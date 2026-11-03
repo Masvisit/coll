@@ -47,7 +47,7 @@ input[type=search]:focus{border-color:var(--acc)}
 <div class="top">
   <input type="search" id="q" placeholder="Busca una paraula (p. ex. mur, collons, rècord)…" autocomplete="off">
   <div class="chips" id="chips"></div>
-  <div class="legend"><span><i class="lv lv1"></i>to tranquil</span><span><i class="lv lv2"></i>ferm</span><span><i class="lv lv3"></i>a fons</span><span>▶ l'escoltes amb la veu de l'iPhone (la definitiva serà Alba)</span></div>
+  <div class="legend"><span><i class="lv lv1"></i>to tranquil</span><span><i class="lv lv2"></i>ferm</span><span><i class="lv lv3"></i>a fons</span><span>▶ l'escoltes amb la veu de l'Alba</span></div>
 </div>
 <div id="list"></div>
 
@@ -104,6 +104,12 @@ function groupKey(o){
   else if (o.grup) parts.push(GRUP[o.grup]);
   return parts.join(' · ') || 'Totes';
 }
+let cur = null;
+function play(id, text){
+  if (cur){ cur.pause(); cur = null; }
+  const a = new Audio('audio/' + id + '.mp3'); cur = a;
+  a.play().catch(() => speak(text));
+}
 function speak(text){
   if (!('speechSynthesis' in window)) return;
   speechSynthesis.cancel();
@@ -130,11 +136,11 @@ function render(){
       Object.entries(groups).map(([g, arr]) => {
         const key = c + '|' + g, limit = c === 'num' && !open[key] && !nq ? 4 : arr.length;
         return `<div class="grp"><h3>${esc(g)}</h3>` + arr.slice(0, limit).map(o =>
-          `<div class="row"><i class="lv lv${o.niv}"></i><div class="t">${hl(o.text)}<div class="n">${o.id}</div></div><button class="play" data-t="${esc(o.text)}" aria-label="Escolta">▶</button></div>`).join('') +
+          `<div class="row"><i class="lv lv${o.niv}"></i><div class="t">${hl(o.text)}<div class="n">${o.id}</div></div><button class="play" data-id="${o.id}" data-t="${esc(o.text)}" aria-label="Escolta">▶</button></div>`).join('') +
           (limit < arr.length ? `<button class="more" data-k="${esc(key)}">Mostra'n ${arr.length - limit} més</button>` : '') + `</div>`;
       }).join('') + `</section>`;
   }).join('');
-  $('list').querySelectorAll('.play').forEach(b => b.onclick = () => speak(b.dataset.t));
+  $('list').querySelectorAll('.play').forEach(b => b.onclick = () => play(b.dataset.id, b.dataset.t));
   $('list').querySelectorAll('.more').forEach(b => b.onclick = () => { open[b.dataset.k] = true; render(); });
 }
 $('q').addEventListener('input', e => { q = e.target.value; render(); });

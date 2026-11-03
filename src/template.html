@@ -1,0 +1,408 @@
+<!doctype html>
+<html lang="ca">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0e1013">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<title>Coll · prova</title>
+<style>
+:root{
+  --bg:#0e1013; --card:#171a1f; --card2:#1d2128; --line:#2a3039;
+  --tx:#eef1f4; --mut:#9aa3ad; --acc:#ffb020; --ok:#3ecf8e; --bad:#ff6363; --blue:#5aa9ff;
+}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--tx);
+  font:16px/1.45 -apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",system-ui,sans-serif;-webkit-text-size-adjust:100%}
+body{padding:calc(env(safe-area-inset-top) + 18px) 16px calc(env(safe-area-inset-bottom) + 40px);max-width:560px;margin:0 auto}
+h1{font-size:26px;line-height:1.1;margin:0 0 4px;letter-spacing:-.01em}
+h1 span{color:var(--acc)}
+.sub{color:var(--mut);margin:0 0 14px;font-size:14px}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 18px}
+.chip{font-size:12.5px;padding:5px 9px;border-radius:999px;background:var(--card);border:1px solid var(--line);color:var(--mut);white-space:nowrap}
+.chip.ok{color:var(--ok);border-color:#24533f}
+.chip.no{color:var(--bad);border-color:#5a2a2a}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:16px;margin:0 0 14px}
+.card h2{font-size:17px;margin:0 0 4px;display:flex;align-items:center;gap:10px}
+.num{flex:none;width:26px;height:26px;border-radius:50%;background:var(--acc);color:#111;font-size:14px;font-weight:700;display:grid;place-items:center}
+.hint{color:var(--mut);font-size:14px;margin:0 0 12px}
+.hint b{color:var(--tx);font-weight:600}
+ol.steps{margin:0;padding-left:20px;color:var(--mut);font-size:14px}
+ol.steps li{margin:3px 0}
+ol.steps b{color:var(--tx)}
+button{font:inherit;cursor:pointer;-webkit-tap-highlight-color:transparent}
+.btn{width:100%;min-height:52px;border:0;border-radius:14px;background:var(--acc);color:#141414;font-weight:700;font-size:16.5px;padding:12px 16px;margin:6px 0}
+.btn.sec{background:var(--card2);color:var(--tx);border:1px solid var(--line);font-weight:600}
+.btn:active{transform:scale(.985)}
+.btn:disabled{opacity:.45}
+.test{border-top:1px solid var(--line);padding-top:12px;margin-top:12px}
+.test:first-of-type{border-top:0;padding-top:0;margin-top:0}
+.test .t{font-weight:600;margin:0 0 2px}
+.test .d{color:var(--mut);font-size:13.5px;margin:0 0 6px}
+.res{display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px;margin-top:4px}
+.res button{min-height:46px;border-radius:12px;border:1px solid var(--line);background:var(--card2);color:var(--mut);font-size:13px;line-height:1.2;padding:6px}
+.res button.sel.good{background:#173a2b;color:var(--ok);border-color:#2f7a57}
+.res button.sel.bad{background:#3a1c1c;color:var(--bad);border-color:#7a3434}
+.big{font-size:64px;font-weight:800;line-height:1;letter-spacing:-.03em;font-variant-numeric:tabular-nums}
+.big small{font-size:18px;font-weight:600;color:var(--mut);letter-spacing:0;margin-left:6px}
+.row{display:flex;gap:10px;align-items:baseline;flex-wrap:wrap}
+.kv{display:grid;grid-template-columns:auto 1fr;gap:4px 12px;font-size:14px;margin-top:10px}
+.kv dt{color:var(--mut)}
+.kv dd{margin:0;font-variant-numeric:tabular-nums;text-align:right}
+.status{font-size:14px;margin:6px 0 0;color:var(--mut)}
+.status.ok{color:var(--ok)} .status.bad{color:var(--bad)} .status.warn{color:var(--acc)}
+.where{background:var(--card2);border:1px solid var(--line);border-radius:14px;padding:12px;margin-top:10px}
+.where .w1{font-size:20px;font-weight:700;line-height:1.2}
+.where .w2{color:var(--mut);font-size:14px;margin-top:3px}
+.bar{height:8px;border-radius:99px;background:#0b0d10;margin-top:10px;overflow:hidden;position:relative}
+.bar i{position:absolute;inset:0 auto 0 0;width:0;background:linear-gradient(90deg,var(--blue),var(--acc));border-radius:99px;transition:width .4s}
+.phases{display:flex;gap:2px;margin-top:4px}
+.phases span{height:4px;border-radius:2px;background:#39414c}
+.phases span.on{background:var(--acc)}
+textarea{width:100%;min-height:150px;background:#0b0d10;color:#cfd6dd;border:1px solid var(--line);border-radius:12px;padding:10px;font:12px/1.4 ui-monospace,SFMono-Regular,Menlo,monospace}
+.log{font:12px/1.4 ui-monospace,Menlo,monospace;color:var(--bad);white-space:pre-wrap;margin-top:8px}
+</style>
+</head>
+<body>
+<h1>Coll <span>·</span> prova</h1>
+<p class="sub">Comprova al teu iPhone les quatre peces que fan falta per a l'entrenador.</p>
+<div class="chips" id="chips"></div>
+
+<section class="card">
+  <h2>Abans de començar</h2>
+  <ol class="steps">
+    <li>Obre aquesta pàgina amb <b>Bluefy</b> (no amb Safari).</li>
+    <li>Treu el <b>mode silenci</b> de l'iPhone.</li>
+    <li>Posa música a <b>Spotify</b> a un volum normal i torna aquí.</li>
+  </ol>
+</section>
+
+<section class="card" id="audio">
+  <h2><span class="num">1</span>Veu sobre Spotify</h2>
+  <p class="hint">Prova cada botó amb la música sonant i marca què ha passat. Volem que <b>Spotify no s'aturi</b> i que la veu s'entengui.</p>
+
+  <div class="test" data-test="A">
+    <p class="t">A · Veu gravada</p>
+    <p class="d">So d'avís + frase en fitxer (veu de prova robòtica; la definitiva serà millor).</p>
+    <button class="btn" id="playA">Reproduir A</button>
+    <div class="res"></div>
+  </div>
+
+  <div class="test" data-test="B">
+    <p class="t">B · Veu de l'iPhone</p>
+    <p class="d">La veu catalana del sistema llegeix la frase (permetria dir números en directe).</p>
+    <button class="btn" id="playB">Reproduir B</button>
+    <div class="res"></div>
+  </div>
+
+  <div class="test" data-test="C">
+    <p class="t">C · Reproductor clàssic</p>
+    <p class="d">El mateix fitxer amb un altre sistema de reproducció, per comparar.</p>
+    <button class="btn" id="playC">Reproduir C</button>
+    <div class="res"></div>
+  </div>
+  <p class="status" id="audioStatus"></p>
+</section>
+
+<section class="card" id="hr">
+  <h2><span class="num">2</span>Pulsòmetre</h2>
+  <p class="hint">Al rellotge: entra a l'esport de córrer (pre-entrenament) → <b>Configuració → Compartir FC amb altres dispositius → Visible per a tothom</b>. Després connecta.</p>
+  <div class="row"><div class="big" id="hrVal">--<small>ppm</small></div></div>
+  <p class="status" id="hrStatus">Sense connectar</p>
+  <button class="btn" id="hrBtn">Connectar el Pacer Pro</button>
+  <button class="btn sec" id="hrAny">No surt? Buscar qualsevol dispositiu</button>
+  <dl class="kv" id="hrKv"></dl>
+</section>
+
+<section class="card" id="gps">
+  <h2><span class="num">3</span>GPS sobre la ruta</h2>
+  <p class="hint">A casa només veuràs la distància a la pujada. Si la proves allà, et dirà a quin metre i fase ets.</p>
+  <button class="btn" id="gpsBtn">Activar GPS</button>
+  <div class="where" id="where" hidden>
+    <div class="w1" id="w1">—</div>
+    <div class="w2" id="w2"></div>
+    <div class="bar"><i id="barFill"></i></div>
+    <div class="phases" id="phaseStrip"></div>
+  </div>
+  <dl class="kv" id="gpsKv"></dl>
+  <p class="status" id="gpsStatus"></p>
+</section>
+
+<section class="card" id="wake">
+  <h2><span class="num">4</span>Pantalla encesa</h2>
+  <p class="hint">L'app necessita la pantalla encesa mentre corres. Si aquí surt que no es pot, posarem <b>Bloqueig automàtic → Mai</b> a l'iPhone.</p>
+  <button class="btn sec" id="wakeBtn">Mantenir la pantalla encesa</button>
+  <p class="status" id="wakeStatus"></p>
+</section>
+
+<section class="card">
+  <h2>Resultats</h2>
+  <p class="hint">Quan hagis fet les proves, copia-ho i enganxa-m'ho al xat.</p>
+  <button class="btn" id="copyBtn">Copiar resultats</button>
+  <textarea id="report" readonly></textarea>
+  <div class="log" id="log"></div>
+</section>
+
+<script>
+'use strict';
+const DATA = __DATA__;
+const CHIME_B64 = "__CHIME__";
+const FRASE_B64 = "__FRASE__";
+const FRASE_TXT = "Vas bé. Portes cinc segons d'avantatge sobre el teu millor registre. Guarda forces, que ara arriba el mur.";
+
+const $ = id => document.getElementById(id);
+const state = {
+  results: {A:null, B:null, C:null},
+  audioSession: null, voices: [],
+  hr: {name:null, n:0, first:null, last:null, min:null, max:null, disc:0, err:null, val:null},
+  gps: {n:0, first:null, last:null, accSum:0, accBest:null, err:null, lastFix:null, proj:null, intervals:[]},
+  wake: 'no provat', errors: []
+};
+const LBL = { ok: 'sona per sobre', pausa: 'ATURA Spotify', nosent: 'no se sent', null: 'no provat' };
+window.addEventListener('error', e => logErr(e.message + (e.lineno ? ' (l.' + e.lineno + ')' : '')));
+window.addEventListener('unhandledrejection', e => logErr(String(e.reason && e.reason.message || e.reason)));
+function logErr(m){ state.errors.push(m); $('log').textContent = state.errors.slice(-6).join('\n'); report(); }
+
+/* ---------- diagnòstic ---------- */
+const support = {
+  bt: !!navigator.bluetooth,
+  as: 'audioSession' in navigator,
+  wl: 'wakeLock' in navigator,
+  geo: 'geolocation' in navigator,
+  tts: 'speechSynthesis' in window,
+  ac: !!(window.AudioContext || window.webkitAudioContext)
+};
+function chips(){
+  const ca = state.voices.filter(v => /^ca/i.test(v.lang));
+  const items = [
+    ['Bluetooth', support.bt], ['Àudio mixt', support.as], ['Pantalla', support.wl],
+    ['GPS', support.geo], ['Veu catalana', support.tts ? (ca.length ? true : (state.voices.length ? false : null)) : false]
+  ];
+  $('chips').innerHTML = items.map(([n, ok]) =>
+    `<span class="chip ${ok === true ? 'ok' : ok === false ? 'no' : ''}">${ok === true ? '✓' : ok === false ? '✗' : '…'} ${n}</span>`).join('');
+}
+function loadVoices(){ if (!support.tts) return; state.voices = speechSynthesis.getVoices() || []; chips(); report(); }
+if (support.tts){ loadVoices(); speechSynthesis.addEventListener && speechSynthesis.addEventListener('voiceschanged', loadVoices); setTimeout(loadVoices, 800); }
+chips();
+
+/* ---------- 1 · àudio ---------- */
+function setAmbient(){
+  if (!support.as) { state.audioSession = 'no disponible'; return; }
+  try { navigator.audioSession.type = 'ambient'; state.audioSession = navigator.audioSession.type; }
+  catch(e){ state.audioSession = 'error: ' + e.message; }
+}
+function b64ToBuf(b64){ const s = atob(b64); const u = new Uint8Array(s.length); for (let i=0;i<s.length;i++) u[i]=s.charCodeAt(i); return u.buffer; }
+let ctx = null, bufs = null;
+async function getCtx(){
+  if (!ctx){ const AC = window.AudioContext || window.webkitAudioContext; ctx = new AC(); }
+  if (ctx.state !== 'running') await ctx.resume();
+  if (!bufs){
+    const dec = b => new Promise((res, rej) => { const p = ctx.decodeAudioData(b64ToBuf(b), res, rej); if (p && p.then) p.then(res, rej); });
+    bufs = { chime: await dec(CHIME_B64), frase: await dec(FRASE_B64) };
+  }
+  return ctx;
+}
+function playBuf(buf, when){ const s = ctx.createBufferSource(); s.buffer = buf; s.connect(ctx.destination); s.start(when); return when + buf.duration; }
+function aStatus(t, cls){ const el = $('audioStatus'); el.textContent = t; el.className = 'status ' + (cls||''); }
+
+$('playA').onclick = async () => {
+  setAmbient(); askWake();
+  try { await getCtx(); const t0 = ctx.currentTime + 0.05; const t1 = playBuf(bufs.chime, t0); playBuf(bufs.frase, t1 + 0.1);
+    aStatus('A: reproduint (sessió d\'àudio: ' + state.audioSession + ')'); }
+  catch(e){ aStatus('A ha fallat: ' + e.message, 'bad'); logErr('A: ' + e.message); }
+};
+$('playB').onclick = () => {
+  setAmbient(); askWake();
+  if (!support.tts){ aStatus('B: aquest navegador no té veu del sistema', 'bad'); return; }
+  try {
+    speechSynthesis.cancel();
+    const u = new SpeechSynthesisUtterance(FRASE_TXT);
+    const ca = state.voices.filter(v => /^ca/i.test(v.lang));
+    if (ca.length){ u.voice = ca.find(v => /enhanced|premium|millorada/i.test(v.name)) || ca[0]; }
+    u.lang = 'ca-ES'; u.rate = 1; u.volume = 1;
+    u.onerror = e => aStatus('B error: ' + (e.error || 'desconegut'), 'bad');
+    speechSynthesis.speak(u);
+    aStatus('B: reproduint' + (u.voice ? ' amb la veu ' + u.voice.name : ' (no hi ha veu catalana instal·lada)'), u.voice ? '' : 'warn');
+  } catch(e){ aStatus('B ha fallat: ' + e.message, 'bad'); logErr('B: ' + e.message); }
+};
+let elA = null;
+$('playC').onclick = async () => {
+  setAmbient(); askWake();
+  try {
+    if (!elA){ elA = new Audio('data:audio/mpeg;base64,' + FRASE_B64); elA.preload = 'auto'; }
+    elA.currentTime = 0; await elA.play(); aStatus('C: reproduint');
+  } catch(e){ aStatus('C ha fallat: ' + e.message, 'bad'); logErr('C: ' + e.message); }
+};
+const OPTS = [['ok','✓ Sona per sobre','good'], ['pausa','Ha aturat Spotify','bad'], ['nosent','No s\'ha sentit','bad']];
+document.querySelectorAll('.test').forEach(box => {
+  const k = box.dataset.test, res = box.querySelector('.res');
+  res.innerHTML = OPTS.map(([v, l, c]) => `<button data-v="${v}" data-c="${c}">${l}</button>`).join('');
+  res.querySelectorAll('button').forEach(b => b.onclick = () => {
+    res.querySelectorAll('button').forEach(x => x.classList.remove('sel','good','bad'));
+    b.classList.add('sel', b.dataset.c); state.results[k] = b.dataset.v; report();
+  });
+});
+
+/* ---------- 2 · pulsòmetre ---------- */
+let hrDev = null, hrRetry = 0;
+function hrStatus(t, cls){ const el = $('hrStatus'); el.textContent = t; el.className = 'status ' + (cls||''); }
+async function hrConnect(any){
+  if (!support.bt){ hrStatus('Aquest navegador no té Bluetooth web. Obre la pàgina amb Bluefy.', 'bad'); state.hr.err = 'sense navigator.bluetooth'; report(); return; }
+  askWake();
+  try {
+    const opts = any ? { acceptAllDevices: true, optionalServices: ['heart_rate'] }
+                     : { filters: [{ services: ['heart_rate'] }] };
+    hrDev = await navigator.bluetooth.requestDevice(opts);
+    state.hr.name = hrDev.name || '(sense nom)';
+    hrDev.addEventListener('gattserverdisconnected', hrDisconnected);
+    await hrSubscribe();
+  } catch(e){ hrStatus('No s\'ha connectat: ' + e.message, 'bad'); state.hr.err = e.message; report(); }
+}
+async function hrSubscribe(){
+  hrStatus('Connectant amb ' + state.hr.name + '…', 'warn');
+  const server = await hrDev.gatt.connect();
+  const svc = await server.getPrimaryService('heart_rate');
+  const ch = await svc.getCharacteristic('heart_rate_measurement');
+  ch.addEventListener('characteristicvaluechanged', onHR);
+  await ch.startNotifications();
+  hrRetry = 0; hrStatus('Connectat a ' + state.hr.name, 'ok'); state.hr.err = null; report();
+}
+function onHR(e){
+  const v = e.target.value, flags = v.getUint8(0);
+  const bpm = (flags & 1) ? v.getUint16(1, true) : v.getUint8(1);
+  const h = state.hr, now = Date.now();
+  h.n++; if (!h.first) h.first = now; h.last = now; h.val = bpm;
+  if (bpm > 0){ h.min = h.min == null ? bpm : Math.min(h.min, bpm); h.max = h.max == null ? bpm : Math.max(h.max, bpm); }
+  $('hrVal').innerHTML = bpm + '<small>ppm</small>';
+  hrKv();
+}
+function hrKv(){
+  const h = state.hr; const ago = h.last ? ((Date.now() - h.last)/1000).toFixed(0) + ' s' : '—';
+  const per = h.n > 1 ? ((h.last - h.first)/1000/(h.n - 1)).toFixed(1) + ' s' : '—';
+  $('hrKv').innerHTML = `<dt>Dispositiu</dt><dd>${h.name || '—'}</dd><dt>Lectures</dt><dd>${h.n}</dd>
+    <dt>Cada</dt><dd>${per}</dd><dt>Darrera</dt><dd>fa ${ago}</dd><dt>Mín / màx</dt><dd>${h.min ?? '—'} / ${h.max ?? '—'}</dd>
+    <dt>Desconnexions</dt><dd>${h.disc}</dd>`;
+}
+async function hrDisconnected(){
+  state.hr.disc++; hrKv(); report();
+  if (hrRetry >= 5){ hrStatus('S\'ha perdut la connexió. Torna a connectar.', 'bad'); return; }
+  hrRetry++; hrStatus('Connexió perduda, reintentant (' + hrRetry + '/5)…', 'warn');
+  setTimeout(() => hrSubscribe().catch(() => hrDisconnected()), 1500 * hrRetry);
+}
+$('hrBtn').onclick = () => hrConnect(false);
+$('hrAny').onclick = () => hrConnect(true);
+setInterval(() => { if (state.hr.n) hrKv(); }, 1000);
+
+/* ---------- 3 · GPS ---------- */
+const R = 6371000, LAT0 = DATA.route[0][0] * Math.PI/180, COS0 = Math.cos(LAT0);
+const toXY = (lat, lon) => [lon * Math.PI/180 * R * COS0, lat * Math.PI/180 * R];
+const RX = [], RY = [], RD = [];
+DATA.route.forEach(([la, lo, d]) => { const [x, y] = toXY(la, lo); RX.push(x); RY.push(y); RD.push(d); });
+const LEN = RD[RD.length - 1];
+function project(lat, lon){
+  const [px, py] = toXY(lat, lon); let best = 1e12, s = 0;
+  for (let i = 0; i < RX.length - 1; i++){
+    const vx = RX[i+1]-RX[i], vy = RY[i+1]-RY[i], L2 = vx*vx + vy*vy || 1e-9;
+    let u = ((px-RX[i])*vx + (py-RY[i])*vy) / L2; u = u < 0 ? 0 : u > 1 ? 1 : u;
+    const qx = RX[i] + u*vx, qy = RY[i] + u*vy, d = Math.hypot(px-qx, py-qy);
+    if (d < best){ best = d; s = RD[i] + u*(RD[i+1]-RD[i]); }
+  }
+  return { s, off: best };
+}
+function dist(a, b, c, d){ const [x1,y1] = toXY(a,b), [x2,y2] = toXY(c,d); return Math.hypot(x1-x2, y1-y2); }
+const fmtD = m => m >= 1000 ? (m/1000).toFixed(2).replace('.', ',') + ' km' : Math.round(m) + ' m';
+const fmtT = s => Math.floor(s/60) + ':' + String(Math.round(s%60)).padStart(2,'0');
+function phaseAt(s){ return DATA.phases.find(p => s >= p.a && s < p.b) || DATA.phases[DATA.phases.length-1]; }
+function recAt(arr, s){ const i = Math.min(arr.length-1, Math.max(0, s/10)); const lo = Math.floor(i), hi = Math.min(arr.length-1, lo+1); return arr[lo] + (arr[hi]-arr[lo])*(i-lo); }
+$('phaseStrip').innerHTML = DATA.phases.map(p => `<span style="flex:${p.b-p.a}" data-n="${p.n}"></span>`).join('');
+
+let watchId = null;
+function gpsStatus(t, cls){ const el = $('gpsStatus'); el.textContent = t; el.className = 'status ' + (cls||''); }
+$('gpsBtn').onclick = () => {
+  if (!support.geo){ gpsStatus('Aquest navegador no té GPS', 'bad'); return; }
+  askWake();
+  if (watchId != null){ navigator.geolocation.clearWatch(watchId); watchId = null; $('gpsBtn').textContent = 'Activar GPS'; gpsStatus('GPS aturat'); return; }
+  gpsStatus('Esperant senyal…', 'warn');
+  watchId = navigator.geolocation.watchPosition(onPos, e => { state.gps.err = e.message || ('codi ' + e.code); gpsStatus('Error GPS: ' + state.gps.err, 'bad'); report(); },
+    { enableHighAccuracy: true, maximumAge: 0, timeout: 20000 });
+  $('gpsBtn').textContent = 'Aturar GPS';
+};
+function onPos(p){
+  const g = state.gps, c = p.coords, now = Date.now();
+  if (g.last) g.intervals.push((now - g.last)/1000);
+  if (g.intervals.length > 120) g.intervals.shift();
+  g.n++; if (!g.first) g.first = now; g.last = now; g.err = null;
+  g.accSum += c.accuracy; g.accBest = g.accBest == null ? c.accuracy : Math.min(g.accBest, c.accuracy);
+  g.lastFix = { lat: c.latitude, lon: c.longitude, acc: c.accuracy, speed: c.speed };
+  const pr = project(c.latitude, c.longitude); g.proj = pr;
+  const dStart = dist(c.latitude, c.longitude, DATA.start[0], DATA.start[1]);
+  const dTop = dist(c.latitude, c.longitude, DATA.top[0], DATA.top[1]);
+  $('where').hidden = false;
+  const onRoute = pr.off <= Math.max(35, Math.min(c.accuracy, 60));
+  document.querySelectorAll('#phaseStrip span').forEach(sp => sp.classList.remove('on'));
+  if (onRoute){
+    const ph = phaseAt(pr.s);
+    $('w1').textContent = 'Metre ' + Math.round(pr.s) + ' de ' + Math.round(LEN) + ' · ' + ph.nom;
+    $('w2').textContent = 'Fase ' + ph.n + ' (' + String(ph.pct).replace('.', ',') + ' %) · el 30/10 hi passaves al ' + fmtT(recAt(DATA.rec30, pr.s)) + ', el 03/11 al ' + fmtT(recAt(DATA.rec03, pr.s));
+    $('barFill').style.width = (pr.s/LEN*100).toFixed(1) + '%';
+    const on = document.querySelector('#phaseStrip span[data-n="' + ph.n + '"]'); on && on.classList.add('on');
+    gpsStatus('A la pujada (a ' + Math.round(pr.off) + ' m del traçat)', 'ok');
+  } else {
+    $('w1').textContent = 'Fora de la pujada';
+    $('w2').textContent = 'Inici a ' + fmtD(dStart) + ' · cim a ' + fmtD(dTop) + ' · traçat més proper a ' + fmtD(pr.off);
+    $('barFill').style.width = '0%';
+    gpsStatus('Rebent posicions', 'ok');
+  }
+  const iv = g.intervals.length ? (g.intervals.reduce((a,b)=>a+b,0)/g.intervals.length).toFixed(1) + ' s' : '—';
+  $('gpsKv').innerHTML = `<dt>Posicions</dt><dd>${g.n}</dd><dt>Cada</dt><dd>${iv}</dd>
+    <dt>Precisió</dt><dd>${Math.round(c.accuracy)} m (millor ${Math.round(g.accBest)} m)</dd>
+    <dt>Velocitat</dt><dd>${c.speed != null && c.speed >= 0 ? (c.speed*3.6).toFixed(1).replace('.', ',') + ' km/h' : '—'}</dd>`;
+  report();
+}
+
+/* ---------- 4 · pantalla ---------- */
+let wl = null, wantWake = false;
+function wStatus(t, cls){ const el = $('wakeStatus'); el.textContent = t; el.className = 'status ' + (cls||''); state.wake = t; report(); }
+async function askWake(){
+  wantWake = true;
+  if (!support.wl){ wStatus('Aquest navegador no pot mantenir la pantalla encesa. Caldrà Bloqueig automàtic → Mai.', 'bad'); return; }
+  if (wl && !wl.released) return;
+  try { wl = await navigator.wakeLock.request('screen'); wStatus('Pantalla encesa activada', 'ok');
+    wl.addEventListener('release', () => { if (document.visibilityState === 'visible') wStatus('El sistema ha apagat el bloqueig de pantalla', 'warn'); });
+  } catch(e){ wStatus('No s\'ha pogut: ' + e.message + '. Caldrà Bloqueig automàtic → Mai.', 'bad'); }
+}
+document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'visible' && wantWake) askWake(); });
+$('wakeBtn').onclick = askWake;
+
+/* ---------- resultats ---------- */
+function report(){
+  const g = state.gps, h = state.hr;
+  const ca = state.voices.filter(v => /^ca/i.test(v.lang)).map(v => v.name + ' (' + v.lang + ')');
+  const iv = g.intervals.length ? (g.intervals.reduce((a,b)=>a+b,0)/g.intervals.length).toFixed(1) : '—';
+  const lines = [
+    'PROVA COLL · ' + new Date().toLocaleString('ca-ES'),
+    'Navegador: ' + navigator.userAgent,
+    'Suport: bluetooth=' + support.bt + ' audioSession=' + support.as + ' wakeLock=' + support.wl + ' geo=' + support.geo + ' tts=' + support.tts,
+    'Sessió d\'àudio: ' + (state.audioSession || 'no tocada'),
+    'Veus catalanes: ' + (ca.length ? ca.join(', ') : 'cap') + ' (total veus: ' + state.voices.length + ')',
+    'Àudio A (fitxer, Web Audio): ' + LBL[state.results.A],
+    'Àudio B (veu iPhone): ' + LBL[state.results.B],
+    'Àudio C (reproductor clàssic): ' + LBL[state.results.C],
+    'FC: ' + (h.n ? h.name + ', ' + h.n + ' lectures, cada ' + (h.n > 1 ? ((h.last-h.first)/1000/(h.n-1)).toFixed(1) : '—') + ' s, ' + h.min + '-' + h.max + ' ppm, desconnexions ' + h.disc : 'sense dades') + (h.err ? ' · error: ' + h.err : ''),
+    'GPS: ' + (g.n ? g.n + ' posicions, cada ' + iv + ' s, precisió mitjana ' + Math.round(g.accSum/g.n) + ' m, millor ' + Math.round(g.accBest) + ' m' + (g.proj ? ', a ' + Math.round(g.proj.off) + ' m del traçat (metre ' + Math.round(g.proj.s) + ')' : '') : 'sense dades') + (g.err ? ' · error: ' + g.err : ''),
+    'Pantalla: ' + state.wake,
+    'Errors: ' + (state.errors.length ? state.errors.slice(-5).join(' | ') : 'cap')
+  ];
+  $('report').value = lines.join('\n');
+}
+$('copyBtn').onclick = async () => {
+  report(); const t = $('report').value;
+  try { await navigator.clipboard.writeText(t); $('copyBtn').textContent = 'Copiat ✓'; }
+  catch(e){ const r = $('report'); r.focus(); r.select(); r.setSelectionRange(0, t.length);
+    try { document.execCommand('copy'); $('copyBtn').textContent = 'Copiat ✓'; } catch(_){ $('copyBtn').textContent = 'Selecciona el text i copia'; } }
+  setTimeout(() => $('copyBtn').textContent = 'Copiar resultats', 2500);
+};
+report();
+</script>
+</body>
+</html>

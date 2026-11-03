@@ -128,9 +128,9 @@ function split(pcm, marks, list){
   const at = {}; marks.forEach(m => at[m.text] = m.t / unit);
   const out = {};
   list.forEach((f, i) => {
-    const s = at['s|' + f.id], e = at['e|' + f.id];
-    if (s == null || e == null) throw new Error('Falten marques per a ' + f.id);
     const next = i + 1 < list.length ? at['s|' + list[i + 1].id] : dur;
+    const s = at['s|' + f.id], e = at['e|' + f.id] ?? next;   // Azure no envia l'última marca de cada lot
+    if (s == null || e == null) throw new Error('Falten marques per a ' + f.id);
     let a = Math.max(0, Math.floor((s - 0.05) * SR)), b = Math.min(pcm.length, Math.floor(Math.min(e + 0.6, next - 0.05) * SR));
     const seg = pcm.subarray(a, b);
     const W = Math.round(SR * 0.01); let peak = 0; for (let k = 0; k < seg.length; k++){ const v = Math.abs(seg[k]); if (v > peak) peak = v; }

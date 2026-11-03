@@ -1,5 +1,7 @@
 """Banc de frases de l'entrenador del coll.
 
+To: exigent però proper a tota la pujada; diu el nom de tant en tant i paraulotes sense manies.
+
 Genera data/frases.json:  python3 src/frases.py
 
 Etiquetes:
@@ -29,13 +31,13 @@ add("inici", [
     "Rellotge en marxa. Entra a la pujada amb calma, que és llarga.",
     "Bé, Àlex, ja hi som. Primers metres tranquils: ritme de pujada, no de cursa.",
     "Arrenca la pujada. Recorda: el coll es guanya a partir del quilòmetre dos, no ara.",
-    "Comença el ball. Respira fons i troba el teu ritme.",
+    "Comença el ball. Troba el teu ritme, i que sigui un ritme de veritat.",
     "Vinga, a pujar. Els primers quatre-cents metres, suaus i constants.",
     "Som al peu del coll. Avui anem a buscar el teu millor temps, però amb cap.",
     "Pujada en marxa. Espatlles relaxades, passes curtes, i que el ritme surti sol.",
     "Comencem. Si surts massa fort ara, ho pagaràs al mur. Ja ho saps.",
     "Endavant. Un sol objectiu: arribar al mur amb forces.",
-    "Ja estem. Tu corre, que jo et vaig dient com vas.",
+    "Ja estem. Tu corre, que jo et vigilo. I no te'n passaré ni una.",
 ], grup="ini", niv=1)
 
 # ---------------------------------------------------------------- entrada a cada fase
@@ -71,9 +73,9 @@ add("entrada", [
 ], fase=4)
 add("entrada", [
     "El mur. Dos-cents setanta metres al quinze per cent. Passes curtes i amunt.",
-    "Aquí és. El mur. No es negocia.",
+    "Aquí és, collons. El mur. No es negocia.",
     "Mur! Cadència alta, passes petites, braços que empenyin.",
-    "Ja hi ets, al mur. Ara no pensis: puja.",
+    "Ja hi ets, al mur. Ara no pensis, hòstia: puja.",
     "Quinze per cent. Inclina't endavant des dels turmells i tira amunt.",
     "El tram més dret. Si toca patir, es pateix. Amunt, collons.",
 ], fase=5)
@@ -90,7 +92,7 @@ add("entrada", [
     "Quilòmetre dur. Al principi hi ha una rampa del divuit per cent: passes curtes.",
     "Ara el tram llarg. Divideix-lo: d'aquí a cent metres, i després cent més.",
     "Fase set. Aquí és on es guanyen o es perden els segons de debò.",
-    "Quilòmetre dur. Cap, cor i cames: tot a pujar.",
+    "Quilòmetre dur. Cap, cor i collons: tot a pujar.",
     "Ara ve el que entrenes. Mil metres de pujada de veritat.",
 ], fase=7)
 add("entrada", [
@@ -108,12 +110,12 @@ add("fase", [
     "Espatlles avall i relaxades.",
     "Respira amb la panxa, no amb el pit.",
     "Troba un ritme que puguis aguantar vint-i-cinc minuts.",
-    "Encara és molt d'hora. Paciència.",
+    "Encara és d'hora. Paciència, però sense adormir-te.",
     "Mira cinc metres endavant, no als peus.",
     "Si et sents molt bé, perfecte: guarda-ho.",
     "Braços al costat del cos, de davant cap enrere.",
     "El que estalviïs aquí, ho tindràs al mur.",
-    "Bon començament. Segueix així.",
+    "Bon començament. Ara, que no decaigui.",
 ], fase=1)
 add("fase", [
     "Busca una cadència regular, com un metrònom.",
@@ -135,7 +137,7 @@ add("fase", [
     "Pensa en el mur, però amb calma: estàs preparat.",
     "Pla vol dir recuperar, no passejar.",
     "Passa normal, cadència viva.",
-    "Bé. Carregant piles.",
+    "Carregant piles. Però corrent, eh, no passejant.",
     "Agafa aire. El que ve demana oxigen.",
     "Aprofita: és l'últim tram fàcil d'avui.",
 ], fase=3)
@@ -156,14 +158,14 @@ add("fase", [
     "Empeny amb els braços!",
     "No miris a dalt. Mira el metre següent.",
     "Aguanta. Això s'acaba, i tu no.",
-    "Dur, eh? Doncs amunt igualment.",
+    "Dur de collons, eh? Doncs amunt igualment.",
     "Cada passa és una passa menys.",
     "No negociïs amb el cansament. Puja.",
     "Cos endavant, cames a treballar.",
     "Això és el mur, Àlex. I tu el puges.",
     "Collons, que dret. Però tu ets més dur.",
     "Respira fort i segueix.",
-    "Ni se t'acudeixi aturar-te ara.",
+    "Ni se t'acudeixi aturar-te ara, me cago en tot.",
 ], fase=5)
 add("fase", [
     "Respira. Recupera en marxa.",
@@ -186,7 +188,7 @@ add("fase", [
     "Dur no vol dir lent. Mantén el ritme.",
     "Cos endavant, mirada al terra de davant.",
     "Ara és quan els altres afluixen. Tu no.",
-    "Sí que cansa. I què? Amunt.",
+    "Sí que cansa. I què, hòstia? Amunt.",
     "Cada metre que puges aquí és un segon que guanyes a dalt.",
     "Hòstia, que dur. Va, que tu pots amb això.",
     "Constància. No et cal anar més ràpid, et cal no afluixar.",
@@ -198,7 +200,7 @@ add("fase", [
     "Allarga la passa! Ja és pla.",
     "Ara accelera. Tot el que quedi, fora.",
     "Ja el veus. A fons!",
-    "Buida el dipòsit!",
+    "Buida el dipòsit, collons!",
     "No t'aturis abans d'hora. Fins al cim!",
     "Esprint! Va, va, va!",
     "Ja hi ets, collons! Amunt!",
@@ -211,7 +213,7 @@ add("fase", [
 add("punt", [
     "Rampa del divuit per cent! Passes curtes, curtíssimes!",
     "Aquest és el tros més dret de tot el coll. Aguanta vint segons!",
-    "La rampa! Cos endavant i amunt!",
+    "La puta rampa! Cos endavant i amunt!",
     "Divuit per cent. Això passa ràpid si no t'atures.",
 ], estat="rampa", fase=7)
 add("punt", [
@@ -242,7 +244,7 @@ GAP = {
     "Bon control. Ni massa ni massa poc.",
     "Al teu ritme de rècord. Tranquil i constant."],
   "darrere": [
-    "Una mica per darrere, però encara és molt d'hora. Sense pànic.",
+    "Una mica per darrere. Sense pànic, però no te'n refiïs: comença a apretar.",
     "Uns segons de retard. Res que no es pugui recuperar més amunt.",
     "Vas una mica conservador. Si et trobes bé, pots apretar una mica.",
     "Lleugerament lent. Ajusta el ritme sense fer cap bogeria.",
@@ -251,8 +253,8 @@ GAP = {
     "Massa lent per ser el principi. Avui cal més ritme.",
     "Bastant retard. Encara hi ets a temps, però cal posar-s'hi ja.",
     "Vas massa còmode. Puja una marxa.",
-    "Molts segons perduts ja. No passa res, però a partir d'ara, apreta.",
-    "Avui has sortit tou. Desperta, Àlex."]},
+    "Molts segons perduts ja. Prou de passejar, collons: a partir d'ara, apreta.",
+    "Avui has sortit tou. Desperta, Àlex, hòstia!"]},
  "mur": {
   "molt_davant": [
     "Molt per davant al mur! Aguanta, que aquest marge val or.",
@@ -277,7 +279,7 @@ GAP = {
     "Retard petit. Ara és quan es retalla. Va!",
     "Vas per darrere. Passes curtes i ràpides: guanya segons ara.",
     "Uns segons tard. No et rendeixis, que el quilòmetre dur encara ha de venir.",
-    "Per darrere, però a tocar. Apreta, Àlex!"],
+    "Per darrere, però a tocar. Apreta, hòstia!"],
   "molt_darrere": [
     "Molt de retard. Oblida el rècord i fes el millor mur possible.",
     "Vas tard. Això no s'arregla amb paraules, s'arregla amb cames.",
@@ -299,21 +301,21 @@ GAP = {
     "Per davant, Àlex! Últim esforç!"],
   "igual": [
     "Igualat amb el rècord! Cada segon que guanyis ara és rècord.",
-    "Clavat. Si apretes ara, és teu.",
+    "Clavat. Si apretes ara, és teu, collons!",
     "Empat tècnic. Guanya'l als últims metres!",
     "Exactament al teu rècord. Dona-ho tot!",
     "Tot igual. Qui té més ganes ara? Tu!"],
   "darrere": [
     "Per darrere, però a tocar. Encara hi ets a temps!",
     "Pocs segons. Si ho dones tot, el pots caçar!",
-    "Va, que el rècord encara és a l'abast!",
+    "Va, hòstia, que el rècord encara és a l'abast!",
     "Retard petit. Apreta fins al final!",
     "Uns segons. Hòstia, que es pot! Amunt!"],
   "molt_darrere": [
     "Avui no serà rècord, però el final sí que pot ser bo. Amunt!",
     "Molt de retard. Acaba fort igualment: també és entrenament.",
     "Oblida el rellotge. Puja com si fos la prova de veritat.",
-    "No serà el millor dia, però no és motiu per afluixar.",
+    "No serà el millor dia, però això no és excusa per afluixar, collons.",
     "Acaba-ho amb orgull. Fins a dalt a bon ritme."]},
 }
 for g, d in GAP.items():
@@ -334,15 +336,15 @@ add("tend", ["Estàs volant! Segueix així fins a dalt!",
              "Els últims metres són teus. Continua!",
              "Remuntada en marxa. Apreta!"], grup="fi", estat="guanyant")
 add("tend", ["Has perdut uns segons en els últims metres. Revisa el ritme.",
-             "T'estàs encantant. Torna al teu ritme.",
+             "T'estàs encantant, home. Torna al teu ritme.",
              "Vas baixant la velocitat sense adonar-te'n. Atenció.",
              "Perds una mica. Res greu, però corregeix-ho."], grup="ini", estat="perdent")
 add("tend", ["Estàs perdent temps al mur. Passes curtes i ràpides!",
              "Se t'escapen segons. Braços, Àlex, braços!",
-             "Afluixes. Ara no!",
+             "Afluixes. Ara no, me cago en la mar!",
              "Perds ritme. Concentra't en la cadència."], grup="mur", estat="perdent")
 add("tend", ["Estàs perdent temps! No afluixis ara!",
-             "Se t'escapa. Treu el que et quedi!",
+             "Se t'escapa, hòstia! Treu el que et quedi!",
              "Ara no, collons! Amunt!",
              "Perds segons. Últim esforç, va!"], grup="fi", estat="perdent")
 add("tend", ["Ritme molt regular. Així.",
@@ -358,7 +360,7 @@ DIAG = {
   "ini": ["Vas ràpid i amb les pulsacions altes. Aquest ritme no l'aguantaràs. Afluixa.",
           "Massa intensitat per ser el principi. Baixa una marxa ara.",
           "Pulsacions per sobre del teu millor dia. Això es paga al mur.",
-          "T'estàs flipant, Àlex. Calma, que el coll és llarg."],
+          "T'estàs flipant, Àlex. Calma, collons, que el coll és llarg."],
   "mur": ["Pulsacions molt altes. Mantén, però no apretis més.",
           "Al límit. Controla, que encara queda el quilòmetre dur.",
           "Molt alt de cor. Passes curtes i respira, no forcis més.",
@@ -384,12 +386,12 @@ DIAG = {
   "ini": ["Vas lent i amb pulsacions baixes. Tens marge: puja una mica el ritme.",
           "Massa conservador. El cor diu que pots anar més ràpid.",
           "Pulsacions baixes. Pots apretar sense por.",
-          "Estàs guardant massa. Una mica més de ritme."],
+          "Estàs guardant massa. Mou el cul, que tens marge."],
   "mur": ["Tens marge de pulsacions. Apreta al mur!",
-          "Massa còmode. Puja el ritme, que el cor ho aguanta.",
-          "Vas conservador. És el moment de gastar.",
+          "Massa còmode, collons. Puja el ritme, que el cor ho aguanta.",
+          "Prou de guardar, hòstia. És el moment de gastar.",
           "Pulsacions baixes per ser el mur. Pots més, Àlex!"],
-  "fi":  ["Has guardat massa. Ara buida-ho tot!",
+  "fi":  ["Has guardat massa, collons! Ara buida-ho tot!",
           "Tens energia de sobres. A fons fins a dalt!",
           "Pulsacions baixes al final? Apreta, collons!",
           "No arribis a dalt amb forces. Gasta-les ara!"]},
@@ -403,7 +405,7 @@ DIAG = {
           "No és el teu millor dia, però el mur es puja igual.",
           "Gestiona l'esforç. El rècord no és avui; l'entrenament, sí."],
   "fi":  ["Dia dur, però queda poc. Aguanta!",
-          "Costa, però acaba-ho bé!",
+          "Costa de collons, però acaba-ho bé!",
           "Avui ha estat dur. Últim esforç igualment!",
           "Els dies dolents també fan cames. Fins a dalt!"]},
  "controlat": {
@@ -418,7 +420,7 @@ DIAG = {
   "fi":  ["Igual que el rècord, de ritme i de cor. Dona-ho tot!",
           "Controlat fins aquí. Ara deixa anar el control!",
           "Tot a punt per rematar. Va!",
-          "Ara sí, sense frens: a fons!"]},
+          "Ara sí, sense frens: a fons, hòstia!"]},
 }
 for estat, d in DIAG.items():
     for g, texts in d.items():
@@ -462,13 +464,13 @@ QUEDEN = {
  500:  ["Queden cinc-cents metres! Ja ho olores!",
         "Cinc-cents metres. Ara sí, comença a apretar.",
         "Mig quilòmetre! No et guardis res!",
-        "Cinc-cents! Això ja és teu!"],
+        "Cinc-cents, collons! Això ja és teu!"],
  300:  ["Tres-cents metres! Apreta!",
         "Queden tres-cents. Tot el que tinguis!",
         "Tres-cents metres, collons! Amunt!",
         "Últims tres-cents. Sense mirar enrere!"],
  200:  ["Queden dos-cents metres. Ara no et guardes res!",
-        "Dos-cents! A fons!",
+        "Dos-cents, hòstia! A fons!",
         "Dos-cents metres, Àlex! Esprint!",
         "Últims dos-cents! Va, va, va!"],
  100:  ["Cent metres! Tot!",
@@ -478,7 +480,7 @@ QUEDEN = {
  50:   ["Cinquanta! Ja és teu!",
         "Últims metres! Ara!",
         "Ja hi ets! Fins al final!",
-        "Cinquanta metres! A fons!"],
+        "Cinquanta metres! A fons, collons!"],
 }
 for q, texts in QUEDEN.items():
     add("queden", texts, estat=q, niv=1 if q >= 2000 else 2 if q >= 1000 else 3)
@@ -489,7 +491,7 @@ add("caminar", ["Si has de caminar, camina fort. Braços actius.",
                 "Caminant també es puja. Passa llarga i ferma.",
                 "Caminar no és rendir-se. Torna a córrer quan puguis.",
                 "Recupera caminant uns segons i tornem-hi.",
-                "Caminant perds molt. Torna a trotar, encara que sigui curt.",
+                "Caminant perds molt, hòstia. Torna a trotar, encara que sigui curt.",
                 "Mans als genolls si cal, però amunt.",
                 "Uns segons caminant i a córrer. Tu decideixes quan."], niv=2)
 add("aturat", ["T'has aturat. Respira i torna-hi quan puguis.",
@@ -497,7 +499,7 @@ add("aturat", ["T'has aturat. Respira i torna-hi quan puguis.",
                "Un moment de pausa. Ara, a seguir.",
                "No et quedis aquí, Àlex. Pas a pas.",
                "Recupera deu segons i reprenem.",
-               "Tornem-hi? Va, que el cim no baixa."], niv=2)
+               "Tornem-hi? Va, collons, que el cim no baixa sol."], niv=2)
 add("represa", ["Això és. Tornem a córrer.",
                 "Molt bé, de nou en marxa.",
                 "Endavant una altra vegada.",
@@ -506,10 +508,10 @@ add("represa", ["Això és. Tornem a córrer.",
 # ---------------------------------------------------------------- final al cim
 add("final", ["Rècord! I de molt! Quina pujada, Àlex!",
               "Nou rècord, i amb marge! Avui has volat!",
-              "Brutal! Nou rècord per molts segons!",
+              "Hòstia puta, quin rècord! I per molts segons!",
               "Rècord destrossat! Això és forma de veritat!"], estat="record_gran", niv=3)
 add("final", ["Nou rècord! Ho has aconseguit!",
-              "Rècord! Pocs segons, però teus!",
+              "Rècord, collons! Pocs segons, però teus!",
               "Nou millor temps! Bona feina!",
               "Rècord, Àlex! Ben treballat!"], estat="record", niv=3)
 add("final", ["Clavat al teu rècord! Per un pèl!",
@@ -541,18 +543,21 @@ add("baixada", ["Ara baixa tranquil i recupera.",
 add("motiva", ["Estàs fent el que toca. Constància.",
                "Cada pujada et fa més fort.",
                "Gaudeix-ne. Aquest és el teu coll.",
-               "Tranquil, que vas bé.",
+               "Vas bé. Però vull més que bé.",
                "Un metre darrere l'altre.",
                "Corre fàcil. Que sembli fàcil.",
                "Avui sumes. Sempre sumes.",
-               "Bona feina. Segueix.",
+               "Bona feina. I no t'hi acostumis, que ara ve el dur.",
                "Ritme, respiració i cap. Tot en ordre.",
                "Molt bé, Àlex.",
                "Això és base. Això és el que després marca la diferència.",
                "Paciència. El coll premia qui sap esperar.",
                "Bon pas. Endavant.",
                "Fluid. Així.",
-               "Estàs on has de ser."], grup="ini")
+               "Estàs on has de ser.",
+               "Vas bé, però no et conformis.",
+               "Còmode està bé. Massa còmode, no.",
+               "Ritme ferm, cap fred."], grup="ini")
 add("motiva", ["Ara es veu qui ha entrenat.",
                "Això és el que et farà passar les físiques.",
                "El dolor passa. El temps queda.",
@@ -566,8 +571,11 @@ add("motiva", ["Ara es veu qui ha entrenat.",
                "Un pas més. I un altre.",
                "Collons, que bé que ho estàs fent.",
                "El mur no sap qui ets. Ensenya-li-ho.",
-               "Això és caràcter.",
-               "Cap fort, cames fortes."], grup="mur")
+               "Això és caràcter, collons.",
+               "Cap fort, cames fortes.",
+               "Me cago en la pujada. Amunt igualment!",
+               "Que li donin pel sac al cansament. Puja!",
+               "Hòstia, Àlex, que això és el mur i tu ets més dur."], grup="mur")
 add("motiva", ["Ja ho tens! No afluixis!",
                "Ara o mai!",
                "Tot el que has entrenat, ara!",
@@ -576,13 +584,18 @@ add("motiva", ["Ja ho tens! No afluixis!",
                "Dona-ho tot, Àlex!",
                "Això és teu! Amunt!",
                "L'últim esforç és el que compta!",
-               "Ni una passa fluixa!",
+               "Ni una passa fluixa, hòstia!",
                "Final! A fons!",
                "Hòstia, quina pujada que estàs fent!",
                "Que quedi tot aquí dalt!",
                "Remata-ho!",
                "Ara ets imparable!",
-               "Fins al final, sense excuses!"], grup="fi")
+               "Fins al final, sense excuses de merda!",
+               "Va, collons, va, va!",
+               "Amunt, me cago en tot!",
+               "Que no et guanyi aquesta puta pujada!",
+               "Hòstia puta, apreta!",
+               "Ara, collons, ara!"], grup="fi")
 
 # ---------------------------------------------------------------- sistema
 add("sistema", ["GPS connectat. Quan arribis a l'inici de la pujada, comencem."], estat="gps_ok", niv=1)

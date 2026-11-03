@@ -76,7 +76,7 @@ const CAT = {
 const FASE = {1:'Fase 1 · Arrencada (0–0,46 km, 7,8 %)',2:'Fase 2 · Tram de ritme (0,46–1,25 km, 5,6 %)',3:'Fase 3 · Respir (1,25–1,65 km, 2,1 %)',
   4:'Fase 4 · Entrada al mur (1,65–1,87 km, 9,8 %)',5:'Fase 5 · El mur (1,87–2,14 km, 15,1 %)',6:'Fase 6 · Replà (2,14–2,29 km, 7,5 %)',
   7:'Fase 7 · Quilòmetre dur (2,29–3,29 km, 12,1 %)',8:'Fase 8 · Coronar (3,29–3,46 km, 4,7 %)'};
-const GRUP = {ini:'Fases 1–3 (to proper)', mur:'Fases 4–6 (el mur)', fi:'Fases 7–8 (final)'};
+const GRUP = {ini:'Fases 1–3 (inici)', mur:'Fases 4–6 (el mur)', fi:'Fases 7–8 (final)'};
 const ESTAT = {
   molt_davant:'molt per davant (més de 15 s)', davant:'per davant (5–15 s)', igual:'igualat (±5 s)', darrere:'per darrere (5–15 s)', molt_darrere:'molt per darrere (més de 15 s)',
   guanyant:'guanyant temps', perdent:'perdent temps', estable:'estable',
@@ -115,7 +115,7 @@ function render(){
   const nq = norm(q.trim());
   const items = DATA.filter(o => (cat === 'tot' || o.cat === cat) && (!nq || norm(o.text).includes(nq)));
   const hand = DATA.filter(o => o.cat !== 'num').length;
-  $('sub').textContent = `${hand} frases escrites + ${DATA.length - hand} amb números = ${DATA.length} àudios. To proper fins al mur, exigent a partir d'allà.`;
+  $('sub').textContent = `${hand} frases escrites + ${DATA.length - hand} amb números = ${DATA.length} àudios. To exigent però proper, amb el nom de tant en tant i paraulotes sense manies.`;
   const counts = {}; DATA.forEach(o => counts[o.cat] = (counts[o.cat] || 0) + 1);
   $('chips').innerHTML = [['tot', 'Totes', DATA.length], ...Object.keys(CAT).map(k => [k, CAT[k][0], counts[k] || 0])]
     .map(([k, l, n]) => `<button class="chip ${k === cat ? 'on' : ''}" data-k="${k}">${l} · ${n}</button>`).join('');

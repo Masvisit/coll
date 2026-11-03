@@ -51,7 +51,7 @@
   "grup": "ini",
   "estat": null,
   "niv": 1,
-  "text": "Comença el ball. Respira fons i troba el teu ritme."
+  "text": "Comença el ball. Troba el teu ritme, i que sigui un ritme de veritat."
  },
  {
   "id": "inici_007",
@@ -105,7 +105,7 @@
   "grup": "ini",
   "estat": null,
   "niv": 1,
-  "text": "Ja estem. Tu corre, que jo et vaig dient com vas."
+  "text": "Ja estem. Tu corre, que jo et vigilo. I no te'n passaré ni una."
  },
  {
   "id": "entrada_001",
@@ -321,7 +321,7 @@
   "grup": "mur",
   "estat": null,
   "niv": 3,
-  "text": "Aquí és. El mur. No es negocia."
+  "text": "Aquí és, collons. El mur. No es negocia."
  },
  {
   "id": "entrada_025",
@@ -339,7 +339,7 @@
   "grup": "mur",
   "estat": null,
   "niv": 3,
-  "text": "Ja hi ets, al mur. Ara no pensis: puja."
+  "text": "Ja hi ets, al mur. Ara no pensis, hòstia: puja."
  },
  {
   "id": "entrada_027",
@@ -456,7 +456,7 @@
   "grup": "fi",
   "estat": null,
   "niv": 3,
-  "text": "Quilòmetre dur. Cap, cor i cames: tot a pujar."
+  "text": "Quilòmetre dur. Cap, cor i collons: tot a pujar."
  },
  {
   "id": "entrada_040",
@@ -564,7 +564,7 @@
   "grup": "ini",
   "estat": null,
   "niv": 1,
-  "text": "Encara és molt d'hora. Paciència."
+  "text": "Encara és d'hora. Paciència, però sense adormir-te."
  },
  {
   "id": "fase_006",
@@ -609,7 +609,7 @@
   "grup": "ini",
   "estat": null,
   "niv": 1,
-  "text": "Bon començament. Segueix així."
+  "text": "Bon començament. Ara, que no decaigui."
  },
  {
   "id": "fase_011",
@@ -771,7 +771,7 @@
   "grup": "ini",
   "estat": null,
   "niv": 1,
-  "text": "Bé. Carregant piles."
+  "text": "Carregant piles. Però corrent, eh, no passejant."
  },
  {
   "id": "fase_029",
@@ -924,7 +924,7 @@
   "grup": "mur",
   "estat": null,
   "niv": 3,
-  "text": "Dur, eh? Doncs amunt igualment."
+  "text": "Dur de collons, eh? Doncs amunt igualment."
  },
  {
   "id": "fase_046",
@@ -987,7 +987,7 @@
   "grup": "mur",
   "estat": null,
   "niv": 3,
-  "text": "Ni se t'acudeixi aturar-te ara."
+  "text": "Ni se t'acudeixi aturar-te ara, me cago en tot."
  },
  {
   "id": "fase_053",
@@ -1158,7 +1158,7 @@
   "grup": "fi",
   "estat": null,
   "niv": 3,
-  "text": "Sí que cansa. I què? Amunt."
+  "text": "Sí que cansa. I què, hòstia? Amunt."
  },
  {
   "id": "fase_072",
@@ -1248,7 +1248,7 @@
   "grup": "fi",
   "estat": null,
   "niv": 3,
-  "text": "Buida el dipòsit!"
+  "text": "Buida el dipòsit, collons!"
  },
  {
   "id": "fase_082",
@@ -1329,7 +1329,7 @@
   "grup": "fi",
   "estat": "rampa",
   "niv": 3,
-  "text": "La rampa! Cos endavant i amunt!"
+  "text": "La puta rampa! Cos endavant i amunt!"
  },
  {
   "id": "punt_004",
@@ -1509,7 +1509,7 @@
   "grup": "ini",
   "estat": "darrere",
   "niv": 1,
-  "text": "Una mica per darrere, però encara és molt d'hora. Sense pànic."
+  "text": "Una mica per darrere. Sense pànic, però no te'n refiïs: comença a apretar."
  },
  {
   "id": "gap_017",
@@ -1581,7 +1581,7 @@
   "grup": "ini",
   "estat": "molt_darrere",
   "niv": 1,
-  "text": "Molts segons perduts ja. No passa res, però a partir d'ara, apreta."
+  "text": "Molts segons perduts ja. Prou de passejar, collons: a partir d'ara, apreta."
  },
  {
   "id": "gap_025",
@@ -1590,7 +1590,7 @@
   "grup": "ini",
   "estat": "molt_darrere",
   "niv": 1,
-  "text": "Avui has sortit tou. Desperta, Àlex."
+  "text": "Avui has sortit tou. Desperta, Àlex, hòstia!"
  },
  {
   "id": "gap_026",
@@ -1770,7 +1770,7 @@
   "grup": "mur",
   "estat": "darrere",
   "niv": 2,
-  "text": "Per darrere, però a tocar. Apreta, Àlex!"
+  "text": "Per darrere, però a tocar. Apreta, hòstia!"
  },
  {
   "id": "gap_046",
@@ -1923,7 +1923,7 @@
   "grup": "fi",
   "estat": "igual",
   "niv": 3,
-  "text": "Clavat. Si apretes ara, és teu."
+  "text": "Clavat. Si apretes ara, és teu, collons!"
  },
  {
   "id": "gap_063",
@@ -1977,7 +1977,7 @@
   "grup": "fi",
   "estat": "darrere",
   "niv": 3,
-  "text": "Va, que el rècord encara és a l'abast!"
+  "text": "Va, hòstia, que el rècord encara és a l'abast!"
  },
  {
   "id": "gap_069",
@@ -2031,7 +2031,7 @@
   "grup": "fi",
   "estat": "molt_darrere",
   "niv": 3,
-  "text": "No serà el millor dia, però no és motiu per afluixar."
+  "text": "No serà el millor dia, però això no és excusa per afluixar, collons."
  },
  {
   "id": "gap_075",
@@ -2166,7 +2166,7 @@
   "grup": "ini",
   "estat": "perdent",
   "niv": 1,
-  "text": "T'estàs encantant. Torna al teu ritme."
+  "text": "T'estàs encantant, home. Torna al teu ritme."
  },
  {
   "id": "tend_015",
@@ -2211,7 +2211,7 @@
   "grup": "mur",
   "estat": "perdent",
   "niv": 2,
-  "text": "Afluixes. Ara no!"
+  "text": "Afluixes. Ara no, me cago en la mar!"
  },
  {
   "id": "tend_020",
@@ -2238,7 +2238,7 @@
   "grup": "fi",
   "estat": "perdent",
   "niv": 3,
-  "text": "Se t'escapa. Treu el que et quedi!"
+  "text": "Se t'escapa, hòstia! Treu el que et quedi!"
  },
  {
   "id": "tend_023",
@@ -2346,7 +2346,7 @@
   "grup": "ini",
   "estat": "flipant",
   "niv": 1,
-  "text": "T'estàs flipant, Àlex. Calma, que el coll és llarg."
+  "text": "T'estàs flipant, Àlex. Calma, collons, que el coll és llarg."
  },
  {
   "id": "diag_005",
@@ -2562,7 +2562,7 @@
   "grup": "ini",
   "estat": "conservador",
   "niv": 1,
-  "text": "Estàs guardant massa. Una mica més de ritme."
+  "text": "Estàs guardant massa. Mou el cul, que tens marge."
  },
  {
   "id": "diag_029",
@@ -2580,7 +2580,7 @@
   "grup": "mur",
   "estat": "conservador",
   "niv": 2,
-  "text": "Massa còmode. Puja el ritme, que el cor ho aguanta."
+  "text": "Massa còmode, collons. Puja el ritme, que el cor ho aguanta."
  },
  {
   "id": "diag_031",
@@ -2589,7 +2589,7 @@
   "grup": "mur",
   "estat": "conservador",
   "niv": 2,
-  "text": "Vas conservador. És el moment de gastar."
+  "text": "Prou de guardar, hòstia. És el moment de gastar."
  },
  {
   "id": "diag_032",
@@ -2607,7 +2607,7 @@
   "grup": "fi",
   "estat": "conservador",
   "niv": 3,
-  "text": "Has guardat massa. Ara buida-ho tot!"
+  "text": "Has guardat massa, collons! Ara buida-ho tot!"
  },
  {
   "id": "diag_034",
@@ -2724,7 +2724,7 @@
   "grup": "fi",
   "estat": "dia_dur",
   "niv": 3,
-  "text": "Costa, però acaba-ho bé!"
+  "text": "Costa de collons, però acaba-ho bé!"
  },
  {
   "id": "diag_047",
@@ -2850,7 +2850,7 @@
   "grup": "fi",
   "estat": "controlat",
   "niv": 3,
-  "text": "Ara sí, sense frens: a fons!"
+  "text": "Ara sí, sense frens: a fons, hòstia!"
  },
  {
   "id": "fc_001",
@@ -3165,7 +3165,7 @@
   "grup": null,
   "estat": 500,
   "niv": 3,
-  "text": "Cinc-cents! Això ja és teu!"
+  "text": "Cinc-cents, collons! Això ja és teu!"
  },
  {
   "id": "queden_021",
@@ -3219,7 +3219,7 @@
   "grup": null,
   "estat": 200,
   "niv": 3,
-  "text": "Dos-cents! A fons!"
+  "text": "Dos-cents, hòstia! A fons!"
  },
  {
   "id": "queden_027",
@@ -3309,7 +3309,7 @@
   "grup": null,
   "estat": 50,
   "niv": 3,
-  "text": "Cinquanta metres! A fons!"
+  "text": "Cinquanta metres! A fons, collons!"
  },
  {
   "id": "caminar_001",
@@ -3363,7 +3363,7 @@
   "grup": null,
   "estat": null,
   "niv": 2,
-  "text": "Caminant perds molt. Torna a trotar, encara que sigui curt."
+  "text": "Caminant perds molt, hòstia. Torna a trotar, encara que sigui curt."
  },
  {
   "id": "caminar_007",
@@ -3435,7 +3435,7 @@
   "grup": null,
   "estat": null,
   "niv": 2,
-  "text": "Tornem-hi? Va, que el cim no baixa."
+  "text": "Tornem-hi? Va, collons, que el cim no baixa sol."
  },
  {
   "id": "represa_001",
@@ -3498,7 +3498,7 @@
   "grup": null,
   "estat": "record_gran",
   "niv": 3,
-  "text": "Brutal! Nou rècord per molts segons!"
+  "text": "Hòstia puta, quin rècord! I per molts segons!"
  },
  {
   "id": "final_004",
@@ -3525,7 +3525,7 @@
   "grup": null,
   "estat": "record",
   "niv": 3,
-  "text": "Rècord! Pocs segons, però teus!"
+  "text": "Rècord, collons! Pocs segons, però teus!"
  },
  {
   "id": "final_007",
@@ -3795,7 +3795,7 @@
   "grup": "ini",
   "estat": null,
   "niv": 1,
-  "text": "Tranquil, que vas bé."
+  "text": "Vas bé. Però vull més que bé."
  },
  {
   "id": "motiva_005",
@@ -3831,7 +3831,7 @@
   "grup": "ini",
   "estat": null,
   "niv": 1,
-  "text": "Bona feina. Segueix."
+  "text": "Bona feina. I no t'hi acostumis, que ara ve el dur."
  },
  {
   "id": "motiva_009",
@@ -3900,28 +3900,28 @@
   "id": "motiva_016",
   "cat": "motiva",
   "fase": null,
-  "grup": "mur",
+  "grup": "ini",
   "estat": null,
-  "niv": 2,
-  "text": "Ara es veu qui ha entrenat."
+  "niv": 1,
+  "text": "Vas bé, però no et conformis."
  },
  {
   "id": "motiva_017",
   "cat": "motiva",
   "fase": null,
-  "grup": "mur",
+  "grup": "ini",
   "estat": null,
-  "niv": 2,
-  "text": "Això és el que et farà passar les físiques."
+  "niv": 1,
+  "text": "Còmode està bé. Massa còmode, no."
  },
  {
   "id": "motiva_018",
   "cat": "motiva",
   "fase": null,
-  "grup": "mur",
+  "grup": "ini",
   "estat": null,
-  "niv": 2,
-  "text": "El dolor passa. El temps queda."
+  "niv": 1,
+  "text": "Ritme ferm, cap fred."
  },
  {
   "id": "motiva_019",
@@ -3930,7 +3930,7 @@
   "grup": "mur",
   "estat": null,
   "niv": 2,
-  "text": "Aguanta. Ets més fort que aquesta pujada."
+  "text": "Ara es veu qui ha entrenat."
  },
  {
   "id": "motiva_020",
@@ -3939,7 +3939,7 @@
   "grup": "mur",
   "estat": null,
   "niv": 2,
-  "text": "No et rendeixis ara, que és quan compta."
+  "text": "Això és el que et farà passar les físiques."
  },
  {
   "id": "motiva_021",
@@ -3948,7 +3948,7 @@
   "grup": "mur",
   "estat": null,
   "niv": 2,
-  "text": "Has vingut a pujar, no a passejar."
+  "text": "El dolor passa. El temps queda."
  },
  {
   "id": "motiva_022",
@@ -3957,7 +3957,7 @@
   "grup": "mur",
   "estat": null,
   "niv": 2,
-  "text": "Cada pujada dura és un període més a la navette."
+  "text": "Aguanta. Ets més fort que aquesta pujada."
  },
  {
   "id": "motiva_023",
@@ -3966,7 +3966,7 @@
   "grup": "mur",
   "estat": null,
   "niv": 2,
-  "text": "Pensa en el dia de la prova. Puja per això."
+  "text": "No et rendeixis ara, que és quan compta."
  },
  {
   "id": "motiva_024",
@@ -3975,7 +3975,7 @@
   "grup": "mur",
   "estat": null,
   "niv": 2,
-  "text": "Es fa dur perquè ho estàs fent bé."
+  "text": "Has vingut a pujar, no a passejar."
  },
  {
   "id": "motiva_025",
@@ -3984,7 +3984,7 @@
   "grup": "mur",
   "estat": null,
   "niv": 2,
-  "text": "Amunt, Àlex! Amunt!"
+  "text": "Cada pujada dura és un període més a la navette."
  },
  {
   "id": "motiva_026",
@@ -3993,7 +3993,7 @@
   "grup": "mur",
   "estat": null,
   "niv": 2,
-  "text": "Un pas més. I un altre."
+  "text": "Pensa en el dia de la prova. Puja per això."
  },
  {
   "id": "motiva_027",
@@ -4002,7 +4002,7 @@
   "grup": "mur",
   "estat": null,
   "niv": 2,
-  "text": "Collons, que bé que ho estàs fent."
+  "text": "Es fa dur perquè ho estàs fent bé."
  },
  {
   "id": "motiva_028",
@@ -4011,7 +4011,7 @@
   "grup": "mur",
   "estat": null,
   "niv": 2,
-  "text": "El mur no sap qui ets. Ensenya-li-ho."
+  "text": "Amunt, Àlex! Amunt!"
  },
  {
   "id": "motiva_029",
@@ -4020,7 +4020,7 @@
   "grup": "mur",
   "estat": null,
   "niv": 2,
-  "text": "Això és caràcter."
+  "text": "Un pas més. I un altre."
  },
  {
   "id": "motiva_030",
@@ -4029,61 +4029,61 @@
   "grup": "mur",
   "estat": null,
   "niv": 2,
-  "text": "Cap fort, cames fortes."
+  "text": "Collons, que bé que ho estàs fent."
  },
  {
   "id": "motiva_031",
   "cat": "motiva",
   "fase": null,
-  "grup": "fi",
+  "grup": "mur",
   "estat": null,
-  "niv": 3,
-  "text": "Ja ho tens! No afluixis!"
+  "niv": 2,
+  "text": "El mur no sap qui ets. Ensenya-li-ho."
  },
  {
   "id": "motiva_032",
   "cat": "motiva",
   "fase": null,
-  "grup": "fi",
+  "grup": "mur",
   "estat": null,
-  "niv": 3,
-  "text": "Ara o mai!"
+  "niv": 2,
+  "text": "Això és caràcter, collons."
  },
  {
   "id": "motiva_033",
   "cat": "motiva",
   "fase": null,
-  "grup": "fi",
+  "grup": "mur",
   "estat": null,
-  "niv": 3,
-  "text": "Tot el que has entrenat, ara!"
+  "niv": 2,
+  "text": "Cap fort, cames fortes."
  },
  {
   "id": "motiva_034",
   "cat": "motiva",
   "fase": null,
-  "grup": "fi",
+  "grup": "mur",
   "estat": null,
-  "niv": 3,
-  "text": "No hi ha demà. Hi ha ara!"
+  "niv": 2,
+  "text": "Me cago en la pujada. Amunt igualment!"
  },
  {
   "id": "motiva_035",
   "cat": "motiva",
   "fase": null,
-  "grup": "fi",
+  "grup": "mur",
   "estat": null,
-  "niv": 3,
-  "text": "Va, que ja hi ets!"
+  "niv": 2,
+  "text": "Que li donin pel sac al cansament. Puja!"
  },
  {
   "id": "motiva_036",
   "cat": "motiva",
   "fase": null,
-  "grup": "fi",
+  "grup": "mur",
   "estat": null,
-  "niv": 3,
-  "text": "Dona-ho tot, Àlex!"
+  "niv": 2,
+  "text": "Hòstia, Àlex, que això és el mur i tu ets més dur."
  },
  {
   "id": "motiva_037",
@@ -4092,7 +4092,7 @@
   "grup": "fi",
   "estat": null,
   "niv": 3,
-  "text": "Això és teu! Amunt!"
+  "text": "Ja ho tens! No afluixis!"
  },
  {
   "id": "motiva_038",
@@ -4101,7 +4101,7 @@
   "grup": "fi",
   "estat": null,
   "niv": 3,
-  "text": "L'últim esforç és el que compta!"
+  "text": "Ara o mai!"
  },
  {
   "id": "motiva_039",
@@ -4110,7 +4110,7 @@
   "grup": "fi",
   "estat": null,
   "niv": 3,
-  "text": "Ni una passa fluixa!"
+  "text": "Tot el que has entrenat, ara!"
  },
  {
   "id": "motiva_040",
@@ -4119,7 +4119,7 @@
   "grup": "fi",
   "estat": null,
   "niv": 3,
-  "text": "Final! A fons!"
+  "text": "No hi ha demà. Hi ha ara!"
  },
  {
   "id": "motiva_041",
@@ -4128,7 +4128,7 @@
   "grup": "fi",
   "estat": null,
   "niv": 3,
-  "text": "Hòstia, quina pujada que estàs fent!"
+  "text": "Va, que ja hi ets!"
  },
  {
   "id": "motiva_042",
@@ -4137,7 +4137,7 @@
   "grup": "fi",
   "estat": null,
   "niv": 3,
-  "text": "Que quedi tot aquí dalt!"
+  "text": "Dona-ho tot, Àlex!"
  },
  {
   "id": "motiva_043",
@@ -4146,7 +4146,7 @@
   "grup": "fi",
   "estat": null,
   "niv": 3,
-  "text": "Remata-ho!"
+  "text": "Això és teu! Amunt!"
  },
  {
   "id": "motiva_044",
@@ -4155,7 +4155,7 @@
   "grup": "fi",
   "estat": null,
   "niv": 3,
-  "text": "Ara ets imparable!"
+  "text": "L'últim esforç és el que compta!"
  },
  {
   "id": "motiva_045",
@@ -4164,7 +4164,106 @@
   "grup": "fi",
   "estat": null,
   "niv": 3,
-  "text": "Fins al final, sense excuses!"
+  "text": "Ni una passa fluixa, hòstia!"
+ },
+ {
+  "id": "motiva_046",
+  "cat": "motiva",
+  "fase": null,
+  "grup": "fi",
+  "estat": null,
+  "niv": 3,
+  "text": "Final! A fons!"
+ },
+ {
+  "id": "motiva_047",
+  "cat": "motiva",
+  "fase": null,
+  "grup": "fi",
+  "estat": null,
+  "niv": 3,
+  "text": "Hòstia, quina pujada que estàs fent!"
+ },
+ {
+  "id": "motiva_048",
+  "cat": "motiva",
+  "fase": null,
+  "grup": "fi",
+  "estat": null,
+  "niv": 3,
+  "text": "Que quedi tot aquí dalt!"
+ },
+ {
+  "id": "motiva_049",
+  "cat": "motiva",
+  "fase": null,
+  "grup": "fi",
+  "estat": null,
+  "niv": 3,
+  "text": "Remata-ho!"
+ },
+ {
+  "id": "motiva_050",
+  "cat": "motiva",
+  "fase": null,
+  "grup": "fi",
+  "estat": null,
+  "niv": 3,
+  "text": "Ara ets imparable!"
+ },
+ {
+  "id": "motiva_051",
+  "cat": "motiva",
+  "fase": null,
+  "grup": "fi",
+  "estat": null,
+  "niv": 3,
+  "text": "Fins al final, sense excuses de merda!"
+ },
+ {
+  "id": "motiva_052",
+  "cat": "motiva",
+  "fase": null,
+  "grup": "fi",
+  "estat": null,
+  "niv": 3,
+  "text": "Va, collons, va, va!"
+ },
+ {
+  "id": "motiva_053",
+  "cat": "motiva",
+  "fase": null,
+  "grup": "fi",
+  "estat": null,
+  "niv": 3,
+  "text": "Amunt, me cago en tot!"
+ },
+ {
+  "id": "motiva_054",
+  "cat": "motiva",
+  "fase": null,
+  "grup": "fi",
+  "estat": null,
+  "niv": 3,
+  "text": "Que no et guanyi aquesta puta pujada!"
+ },
+ {
+  "id": "motiva_055",
+  "cat": "motiva",
+  "fase": null,
+  "grup": "fi",
+  "estat": null,
+  "niv": 3,
+  "text": "Hòstia puta, apreta!"
+ },
+ {
+  "id": "motiva_056",
+  "cat": "motiva",
+  "fase": null,
+  "grup": "fi",
+  "estat": null,
+  "niv": 3,
+  "text": "Ara, collons, ara!"
  },
  {
   "id": "sistema_001",

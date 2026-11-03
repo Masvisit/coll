@@ -61,11 +61,20 @@ button{font:inherit;cursor:pointer;-webkit-tap-highlight-color:transparent}
 .phases span.on{background:var(--acc)}
 textarea{width:100%;min-height:150px;background:#0b0d10;color:#cfd6dd;border:1px solid var(--line);border-radius:12px;padding:10px;font:12px/1.4 ui-monospace,SFMono-Regular,Menlo,monospace}
 .log{font:12px/1.4 ui-monospace,Menlo,monospace;color:var(--bad);white-space:pre-wrap;margin-top:8px}
+.alert{background:#2b2110;border:1px solid #6b4d12;color:#ffd58a;border-radius:12px;padding:10px 12px;font-size:14px;margin:4px 0 12px}
+.alert b{color:#fff}
+.q{display:grid;grid-template-columns:62px 1fr;align-items:center;gap:8px;margin-top:6px}
+.q > span{color:var(--mut);font-size:13px}
+.seg{display:grid;grid-auto-flow:column;grid-auto-columns:1fr;gap:6px}
+.seg button{min-height:42px;border-radius:11px;border:1px solid var(--line);background:var(--card2);color:var(--mut);font-size:13px;line-height:1.15;padding:5px}
+.seg button.sel.good{background:#173a2b;color:var(--ok);border-color:#2f7a57}
+.seg button.sel.bad{background:#3a1c1c;color:var(--bad);border-color:#7a3434}
+.auto{font:12px/1.4 ui-monospace,Menlo,monospace;color:var(--mut);margin:2px 0 4px;min-height:1em}
 </style>
 </head>
 <body>
 <h1>Coll <span>·</span> prova</h1>
-<p class="sub">Comprova al teu iPhone les quatre peces que fan falta per a l'entrenador.</p>
+<p class="sub">Versió 2 · Comprova al teu iPhone les quatre peces que fan falta per a l'entrenador.</p>
 <div class="chips" id="chips"></div>
 
 <section class="card">
@@ -79,12 +88,14 @@ textarea{width:100%;min-height:150px;background:#0b0d10;color:#cfd6dd;border:1px
 
 <section class="card" id="audio">
   <h2><span class="num">1</span>Veu sobre Spotify</h2>
-  <p class="hint">Prova cada botó amb la música sonant i marca què ha passat. Volem que <b>Spotify no s'aturi</b> i que la veu s'entengui.</p>
+  <div class="alert"><b>Mode silenci desactivat</b>, comprova-ho bé: amb el mode silenci, l'iPhone apaga aquest tipus d'àudio sense avisar. Interruptor del lateral sense la marca taronja (o, si tens botó d'Acció, la campana sense ratllar) i volum de l'iPhone a mitges.</div>
+  <p class="hint">Fes A, B i C amb <b>Spotify sonant</b> i marca què passa amb la veu i amb la música. La D, al final.</p>
 
   <div class="test" data-test="A">
     <p class="t">A · Veu gravada</p>
     <p class="d">So d'avís + frase en fitxer (veu de prova robòtica; la definitiva serà millor).</p>
     <button class="btn" id="playA">Reproduir A</button>
+    <p class="auto" id="autoA"></p>
     <div class="res"></div>
   </div>
 
@@ -92,6 +103,7 @@ textarea{width:100%;min-height:150px;background:#0b0d10;color:#cfd6dd;border:1px
     <p class="t">B · Veu de l'iPhone</p>
     <p class="d">La veu catalana del sistema llegeix la frase (permetria dir números en directe).</p>
     <button class="btn" id="playB">Reproduir B</button>
+    <p class="auto" id="autoB"></p>
     <div class="res"></div>
   </div>
 
@@ -99,6 +111,15 @@ textarea{width:100%;min-height:150px;background:#0b0d10;color:#cfd6dd;border:1px
     <p class="t">C · Reproductor clàssic</p>
     <p class="d">El mateix fitxer amb un altre sistema de reproducció, per comparar.</p>
     <button class="btn" id="playC">Reproduir C</button>
+    <p class="auto" id="autoC"></p>
+    <div class="res"></div>
+  </div>
+
+  <div class="test" data-test="D">
+    <p class="t">D · Diagnòstic</p>
+    <p class="d">Mode reproductor: <b>aturarà Spotify</b>, però sona encara que hi hagi el mode silenci. Si D se sent i A no, el culpable és el mode silenci. Després torna a posar Spotify.</p>
+    <button class="btn sec" id="playD">Reproduir D</button>
+    <p class="auto" id="autoD"></p>
     <div class="res"></div>
   </div>
   <p class="status" id="audioStatus"></p>
@@ -152,13 +173,17 @@ const FRASE_TXT = "Vas bé. Portes cinc segons d'avantatge sobre el teu millor r
 
 const $ = id => document.getElementById(id);
 const state = {
-  results: {A:null, B:null, C:null},
+  results: {A:{voice:null, spot:null}, B:{voice:null, spot:null}, C:{voice:null, spot:null}, D:{voice:null}},
+  auto: {A:'no provat', B:'no provat', C:'no provat', D:'no provat'}, asLog: [],
   audioSession: null, voices: [],
-  hr: {name:null, n:0, first:null, last:null, min:null, max:null, disc:0, err:null, val:null},
+  hr: {name:null, n:0, first:null, last:null, min:null, max:null, disc:0, err:null, val:null, steps:[]},
   gps: {n:0, first:null, last:null, accSum:0, accBest:null, err:null, lastFix:null, proj:null, intervals:[]},
   wake: 'no provat', errors: []
 };
-const LBL = { ok: 'sona per sobre', pausa: 'ATURA Spotify', nosent: 'no se sent', null: 'no provat' };
+const LBL = {
+  voice: { si: 'SÍ se sent', no: 'NO se sent', null: '?' },
+  spot: { continua: 'continua', atura: 'S\'ATURA', nosonava: 'no sonava', null: '?' }
+};
 window.addEventListener('error', e => logErr(e.message + (e.lineno ? ' (l.' + e.lineno + ')' : '')));
 window.addEventListener('unhandledrejection', e => logErr(String(e.reason && e.reason.message || e.reason)));
 function logErr(m){ state.errors.push(m); $('log').textContent = state.errors.slice(-6).join('\n'); report(); }
@@ -186,11 +211,18 @@ if (support.tts){ loadVoices(); speechSynthesis.addEventListener && speechSynthe
 chips();
 
 /* ---------- 1 · àudio ---------- */
-function setAmbient(){
+const asState = () => support.as ? navigator.audioSession.type + '/' + navigator.audioSession.state : 'sense API';
+function setType(t){
   if (!support.as) { state.audioSession = 'no disponible'; return; }
-  try { navigator.audioSession.type = 'ambient'; state.audioSession = navigator.audioSession.type; }
+  try { navigator.audioSession.type = t; state.audioSession = asState(); }
   catch(e){ state.audioSession = 'error: ' + e.message; }
 }
+if (support.as){
+  try { navigator.audioSession.addEventListener('statechange', () => {
+    state.asLog.push(asState()); if (state.asLog.length > 8) state.asLog.shift(); report(); }); } catch(e){}
+}
+function auto(k, t){ state.auto[k] = t; $('auto' + k).textContent = t; report(); }
+const secs = t0 => ((performance.now() - t0)/1000).toFixed(1) + ' s';
 function b64ToBuf(b64){ const s = atob(b64); const u = new Uint8Array(s.length); for (let i=0;i<s.length;i++) u[i]=s.charCodeAt(i); return u.buffer; }
 let ctx = null, bufs = null;
 async function getCtx(){
@@ -205,42 +237,65 @@ async function getCtx(){
 function playBuf(buf, when){ const s = ctx.createBufferSource(); s.buffer = buf; s.connect(ctx.destination); s.start(when); return when + buf.duration; }
 function aStatus(t, cls){ const el = $('audioStatus'); el.textContent = t; el.className = 'status ' + (cls||''); }
 
-$('playA').onclick = async () => {
-  setAmbient(); askWake();
-  try { await getCtx(); const t0 = ctx.currentTime + 0.05; const t1 = playBuf(bufs.chime, t0); playBuf(bufs.frase, t1 + 0.1);
-    aStatus('A: reproduint (sessió d\'àudio: ' + state.audioSession + ')'); }
-  catch(e){ aStatus('A ha fallat: ' + e.message, 'bad'); logErr('A: ' + e.message); }
-};
+async function playWA(k){
+  try {
+    await getCtx();
+    const t1 = playBuf(bufs.chime, ctx.currentTime + 0.05);
+    const src = ctx.createBufferSource(); src.buffer = bufs.frase; src.connect(ctx.destination);
+    const t0 = performance.now();
+    src.onended = () => auto(k, 'acabat ✓ ' + secs(t0) + ' · context ' + ctx.state + ' · sessió ' + asState());
+    src.start(t1 + 0.1);
+    auto(k, 'reproduint… context ' + ctx.state + ' · sessió ' + asState());
+  } catch(e){ auto(k, 'ERROR: ' + e.message); logErr(k + ': ' + e.message); }
+}
+$('playA').onclick = () => { setType('ambient'); askWake(); playWA('A'); };
+$('playD').onclick = () => { setType('playback'); askWake(); playWA('D'); };
 $('playB').onclick = () => {
-  setAmbient(); askWake();
-  if (!support.tts){ aStatus('B: aquest navegador no té veu del sistema', 'bad'); return; }
+  setType('ambient'); askWake();
+  if (!support.tts){ auto('B', 'ERROR: aquest navegador no té veu del sistema'); return; }
   try {
     speechSynthesis.cancel();
     const u = new SpeechSynthesisUtterance(FRASE_TXT);
     const ca = state.voices.filter(v => /^ca/i.test(v.lang));
     if (ca.length){ u.voice = ca.find(v => /enhanced|premium|millorada/i.test(v.name)) || ca[0]; }
     u.lang = 'ca-ES'; u.rate = 1; u.volume = 1;
-    u.onerror = e => aStatus('B error: ' + (e.error || 'desconegut'), 'bad');
+    const t0 = performance.now(); let started = false;
+    u.onstart = () => { started = true; auto('B', 'parlant… veu ' + (u.voice ? u.voice.name : 'per defecte') + ' · sessió ' + asState()); };
+    u.onend = () => auto('B', 'acabat ✓ ' + secs(t0) + ' · veu ' + (u.voice ? u.voice.name : 'per defecte') + ' · sessió ' + asState());
+    u.onerror = e => auto('B', 'ERROR: ' + (e.error || 'desconegut'));
     speechSynthesis.speak(u);
-    aStatus('B: reproduint' + (u.voice ? ' amb la veu ' + u.voice.name : ' (no hi ha veu catalana instal·lada)'), u.voice ? '' : 'warn');
-  } catch(e){ aStatus('B ha fallat: ' + e.message, 'bad'); logErr('B: ' + e.message); }
+    auto('B', 'enviat a la veu…');
+    setTimeout(() => { if (!started) auto('B', 'no ha començat a parlar en 3 s · sessió ' + asState()); }, 3000);
+  } catch(e){ auto('B', 'ERROR: ' + e.message); logErr('B: ' + e.message); }
 };
-let elA = null;
+let elA = null, elT0 = 0;
 $('playC').onclick = async () => {
-  setAmbient(); askWake();
+  setType('ambient'); askWake();
   try {
-    if (!elA){ elA = new Audio('data:audio/mpeg;base64,' + FRASE_B64); elA.preload = 'auto'; }
-    elA.currentTime = 0; await elA.play(); aStatus('C: reproduint');
-  } catch(e){ aStatus('C ha fallat: ' + e.message, 'bad'); logErr('C: ' + e.message); }
+    if (!elA){
+      elA = new Audio('data:audio/mpeg;base64,' + FRASE_B64); elA.preload = 'auto';
+      elA.addEventListener('playing', () => auto('C', 'reproduint… sessió ' + asState()));
+      elA.addEventListener('ended', () => auto('C', 'acabat ✓ ' + secs(elT0) + ' · sessió ' + asState()));
+      elA.addEventListener('pause', () => { if (!elA.ended) auto('C', 'PAUSAT pel sistema al ' + elA.currentTime.toFixed(1) + ' s · sessió ' + asState()); });
+      elA.addEventListener('error', () => auto('C', 'ERROR de reproducció'));
+    }
+    elT0 = performance.now(); elA.currentTime = 0; await elA.play();
+  } catch(e){ auto('C', 'ERROR: ' + e.message); logErr('C: ' + e.message); }
 };
-const OPTS = [['ok','✓ Sona per sobre','good'], ['pausa','Ha aturat Spotify','bad'], ['nosent','No s\'ha sentit','bad']];
+const QS = {
+  voice: ['Veu', [['si', 'S\'ha sentit', 'good'], ['no', 'No s\'ha sentit', 'bad']]],
+  spot: ['Spotify', [['continua', 'Continua', 'good'], ['atura', 'S\'atura', 'bad'], ['nosonava', 'No sonava', 'bad']]]
+};
 document.querySelectorAll('.test').forEach(box => {
   const k = box.dataset.test, res = box.querySelector('.res');
-  res.innerHTML = OPTS.map(([v, l, c]) => `<button data-v="${v}" data-c="${c}">${l}</button>`).join('');
-  res.querySelectorAll('button').forEach(b => b.onclick = () => {
-    res.querySelectorAll('button').forEach(x => x.classList.remove('sel','good','bad'));
-    b.classList.add('sel', b.dataset.c); state.results[k] = b.dataset.v; report();
-  });
+  res.className = '';
+  res.innerHTML = Object.keys(state.results[k]).map(q =>
+    `<div class="q"><span>${QS[q][0]}</span><div class="seg" data-q="${q}">` +
+    QS[q][1].map(([v, l, c]) => `<button data-v="${v}" data-c="${c}">${l}</button>`).join('') + `</div></div>`).join('');
+  res.querySelectorAll('.seg').forEach(seg => seg.querySelectorAll('button').forEach(b => b.onclick = () => {
+    seg.querySelectorAll('button').forEach(x => x.classList.remove('sel', 'good', 'bad'));
+    b.classList.add('sel', b.dataset.c); state.results[k][seg.dataset.q] = b.dataset.v; report();
+  }));
 });
 
 /* ---------- 2 · pulsòmetre ---------- */
@@ -252,26 +307,28 @@ async function hrConnect(any){
   try {
     const opts = any ? { acceptAllDevices: true, optionalServices: ['heart_rate'] }
                      : { filters: [{ services: ['heart_rate'] }] };
+    hrStep('buscant (' + (any ? 'qualsevol' : 'filtre FC') + ')');
     hrDev = await navigator.bluetooth.requestDevice(opts);
-    state.hr.name = hrDev.name || '(sense nom)';
+    state.hr.name = hrDev.name || '(sense nom)'; hrStep('triat ' + state.hr.name);
     hrDev.addEventListener('gattserverdisconnected', hrDisconnected);
     await hrSubscribe();
-  } catch(e){ hrStatus('No s\'ha connectat: ' + e.message, 'bad'); state.hr.err = e.message; report(); }
+  } catch(e){ hrStatus('No s\'ha connectat: ' + e.message, 'bad'); state.hr.err = e.message; hrStep('ERROR ' + e.message); }
 }
+function hrStep(s){ state.hr.steps.push(s); if (state.hr.steps.length > 12) state.hr.steps.shift(); report(); }
 async function hrSubscribe(){
   hrStatus('Connectant amb ' + state.hr.name + '…', 'warn');
-  const server = await hrDev.gatt.connect();
-  const svc = await server.getPrimaryService('heart_rate');
+  const server = await hrDev.gatt.connect(); hrStep('connectat');
+  const svc = await server.getPrimaryService('heart_rate'); hrStep('servei FC');
   const ch = await svc.getCharacteristic('heart_rate_measurement');
   ch.addEventListener('characteristicvaluechanged', onHR);
-  await ch.startNotifications();
+  await ch.startNotifications(); hrStep('notificacions actives');
   hrRetry = 0; hrStatus('Connectat a ' + state.hr.name, 'ok'); state.hr.err = null; report();
 }
 function onHR(e){
   const v = e.target.value, flags = v.getUint8(0);
   const bpm = (flags & 1) ? v.getUint16(1, true) : v.getUint8(1);
   const h = state.hr, now = Date.now();
-  h.n++; if (!h.first) h.first = now; h.last = now; h.val = bpm;
+  h.n++; if (!h.first){ h.first = now; hrStep('primera lectura ' + bpm); } h.last = now; h.val = bpm;
   if (bpm > 0){ h.min = h.min == null ? bpm : Math.min(h.min, bpm); h.max = h.max == null ? bpm : Math.max(h.max, bpm); }
   $('hrVal').innerHTML = bpm + '<small>ppm</small>';
   hrKv();
@@ -380,16 +437,17 @@ function report(){
   const ca = state.voices.filter(v => /^ca/i.test(v.lang)).map(v => v.name + ' (' + v.lang + ')');
   const iv = g.intervals.length ? (g.intervals.reduce((a,b)=>a+b,0)/g.intervals.length).toFixed(1) : '—';
   const lines = [
-    'PROVA COLL · ' + new Date().toLocaleString('ca-ES'),
+    'PROVA COLL v2 · ' + new Date().toLocaleString('ca-ES'),
     'Navegador: ' + navigator.userAgent,
     'Suport: bluetooth=' + support.bt + ' audioSession=' + support.as + ' wakeLock=' + support.wl + ' geo=' + support.geo + ' tts=' + support.tts,
-    'Sessió d\'àudio: ' + (state.audioSession || 'no tocada'),
+    'Sessió d\'àudio: ' + (state.audioSession || 'no tocada') + (state.asLog.length ? ' · canvis: ' + state.asLog.join(' → ') : ''),
     'Veus catalanes: ' + (ca.length ? ca.join(', ') : 'cap') + ' (total veus: ' + state.voices.length + ')',
-    'Àudio A (fitxer, Web Audio): ' + LBL[state.results.A],
-    'Àudio B (veu iPhone): ' + LBL[state.results.B],
-    'Àudio C (reproductor clàssic): ' + LBL[state.results.C],
-    'FC: ' + (h.n ? h.name + ', ' + h.n + ' lectures, cada ' + (h.n > 1 ? ((h.last-h.first)/1000/(h.n-1)).toFixed(1) : '—') + ' s, ' + h.min + '-' + h.max + ' ppm, desconnexions ' + h.disc : 'sense dades') + (h.err ? ' · error: ' + h.err : ''),
-    'GPS: ' + (g.n ? g.n + ' posicions, cada ' + iv + ' s, precisió mitjana ' + Math.round(g.accSum/g.n) + ' m, millor ' + Math.round(g.accBest) + ' m' + (g.proj ? ', a ' + Math.round(g.proj.off) + ' m del traçat (metre ' + Math.round(g.proj.s) + ')' : '') : 'sense dades') + (g.err ? ' · error: ' + g.err : ''),
+    ...['A', 'B', 'C', 'D'].map(k => {
+      const r = state.results[k], nm = { A: 'fitxer, Web Audio', B: 'veu iPhone', C: 'reproductor clàssic', D: 'diagnòstic, mode reproductor' }[k];
+      return 'Àudio ' + k + ' (' + nm + '): veu ' + LBL.voice[r.voice] + ('spot' in r ? ', Spotify ' + LBL.spot[r.spot] : '') + ' · ' + state.auto[k];
+    }),
+    'FC: ' + (h.n ? h.name + ', ' + h.n + ' lectures, cada ' + (h.n > 1 ? ((h.last-h.first)/1000/(h.n-1)).toFixed(1) : '—') + ' s, ' + h.min + '-' + h.max + ' ppm, desconnexions ' + h.disc : 'sense lectures') + (h.steps.length ? ' · passos: ' + h.steps.join(' → ') : (h.err ? ' · error: ' + h.err : ' · no provat')),
+    'GPS: ' + (g.n ? g.n + ' posicions en ' + Math.round((g.last - g.first)/1000) + ' s, cada ' + iv + ' s, precisió mitjana ' + Math.round(g.accSum/g.n) + ' m, millor ' + Math.round(g.accBest) + ' m' + (g.proj ? ', a ' + Math.round(g.proj.off) + ' m del traçat (metre ' + Math.round(g.proj.s) + ')' : '') : 'sense dades') + (g.err ? ' · error: ' + g.err : ''),
     'Pantalla: ' + state.wake,
     'Errors: ' + (state.errors.length ? state.errors.slice(-5).join(' | ') : 'cap')
   ];

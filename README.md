@@ -9,6 +9,8 @@ Entrenador a l'orella per a la pujada del coll: GPS, comparació amb registres a
 - `src/template.html` — codi de la pàgina
 - `src/build.py` — genera `index.html`: `python3 src/build.py`
 - `src/assets/` — àudios de prova
+- `frases.html` — revisió de les frases de l'entrenador → https://masvisit.github.io/coll/frases.html
+- `src/frases.py` — banc de frases (genera `data/frases.json`: `python3 src/frases.py`)
 - `data/perfil_coll.json` — ruta de la pujada (cada 5 m), perfil d'altitud (cada 10 m), 8 fases i temps dels registres del 30/10 i 03/11
 
 ## La pujada
@@ -24,3 +26,8 @@ Entrenador a l'orella per a la pujada del coll: GPS, comparació amb registres a
 | 6 | Replà | 2,14–2,29 | 7,5 % |
 | 7 | Quilòmetre dur | 2,29–3,29 | 12,1 % |
 | 8 | Coronar | 3,29–3,46 | 4,7 % |
+
+## Frases de l'entrenador
+475 frases escrites + 524 amb números (999 àudios). Veu: Azure **ca-ES-AlbaNeural**.
+To proper a les fases 1–3, exigent a partir del mur; diu el nom de tant en tant i algun renec quan apreta.
+Etiquetes: `cat` (categoria), `fase` (1–8), `grup` (ini/mur/fi), `estat` (valor dins la categoria), `niv` (1 tranquil · 2 ferm · 3 a fons).

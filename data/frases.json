@@ -1,0 +1,9517 @@
+[
+ {
+  "id": "inici_001",
+  "cat": "inici",
+  "fase": null,
+  "grup": "ini",
+  "estat": null,
+  "niv": 1,
+  "text": "Som-hi. Comença el coll: tres quilòmetres i mig i gairebé tres-cents metres de desnivell. Paciència al principi."
+ },
+ {
+  "id": "inici_002",
+  "cat": "inici",
+  "fase": null,
+  "grup": "ini",
+  "estat": null,
+  "niv": 1,
+  "text": "Comencem. Avui la clau és no gastar ara el que necessitaràs al mur."
+ },
+ {
+  "id": "inici_003",
+  "cat": "inici",
+  "fase": null,
+  "grup": "ini",
+  "estat": null,
+  "niv": 1,
+  "text": "Rellotge en marxa. Entra a la pujada amb calma, que és llarga."
+ },
+ {
+  "id": "inici_004",
+  "cat": "inici",
+  "fase": null,
+  "grup": "ini",
+  "estat": null,
+  "niv": 1,
+  "text": "Bé, Àlex, ja hi som. Primers metres tranquils: ritme de pujada, no de cursa."
+ },
+ {
+  "id": "inici_005",
+  "cat": "inici",
+  "fase": null,
+  "grup": "ini",
+  "estat": null,
+  "niv": 1,
+  "text": "Arrenca la pujada. Recorda: el coll es guanya a partir del quilòmetre dos, no ara."
+ },
+ {
+  "id": "inici_006",
+  "cat": "inici",
+  "fase": null,
+  "grup": "ini",
+  "estat": null,
+  "niv": 1,
+  "text": "Comença el ball. Respira fons i troba el teu ritme."
+ },
+ {
+  "id": "inici_007",
+  "cat": "inici",
+  "fase": null,
+  "grup": "ini",
+  "estat": null,
+  "niv": 1,
+  "text": "Vinga, a pujar. Els primers quatre-cents metres, suaus i constants."
+ },
+ {
+  "id": "inici_008",
+  "cat": "inici",
+  "fase": null,
+  "grup": "ini",
+  "estat": null,
+  "niv": 1,
+  "text": "Som al peu del coll. Avui anem a buscar el teu millor temps, però amb cap."
+ },
+ {
+  "id": "inici_009",
+  "cat": "inici",
+  "fase": null,
+  "grup": "ini",
+  "estat": null,
+  "niv": 1,
+  "text": "Pujada en marxa. Espatlles relaxades, passes curtes, i que el ritme surti sol."
+ },
+ {
+  "id": "inici_010",
+  "cat": "inici",
+  "fase": null,
+  "grup": "ini",
+  "estat": null,
+  "niv": 1,
+  "text": "Comencem. Si surts massa fort ara, ho pagaràs al mur. Ja ho saps."
+ },
+ {
+  "id": "inici_011",
+  "cat": "inici",
+  "fase": null,
+  "grup": "ini",
+  "estat": null,
+  "niv": 1,
+  "text": "Endavant. Un sol objectiu: arribar al mur amb forces."
+ },
+ {
+  "id": "inici_012",
+  "cat": "inici",
+  "fase": null,
+  "grup": "ini",
+  "estat": null,
+  "niv": 1,
+  "text": "Ja estem. Tu corre, que jo et vaig dient com vas."
+ },
+ {
+  "id": "entrada_001",
+  "cat": "entrada",
+  "fase": 1,
+  "grup": "ini",
+  "estat": null,
+  "niv": 1,
+  "text": "Primer tram: quatre-cents metres a prop del vuit per cent. No és el moment de demostrar res."
+ },
+ {
+  "id": "entrada_002",
+  "cat": "entrada",
+  "fase": 1,
+  "grup": "ini",
+  "estat": null,
+  "niv": 1,
+  "text": "Arrencada. Pendent seriós des del principi: escurça la passa."
+ },
+ {
+  "id": "entrada_003",
+  "cat": "entrada",
+  "fase": 1,
+  "grup": "ini",
+  "estat": null,
+  "niv": 1,
+  "text": "Aquest primer tram enganya. Puja a ritme, no a orgull."
+ },
+ {
+  "id": "entrada_004",
+  "cat": "entrada",
+  "fase": 1,
+  "grup": "ini",
+  "estat": null,
+  "niv": 1,
+  "text": "Fase u: entra en calor pujant. Que les pulsacions pugin a poc a poc."
+ },
+ {
+  "id": "entrada_005",
+  "cat": "entrada",
+  "fase": 2,
+  "grup": "ini",
+  "estat": null,
+  "niv": 1,
+  "text": "Tram de ritme. Vuit-cents metres al cinc i mig per cent: aquí es troba la velocitat de creuer."
+ },
+ {
+  "id": "entrada_006",
+  "cat": "entrada",
+  "fase": 2,
+  "grup": "ini",
+  "estat": null,
+  "niv": 1,
+  "text": "Ara suavitza una mica. Aprofita per allargar lleugerament la passa i agafar ritme."
+ },
+ {
+  "id": "entrada_007",
+  "cat": "entrada",
+  "fase": 2,
+  "grup": "ini",
+  "estat": null,
+  "niv": 1,
+  "text": "Comença el tram de ritme. Constància, que aquí es guanyen segons sense patir."
+ },
+ {
+  "id": "entrada_008",
+  "cat": "entrada",
+  "fase": 2,
+  "grup": "ini",
+  "estat": null,
+  "niv": 1,
+  "text": "Pendent més amable. No t'adormis: ritme sostingut fins al respir."
+ },
+ {
+  "id": "entrada_009",
+  "cat": "entrada",
+  "fase": 2,
+  "grup": "ini",
+  "estat": null,
+  "niv": 1,
+  "text": "Fase dos. Aquí pots córrer de debò, però sense passar-te de voltes."
+ },
+ {
+  "id": "entrada_010",
+  "cat": "entrada",
+  "fase": 2,
+  "grup": "ini",
+  "estat": null,
+  "niv": 1,
+  "text": "Tram de ritme: si vas bé de cames, és el lloc per arrencar uns segons."
+ },
+ {
+  "id": "entrada_011",
+  "cat": "entrada",
+  "fase": 3,
+  "grup": "ini",
+  "estat": null,
+  "niv": 1,
+  "text": "Arriba el respir. Quatre-cents metres gairebé plans: recupera sense parar de córrer."
+ },
+ {
+  "id": "entrada_012",
+  "cat": "entrada",
+  "fase": 3,
+  "grup": "ini",
+  "estat": null,
+  "niv": 1,
+  "text": "Respir. Deixa baixar pulsacions, però mantén la cadència."
+ },
+ {
+  "id": "entrada_013",
+  "cat": "entrada",
+  "fase": 3,
+  "grup": "ini",
+  "estat": null,
+  "niv": 1,
+  "text": "Ara gairebé pla. Aprofita-ho per recuperar, que després ve el mur."
+ },
+ {
+  "id": "entrada_014",
+  "cat": "entrada",
+  "fase": 3,
+  "grup": "ini",
+  "estat": null,
+  "niv": 1,
+  "text": "Fase tres, el respir. Braços fluixos, que el cor es calmi."
+ },
+ {
+  "id": "entrada_015",
+  "cat": "entrada",
+  "fase": 3,
+  "grup": "ini",
+  "estat": null,
+  "niv": 1,
+  "text": "Respira, Àlex. Aquest tram és per carregar piles."
+ },
+ {
+  "id": "entrada_016",
+  "cat": "entrada",
+  "fase": 3,
+  "grup": "ini",
+  "estat": null,
+  "niv": 1,
+  "text": "Pla. No el malgastis: aquí recuperes, però també pots arrencar segons fàcils."
+ },
+ {
+  "id": "entrada_017",
+  "cat": "entrada",
+  "fase": 4,
+  "grup": "mur",
+  "estat": null,
+  "niv": 2,
+  "text": "S'acaba el respir. Entrada al mur: dos-cents metres a prop del deu per cent."
+ },
+ {
+  "id": "entrada_018",
+  "cat": "entrada",
+  "fase": 4,
+  "grup": "mur",
+  "estat": null,
+  "niv": 2,
+  "text": "Ara torna a picar. Passes curtes i braços actius."
+ },
+ {
+  "id": "entrada_019",
+  "cat": "entrada",
+  "fase": 4,
+  "grup": "mur",
+  "estat": null,
+  "niv": 2,
+  "text": "Entrada al mur. Prepara't, que el que ve és el tram més dret."
+ },
+ {
+  "id": "entrada_020",
+  "cat": "entrada",
+  "fase": 4,
+  "grup": "mur",
+  "estat": null,
+  "niv": 2,
+  "text": "Comença a pujar fort. Mentalitza't: ara toca treballar."
+ },
+ {
+  "id": "entrada_021",
+  "cat": "entrada",
+  "fase": 4,
+  "grup": "mur",
+  "estat": null,
+  "niv": 2,
+  "text": "Fase quatre. Aquí el cos es queixa. No l'escoltis gaire."
+ },
+ {
+  "id": "entrada_022",
+  "cat": "entrada",
+  "fase": 4,
+  "grup": "mur",
+  "estat": null,
+  "niv": 2,
+  "text": "Entrem en zona seriosa. Mirada endavant i amunt."
+ },
+ {
+  "id": "entrada_023",
+  "cat": "entrada",
+  "fase": 5,
+  "grup": "mur",
+  "estat": null,
+  "niv": 3,
+  "text": "El mur. Dos-cents setanta metres al quinze per cent. Passes curtes i amunt."
+ },
+ {
+  "id": "entrada_024",
+  "cat": "entrada",
+  "fase": 5,
+  "grup": "mur",
+  "estat": null,
+  "niv": 3,
+  "text": "Aquí és. El mur. No es negocia."
+ },
+ {
+  "id": "entrada_025",
+  "cat": "entrada",
+  "fase": 5,
+  "grup": "mur",
+  "estat": null,
+  "niv": 3,
+  "text": "Mur! Cadència alta, passes petites, braços que empenyin."
+ },
+ {
+  "id": "entrada_026",
+  "cat": "entrada",
+  "fase": 5,
+  "grup": "mur",
+  "estat": null,
+  "niv": 3,
+  "text": "Ja hi ets, al mur. Ara no pensis: puja."
+ },
+ {
+  "id": "entrada_027",
+  "cat": "entrada",
+  "fase": 5,
+  "grup": "mur",
+  "estat": null,
+  "niv": 3,
+  "text": "Quinze per cent. Inclina't endavant des dels turmells i tira amunt."
+ },
+ {
+  "id": "entrada_028",
+  "cat": "entrada",
+  "fase": 5,
+  "grup": "mur",
+  "estat": null,
+  "niv": 3,
+  "text": "El tram més dret. Si toca patir, es pateix. Amunt, collons."
+ },
+ {
+  "id": "entrada_029",
+  "cat": "entrada",
+  "fase": 6,
+  "grup": "mur",
+  "estat": null,
+  "niv": 2,
+  "text": "Replà. Cent cinquanta metres per refer-te, però sense aturar-te."
+ },
+ {
+  "id": "entrada_030",
+  "cat": "entrada",
+  "fase": 6,
+  "grup": "mur",
+  "estat": null,
+  "niv": 2,
+  "text": "Mur superat. Aprofita el replà per respirar i tornar a allargar."
+ },
+ {
+  "id": "entrada_031",
+  "cat": "entrada",
+  "fase": 6,
+  "grup": "mur",
+  "estat": null,
+  "niv": 2,
+  "text": "Replà: recupera en moviment. Encara queda un quilòmetre dur."
+ },
+ {
+  "id": "entrada_032",
+  "cat": "entrada",
+  "fase": 6,
+  "grup": "mur",
+  "estat": null,
+  "niv": 2,
+  "text": "Bé, has passat el mur. Ara refés-te sense perdre ritme."
+ },
+ {
+  "id": "entrada_033",
+  "cat": "entrada",
+  "fase": 6,
+  "grup": "mur",
+  "estat": null,
+  "niv": 2,
+  "text": "Fase sis. Respira fons tres vegades i prepara't per al quilòmetre dur."
+ },
+ {
+  "id": "entrada_034",
+  "cat": "entrada",
+  "fase": 6,
+  "grup": "mur",
+  "estat": null,
+  "niv": 2,
+  "text": "Això és un replà, no un descans. Mantén les cames vives."
+ },
+ {
+  "id": "entrada_035",
+  "cat": "entrada",
+  "fase": 7,
+  "grup": "fi",
+  "estat": null,
+  "niv": 3,
+  "text": "Comença el quilòmetre dur. Mil metres al dotze per cent. Aquí es decideix tot."
+ },
+ {
+  "id": "entrada_036",
+  "cat": "entrada",
+  "fase": 7,
+  "grup": "fi",
+  "estat": null,
+  "niv": 3,
+  "text": "Quilòmetre dur. Al principi hi ha una rampa del divuit per cent: passes curtes."
+ },
+ {
+  "id": "entrada_037",
+  "cat": "entrada",
+  "fase": 7,
+  "grup": "fi",
+  "estat": null,
+  "niv": 3,
+  "text": "Ara el tram llarg. Divideix-lo: d'aquí a cent metres, i després cent més."
+ },
+ {
+  "id": "entrada_038",
+  "cat": "entrada",
+  "fase": 7,
+  "grup": "fi",
+  "estat": null,
+  "niv": 3,
+  "text": "Fase set. Aquí és on es guanyen o es perden els segons de debò."
+ },
+ {
+  "id": "entrada_039",
+  "cat": "entrada",
+  "fase": 7,
+  "grup": "fi",
+  "estat": null,
+  "niv": 3,
+  "text": "Quilòmetre dur. Cap, cor i cames: tot a pujar."
+ },
+ {
+  "id": "entrada_040",
+  "cat": "entrada",
+  "fase": 7,
+  "grup": "fi",
+  "estat": null,
+  "niv": 3,
+  "text": "Ara ve el que entrenes. Mil metres de pujada de veritat."
+ },
+ {
+  "id": "entrada_041",
+  "cat": "entrada",
+  "fase": 8,
+  "grup": "fi",
+  "estat": null,
+  "niv": 3,
+  "text": "Últim tram! El pendent afluixa: ara és el moment de buidar-ho tot."
+ },
+ {
+  "id": "entrada_042",
+  "cat": "entrada",
+  "fase": 8,
+  "grup": "fi",
+  "estat": null,
+  "niv": 3,
+  "text": "Coronant. Cent setanta metres més suaus. Accelera!"
+ },
+ {
+  "id": "entrada_043",
+  "cat": "entrada",
+  "fase": 8,
+  "grup": "fi",
+  "estat": null,
+  "niv": 3,
+  "text": "Ja s'aplana. Allarga la passa i porta-ho fins a dalt."
+ },
+ {
+  "id": "entrada_044",
+  "cat": "entrada",
+  "fase": 8,
+  "grup": "fi",
+  "estat": null,
+  "niv": 3,
+  "text": "Fase vuit. Últims metres: res guardat a la butxaca."
+ },
+ {
+  "id": "entrada_045",
+  "cat": "entrada",
+  "fase": 8,
+  "grup": "fi",
+  "estat": null,
+  "niv": 3,
+  "text": "Corona, Àlex! Això ja és gairebé pla. A fons!"
+ },
+ {
+  "id": "entrada_046",
+  "cat": "entrada",
+  "fase": 8,
+  "grup": "fi",
+  "estat": null,
+  "niv": 3,
+  "text": "Ja hi ets. Últim esforç fins al cim."
+ },
+ {
+  "id": "fase_001",
+  "cat": "fase",
+  "fase": 1,
+  "grup": "ini",
+  "estat": null,
+  "niv": 1,
+  "text": "Passes curtes i lleugeres. Que no et costi."
+ },
+ {
+  "id": "fase_002",
+  "cat": "fase",
+  "fase": 1,
+  "grup": "ini",
+  "estat": null,
+  "niv": 1,
+  "text": "Espatlles avall i relaxades."
+ },
+ {
+  "id": "fase_003",
+  "cat": "fase",
+  "fase": 1,
+  "grup": "ini",
+  "estat": null,
+  "niv": 1,
+  "text": "Respira amb la panxa, no amb el pit."
+ },
+ {
+  "id": "fase_004",
+  "cat": "fase",
+  "fase": 1,
+  "grup": "ini",
+  "estat": null,
+  "niv": 1,
+  "text": "Troba un ritme que puguis aguantar vint-i-cinc minuts."
+ },
+ {
+  "id": "fase_005",
+  "cat": "fase",
+  "fase": 1,
+  "grup": "ini",
+  "estat": null,
+  "niv": 1,
+  "text": "Encara és molt d'hora. Paciència."
+ },
+ {
+  "id": "fase_006",
+  "cat": "fase",
+  "fase": 1,
+  "grup": "ini",
+  "estat": null,
+  "niv": 1,
+  "text": "Mira cinc metres endavant, no als peus."
+ },
+ {
+  "id": "fase_007",
+  "cat": "fase",
+  "fase": 1,
+  "grup": "ini",
+  "estat": null,
+  "niv": 1,
+  "text": "Si et sents molt bé, perfecte: guarda-ho."
+ },
+ {
+  "id": "fase_008",
+  "cat": "fase",
+  "fase": 1,
+  "grup": "ini",
+  "estat": null,
+  "niv": 1,
+  "text": "Braços al costat del cos, de davant cap enrere."
+ },
+ {
+  "id": "fase_009",
+  "cat": "fase",
+  "fase": 1,
+  "grup": "ini",
+  "estat": null,
+  "niv": 1,
+  "text": "El que estalviïs aquí, ho tindràs al mur."
+ },
+ {
+  "id": "fase_010",
+  "cat": "fase",
+  "fase": 1,
+  "grup": "ini",
+  "estat": null,
+  "niv": 1,
+  "text": "Bon començament. Segueix així."
+ },
+ {
+  "id": "fase_011",
+  "cat": "fase",
+  "fase": 2,
+  "grup": "ini",
+  "estat": null,
+  "niv": 1,
+  "text": "Busca una cadència regular, com un metrònom."
+ },
+ {
+  "id": "fase_012",
+  "cat": "fase",
+  "fase": 2,
+  "grup": "ini",
+  "estat": null,
+  "niv": 1,
+  "text": "Aquí la passa pot ser una mica més llarga."
+ },
+ {
+  "id": "fase_013",
+  "cat": "fase",
+  "fase": 2,
+  "grup": "ini",
+  "estat": null,
+  "niv": 1,
+  "text": "Constant. Cada metre igual que l'anterior."
+ },
+ {
+  "id": "fase_014",
+  "cat": "fase",
+  "fase": 2,
+  "grup": "ini",
+  "estat": null,
+  "niv": 1,
+  "text": "Respira en ritme: dues passes inspirar, dues expirar."
+ },
+ {
+  "id": "fase_015",
+  "cat": "fase",
+  "fase": 2,
+  "grup": "ini",
+  "estat": null,
+  "niv": 1,
+  "text": "Molt bé. Aquest és el teu ritme de creuer."
+ },
+ {
+  "id": "fase_016",
+  "cat": "fase",
+  "fase": 2,
+  "grup": "ini",
+  "estat": null,
+  "niv": 1,
+  "text": "No t'adormis, que en aquest tram és fàcil perdre segons."
+ },
+ {
+  "id": "fase_017",
+  "cat": "fase",
+  "fase": 2,
+  "grup": "ini",
+  "estat": null,
+  "niv": 1,
+  "text": "Relaxa la cara i les mans. Tot l'esforç, a les cames."
+ },
+ {
+  "id": "fase_018",
+  "cat": "fase",
+  "fase": 2,
+  "grup": "ini",
+  "estat": null,
+  "niv": 1,
+  "text": "Bon tram. Mantén-lo fins al respir."
+ },
+ {
+  "id": "fase_019",
+  "cat": "fase",
+  "fase": 2,
+  "grup": "ini",
+  "estat": null,
+  "niv": 1,
+  "text": "Corre alt, amb el maluc endavant."
+ },
+ {
+  "id": "fase_020",
+  "cat": "fase",
+  "fase": 2,
+  "grup": "ini",
+  "estat": null,
+  "niv": 1,
+  "text": "Encara queda molt coll. Ritme intel·ligent."
+ },
+ {
+  "id": "fase_021",
+  "cat": "fase",
+  "fase": 3,
+  "grup": "ini",
+  "estat": null,
+  "niv": 1,
+  "text": "Recupera, però sense afluixar del tot."
+ },
+ {
+  "id": "fase_022",
+  "cat": "fase",
+  "fase": 3,
+  "grup": "ini",
+  "estat": null,
+  "niv": 1,
+  "text": "Respira profund. Omple els pulmons."
+ },
+ {
+  "id": "fase_023",
+  "cat": "fase",
+  "fase": 3,
+  "grup": "ini",
+  "estat": null,
+  "niv": 1,
+  "text": "Deixa anar els braços un moment i torna a posar-los."
+ },
+ {
+  "id": "fase_024",
+  "cat": "fase",
+  "fase": 3,
+  "grup": "ini",
+  "estat": null,
+  "niv": 1,
+  "text": "Aquí les pulsacions han de baixar una mica."
+ },
+ {
+  "id": "fase_025",
+  "cat": "fase",
+  "fase": 3,
+  "grup": "ini",
+  "estat": null,
+  "niv": 1,
+  "text": "Pensa en el mur, però amb calma: estàs preparat."
+ },
+ {
+  "id": "fase_026",
+  "cat": "fase",
+  "fase": 3,
+  "grup": "ini",
+  "estat": null,
+  "niv": 1,
+  "text": "Pla vol dir recuperar, no passejar."
+ },
+ {
+  "id": "fase_027",
+  "cat": "fase",
+  "fase": 3,
+  "grup": "ini",
+  "estat": null,
+  "niv": 1,
+  "text": "Passa normal, cadència viva."
+ },
+ {
+  "id": "fase_028",
+  "cat": "fase",
+  "fase": 3,
+  "grup": "ini",
+  "estat": null,
+  "niv": 1,
+  "text": "Bé. Carregant piles."
+ },
+ {
+  "id": "fase_029",
+  "cat": "fase",
+  "fase": 3,
+  "grup": "ini",
+  "estat": null,
+  "niv": 1,
+  "text": "Agafa aire. El que ve demana oxigen."
+ },
+ {
+  "id": "fase_030",
+  "cat": "fase",
+  "fase": 3,
+  "grup": "ini",
+  "estat": null,
+  "niv": 1,
+  "text": "Aprofita: és l'últim tram fàcil d'avui."
+ },
+ {
+  "id": "fase_031",
+  "cat": "fase",
+  "fase": 4,
+  "grup": "mur",
+  "estat": null,
+  "niv": 2,
+  "text": "Escurça la passa ja, abans que el pendent t'hi obligui."
+ },
+ {
+  "id": "fase_032",
+  "cat": "fase",
+  "fase": 4,
+  "grup": "mur",
+  "estat": null,
+  "niv": 2,
+  "text": "Braços! Que t'ajudin a pujar."
+ },
+ {
+  "id": "fase_033",
+  "cat": "fase",
+  "fase": 4,
+  "grup": "mur",
+  "estat": null,
+  "niv": 2,
+  "text": "Comença a costar. És normal. Endavant."
+ },
+ {
+  "id": "fase_034",
+  "cat": "fase",
+  "fase": 4,
+  "grup": "mur",
+  "estat": null,
+  "niv": 2,
+  "text": "Mirada amunt, pit obert."
+ },
+ {
+  "id": "fase_035",
+  "cat": "fase",
+  "fase": 4,
+  "grup": "mur",
+  "estat": null,
+  "niv": 2,
+  "text": "Prepara el cap: ara vénen els metres que importen."
+ },
+ {
+  "id": "fase_036",
+  "cat": "fase",
+  "fase": 4,
+  "grup": "mur",
+  "estat": null,
+  "niv": 2,
+  "text": "Ritme ferm. No et deixis anar."
+ },
+ {
+  "id": "fase_037",
+  "cat": "fase",
+  "fase": 4,
+  "grup": "mur",
+  "estat": null,
+  "niv": 2,
+  "text": "Aquí ja es nota. Bé: vol dir que treballes."
+ },
+ {
+  "id": "fase_038",
+  "cat": "fase",
+  "fase": 4,
+  "grup": "mur",
+  "estat": null,
+  "niv": 2,
+  "text": "Puja amb els turmells, no amb l'esquena."
+ },
+ {
+  "id": "fase_039",
+  "cat": "fase",
+  "fase": 4,
+  "grup": "mur",
+  "estat": null,
+  "niv": 2,
+  "text": "Va, va, va. Constància."
+ },
+ {
+  "id": "fase_040",
+  "cat": "fase",
+  "fase": 4,
+  "grup": "mur",
+  "estat": null,
+  "niv": 2,
+  "text": "No et pengis del pendent. Ataca'l."
+ },
+ {
+  "id": "fase_041",
+  "cat": "fase",
+  "fase": 5,
+  "grup": "mur",
+  "estat": null,
+  "niv": 3,
+  "text": "Passes petites i ràpides. Com si pugessis escales."
+ },
+ {
+  "id": "fase_042",
+  "cat": "fase",
+  "fase": 5,
+  "grup": "mur",
+  "estat": null,
+  "niv": 3,
+  "text": "Empeny amb els braços!"
+ },
+ {
+  "id": "fase_043",
+  "cat": "fase",
+  "fase": 5,
+  "grup": "mur",
+  "estat": null,
+  "niv": 3,
+  "text": "No miris a dalt. Mira el metre següent."
+ },
+ {
+  "id": "fase_044",
+  "cat": "fase",
+  "fase": 5,
+  "grup": "mur",
+  "estat": null,
+  "niv": 3,
+  "text": "Aguanta. Això s'acaba, i tu no."
+ },
+ {
+  "id": "fase_045",
+  "cat": "fase",
+  "fase": 5,
+  "grup": "mur",
+  "estat": null,
+  "niv": 3,
+  "text": "Dur, eh? Doncs amunt igualment."
+ },
+ {
+  "id": "fase_046",
+  "cat": "fase",
+  "fase": 5,
+  "grup": "mur",
+  "estat": null,
+  "niv": 3,
+  "text": "Cada passa és una passa menys."
+ },
+ {
+  "id": "fase_047",
+  "cat": "fase",
+  "fase": 5,
+  "grup": "mur",
+  "estat": null,
+  "niv": 3,
+  "text": "No negociïs amb el cansament. Puja."
+ },
+ {
+  "id": "fase_048",
+  "cat": "fase",
+  "fase": 5,
+  "grup": "mur",
+  "estat": null,
+  "niv": 3,
+  "text": "Cos endavant, cames a treballar."
+ },
+ {
+  "id": "fase_049",
+  "cat": "fase",
+  "fase": 5,
+  "grup": "mur",
+  "estat": null,
+  "niv": 3,
+  "text": "Això és el mur, Àlex. I tu el puges."
+ },
+ {
+  "id": "fase_050",
+  "cat": "fase",
+  "fase": 5,
+  "grup": "mur",
+  "estat": null,
+  "niv": 3,
+  "text": "Collons, que dret. Però tu ets més dur."
+ },
+ {
+  "id": "fase_051",
+  "cat": "fase",
+  "fase": 5,
+  "grup": "mur",
+  "estat": null,
+  "niv": 3,
+  "text": "Respira fort i segueix."
+ },
+ {
+  "id": "fase_052",
+  "cat": "fase",
+  "fase": 5,
+  "grup": "mur",
+  "estat": null,
+  "niv": 3,
+  "text": "Ni se t'acudeixi aturar-te ara."
+ },
+ {
+  "id": "fase_053",
+  "cat": "fase",
+  "fase": 6,
+  "grup": "mur",
+  "estat": null,
+  "niv": 2,
+  "text": "Respira. Recupera en marxa."
+ },
+ {
+  "id": "fase_054",
+  "cat": "fase",
+  "fase": 6,
+  "grup": "mur",
+  "estat": null,
+  "niv": 2,
+  "text": "Allarga una mica la passa i deixa que les cames es descarreguin."
+ },
+ {
+  "id": "fase_055",
+  "cat": "fase",
+  "fase": 6,
+  "grup": "mur",
+  "estat": null,
+  "niv": 2,
+  "text": "Molt bé. El mur ja és història."
+ },
+ {
+  "id": "fase_056",
+  "cat": "fase",
+  "fase": 6,
+  "grup": "mur",
+  "estat": null,
+  "niv": 2,
+  "text": "Aprofita aquests metres: després no n'hi haurà."
+ },
+ {
+  "id": "fase_057",
+  "cat": "fase",
+  "fase": 6,
+  "grup": "mur",
+  "estat": null,
+  "niv": 2,
+  "text": "Torna a posar ordre: respiració, braços, cadència."
+ },
+ {
+  "id": "fase_058",
+  "cat": "fase",
+  "fase": 6,
+  "grup": "mur",
+  "estat": null,
+  "niv": 2,
+  "text": "Ja has fet el més dret. Ara, el més llarg."
+ },
+ {
+  "id": "fase_059",
+  "cat": "fase",
+  "fase": 6,
+  "grup": "mur",
+  "estat": null,
+  "niv": 2,
+  "text": "No t'hi recreïs. Cames vives."
+ },
+ {
+  "id": "fase_060",
+  "cat": "fase",
+  "fase": 6,
+  "grup": "mur",
+  "estat": null,
+  "niv": 2,
+  "text": "Bé, bé. Ara cap al quilòmetre dur."
+ },
+ {
+  "id": "fase_061",
+  "cat": "fase",
+  "fase": 6,
+  "grup": "mur",
+  "estat": null,
+  "niv": 2,
+  "text": "Treu-te la tensió de les espatlles."
+ },
+ {
+  "id": "fase_062",
+  "cat": "fase",
+  "fase": 6,
+  "grup": "mur",
+  "estat": null,
+  "niv": 2,
+  "text": "Recupera, però el rellotge no s'atura."
+ },
+ {
+  "id": "fase_063",
+  "cat": "fase",
+  "fase": 7,
+  "grup": "fi",
+  "estat": null,
+  "niv": 3,
+  "text": "Passes curtes a la rampa. Ja s'acabarà."
+ },
+ {
+  "id": "fase_064",
+  "cat": "fase",
+  "fase": 7,
+  "grup": "fi",
+  "estat": null,
+  "niv": 3,
+  "text": "D'aquí al revolt següent. Només això."
+ },
+ {
+  "id": "fase_065",
+  "cat": "fase",
+  "fase": 7,
+  "grup": "fi",
+  "estat": null,
+  "niv": 3,
+  "text": "No pensis en el cim. Pensa en els cent metres següents."
+ },
+ {
+  "id": "fase_066",
+  "cat": "fase",
+  "fase": 7,
+  "grup": "fi",
+  "estat": null,
+  "niv": 3,
+  "text": "Això és el que entrenes per a l'oposició. Demostra-ho."
+ },
+ {
+  "id": "fase_067",
+  "cat": "fase",
+  "fase": 7,
+  "grup": "fi",
+  "estat": null,
+  "niv": 3,
+  "text": "Braços i cadència. Que la passa no s'arrossegui."
+ },
+ {
+  "id": "fase_068",
+  "cat": "fase",
+  "fase": 7,
+  "grup": "fi",
+  "estat": null,
+  "niv": 3,
+  "text": "Dur no vol dir lent. Mantén el ritme."
+ },
+ {
+  "id": "fase_069",
+  "cat": "fase",
+  "fase": 7,
+  "grup": "fi",
+  "estat": null,
+  "niv": 3,
+  "text": "Cos endavant, mirada al terra de davant."
+ },
+ {
+  "id": "fase_070",
+  "cat": "fase",
+  "fase": 7,
+  "grup": "fi",
+  "estat": null,
+  "niv": 3,
+  "text": "Ara és quan els altres afluixen. Tu no."
+ },
+ {
+  "id": "fase_071",
+  "cat": "fase",
+  "fase": 7,
+  "grup": "fi",
+  "estat": null,
+  "niv": 3,
+  "text": "Sí que cansa. I què? Amunt."
+ },
+ {
+  "id": "fase_072",
+  "cat": "fase",
+  "fase": 7,
+  "grup": "fi",
+  "estat": null,
+  "niv": 3,
+  "text": "Cada metre que puges aquí és un segon que guanyes a dalt."
+ },
+ {
+  "id": "fase_073",
+  "cat": "fase",
+  "fase": 7,
+  "grup": "fi",
+  "estat": null,
+  "niv": 3,
+  "text": "Hòstia, que dur. Va, que tu pots amb això."
+ },
+ {
+  "id": "fase_074",
+  "cat": "fase",
+  "fase": 7,
+  "grup": "fi",
+  "estat": null,
+  "niv": 3,
+  "text": "Constància. No et cal anar més ràpid, et cal no afluixar."
+ },
+ {
+  "id": "fase_075",
+  "cat": "fase",
+  "fase": 7,
+  "grup": "fi",
+  "estat": null,
+  "niv": 3,
+  "text": "Respira fort i empeny."
+ },
+ {
+  "id": "fase_076",
+  "cat": "fase",
+  "fase": 7,
+  "grup": "fi",
+  "estat": null,
+  "niv": 3,
+  "text": "Això ja ho has fet abans. Ho tornaràs a fer."
+ },
+ {
+  "id": "fase_077",
+  "cat": "fase",
+  "fase": 7,
+  "grup": "fi",
+  "estat": null,
+  "niv": 3,
+  "text": "Cames de ferro, Àlex. Amunt."
+ },
+ {
+  "id": "fase_078",
+  "cat": "fase",
+  "fase": 8,
+  "grup": "fi",
+  "estat": null,
+  "niv": 3,
+  "text": "Allarga la passa! Ja és pla."
+ },
+ {
+  "id": "fase_079",
+  "cat": "fase",
+  "fase": 8,
+  "grup": "fi",
+  "estat": null,
+  "niv": 3,
+  "text": "Ara accelera. Tot el que quedi, fora."
+ },
+ {
+  "id": "fase_080",
+  "cat": "fase",
+  "fase": 8,
+  "grup": "fi",
+  "estat": null,
+  "niv": 3,
+  "text": "Ja el veus. A fons!"
+ },
+ {
+  "id": "fase_081",
+  "cat": "fase",
+  "fase": 8,
+  "grup": "fi",
+  "estat": null,
+  "niv": 3,
+  "text": "Buida el dipòsit!"
+ },
+ {
+  "id": "fase_082",
+  "cat": "fase",
+  "fase": 8,
+  "grup": "fi",
+  "estat": null,
+  "niv": 3,
+  "text": "No t'aturis abans d'hora. Fins al cim!"
+ },
+ {
+  "id": "fase_083",
+  "cat": "fase",
+  "fase": 8,
+  "grup": "fi",
+  "estat": null,
+  "niv": 3,
+  "text": "Esprint! Va, va, va!"
+ },
+ {
+  "id": "fase_084",
+  "cat": "fase",
+  "fase": 8,
+  "grup": "fi",
+  "estat": null,
+  "niv": 3,
+  "text": "Ja hi ets, collons! Amunt!"
+ },
+ {
+  "id": "fase_085",
+  "cat": "fase",
+  "fase": 8,
+  "grup": "fi",
+  "estat": null,
+  "niv": 3,
+  "text": "Res a la butxaca. Tot ara."
+ },
+ {
+  "id": "fase_086",
+  "cat": "fase",
+  "fase": 8,
+  "grup": "fi",
+  "estat": null,
+  "niv": 3,
+  "text": "Braços ràpids, cames ràpides."
+ },
+ {
+  "id": "fase_087",
+  "cat": "fase",
+  "fase": 8,
+  "grup": "fi",
+  "estat": null,
+  "niv": 3,
+  "text": "Que se senti el final!"
+ },
+ {
+  "id": "punt_001",
+  "cat": "punt",
+  "fase": 7,
+  "grup": "fi",
+  "estat": "rampa",
+  "niv": 3,
+  "text": "Rampa del divuit per cent! Passes curtes, curtíssimes!"
+ },
+ {
+  "id": "punt_002",
+  "cat": "punt",
+  "fase": 7,
+  "grup": "fi",
+  "estat": "rampa",
+  "niv": 3,
+  "text": "Aquest és el tros més dret de tot el coll. Aguanta vint segons!"
+ },
+ {
+  "id": "punt_003",
+  "cat": "punt",
+  "fase": 7,
+  "grup": "fi",
+  "estat": "rampa",
+  "niv": 3,
+  "text": "La rampa! Cos endavant i amunt!"
+ },
+ {
+  "id": "punt_004",
+  "cat": "punt",
+  "fase": 7,
+  "grup": "fi",
+  "estat": "rampa",
+  "niv": 3,
+  "text": "Divuit per cent. Això passa ràpid si no t'atures."
+ },
+ {
+  "id": "punt_005",
+  "cat": "punt",
+  "fase": 7,
+  "grup": "fi",
+  "estat": "mig_km_dur",
+  "niv": 3,
+  "text": "Meitat del quilòmetre dur. Ja en queda menys del que has fet."
+ },
+ {
+  "id": "punt_006",
+  "cat": "punt",
+  "fase": 7,
+  "grup": "fi",
+  "estat": "mig_km_dur",
+  "niv": 3,
+  "text": "Mig quilòmetre dur fet. L'altra meitat, igual de ferm."
+ },
+ {
+  "id": "punt_007",
+  "cat": "punt",
+  "fase": 7,
+  "grup": "fi",
+  "estat": "mig_km_dur",
+  "niv": 3,
+  "text": "Ja ets a la meitat del tram llarg. Ara, a acabar-lo."
+ },
+ {
+  "id": "gap_001",
+  "cat": "gap",
+  "fase": null,
+  "grup": "ini",
+  "estat": "molt_davant",
+  "niv": 1,
+  "text": "Molt per davant tan d'hora. Compte, que el mur cobra interessos."
+ },
+ {
+  "id": "gap_002",
+  "cat": "gap",
+  "fase": null,
+  "grup": "ini",
+  "estat": "molt_davant",
+  "niv": 1,
+  "text": "Massa ràpid per ser el principi. Afluixa una mica."
+ },
+ {
+  "id": "gap_003",
+  "cat": "gap",
+  "fase": null,
+  "grup": "ini",
+  "estat": "molt_davant",
+  "niv": 1,
+  "text": "Vas fortíssim. Si les cames no ho confirmen, frena ara que encara hi ets a temps."
+ },
+ {
+  "id": "gap_004",
+  "cat": "gap",
+  "fase": null,
+  "grup": "ini",
+  "estat": "molt_davant",
+  "niv": 1,
+  "text": "Bona sensació, però el coll és llarg. No te'l mengis de cop."
+ },
+ {
+  "id": "gap_005",
+  "cat": "gap",
+  "fase": null,
+  "grup": "ini",
+  "estat": "molt_davant",
+  "niv": 1,
+  "text": "Molt de marge ja. Guarda'l, no el gastis tot ara."
+ },
+ {
+  "id": "gap_006",
+  "cat": "gap",
+  "fase": null,
+  "grup": "ini",
+  "estat": "davant",
+  "niv": 1,
+  "text": "Bon marge. Mantén-lo, sense apretar més."
+ },
+ {
+  "id": "gap_007",
+  "cat": "gap",
+  "fase": null,
+  "grup": "ini",
+  "estat": "davant",
+  "niv": 1,
+  "text": "Per davant i amb el mur lluny. Bé, però amb prudència."
+ },
+ {
+  "id": "gap_008",
+  "cat": "gap",
+  "fase": null,
+  "grup": "ini",
+  "estat": "davant",
+  "niv": 1,
+  "text": "Molt bé. És un bon avantatge, a aquestes alçades."
+ },
+ {
+  "id": "gap_009",
+  "cat": "gap",
+  "fase": null,
+  "grup": "ini",
+  "estat": "davant",
+  "niv": 1,
+  "text": "Vas bé. No cal guanyar més temps aquí."
+ },
+ {
+  "id": "gap_010",
+  "cat": "gap",
+  "fase": null,
+  "grup": "ini",
+  "estat": "davant",
+  "niv": 1,
+  "text": "Bon inici. Ara, a conservar-lo."
+ },
+ {
+  "id": "gap_011",
+  "cat": "gap",
+  "fase": null,
+  "grup": "ini",
+  "estat": "igual",
+  "niv": 1,
+  "text": "Clavat al teu millor ritme. Perfecte per començar."
+ },
+ {
+  "id": "gap_012",
+  "cat": "gap",
+  "fase": null,
+  "grup": "ini",
+  "estat": "igual",
+  "niv": 1,
+  "text": "Exactament on toca. Segueix així."
+ },
+ {
+  "id": "gap_013",
+  "cat": "gap",
+  "fase": null,
+  "grup": "ini",
+  "estat": "igual",
+  "niv": 1,
+  "text": "Igualat. El que passi a partir del mur ho decidirà."
+ },
+ {
+  "id": "gap_014",
+  "cat": "gap",
+  "fase": null,
+  "grup": "ini",
+  "estat": "igual",
+  "niv": 1,
+  "text": "Bon control. Ni massa ni massa poc."
+ },
+ {
+  "id": "gap_015",
+  "cat": "gap",
+  "fase": null,
+  "grup": "ini",
+  "estat": "igual",
+  "niv": 1,
+  "text": "Al teu ritme de rècord. Tranquil i constant."
+ },
+ {
+  "id": "gap_016",
+  "cat": "gap",
+  "fase": null,
+  "grup": "ini",
+  "estat": "darrere",
+  "niv": 1,
+  "text": "Una mica per darrere, però encara és molt d'hora. Sense pànic."
+ },
+ {
+  "id": "gap_017",
+  "cat": "gap",
+  "fase": null,
+  "grup": "ini",
+  "estat": "darrere",
+  "niv": 1,
+  "text": "Uns segons de retard. Res que no es pugui recuperar més amunt."
+ },
+ {
+  "id": "gap_018",
+  "cat": "gap",
+  "fase": null,
+  "grup": "ini",
+  "estat": "darrere",
+  "niv": 1,
+  "text": "Vas una mica conservador. Si et trobes bé, pots apretar una mica."
+ },
+ {
+  "id": "gap_019",
+  "cat": "gap",
+  "fase": null,
+  "grup": "ini",
+  "estat": "darrere",
+  "niv": 1,
+  "text": "Lleugerament lent. Ajusta el ritme sense fer cap bogeria."
+ },
+ {
+  "id": "gap_020",
+  "cat": "gap",
+  "fase": null,
+  "grup": "ini",
+  "estat": "darrere",
+  "niv": 1,
+  "text": "Poc retard. Les cames responen? Doncs ves-lo retallant a poc a poc."
+ },
+ {
+  "id": "gap_021",
+  "cat": "gap",
+  "fase": null,
+  "grup": "ini",
+  "estat": "molt_darrere",
+  "niv": 1,
+  "text": "Massa lent per ser el principi. Avui cal més ritme."
+ },
+ {
+  "id": "gap_022",
+  "cat": "gap",
+  "fase": null,
+  "grup": "ini",
+  "estat": "molt_darrere",
+  "niv": 1,
+  "text": "Bastant retard. Encara hi ets a temps, però cal posar-s'hi ja."
+ },
+ {
+  "id": "gap_023",
+  "cat": "gap",
+  "fase": null,
+  "grup": "ini",
+  "estat": "molt_darrere",
+  "niv": 1,
+  "text": "Vas massa còmode. Puja una marxa."
+ },
+ {
+  "id": "gap_024",
+  "cat": "gap",
+  "fase": null,
+  "grup": "ini",
+  "estat": "molt_darrere",
+  "niv": 1,
+  "text": "Molts segons perduts ja. No passa res, però a partir d'ara, apreta."
+ },
+ {
+  "id": "gap_025",
+  "cat": "gap",
+  "fase": null,
+  "grup": "ini",
+  "estat": "molt_darrere",
+  "niv": 1,
+  "text": "Avui has sortit tou. Desperta, Àlex."
+ },
+ {
+  "id": "gap_026",
+  "cat": "gap",
+  "fase": null,
+  "grup": "mur",
+  "estat": "molt_davant",
+  "niv": 2,
+  "text": "Molt per davant al mur! Aguanta, que aquest marge val or."
+ },
+ {
+  "id": "gap_027",
+  "cat": "gap",
+  "fase": null,
+  "grup": "mur",
+  "estat": "molt_davant",
+  "niv": 2,
+  "text": "Gran avantatge. Si ara aguantes, avui fas rècord."
+ },
+ {
+  "id": "gap_028",
+  "cat": "gap",
+  "fase": null,
+  "grup": "mur",
+  "estat": "molt_davant",
+  "niv": 2,
+  "text": "Tens molt de marge. No el llencis: puja constant."
+ },
+ {
+  "id": "gap_029",
+  "cat": "gap",
+  "fase": null,
+  "grup": "mur",
+  "estat": "molt_davant",
+  "niv": 2,
+  "text": "Fantàstic. Ara només cal no rebentar."
+ },
+ {
+  "id": "gap_030",
+  "cat": "gap",
+  "fase": null,
+  "grup": "mur",
+  "estat": "molt_davant",
+  "niv": 2,
+  "text": "Molts segons a favor. Defensa'ls metre a metre."
+ },
+ {
+  "id": "gap_031",
+  "cat": "gap",
+  "fase": null,
+  "grup": "mur",
+  "estat": "davant",
+  "niv": 2,
+  "text": "Per davant. Aguanta el mur i el rècord és a prop."
+ },
+ {
+  "id": "gap_032",
+  "cat": "gap",
+  "fase": null,
+  "grup": "mur",
+  "estat": "davant",
+  "niv": 2,
+  "text": "Bon avantatge. Ara toca defensar-lo."
+ },
+ {
+  "id": "gap_033",
+  "cat": "gap",
+  "fase": null,
+  "grup": "mur",
+  "estat": "davant",
+  "niv": 2,
+  "text": "Vas per davant. Que aquests metres durs no te'l prenguin."
+ },
+ {
+  "id": "gap_034",
+  "cat": "gap",
+  "fase": null,
+  "grup": "mur",
+  "estat": "davant",
+  "niv": 2,
+  "text": "Molt bé, segueixes guanyant al rellotge. No afluixis."
+ },
+ {
+  "id": "gap_035",
+  "cat": "gap",
+  "fase": null,
+  "grup": "mur",
+  "estat": "davant",
+  "niv": 2,
+  "text": "Per davant al tram més dur. Això és molt bon senyal."
+ },
+ {
+  "id": "gap_036",
+  "cat": "gap",
+  "fase": null,
+  "grup": "mur",
+  "estat": "igual",
+  "niv": 2,
+  "text": "Igualat al mur. Aquí es decideix."
+ },
+ {
+  "id": "gap_037",
+  "cat": "gap",
+  "fase": null,
+  "grup": "mur",
+  "estat": "igual",
+  "niv": 2,
+  "text": "Clavat. Qui afluixi ara, perd. I tu no afluixes."
+ },
+ {
+  "id": "gap_038",
+  "cat": "gap",
+  "fase": null,
+  "grup": "mur",
+  "estat": "igual",
+  "niv": 2,
+  "text": "Exactament al teu millor temps. Ara cal donar una mica més."
+ },
+ {
+  "id": "gap_039",
+  "cat": "gap",
+  "fase": null,
+  "grup": "mur",
+  "estat": "igual",
+  "niv": 2,
+  "text": "Empat amb el teu rècord. Guanya'l a partir d'aquí."
+ },
+ {
+  "id": "gap_040",
+  "cat": "gap",
+  "fase": null,
+  "grup": "mur",
+  "estat": "igual",
+  "niv": 2,
+  "text": "Igualat. Un esforç petit ara són segons a dalt."
+ },
+ {
+  "id": "gap_041",
+  "cat": "gap",
+  "fase": null,
+  "grup": "mur",
+  "estat": "darrere",
+  "niv": 2,
+  "text": "Uns segons per darrere. El mur és el lloc per recuperar-los: apreta."
+ },
+ {
+  "id": "gap_042",
+  "cat": "gap",
+  "fase": null,
+  "grup": "mur",
+  "estat": "darrere",
+  "niv": 2,
+  "text": "Retard petit. Ara és quan es retalla. Va!"
+ },
+ {
+  "id": "gap_043",
+  "cat": "gap",
+  "fase": null,
+  "grup": "mur",
+  "estat": "darrere",
+  "niv": 2,
+  "text": "Vas per darrere. Passes curtes i ràpides: guanya segons ara."
+ },
+ {
+  "id": "gap_044",
+  "cat": "gap",
+  "fase": null,
+  "grup": "mur",
+  "estat": "darrere",
+  "niv": 2,
+  "text": "Uns segons tard. No et rendeixis, que el quilòmetre dur encara ha de venir."
+ },
+ {
+  "id": "gap_045",
+  "cat": "gap",
+  "fase": null,
+  "grup": "mur",
+  "estat": "darrere",
+  "niv": 2,
+  "text": "Per darrere, però a tocar. Apreta, Àlex!"
+ },
+ {
+  "id": "gap_046",
+  "cat": "gap",
+  "fase": null,
+  "grup": "mur",
+  "estat": "molt_darrere",
+  "niv": 2,
+  "text": "Molt de retard. Oblida el rècord i fes el millor mur possible."
+ },
+ {
+  "id": "gap_047",
+  "cat": "gap",
+  "fase": null,
+  "grup": "mur",
+  "estat": "molt_darrere",
+  "niv": 2,
+  "text": "Vas tard. Això no s'arregla amb paraules, s'arregla amb cames."
+ },
+ {
+  "id": "gap_048",
+  "cat": "gap",
+  "fase": null,
+  "grup": "mur",
+  "estat": "molt_darrere",
+  "niv": 2,
+  "text": "Massa segons per darrere. Treu el que tinguis, collons."
+ },
+ {
+  "id": "gap_049",
+  "cat": "gap",
+  "fase": null,
+  "grup": "mur",
+  "estat": "molt_darrere",
+  "niv": 2,
+  "text": "Avui costa. Doncs a pujar igualment, que també compta."
+ },
+ {
+  "id": "gap_050",
+  "cat": "gap",
+  "fase": null,
+  "grup": "mur",
+  "estat": "molt_darrere",
+  "niv": 2,
+  "text": "Gran retard. Concentra't a guanyar temps al quilòmetre dur."
+ },
+ {
+  "id": "gap_051",
+  "cat": "gap",
+  "fase": null,
+  "grup": "fi",
+  "estat": "molt_davant",
+  "niv": 3,
+  "text": "Molt per davant! El rècord és teu si no t'atures."
+ },
+ {
+  "id": "gap_052",
+  "cat": "gap",
+  "fase": null,
+  "grup": "fi",
+  "estat": "molt_davant",
+  "niv": 3,
+  "text": "Gran marge! Porta'l fins a dalt."
+ },
+ {
+  "id": "gap_053",
+  "cat": "gap",
+  "fase": null,
+  "grup": "fi",
+  "estat": "molt_davant",
+  "niv": 3,
+  "text": "Rècord a la butxaca. Ara, a fer-lo encara més gran!"
+ },
+ {
+  "id": "gap_054",
+  "cat": "gap",
+  "fase": null,
+  "grup": "fi",
+  "estat": "molt_davant",
+  "niv": 3,
+  "text": "Això és un dia gran. No afluixis fins al cim."
+ },
+ {
+  "id": "gap_055",
+  "cat": "gap",
+  "fase": null,
+  "grup": "fi",
+  "estat": "molt_davant",
+  "niv": 3,
+  "text": "Molts segons a favor. Remata-ho!"
+ },
+ {
+  "id": "gap_056",
+  "cat": "gap",
+  "fase": null,
+  "grup": "fi",
+  "estat": "davant",
+  "niv": 3,
+  "text": "Per davant! Aguanta i serà rècord."
+ },
+ {
+  "id": "gap_057",
+  "cat": "gap",
+  "fase": null,
+  "grup": "fi",
+  "estat": "davant",
+  "niv": 3,
+  "text": "El rècord és a prop. No el deixis escapar!"
+ },
+ {
+  "id": "gap_058",
+  "cat": "gap",
+  "fase": null,
+  "grup": "fi",
+  "estat": "davant",
+  "niv": 3,
+  "text": "Vas guanyant. Ara, a tancar-ho."
+ },
+ {
+  "id": "gap_059",
+  "cat": "gap",
+  "fase": null,
+  "grup": "fi",
+  "estat": "davant",
+  "niv": 3,
+  "text": "Bon avantatge. Defensa'l fins a dalt."
+ },
+ {
+  "id": "gap_060",
+  "cat": "gap",
+  "fase": null,
+  "grup": "fi",
+  "estat": "davant",
+  "niv": 3,
+  "text": "Per davant, Àlex! Últim esforç!"
+ },
+ {
+  "id": "gap_061",
+  "cat": "gap",
+  "fase": null,
+  "grup": "fi",
+  "estat": "igual",
+  "niv": 3,
+  "text": "Igualat amb el rècord! Cada segon que guanyis ara és rècord."
+ },
+ {
+  "id": "gap_062",
+  "cat": "gap",
+  "fase": null,
+  "grup": "fi",
+  "estat": "igual",
+  "niv": 3,
+  "text": "Clavat. Si apretes ara, és teu."
+ },
+ {
+  "id": "gap_063",
+  "cat": "gap",
+  "fase": null,
+  "grup": "fi",
+  "estat": "igual",
+  "niv": 3,
+  "text": "Empat tècnic. Guanya'l als últims metres!"
+ },
+ {
+  "id": "gap_064",
+  "cat": "gap",
+  "fase": null,
+  "grup": "fi",
+  "estat": "igual",
+  "niv": 3,
+  "text": "Exactament al teu rècord. Dona-ho tot!"
+ },
+ {
+  "id": "gap_065",
+  "cat": "gap",
+  "fase": null,
+  "grup": "fi",
+  "estat": "igual",
+  "niv": 3,
+  "text": "Tot igual. Qui té més ganes ara? Tu!"
+ },
+ {
+  "id": "gap_066",
+  "cat": "gap",
+  "fase": null,
+  "grup": "fi",
+  "estat": "darrere",
+  "niv": 3,
+  "text": "Per darrere, però a tocar. Encara hi ets a temps!"
+ },
+ {
+  "id": "gap_067",
+  "cat": "gap",
+  "fase": null,
+  "grup": "fi",
+  "estat": "darrere",
+  "niv": 3,
+  "text": "Pocs segons. Si ho dones tot, el pots caçar!"
+ },
+ {
+  "id": "gap_068",
+  "cat": "gap",
+  "fase": null,
+  "grup": "fi",
+  "estat": "darrere",
+  "niv": 3,
+  "text": "Va, que el rècord encara és a l'abast!"
+ },
+ {
+  "id": "gap_069",
+  "cat": "gap",
+  "fase": null,
+  "grup": "fi",
+  "estat": "darrere",
+  "niv": 3,
+  "text": "Retard petit. Apreta fins al final!"
+ },
+ {
+  "id": "gap_070",
+  "cat": "gap",
+  "fase": null,
+  "grup": "fi",
+  "estat": "darrere",
+  "niv": 3,
+  "text": "Uns segons. Hòstia, que es pot! Amunt!"
+ },
+ {
+  "id": "gap_071",
+  "cat": "gap",
+  "fase": null,
+  "grup": "fi",
+  "estat": "molt_darrere",
+  "niv": 3,
+  "text": "Avui no serà rècord, però el final sí que pot ser bo. Amunt!"
+ },
+ {
+  "id": "gap_072",
+  "cat": "gap",
+  "fase": null,
+  "grup": "fi",
+  "estat": "molt_darrere",
+  "niv": 3,
+  "text": "Molt de retard. Acaba fort igualment: també és entrenament."
+ },
+ {
+  "id": "gap_073",
+  "cat": "gap",
+  "fase": null,
+  "grup": "fi",
+  "estat": "molt_darrere",
+  "niv": 3,
+  "text": "Oblida el rellotge. Puja com si fos la prova de veritat."
+ },
+ {
+  "id": "gap_074",
+  "cat": "gap",
+  "fase": null,
+  "grup": "fi",
+  "estat": "molt_darrere",
+  "niv": 3,
+  "text": "No serà el millor dia, però no és motiu per afluixar."
+ },
+ {
+  "id": "gap_075",
+  "cat": "gap",
+  "fase": null,
+  "grup": "fi",
+  "estat": "molt_darrere",
+  "niv": 3,
+  "text": "Acaba-ho amb orgull. Fins a dalt a bon ritme."
+ },
+ {
+  "id": "tend_001",
+  "cat": "tend",
+  "fase": null,
+  "grup": "ini",
+  "estat": "guanyant",
+  "niv": 1,
+  "text": "Estàs retallant temps. Bé, sense forçar."
+ },
+ {
+  "id": "tend_002",
+  "cat": "tend",
+  "fase": null,
+  "grup": "ini",
+  "estat": "guanyant",
+  "niv": 1,
+  "text": "Els darrers metres has anat millor. Mantén aquest ritme."
+ },
+ {
+  "id": "tend_003",
+  "cat": "tend",
+  "fase": null,
+  "grup": "ini",
+  "estat": "guanyant",
+  "niv": 1,
+  "text": "Vas guanyant segons a poc a poc. Així."
+ },
+ {
+  "id": "tend_004",
+  "cat": "tend",
+  "fase": null,
+  "grup": "ini",
+  "estat": "guanyant",
+  "niv": 1,
+  "text": "Bona tendència. Que l'emoció no t'acceleri."
+ },
+ {
+  "id": "tend_005",
+  "cat": "tend",
+  "fase": null,
+  "grup": "mur",
+  "estat": "guanyant",
+  "niv": 2,
+  "text": "Al mur estàs guanyant temps! Segueix!"
+ },
+ {
+  "id": "tend_006",
+  "cat": "tend",
+  "fase": null,
+  "grup": "mur",
+  "estat": "guanyant",
+  "niv": 2,
+  "text": "Retallant segons al tram dur. Això és força."
+ },
+ {
+  "id": "tend_007",
+  "cat": "tend",
+  "fase": null,
+  "grup": "mur",
+  "estat": "guanyant",
+  "niv": 2,
+  "text": "Cada cop millor. No ho deixis ara."
+ },
+ {
+  "id": "tend_008",
+  "cat": "tend",
+  "fase": null,
+  "grup": "mur",
+  "estat": "guanyant",
+  "niv": 2,
+  "text": "Estàs remuntant. Molt bé, Àlex!"
+ },
+ {
+  "id": "tend_009",
+  "cat": "tend",
+  "fase": null,
+  "grup": "fi",
+  "estat": "guanyant",
+  "niv": 3,
+  "text": "Estàs volant! Segueix així fins a dalt!"
+ },
+ {
+  "id": "tend_010",
+  "cat": "tend",
+  "fase": null,
+  "grup": "fi",
+  "estat": "guanyant",
+  "niv": 3,
+  "text": "Guanyant temps al final. Així es fa!"
+ },
+ {
+  "id": "tend_011",
+  "cat": "tend",
+  "fase": null,
+  "grup": "fi",
+  "estat": "guanyant",
+  "niv": 3,
+  "text": "Els últims metres són teus. Continua!"
+ },
+ {
+  "id": "tend_012",
+  "cat": "tend",
+  "fase": null,
+  "grup": "fi",
+  "estat": "guanyant",
+  "niv": 3,
+  "text": "Remuntada en marxa. Apreta!"
+ },
+ {
+  "id": "tend_013",
+  "cat": "tend",
+  "fase": null,
+  "grup": "ini",
+  "estat": "perdent",
+  "niv": 1,
+  "text": "Has perdut uns segons en els últims metres. Revisa el ritme."
+ },
+ {
+  "id": "tend_014",
+  "cat": "tend",
+  "fase": null,
+  "grup": "ini",
+  "estat": "perdent",
+  "niv": 1,
+  "text": "T'estàs encantant. Torna al teu ritme."
+ },
+ {
+  "id": "tend_015",
+  "cat": "tend",
+  "fase": null,
+  "grup": "ini",
+  "estat": "perdent",
+  "niv": 1,
+  "text": "Vas baixant la velocitat sense adonar-te'n. Atenció."
+ },
+ {
+  "id": "tend_016",
+  "cat": "tend",
+  "fase": null,
+  "grup": "ini",
+  "estat": "perdent",
+  "niv": 1,
+  "text": "Perds una mica. Res greu, però corregeix-ho."
+ },
+ {
+  "id": "tend_017",
+  "cat": "tend",
+  "fase": null,
+  "grup": "mur",
+  "estat": "perdent",
+  "niv": 2,
+  "text": "Estàs perdent temps al mur. Passes curtes i ràpides!"
+ },
+ {
+  "id": "tend_018",
+  "cat": "tend",
+  "fase": null,
+  "grup": "mur",
+  "estat": "perdent",
+  "niv": 2,
+  "text": "Se t'escapen segons. Braços, Àlex, braços!"
+ },
+ {
+  "id": "tend_019",
+  "cat": "tend",
+  "fase": null,
+  "grup": "mur",
+  "estat": "perdent",
+  "niv": 2,
+  "text": "Afluixes. Ara no!"
+ },
+ {
+  "id": "tend_020",
+  "cat": "tend",
+  "fase": null,
+  "grup": "mur",
+  "estat": "perdent",
+  "niv": 2,
+  "text": "Perds ritme. Concentra't en la cadència."
+ },
+ {
+  "id": "tend_021",
+  "cat": "tend",
+  "fase": null,
+  "grup": "fi",
+  "estat": "perdent",
+  "niv": 3,
+  "text": "Estàs perdent temps! No afluixis ara!"
+ },
+ {
+  "id": "tend_022",
+  "cat": "tend",
+  "fase": null,
+  "grup": "fi",
+  "estat": "perdent",
+  "niv": 3,
+  "text": "Se t'escapa. Treu el que et quedi!"
+ },
+ {
+  "id": "tend_023",
+  "cat": "tend",
+  "fase": null,
+  "grup": "fi",
+  "estat": "perdent",
+  "niv": 3,
+  "text": "Ara no, collons! Amunt!"
+ },
+ {
+  "id": "tend_024",
+  "cat": "tend",
+  "fase": null,
+  "grup": "fi",
+  "estat": "perdent",
+  "niv": 3,
+  "text": "Perds segons. Últim esforç, va!"
+ },
+ {
+  "id": "tend_025",
+  "cat": "tend",
+  "fase": null,
+  "grup": null,
+  "estat": "estable",
+  "niv": 2,
+  "text": "Ritme molt regular. Així."
+ },
+ {
+  "id": "tend_026",
+  "cat": "tend",
+  "fase": null,
+  "grup": null,
+  "estat": "estable",
+  "niv": 2,
+  "text": "Constant com un rellotge. Segueix."
+ },
+ {
+  "id": "tend_027",
+  "cat": "tend",
+  "fase": null,
+  "grup": null,
+  "estat": "estable",
+  "niv": 2,
+  "text": "Estable. Això és control."
+ },
+ {
+  "id": "tend_028",
+  "cat": "tend",
+  "fase": null,
+  "grup": null,
+  "estat": "estable",
+  "niv": 2,
+  "text": "Mantens el mateix ritme. Molt bé."
+ },
+ {
+  "id": "tend_029",
+  "cat": "tend",
+  "fase": null,
+  "grup": null,
+  "estat": "estable",
+  "niv": 2,
+  "text": "Ni guanyes ni perds. Bon control."
+ },
+ {
+  "id": "tend_030",
+  "cat": "tend",
+  "fase": null,
+  "grup": null,
+  "estat": "estable",
+  "niv": 2,
+  "text": "Regularitat perfecta. Endavant."
+ },
+ {
+  "id": "diag_001",
+  "cat": "diag",
+  "fase": null,
+  "grup": "ini",
+  "estat": "flipant",
+  "niv": 1,
+  "text": "Vas ràpid i amb les pulsacions altes. Aquest ritme no l'aguantaràs. Afluixa."
+ },
+ {
+  "id": "diag_002",
+  "cat": "diag",
+  "fase": null,
+  "grup": "ini",
+  "estat": "flipant",
+  "niv": 1,
+  "text": "Massa intensitat per ser el principi. Baixa una marxa ara."
+ },
+ {
+  "id": "diag_003",
+  "cat": "diag",
+  "fase": null,
+  "grup": "ini",
+  "estat": "flipant",
+  "niv": 1,
+  "text": "Pulsacions per sobre del teu millor dia. Això es paga al mur."
+ },
+ {
+  "id": "diag_004",
+  "cat": "diag",
+  "fase": null,
+  "grup": "ini",
+  "estat": "flipant",
+  "niv": 1,
+  "text": "T'estàs flipant, Àlex. Calma, que el coll és llarg."
+ },
+ {
+  "id": "diag_005",
+  "cat": "diag",
+  "fase": null,
+  "grup": "mur",
+  "estat": "flipant",
+  "niv": 2,
+  "text": "Pulsacions molt altes. Mantén, però no apretis més."
+ },
+ {
+  "id": "diag_006",
+  "cat": "diag",
+  "fase": null,
+  "grup": "mur",
+  "estat": "flipant",
+  "niv": 2,
+  "text": "Al límit. Controla, que encara queda el quilòmetre dur."
+ },
+ {
+  "id": "diag_007",
+  "cat": "diag",
+  "fase": null,
+  "grup": "mur",
+  "estat": "flipant",
+  "niv": 2,
+  "text": "Molt alt de cor. Passes curtes i respira, no forcis més."
+ },
+ {
+  "id": "diag_008",
+  "cat": "diag",
+  "fase": null,
+  "grup": "mur",
+  "estat": "flipant",
+  "niv": 2,
+  "text": "Estàs fent el mur a tope. Bé, però el que ve és llarg."
+ },
+ {
+  "id": "diag_009",
+  "cat": "diag",
+  "fase": null,
+  "grup": "fi",
+  "estat": "flipant",
+  "niv": 3,
+  "text": "Pulsacions a tope, però ja s'acaba. Aguanta!"
+ },
+ {
+  "id": "diag_010",
+  "cat": "diag",
+  "fase": null,
+  "grup": "fi",
+  "estat": "flipant",
+  "niv": 3,
+  "text": "Vas al límit. Doncs ara és quan toca!"
+ },
+ {
+  "id": "diag_011",
+  "cat": "diag",
+  "fase": null,
+  "grup": "fi",
+  "estat": "flipant",
+  "niv": 3,
+  "text": "Cor a mil. Queda poc, aguanta!"
+ },
+ {
+  "id": "diag_012",
+  "cat": "diag",
+  "fase": null,
+  "grup": "fi",
+  "estat": "flipant",
+  "niv": 3,
+  "text": "Al límit, però és el final. Tot!"
+ },
+ {
+  "id": "diag_013",
+  "cat": "diag",
+  "fase": null,
+  "grup": "ini",
+  "estat": "dia_bo",
+  "niv": 1,
+  "text": "Més ràpid i amb les pulsacions controlades. Avui és un bon dia."
+ },
+ {
+  "id": "diag_014",
+  "cat": "diag",
+  "fase": null,
+  "grup": "ini",
+  "estat": "dia_bo",
+  "niv": 1,
+  "text": "Vas per davant sense pagar-ho de cor. Bon senyal."
+ },
+ {
+  "id": "diag_015",
+  "cat": "diag",
+  "fase": null,
+  "grup": "ini",
+  "estat": "dia_bo",
+  "niv": 1,
+  "text": "Bones cames avui. Aprofita-ho, però amb cap."
+ },
+ {
+  "id": "diag_016",
+  "cat": "diag",
+  "fase": null,
+  "grup": "ini",
+  "estat": "dia_bo",
+  "niv": 1,
+  "text": "Ritme bo i cor tranquil. Perfecte."
+ },
+ {
+  "id": "diag_017",
+  "cat": "diag",
+  "fase": null,
+  "grup": "mur",
+  "estat": "dia_bo",
+  "niv": 2,
+  "text": "Per davant i amb el cor sota control. Dia de rècord."
+ },
+ {
+  "id": "diag_018",
+  "cat": "diag",
+  "fase": null,
+  "grup": "mur",
+  "estat": "dia_bo",
+  "niv": 2,
+  "text": "Les cames responen i el cor aguanta. Segueix!"
+ },
+ {
+  "id": "diag_019",
+  "cat": "diag",
+  "fase": null,
+  "grup": "mur",
+  "estat": "dia_bo",
+  "niv": 2,
+  "text": "Avui estàs fort. Que es noti al mur!"
+ },
+ {
+  "id": "diag_020",
+  "cat": "diag",
+  "fase": null,
+  "grup": "mur",
+  "estat": "dia_bo",
+  "niv": 2,
+  "text": "Molt bé: més ràpid i amb menys pulsacions. Això és forma."
+ },
+ {
+  "id": "diag_021",
+  "cat": "diag",
+  "fase": null,
+  "grup": "fi",
+  "estat": "dia_bo",
+  "niv": 3,
+  "text": "Tens cor de sobres. Buida-ho tot!"
+ },
+ {
+  "id": "diag_022",
+  "cat": "diag",
+  "fase": null,
+  "grup": "fi",
+  "estat": "dia_bo",
+  "niv": 3,
+  "text": "Encara tens marge de pulsacions. A fons!"
+ },
+ {
+  "id": "diag_023",
+  "cat": "diag",
+  "fase": null,
+  "grup": "fi",
+  "estat": "dia_bo",
+  "niv": 3,
+  "text": "Dia gran, Àlex. Remata'l!"
+ },
+ {
+  "id": "diag_024",
+  "cat": "diag",
+  "fase": null,
+  "grup": "fi",
+  "estat": "dia_bo",
+  "niv": 3,
+  "text": "Cor tranquil al final? Doncs encara pots més!"
+ },
+ {
+  "id": "diag_025",
+  "cat": "diag",
+  "fase": null,
+  "grup": "ini",
+  "estat": "conservador",
+  "niv": 1,
+  "text": "Vas lent i amb pulsacions baixes. Tens marge: puja una mica el ritme."
+ },
+ {
+  "id": "diag_026",
+  "cat": "diag",
+  "fase": null,
+  "grup": "ini",
+  "estat": "conservador",
+  "niv": 1,
+  "text": "Massa conservador. El cor diu que pots anar més ràpid."
+ },
+ {
+  "id": "diag_027",
+  "cat": "diag",
+  "fase": null,
+  "grup": "ini",
+  "estat": "conservador",
+  "niv": 1,
+  "text": "Pulsacions baixes. Pots apretar sense por."
+ },
+ {
+  "id": "diag_028",
+  "cat": "diag",
+  "fase": null,
+  "grup": "ini",
+  "estat": "conservador",
+  "niv": 1,
+  "text": "Estàs guardant massa. Una mica més de ritme."
+ },
+ {
+  "id": "diag_029",
+  "cat": "diag",
+  "fase": null,
+  "grup": "mur",
+  "estat": "conservador",
+  "niv": 2,
+  "text": "Tens marge de pulsacions. Apreta al mur!"
+ },
+ {
+  "id": "diag_030",
+  "cat": "diag",
+  "fase": null,
+  "grup": "mur",
+  "estat": "conservador",
+  "niv": 2,
+  "text": "Massa còmode. Puja el ritme, que el cor ho aguanta."
+ },
+ {
+  "id": "diag_031",
+  "cat": "diag",
+  "fase": null,
+  "grup": "mur",
+  "estat": "conservador",
+  "niv": 2,
+  "text": "Vas conservador. És el moment de gastar."
+ },
+ {
+  "id": "diag_032",
+  "cat": "diag",
+  "fase": null,
+  "grup": "mur",
+  "estat": "conservador",
+  "niv": 2,
+  "text": "Pulsacions baixes per ser el mur. Pots més, Àlex!"
+ },
+ {
+  "id": "diag_033",
+  "cat": "diag",
+  "fase": null,
+  "grup": "fi",
+  "estat": "conservador",
+  "niv": 3,
+  "text": "Has guardat massa. Ara buida-ho tot!"
+ },
+ {
+  "id": "diag_034",
+  "cat": "diag",
+  "fase": null,
+  "grup": "fi",
+  "estat": "conservador",
+  "niv": 3,
+  "text": "Tens energia de sobres. A fons fins a dalt!"
+ },
+ {
+  "id": "diag_035",
+  "cat": "diag",
+  "fase": null,
+  "grup": "fi",
+  "estat": "conservador",
+  "niv": 3,
+  "text": "Pulsacions baixes al final? Apreta, collons!"
+ },
+ {
+  "id": "diag_036",
+  "cat": "diag",
+  "fase": null,
+  "grup": "fi",
+  "estat": "conservador",
+  "niv": 3,
+  "text": "No arribis a dalt amb forces. Gasta-les ara!"
+ },
+ {
+  "id": "diag_037",
+  "cat": "diag",
+  "fase": null,
+  "grup": "ini",
+  "estat": "dia_dur",
+  "niv": 1,
+  "text": "Avui costa: més lent i amb pulsacions altes. Gestiona, no forcis."
+ },
+ {
+  "id": "diag_038",
+  "cat": "diag",
+  "fase": null,
+  "grup": "ini",
+  "estat": "dia_dur",
+  "niv": 1,
+  "text": "Dia dur. Baixa una mica i guarda per al mur."
+ },
+ {
+  "id": "diag_039",
+  "cat": "diag",
+  "fase": null,
+  "grup": "ini",
+  "estat": "dia_dur",
+  "niv": 1,
+  "text": "El cos no respon com altres dies. Ritme prudent."
+ },
+ {
+  "id": "diag_040",
+  "cat": "diag",
+  "fase": null,
+  "grup": "ini",
+  "estat": "dia_dur",
+  "niv": 1,
+  "text": "Pulsacions altes i ritme lent. Respira i troba el teu punt."
+ },
+ {
+  "id": "diag_041",
+  "cat": "diag",
+  "fase": null,
+  "grup": "mur",
+  "estat": "dia_dur",
+  "niv": 2,
+  "text": "Dia dur. Puja al teu ritme, sense rebentar."
+ },
+ {
+  "id": "diag_042",
+  "cat": "diag",
+  "fase": null,
+  "grup": "mur",
+  "estat": "dia_dur",
+  "niv": 2,
+  "text": "Avui costa. Passes curtes i constància."
+ },
+ {
+  "id": "diag_043",
+  "cat": "diag",
+  "fase": null,
+  "grup": "mur",
+  "estat": "dia_dur",
+  "niv": 2,
+  "text": "No és el teu millor dia, però el mur es puja igual."
+ },
+ {
+  "id": "diag_044",
+  "cat": "diag",
+  "fase": null,
+  "grup": "mur",
+  "estat": "dia_dur",
+  "niv": 2,
+  "text": "Gestiona l'esforç. El rècord no és avui; l'entrenament, sí."
+ },
+ {
+  "id": "diag_045",
+  "cat": "diag",
+  "fase": null,
+  "grup": "fi",
+  "estat": "dia_dur",
+  "niv": 3,
+  "text": "Dia dur, però queda poc. Aguanta!"
+ },
+ {
+  "id": "diag_046",
+  "cat": "diag",
+  "fase": null,
+  "grup": "fi",
+  "estat": "dia_dur",
+  "niv": 3,
+  "text": "Costa, però acaba-ho bé!"
+ },
+ {
+  "id": "diag_047",
+  "cat": "diag",
+  "fase": null,
+  "grup": "fi",
+  "estat": "dia_dur",
+  "niv": 3,
+  "text": "Avui ha estat dur. Últim esforç igualment!"
+ },
+ {
+  "id": "diag_048",
+  "cat": "diag",
+  "fase": null,
+  "grup": "fi",
+  "estat": "dia_dur",
+  "niv": 3,
+  "text": "Els dies dolents també fan cames. Fins a dalt!"
+ },
+ {
+  "id": "diag_049",
+  "cat": "diag",
+  "fase": null,
+  "grup": "ini",
+  "estat": "controlat",
+  "niv": 1,
+  "text": "Ritme i pulsacions com el teu millor dia. Perfecte."
+ },
+ {
+  "id": "diag_050",
+  "cat": "diag",
+  "fase": null,
+  "grup": "ini",
+  "estat": "controlat",
+  "niv": 1,
+  "text": "Tot sota control. Segueix així."
+ },
+ {
+  "id": "diag_051",
+  "cat": "diag",
+  "fase": null,
+  "grup": "ini",
+  "estat": "controlat",
+  "niv": 1,
+  "text": "Clavat de ritme i de cor. Molt bé."
+ },
+ {
+  "id": "diag_052",
+  "cat": "diag",
+  "fase": null,
+  "grup": "ini",
+  "estat": "controlat",
+  "niv": 1,
+  "text": "Control total. Així s'arriba bé al mur."
+ },
+ {
+  "id": "diag_053",
+  "cat": "diag",
+  "fase": null,
+  "grup": "mur",
+  "estat": "controlat",
+  "niv": 2,
+  "text": "Mateix ritme i mateix cor que el dia del rècord. Ara, una mica més."
+ },
+ {
+  "id": "diag_054",
+  "cat": "diag",
+  "fase": null,
+  "grup": "mur",
+  "estat": "controlat",
+  "niv": 2,
+  "text": "Controlat. Si tens una marxa més, és el moment."
+ },
+ {
+  "id": "diag_055",
+  "cat": "diag",
+  "fase": null,
+  "grup": "mur",
+  "estat": "controlat",
+  "niv": 2,
+  "text": "Tot igual que el millor dia. Toca decidir: apretes?"
+ },
+ {
+  "id": "diag_056",
+  "cat": "diag",
+  "fase": null,
+  "grup": "mur",
+  "estat": "controlat",
+  "niv": 2,
+  "text": "Bé de cor i de ritme. Aguanta i apreta."
+ },
+ {
+  "id": "diag_057",
+  "cat": "diag",
+  "fase": null,
+  "grup": "fi",
+  "estat": "controlat",
+  "niv": 3,
+  "text": "Igual que el rècord, de ritme i de cor. Dona-ho tot!"
+ },
+ {
+  "id": "diag_058",
+  "cat": "diag",
+  "fase": null,
+  "grup": "fi",
+  "estat": "controlat",
+  "niv": 3,
+  "text": "Controlat fins aquí. Ara deixa anar el control!"
+ },
+ {
+  "id": "diag_059",
+  "cat": "diag",
+  "fase": null,
+  "grup": "fi",
+  "estat": "controlat",
+  "niv": 3,
+  "text": "Tot a punt per rematar. Va!"
+ },
+ {
+  "id": "diag_060",
+  "cat": "diag",
+  "fase": null,
+  "grup": "fi",
+  "estat": "controlat",
+  "niv": 3,
+  "text": "Ara sí, sense frens: a fons!"
+ },
+ {
+  "id": "fc_001",
+  "cat": "fc",
+  "fase": null,
+  "grup": "ini",
+  "estat": "molt_alta",
+  "niv": 1,
+  "text": "Pulsacions molt altes. Afluixa un moment i respira."
+ },
+ {
+  "id": "fc_002",
+  "cat": "fc",
+  "fase": null,
+  "grup": "ini",
+  "estat": "molt_alta",
+  "niv": 1,
+  "text": "Cor per sobre de cent vuitanta. Controla, que encara queda."
+ },
+ {
+  "id": "fc_003",
+  "cat": "fc",
+  "fase": null,
+  "grup": "ini",
+  "estat": "molt_alta",
+  "niv": 1,
+  "text": "Zona vermella. Respira fons i baixa una mica."
+ },
+ {
+  "id": "fc_004",
+  "cat": "fc",
+  "fase": null,
+  "grup": "ini",
+  "estat": "molt_alta",
+  "niv": 1,
+  "text": "Molt alt de pulsacions. Passes curtes i calma."
+ },
+ {
+  "id": "fc_005",
+  "cat": "fc",
+  "fase": null,
+  "grup": "ini",
+  "estat": "molt_alta",
+  "niv": 1,
+  "text": "Massa alt per a aquest moment. Baixa una mica el ritme."
+ },
+ {
+  "id": "fc_006",
+  "cat": "fc",
+  "fase": null,
+  "grup": "fi",
+  "estat": "molt_alta",
+  "niv": 3,
+  "text": "Zona vermella, però ja ho tens. Aguanta!"
+ },
+ {
+  "id": "fc_007",
+  "cat": "fc",
+  "fase": null,
+  "grup": "fi",
+  "estat": "molt_alta",
+  "niv": 3,
+  "text": "Cor a tope. Últims metres, aguanta!"
+ },
+ {
+  "id": "fc_008",
+  "cat": "fc",
+  "fase": null,
+  "grup": "fi",
+  "estat": "molt_alta",
+  "niv": 3,
+  "text": "Al límit. Només una mica més!"
+ },
+ {
+  "id": "fc_009",
+  "cat": "fc",
+  "fase": null,
+  "grup": null,
+  "estat": "baixa",
+  "niv": 2,
+  "text": "Pulsacions baixes per a aquest tram. Hi ha marge."
+ },
+ {
+  "id": "fc_010",
+  "cat": "fc",
+  "fase": null,
+  "grup": null,
+  "estat": "baixa",
+  "niv": 2,
+  "text": "El cor va tranquil. Pots anar més ràpid."
+ },
+ {
+  "id": "fc_011",
+  "cat": "fc",
+  "fase": null,
+  "grup": null,
+  "estat": "baixa",
+  "niv": 2,
+  "text": "Poques pulsacions. Desperta les cames."
+ },
+ {
+  "id": "fc_012",
+  "cat": "fc",
+  "fase": null,
+  "grup": null,
+  "estat": "be",
+  "niv": 2,
+  "text": "Bon control de pulsacions."
+ },
+ {
+  "id": "fc_013",
+  "cat": "fc",
+  "fase": null,
+  "grup": null,
+  "estat": "be",
+  "niv": 2,
+  "text": "Pulsacions estables. Molt bé."
+ },
+ {
+  "id": "fc_014",
+  "cat": "fc",
+  "fase": null,
+  "grup": null,
+  "estat": "be",
+  "niv": 2,
+  "text": "Cor regular. Segueix així."
+ },
+ {
+  "id": "fc_015",
+  "cat": "fc",
+  "fase": null,
+  "grup": null,
+  "estat": "be",
+  "niv": 2,
+  "text": "El cor respon bé. Endavant."
+ },
+ {
+  "id": "queden_001",
+  "cat": "queden",
+  "fase": null,
+  "grup": null,
+  "estat": 3000,
+  "niv": 1,
+  "text": "Queden tres quilòmetres. Ja estàs dins."
+ },
+ {
+  "id": "queden_002",
+  "cat": "queden",
+  "fase": null,
+  "grup": null,
+  "estat": 3000,
+  "niv": 1,
+  "text": "Tres quilòmetres per al cim. Ritme."
+ },
+ {
+  "id": "queden_003",
+  "cat": "queden",
+  "fase": null,
+  "grup": null,
+  "estat": 3000,
+  "niv": 1,
+  "text": "Primer tram fet. Queden tres quilòmetres."
+ },
+ {
+  "id": "queden_004",
+  "cat": "queden",
+  "fase": null,
+  "grup": null,
+  "estat": 3000,
+  "niv": 1,
+  "text": "Tres mil metres. Pas a pas."
+ },
+ {
+  "id": "queden_005",
+  "cat": "queden",
+  "fase": null,
+  "grup": null,
+  "estat": 2000,
+  "niv": 1,
+  "text": "Queden dos quilòmetres. I els més durs."
+ },
+ {
+  "id": "queden_006",
+  "cat": "queden",
+  "fase": null,
+  "grup": null,
+  "estat": 2000,
+  "niv": 1,
+  "text": "Dos quilòmetres per al final. Prepara't per al mur."
+ },
+ {
+  "id": "queden_007",
+  "cat": "queden",
+  "fase": null,
+  "grup": null,
+  "estat": 2000,
+  "niv": 1,
+  "text": "Dos quilòmetres. Ara comença la pujada de veritat."
+ },
+ {
+  "id": "queden_008",
+  "cat": "queden",
+  "fase": null,
+  "grup": null,
+  "estat": 2000,
+  "niv": 1,
+  "text": "Queden dos mil metres. Carrega piles ara."
+ },
+ {
+  "id": "queden_009",
+  "cat": "queden",
+  "fase": null,
+  "grup": null,
+  "estat": 1500,
+  "niv": 2,
+  "text": "Queden mil cinc-cents metres. Ets enmig del mur. Amunt!"
+ },
+ {
+  "id": "queden_010",
+  "cat": "queden",
+  "fase": null,
+  "grup": null,
+  "estat": 1500,
+  "niv": 2,
+  "text": "Mil cinc-cents per al cim. Aguanta el mur!"
+ },
+ {
+  "id": "queden_011",
+  "cat": "queden",
+  "fase": null,
+  "grup": null,
+  "estat": 1500,
+  "niv": 2,
+  "text": "Quilòmetre i mig. Cada metre compta."
+ },
+ {
+  "id": "queden_012",
+  "cat": "queden",
+  "fase": null,
+  "grup": null,
+  "estat": 1500,
+  "niv": 2,
+  "text": "Queda un quilòmetre i mig. Tu pots."
+ },
+ {
+  "id": "queden_013",
+  "cat": "queden",
+  "fase": null,
+  "grup": null,
+  "estat": 1000,
+  "niv": 2,
+  "text": "Queda un quilòmetre. El més dur, però l'últim."
+ },
+ {
+  "id": "queden_014",
+  "cat": "queden",
+  "fase": null,
+  "grup": null,
+  "estat": 1000,
+  "niv": 2,
+  "text": "Mil metres. Divideix-los en deu trams de cent."
+ },
+ {
+  "id": "queden_015",
+  "cat": "queden",
+  "fase": null,
+  "grup": null,
+  "estat": 1000,
+  "niv": 2,
+  "text": "Un quilòmetre per al cim. Comença l'últim capítol."
+ },
+ {
+  "id": "queden_016",
+  "cat": "queden",
+  "fase": null,
+  "grup": null,
+  "estat": 1000,
+  "niv": 2,
+  "text": "Últim quilòmetre, Àlex. Va per tu."
+ },
+ {
+  "id": "queden_017",
+  "cat": "queden",
+  "fase": null,
+  "grup": null,
+  "estat": 500,
+  "niv": 3,
+  "text": "Queden cinc-cents metres! Ja ho olores!"
+ },
+ {
+  "id": "queden_018",
+  "cat": "queden",
+  "fase": null,
+  "grup": null,
+  "estat": 500,
+  "niv": 3,
+  "text": "Cinc-cents metres. Ara sí, comença a apretar."
+ },
+ {
+  "id": "queden_019",
+  "cat": "queden",
+  "fase": null,
+  "grup": null,
+  "estat": 500,
+  "niv": 3,
+  "text": "Mig quilòmetre! No et guardis res!"
+ },
+ {
+  "id": "queden_020",
+  "cat": "queden",
+  "fase": null,
+  "grup": null,
+  "estat": 500,
+  "niv": 3,
+  "text": "Cinc-cents! Això ja és teu!"
+ },
+ {
+  "id": "queden_021",
+  "cat": "queden",
+  "fase": null,
+  "grup": null,
+  "estat": 300,
+  "niv": 3,
+  "text": "Tres-cents metres! Apreta!"
+ },
+ {
+  "id": "queden_022",
+  "cat": "queden",
+  "fase": null,
+  "grup": null,
+  "estat": 300,
+  "niv": 3,
+  "text": "Queden tres-cents. Tot el que tinguis!"
+ },
+ {
+  "id": "queden_023",
+  "cat": "queden",
+  "fase": null,
+  "grup": null,
+  "estat": 300,
+  "niv": 3,
+  "text": "Tres-cents metres, collons! Amunt!"
+ },
+ {
+  "id": "queden_024",
+  "cat": "queden",
+  "fase": null,
+  "grup": null,
+  "estat": 300,
+  "niv": 3,
+  "text": "Últims tres-cents. Sense mirar enrere!"
+ },
+ {
+  "id": "queden_025",
+  "cat": "queden",
+  "fase": null,
+  "grup": null,
+  "estat": 200,
+  "niv": 3,
+  "text": "Queden dos-cents metres. Ara no et guardes res!"
+ },
+ {
+  "id": "queden_026",
+  "cat": "queden",
+  "fase": null,
+  "grup": null,
+  "estat": 200,
+  "niv": 3,
+  "text": "Dos-cents! A fons!"
+ },
+ {
+  "id": "queden_027",
+  "cat": "queden",
+  "fase": null,
+  "grup": null,
+  "estat": 200,
+  "niv": 3,
+  "text": "Dos-cents metres, Àlex! Esprint!"
+ },
+ {
+  "id": "queden_028",
+  "cat": "queden",
+  "fase": null,
+  "grup": null,
+  "estat": 200,
+  "niv": 3,
+  "text": "Últims dos-cents! Va, va, va!"
+ },
+ {
+  "id": "queden_029",
+  "cat": "queden",
+  "fase": null,
+  "grup": null,
+  "estat": 100,
+  "niv": 3,
+  "text": "Cent metres! Tot!"
+ },
+ {
+  "id": "queden_030",
+  "cat": "queden",
+  "fase": null,
+  "grup": null,
+  "estat": 100,
+  "niv": 3,
+  "text": "Últims cent! Buida't!"
+ },
+ {
+  "id": "queden_031",
+  "cat": "queden",
+  "fase": null,
+  "grup": null,
+  "estat": 100,
+  "niv": 3,
+  "text": "Cent metres, hòstia! Ja hi ets!"
+ },
+ {
+  "id": "queden_032",
+  "cat": "queden",
+  "fase": null,
+  "grup": null,
+  "estat": 100,
+  "niv": 3,
+  "text": "Cent! Fins a dalt de tot!"
+ },
+ {
+  "id": "queden_033",
+  "cat": "queden",
+  "fase": null,
+  "grup": null,
+  "estat": 50,
+  "niv": 3,
+  "text": "Cinquanta! Ja és teu!"
+ },
+ {
+  "id": "queden_034",
+  "cat": "queden",
+  "fase": null,
+  "grup": null,
+  "estat": 50,
+  "niv": 3,
+  "text": "Últims metres! Ara!"
+ },
+ {
+  "id": "queden_035",
+  "cat": "queden",
+  "fase": null,
+  "grup": null,
+  "estat": 50,
+  "niv": 3,
+  "text": "Ja hi ets! Fins al final!"
+ },
+ {
+  "id": "queden_036",
+  "cat": "queden",
+  "fase": null,
+  "grup": null,
+  "estat": 50,
+  "niv": 3,
+  "text": "Cinquanta metres! A fons!"
+ },
+ {
+  "id": "caminar_001",
+  "cat": "caminar",
+  "fase": null,
+  "grup": null,
+  "estat": null,
+  "niv": 2,
+  "text": "Si has de caminar, camina fort. Braços actius."
+ },
+ {
+  "id": "caminar_002",
+  "cat": "caminar",
+  "fase": null,
+  "grup": null,
+  "estat": null,
+  "niv": 2,
+  "text": "Camina si cal, però en vint passes tornes a córrer."
+ },
+ {
+  "id": "caminar_003",
+  "cat": "caminar",
+  "fase": null,
+  "grup": null,
+  "estat": null,
+  "niv": 2,
+  "text": "Caminant també es puja. Passa llarga i ferma."
+ },
+ {
+  "id": "caminar_004",
+  "cat": "caminar",
+  "fase": null,
+  "grup": null,
+  "estat": null,
+  "niv": 2,
+  "text": "Caminar no és rendir-se. Torna a córrer quan puguis."
+ },
+ {
+  "id": "caminar_005",
+  "cat": "caminar",
+  "fase": null,
+  "grup": null,
+  "estat": null,
+  "niv": 2,
+  "text": "Recupera caminant uns segons i tornem-hi."
+ },
+ {
+  "id": "caminar_006",
+  "cat": "caminar",
+  "fase": null,
+  "grup": null,
+  "estat": null,
+  "niv": 2,
+  "text": "Caminant perds molt. Torna a trotar, encara que sigui curt."
+ },
+ {
+  "id": "caminar_007",
+  "cat": "caminar",
+  "fase": null,
+  "grup": null,
+  "estat": null,
+  "niv": 2,
+  "text": "Mans als genolls si cal, però amunt."
+ },
+ {
+  "id": "caminar_008",
+  "cat": "caminar",
+  "fase": null,
+  "grup": null,
+  "estat": null,
+  "niv": 2,
+  "text": "Uns segons caminant i a córrer. Tu decideixes quan."
+ },
+ {
+  "id": "aturat_001",
+  "cat": "aturat",
+  "fase": null,
+  "grup": null,
+  "estat": null,
+  "niv": 2,
+  "text": "T'has aturat. Respira i torna-hi quan puguis."
+ },
+ {
+  "id": "aturat_002",
+  "cat": "aturat",
+  "fase": null,
+  "grup": null,
+  "estat": null,
+  "niv": 2,
+  "text": "Aturat. El rellotge segueix comptant. Amunt!"
+ },
+ {
+  "id": "aturat_003",
+  "cat": "aturat",
+  "fase": null,
+  "grup": null,
+  "estat": null,
+  "niv": 2,
+  "text": "Un moment de pausa. Ara, a seguir."
+ },
+ {
+  "id": "aturat_004",
+  "cat": "aturat",
+  "fase": null,
+  "grup": null,
+  "estat": null,
+  "niv": 2,
+  "text": "No et quedis aquí, Àlex. Pas a pas."
+ },
+ {
+  "id": "aturat_005",
+  "cat": "aturat",
+  "fase": null,
+  "grup": null,
+  "estat": null,
+  "niv": 2,
+  "text": "Recupera deu segons i reprenem."
+ },
+ {
+  "id": "aturat_006",
+  "cat": "aturat",
+  "fase": null,
+  "grup": null,
+  "estat": null,
+  "niv": 2,
+  "text": "Tornem-hi? Va, que el cim no baixa."
+ },
+ {
+  "id": "represa_001",
+  "cat": "represa",
+  "fase": null,
+  "grup": null,
+  "estat": null,
+  "niv": 2,
+  "text": "Això és. Tornem a córrer."
+ },
+ {
+  "id": "represa_002",
+  "cat": "represa",
+  "fase": null,
+  "grup": null,
+  "estat": null,
+  "niv": 2,
+  "text": "Molt bé, de nou en marxa."
+ },
+ {
+  "id": "represa_003",
+  "cat": "represa",
+  "fase": null,
+  "grup": null,
+  "estat": null,
+  "niv": 2,
+  "text": "Endavant una altra vegada."
+ },
+ {
+  "id": "represa_004",
+  "cat": "represa",
+  "fase": null,
+  "grup": null,
+  "estat": null,
+  "niv": 2,
+  "text": "Així m'agrada. Amunt."
+ },
+ {
+  "id": "final_001",
+  "cat": "final",
+  "fase": null,
+  "grup": null,
+  "estat": "record_gran",
+  "niv": 3,
+  "text": "Rècord! I de molt! Quina pujada, Àlex!"
+ },
+ {
+  "id": "final_002",
+  "cat": "final",
+  "fase": null,
+  "grup": null,
+  "estat": "record_gran",
+  "niv": 3,
+  "text": "Nou rècord, i amb marge! Avui has volat!"
+ },
+ {
+  "id": "final_003",
+  "cat": "final",
+  "fase": null,
+  "grup": null,
+  "estat": "record_gran",
+  "niv": 3,
+  "text": "Brutal! Nou rècord per molts segons!"
+ },
+ {
+  "id": "final_004",
+  "cat": "final",
+  "fase": null,
+  "grup": null,
+  "estat": "record_gran",
+  "niv": 3,
+  "text": "Rècord destrossat! Això és forma de veritat!"
+ },
+ {
+  "id": "final_005",
+  "cat": "final",
+  "fase": null,
+  "grup": null,
+  "estat": "record",
+  "niv": 3,
+  "text": "Nou rècord! Ho has aconseguit!"
+ },
+ {
+  "id": "final_006",
+  "cat": "final",
+  "fase": null,
+  "grup": null,
+  "estat": "record",
+  "niv": 3,
+  "text": "Rècord! Pocs segons, però teus!"
+ },
+ {
+  "id": "final_007",
+  "cat": "final",
+  "fase": null,
+  "grup": null,
+  "estat": "record",
+  "niv": 3,
+  "text": "Nou millor temps! Bona feina!"
+ },
+ {
+  "id": "final_008",
+  "cat": "final",
+  "fase": null,
+  "grup": null,
+  "estat": "record",
+  "niv": 3,
+  "text": "Rècord, Àlex! Ben treballat!"
+ },
+ {
+  "id": "final_009",
+  "cat": "final",
+  "fase": null,
+  "grup": null,
+  "estat": "igual",
+  "niv": 2,
+  "text": "Clavat al teu rècord! Per un pèl!"
+ },
+ {
+  "id": "final_010",
+  "cat": "final",
+  "fase": null,
+  "grup": null,
+  "estat": "igual",
+  "niv": 2,
+  "text": "Gairebé igual que el teu millor temps. Molt a prop!"
+ },
+ {
+  "id": "final_011",
+  "cat": "final",
+  "fase": null,
+  "grup": null,
+  "estat": "igual",
+  "niv": 2,
+  "text": "Empat amb el rècord. La propera cau segur."
+ },
+ {
+  "id": "final_012",
+  "cat": "final",
+  "fase": null,
+  "grup": null,
+  "estat": "lent",
+  "niv": 2,
+  "text": "Cim! A pocs segons del rècord. Bona pujada."
+ },
+ {
+  "id": "final_013",
+  "cat": "final",
+  "fase": null,
+  "grup": null,
+  "estat": "lent",
+  "niv": 2,
+  "text": "Fet! No ha estat rècord, però hi has estat a prop."
+ },
+ {
+  "id": "final_014",
+  "cat": "final",
+  "fase": null,
+  "grup": null,
+  "estat": "lent",
+  "niv": 2,
+  "text": "Coll superat. A uns segons del teu millor dia."
+ },
+ {
+  "id": "final_015",
+  "cat": "final",
+  "fase": null,
+  "grup": null,
+  "estat": "lent",
+  "niv": 2,
+  "text": "Fet! Uns segons per darrere, però bona feina."
+ },
+ {
+  "id": "final_016",
+  "cat": "final",
+  "fase": null,
+  "grup": null,
+  "estat": "molt_lent",
+  "niv": 1,
+  "text": "Cim! Avui no ha sortit el temps, però la pujada està feta."
+ },
+ {
+  "id": "final_017",
+  "cat": "final",
+  "fase": null,
+  "grup": null,
+  "estat": "molt_lent",
+  "niv": 1,
+  "text": "Fet. No ha estat el millor dia, i no passa res."
+ },
+ {
+  "id": "final_018",
+  "cat": "final",
+  "fase": null,
+  "grup": null,
+  "estat": "molt_lent",
+  "niv": 1,
+  "text": "Has arribat a dalt. Els dies durs també sumen."
+ },
+ {
+  "id": "final_019",
+  "cat": "final",
+  "fase": null,
+  "grup": null,
+  "estat": "molt_lent",
+  "niv": 1,
+  "text": "Coll pujat. Descansa, i la propera, millor."
+ },
+ {
+  "id": "reflexio_001",
+  "cat": "reflexio",
+  "fase": null,
+  "grup": null,
+  "estat": "marge",
+  "niv": 1,
+  "text": "Has acabat molt fort: tenies més marge del que has gastat. La propera, surt una mica més ràpid."
+ },
+ {
+  "id": "reflexio_002",
+  "cat": "reflexio",
+  "fase": null,
+  "grup": null,
+  "estat": "marge",
+  "niv": 1,
+  "text": "Has guardat massa al principi. Amb aquest final, el rècord era possible."
+ },
+ {
+  "id": "reflexio_003",
+  "cat": "reflexio",
+  "fase": null,
+  "grup": null,
+  "estat": "marge",
+  "niv": 1,
+  "text": "Final molt potent. Ara cal portar part d'aquesta energia al tram de ritme."
+ },
+ {
+  "id": "reflexio_004",
+  "cat": "reflexio",
+  "fase": null,
+  "grup": null,
+  "estat": "buit",
+  "niv": 1,
+  "text": "Has sortit fort i ho has pagat al final. La propera, més paciència fins al mur."
+ },
+ {
+  "id": "reflexio_005",
+  "cat": "reflexio",
+  "fase": null,
+  "grup": null,
+  "estat": "buit",
+  "niv": 1,
+  "text": "Massa ràpid al principi. El quilòmetre dur t'ho ha cobrat."
+ },
+ {
+  "id": "reflexio_006",
+  "cat": "reflexio",
+  "fase": null,
+  "grup": null,
+  "estat": "buit",
+  "niv": 1,
+  "text": "Bona sortida, però t'ha faltat gasolina al final. Regula millor."
+ },
+ {
+  "id": "reflexio_007",
+  "cat": "reflexio",
+  "fase": null,
+  "grup": null,
+  "estat": "equilibrat",
+  "niv": 1,
+  "text": "Pujada molt ben repartida. Així es fa."
+ },
+ {
+  "id": "reflexio_008",
+  "cat": "reflexio",
+  "fase": null,
+  "grup": null,
+  "estat": "equilibrat",
+  "niv": 1,
+  "text": "Ritme molt equilibrat de principi a final. De manual."
+ },
+ {
+  "id": "reflexio_009",
+  "cat": "reflexio",
+  "fase": null,
+  "grup": null,
+  "estat": "equilibrat",
+  "niv": 1,
+  "text": "Bona gestió de l'esforç. Això és saber pujar."
+ },
+ {
+  "id": "baixada_001",
+  "cat": "baixada",
+  "fase": null,
+  "grup": null,
+  "estat": null,
+  "niv": 1,
+  "text": "Ara baixa tranquil i recupera."
+ },
+ {
+  "id": "baixada_002",
+  "cat": "baixada",
+  "fase": null,
+  "grup": null,
+  "estat": null,
+  "niv": 1,
+  "text": "Cim fet. Baixada suau, que les cames t'ho agrairan."
+ },
+ {
+  "id": "baixada_003",
+  "cat": "baixada",
+  "fase": null,
+  "grup": null,
+  "estat": null,
+  "niv": 1,
+  "text": "Recupera. Beu aigua quan puguis."
+ },
+ {
+  "id": "baixada_004",
+  "cat": "baixada",
+  "fase": null,
+  "grup": null,
+  "estat": null,
+  "niv": 1,
+  "text": "Gran feina avui. A baixar amb calma."
+ },
+ {
+  "id": "motiva_001",
+  "cat": "motiva",
+  "fase": null,
+  "grup": "ini",
+  "estat": null,
+  "niv": 1,
+  "text": "Estàs fent el que toca. Constància."
+ },
+ {
+  "id": "motiva_002",
+  "cat": "motiva",
+  "fase": null,
+  "grup": "ini",
+  "estat": null,
+  "niv": 1,
+  "text": "Cada pujada et fa més fort."
+ },
+ {
+  "id": "motiva_003",
+  "cat": "motiva",
+  "fase": null,
+  "grup": "ini",
+  "estat": null,
+  "niv": 1,
+  "text": "Gaudeix-ne. Aquest és el teu coll."
+ },
+ {
+  "id": "motiva_004",
+  "cat": "motiva",
+  "fase": null,
+  "grup": "ini",
+  "estat": null,
+  "niv": 1,
+  "text": "Tranquil, que vas bé."
+ },
+ {
+  "id": "motiva_005",
+  "cat": "motiva",
+  "fase": null,
+  "grup": "ini",
+  "estat": null,
+  "niv": 1,
+  "text": "Un metre darrere l'altre."
+ },
+ {
+  "id": "motiva_006",
+  "cat": "motiva",
+  "fase": null,
+  "grup": "ini",
+  "estat": null,
+  "niv": 1,
+  "text": "Corre fàcil. Que sembli fàcil."
+ },
+ {
+  "id": "motiva_007",
+  "cat": "motiva",
+  "fase": null,
+  "grup": "ini",
+  "estat": null,
+  "niv": 1,
+  "text": "Avui sumes. Sempre sumes."
+ },
+ {
+  "id": "motiva_008",
+  "cat": "motiva",
+  "fase": null,
+  "grup": "ini",
+  "estat": null,
+  "niv": 1,
+  "text": "Bona feina. Segueix."
+ },
+ {
+  "id": "motiva_009",
+  "cat": "motiva",
+  "fase": null,
+  "grup": "ini",
+  "estat": null,
+  "niv": 1,
+  "text": "Ritme, respiració i cap. Tot en ordre."
+ },
+ {
+  "id": "motiva_010",
+  "cat": "motiva",
+  "fase": null,
+  "grup": "ini",
+  "estat": null,
+  "niv": 1,
+  "text": "Molt bé, Àlex."
+ },
+ {
+  "id": "motiva_011",
+  "cat": "motiva",
+  "fase": null,
+  "grup": "ini",
+  "estat": null,
+  "niv": 1,
+  "text": "Això és base. Això és el que després marca la diferència."
+ },
+ {
+  "id": "motiva_012",
+  "cat": "motiva",
+  "fase": null,
+  "grup": "ini",
+  "estat": null,
+  "niv": 1,
+  "text": "Paciència. El coll premia qui sap esperar."
+ },
+ {
+  "id": "motiva_013",
+  "cat": "motiva",
+  "fase": null,
+  "grup": "ini",
+  "estat": null,
+  "niv": 1,
+  "text": "Bon pas. Endavant."
+ },
+ {
+  "id": "motiva_014",
+  "cat": "motiva",
+  "fase": null,
+  "grup": "ini",
+  "estat": null,
+  "niv": 1,
+  "text": "Fluid. Així."
+ },
+ {
+  "id": "motiva_015",
+  "cat": "motiva",
+  "fase": null,
+  "grup": "ini",
+  "estat": null,
+  "niv": 1,
+  "text": "Estàs on has de ser."
+ },
+ {
+  "id": "motiva_016",
+  "cat": "motiva",
+  "fase": null,
+  "grup": "mur",
+  "estat": null,
+  "niv": 2,
+  "text": "Ara es veu qui ha entrenat."
+ },
+ {
+  "id": "motiva_017",
+  "cat": "motiva",
+  "fase": null,
+  "grup": "mur",
+  "estat": null,
+  "niv": 2,
+  "text": "Això és el que et farà passar les físiques."
+ },
+ {
+  "id": "motiva_018",
+  "cat": "motiva",
+  "fase": null,
+  "grup": "mur",
+  "estat": null,
+  "niv": 2,
+  "text": "El dolor passa. El temps queda."
+ },
+ {
+  "id": "motiva_019",
+  "cat": "motiva",
+  "fase": null,
+  "grup": "mur",
+  "estat": null,
+  "niv": 2,
+  "text": "Aguanta. Ets més fort que aquesta pujada."
+ },
+ {
+  "id": "motiva_020",
+  "cat": "motiva",
+  "fase": null,
+  "grup": "mur",
+  "estat": null,
+  "niv": 2,
+  "text": "No et rendeixis ara, que és quan compta."
+ },
+ {
+  "id": "motiva_021",
+  "cat": "motiva",
+  "fase": null,
+  "grup": "mur",
+  "estat": null,
+  "niv": 2,
+  "text": "Has vingut a pujar, no a passejar."
+ },
+ {
+  "id": "motiva_022",
+  "cat": "motiva",
+  "fase": null,
+  "grup": "mur",
+  "estat": null,
+  "niv": 2,
+  "text": "Cada pujada dura és un període més a la navette."
+ },
+ {
+  "id": "motiva_023",
+  "cat": "motiva",
+  "fase": null,
+  "grup": "mur",
+  "estat": null,
+  "niv": 2,
+  "text": "Pensa en el dia de la prova. Puja per això."
+ },
+ {
+  "id": "motiva_024",
+  "cat": "motiva",
+  "fase": null,
+  "grup": "mur",
+  "estat": null,
+  "niv": 2,
+  "text": "Es fa dur perquè ho estàs fent bé."
+ },
+ {
+  "id": "motiva_025",
+  "cat": "motiva",
+  "fase": null,
+  "grup": "mur",
+  "estat": null,
+  "niv": 2,
+  "text": "Amunt, Àlex! Amunt!"
+ },
+ {
+  "id": "motiva_026",
+  "cat": "motiva",
+  "fase": null,
+  "grup": "mur",
+  "estat": null,
+  "niv": 2,
+  "text": "Un pas més. I un altre."
+ },
+ {
+  "id": "motiva_027",
+  "cat": "motiva",
+  "fase": null,
+  "grup": "mur",
+  "estat": null,
+  "niv": 2,
+  "text": "Collons, que bé que ho estàs fent."
+ },
+ {
+  "id": "motiva_028",
+  "cat": "motiva",
+  "fase": null,
+  "grup": "mur",
+  "estat": null,
+  "niv": 2,
+  "text": "El mur no sap qui ets. Ensenya-li-ho."
+ },
+ {
+  "id": "motiva_029",
+  "cat": "motiva",
+  "fase": null,
+  "grup": "mur",
+  "estat": null,
+  "niv": 2,
+  "text": "Això és caràcter."
+ },
+ {
+  "id": "motiva_030",
+  "cat": "motiva",
+  "fase": null,
+  "grup": "mur",
+  "estat": null,
+  "niv": 2,
+  "text": "Cap fort, cames fortes."
+ },
+ {
+  "id": "motiva_031",
+  "cat": "motiva",
+  "fase": null,
+  "grup": "fi",
+  "estat": null,
+  "niv": 3,
+  "text": "Ja ho tens! No afluixis!"
+ },
+ {
+  "id": "motiva_032",
+  "cat": "motiva",
+  "fase": null,
+  "grup": "fi",
+  "estat": null,
+  "niv": 3,
+  "text": "Ara o mai!"
+ },
+ {
+  "id": "motiva_033",
+  "cat": "motiva",
+  "fase": null,
+  "grup": "fi",
+  "estat": null,
+  "niv": 3,
+  "text": "Tot el que has entrenat, ara!"
+ },
+ {
+  "id": "motiva_034",
+  "cat": "motiva",
+  "fase": null,
+  "grup": "fi",
+  "estat": null,
+  "niv": 3,
+  "text": "No hi ha demà. Hi ha ara!"
+ },
+ {
+  "id": "motiva_035",
+  "cat": "motiva",
+  "fase": null,
+  "grup": "fi",
+  "estat": null,
+  "niv": 3,
+  "text": "Va, que ja hi ets!"
+ },
+ {
+  "id": "motiva_036",
+  "cat": "motiva",
+  "fase": null,
+  "grup": "fi",
+  "estat": null,
+  "niv": 3,
+  "text": "Dona-ho tot, Àlex!"
+ },
+ {
+  "id": "motiva_037",
+  "cat": "motiva",
+  "fase": null,
+  "grup": "fi",
+  "estat": null,
+  "niv": 3,
+  "text": "Això és teu! Amunt!"
+ },
+ {
+  "id": "motiva_038",
+  "cat": "motiva",
+  "fase": null,
+  "grup": "fi",
+  "estat": null,
+  "niv": 3,
+  "text": "L'últim esforç és el que compta!"
+ },
+ {
+  "id": "motiva_039",
+  "cat": "motiva",
+  "fase": null,
+  "grup": "fi",
+  "estat": null,
+  "niv": 3,
+  "text": "Ni una passa fluixa!"
+ },
+ {
+  "id": "motiva_040",
+  "cat": "motiva",
+  "fase": null,
+  "grup": "fi",
+  "estat": null,
+  "niv": 3,
+  "text": "Final! A fons!"
+ },
+ {
+  "id": "motiva_041",
+  "cat": "motiva",
+  "fase": null,
+  "grup": "fi",
+  "estat": null,
+  "niv": 3,
+  "text": "Hòstia, quina pujada que estàs fent!"
+ },
+ {
+  "id": "motiva_042",
+  "cat": "motiva",
+  "fase": null,
+  "grup": "fi",
+  "estat": null,
+  "niv": 3,
+  "text": "Que quedi tot aquí dalt!"
+ },
+ {
+  "id": "motiva_043",
+  "cat": "motiva",
+  "fase": null,
+  "grup": "fi",
+  "estat": null,
+  "niv": 3,
+  "text": "Remata-ho!"
+ },
+ {
+  "id": "motiva_044",
+  "cat": "motiva",
+  "fase": null,
+  "grup": "fi",
+  "estat": null,
+  "niv": 3,
+  "text": "Ara ets imparable!"
+ },
+ {
+  "id": "motiva_045",
+  "cat": "motiva",
+  "fase": null,
+  "grup": "fi",
+  "estat": null,
+  "niv": 3,
+  "text": "Fins al final, sense excuses!"
+ },
+ {
+  "id": "sistema_001",
+  "cat": "sistema",
+  "fase": null,
+  "grup": null,
+  "estat": "gps_ok",
+  "niv": 1,
+  "text": "GPS connectat. Quan arribis a l'inici de la pujada, comencem."
+ },
+ {
+  "id": "sistema_002",
+  "cat": "sistema",
+  "fase": null,
+  "grup": null,
+  "estat": "gps_espera",
+  "niv": 1,
+  "text": "Encara no tinc bon senyal de GPS. Espera uns segons."
+ },
+ {
+  "id": "sistema_003",
+  "cat": "sistema",
+  "fase": null,
+  "grup": null,
+  "estat": "gps_perdut",
+  "niv": 1,
+  "text": "He perdut el GPS. Tu segueix, que el recupero."
+ },
+ {
+  "id": "sistema_004",
+  "cat": "sistema",
+  "fase": null,
+  "grup": null,
+  "estat": "gps_recuperat",
+  "niv": 1,
+  "text": "GPS recuperat."
+ },
+ {
+  "id": "sistema_005",
+  "cat": "sistema",
+  "fase": null,
+  "grup": null,
+  "estat": "fc_ok",
+  "niv": 1,
+  "text": "Pulsòmetre connectat."
+ },
+ {
+  "id": "sistema_006",
+  "cat": "sistema",
+  "fase": null,
+  "grup": null,
+  "estat": "fc_perdut",
+  "niv": 1,
+  "text": "S'ha desconnectat el pulsòmetre. Ho torno a provar."
+ },
+ {
+  "id": "sistema_007",
+  "cat": "sistema",
+  "fase": null,
+  "grup": null,
+  "estat": "fc_recuperat",
+  "niv": 1,
+  "text": "Pulsòmetre recuperat."
+ },
+ {
+  "id": "sistema_008",
+  "cat": "sistema",
+  "fase": null,
+  "grup": null,
+  "estat": "fora_ruta",
+  "niv": 1,
+  "text": "Estàs fora de la ruta del coll."
+ },
+ {
+  "id": "sistema_009",
+  "cat": "sistema",
+  "fase": null,
+  "grup": null,
+  "estat": "ruta_ok",
+  "niv": 1,
+  "text": "Tornes a ser a la ruta. Seguim."
+ },
+ {
+  "id": "sistema_010",
+  "cat": "sistema",
+  "fase": null,
+  "grup": null,
+  "estat": "a_prop_inici",
+  "niv": 1,
+  "text": "Ets a prop de l'inici de la pujada. Quan passis per la sortida, comença el compte."
+ },
+ {
+  "id": "sistema_011",
+  "cat": "sistema",
+  "fase": null,
+  "grup": null,
+  "estat": "a_prop_inici",
+  "niv": 1,
+  "text": "Preparat? La pujada comença d'aquí a uns metres."
+ },
+ {
+  "id": "sistema_012",
+  "cat": "sistema",
+  "fase": null,
+  "grup": null,
+  "estat": "prova_so",
+  "niv": 1,
+  "text": "Prova de so. Si em sents per sobre de la música, tot funciona."
+ },
+ {
+  "id": "num_davant_1",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "davant",
+  "n": 1,
+  "niv": 2,
+  "text": "Vas un segon per davant."
+ },
+ {
+  "id": "num_davant_2",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "davant",
+  "n": 2,
+  "niv": 2,
+  "text": "Vas dos segons per davant."
+ },
+ {
+  "id": "num_davant_3",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "davant",
+  "n": 3,
+  "niv": 2,
+  "text": "Vas tres segons per davant."
+ },
+ {
+  "id": "num_davant_4",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "davant",
+  "n": 4,
+  "niv": 2,
+  "text": "Vas quatre segons per davant."
+ },
+ {
+  "id": "num_davant_5",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "davant",
+  "n": 5,
+  "niv": 2,
+  "text": "Vas cinc segons per davant."
+ },
+ {
+  "id": "num_davant_6",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "davant",
+  "n": 6,
+  "niv": 2,
+  "text": "Vas sis segons per davant."
+ },
+ {
+  "id": "num_davant_7",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "davant",
+  "n": 7,
+  "niv": 2,
+  "text": "Vas set segons per davant."
+ },
+ {
+  "id": "num_davant_8",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "davant",
+  "n": 8,
+  "niv": 2,
+  "text": "Vas vuit segons per davant."
+ },
+ {
+  "id": "num_davant_9",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "davant",
+  "n": 9,
+  "niv": 2,
+  "text": "Vas nou segons per davant."
+ },
+ {
+  "id": "num_davant_10",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "davant",
+  "n": 10,
+  "niv": 2,
+  "text": "Vas deu segons per davant."
+ },
+ {
+  "id": "num_davant_11",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "davant",
+  "n": 11,
+  "niv": 2,
+  "text": "Vas onze segons per davant."
+ },
+ {
+  "id": "num_davant_12",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "davant",
+  "n": 12,
+  "niv": 2,
+  "text": "Vas dotze segons per davant."
+ },
+ {
+  "id": "num_davant_13",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "davant",
+  "n": 13,
+  "niv": 2,
+  "text": "Vas tretze segons per davant."
+ },
+ {
+  "id": "num_davant_14",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "davant",
+  "n": 14,
+  "niv": 2,
+  "text": "Vas catorze segons per davant."
+ },
+ {
+  "id": "num_davant_15",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "davant",
+  "n": 15,
+  "niv": 2,
+  "text": "Vas quinze segons per davant."
+ },
+ {
+  "id": "num_davant_16",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "davant",
+  "n": 16,
+  "niv": 2,
+  "text": "Vas setze segons per davant."
+ },
+ {
+  "id": "num_davant_17",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "davant",
+  "n": 17,
+  "niv": 2,
+  "text": "Vas disset segons per davant."
+ },
+ {
+  "id": "num_davant_18",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "davant",
+  "n": 18,
+  "niv": 2,
+  "text": "Vas divuit segons per davant."
+ },
+ {
+  "id": "num_davant_19",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "davant",
+  "n": 19,
+  "niv": 2,
+  "text": "Vas dinou segons per davant."
+ },
+ {
+  "id": "num_davant_20",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "davant",
+  "n": 20,
+  "niv": 2,
+  "text": "Vas vint segons per davant."
+ },
+ {
+  "id": "num_davant_21",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "davant",
+  "n": 21,
+  "niv": 2,
+  "text": "Vas vint-i-un segons per davant."
+ },
+ {
+  "id": "num_davant_22",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "davant",
+  "n": 22,
+  "niv": 2,
+  "text": "Vas vint-i-dos segons per davant."
+ },
+ {
+  "id": "num_davant_23",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "davant",
+  "n": 23,
+  "niv": 2,
+  "text": "Vas vint-i-tres segons per davant."
+ },
+ {
+  "id": "num_davant_24",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "davant",
+  "n": 24,
+  "niv": 2,
+  "text": "Vas vint-i-quatre segons per davant."
+ },
+ {
+  "id": "num_davant_25",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "davant",
+  "n": 25,
+  "niv": 2,
+  "text": "Vas vint-i-cinc segons per davant."
+ },
+ {
+  "id": "num_davant_26",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "davant",
+  "n": 26,
+  "niv": 2,
+  "text": "Vas vint-i-sis segons per davant."
+ },
+ {
+  "id": "num_davant_27",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "davant",
+  "n": 27,
+  "niv": 2,
+  "text": "Vas vint-i-set segons per davant."
+ },
+ {
+  "id": "num_davant_28",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "davant",
+  "n": 28,
+  "niv": 2,
+  "text": "Vas vint-i-vuit segons per davant."
+ },
+ {
+  "id": "num_davant_29",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "davant",
+  "n": 29,
+  "niv": 2,
+  "text": "Vas vint-i-nou segons per davant."
+ },
+ {
+  "id": "num_davant_30",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "davant",
+  "n": 30,
+  "niv": 2,
+  "text": "Vas trenta segons per davant."
+ },
+ {
+  "id": "num_davant_31",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "davant",
+  "n": 31,
+  "niv": 2,
+  "text": "Vas trenta-un segons per davant."
+ },
+ {
+  "id": "num_davant_32",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "davant",
+  "n": 32,
+  "niv": 2,
+  "text": "Vas trenta-dos segons per davant."
+ },
+ {
+  "id": "num_davant_33",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "davant",
+  "n": 33,
+  "niv": 2,
+  "text": "Vas trenta-tres segons per davant."
+ },
+ {
+  "id": "num_davant_34",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "davant",
+  "n": 34,
+  "niv": 2,
+  "text": "Vas trenta-quatre segons per davant."
+ },
+ {
+  "id": "num_davant_35",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "davant",
+  "n": 35,
+  "niv": 2,
+  "text": "Vas trenta-cinc segons per davant."
+ },
+ {
+  "id": "num_davant_36",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "davant",
+  "n": 36,
+  "niv": 2,
+  "text": "Vas trenta-sis segons per davant."
+ },
+ {
+  "id": "num_davant_37",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "davant",
+  "n": 37,
+  "niv": 2,
+  "text": "Vas trenta-set segons per davant."
+ },
+ {
+  "id": "num_davant_38",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "davant",
+  "n": 38,
+  "niv": 2,
+  "text": "Vas trenta-vuit segons per davant."
+ },
+ {
+  "id": "num_davant_39",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "davant",
+  "n": 39,
+  "niv": 2,
+  "text": "Vas trenta-nou segons per davant."
+ },
+ {
+  "id": "num_davant_40",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "davant",
+  "n": 40,
+  "niv": 2,
+  "text": "Vas quaranta segons per davant."
+ },
+ {
+  "id": "num_davant_41",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "davant",
+  "n": 41,
+  "niv": 2,
+  "text": "Vas quaranta-un segons per davant."
+ },
+ {
+  "id": "num_davant_42",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "davant",
+  "n": 42,
+  "niv": 2,
+  "text": "Vas quaranta-dos segons per davant."
+ },
+ {
+  "id": "num_davant_43",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "davant",
+  "n": 43,
+  "niv": 2,
+  "text": "Vas quaranta-tres segons per davant."
+ },
+ {
+  "id": "num_davant_44",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "davant",
+  "n": 44,
+  "niv": 2,
+  "text": "Vas quaranta-quatre segons per davant."
+ },
+ {
+  "id": "num_davant_45",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "davant",
+  "n": 45,
+  "niv": 2,
+  "text": "Vas quaranta-cinc segons per davant."
+ },
+ {
+  "id": "num_davant_46",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "davant",
+  "n": 46,
+  "niv": 2,
+  "text": "Vas quaranta-sis segons per davant."
+ },
+ {
+  "id": "num_davant_47",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "davant",
+  "n": 47,
+  "niv": 2,
+  "text": "Vas quaranta-set segons per davant."
+ },
+ {
+  "id": "num_davant_48",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "davant",
+  "n": 48,
+  "niv": 2,
+  "text": "Vas quaranta-vuit segons per davant."
+ },
+ {
+  "id": "num_davant_49",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "davant",
+  "n": 49,
+  "niv": 2,
+  "text": "Vas quaranta-nou segons per davant."
+ },
+ {
+  "id": "num_davant_50",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "davant",
+  "n": 50,
+  "niv": 2,
+  "text": "Vas cinquanta segons per davant."
+ },
+ {
+  "id": "num_davant_51",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "davant",
+  "n": 51,
+  "niv": 2,
+  "text": "Vas cinquanta-un segons per davant."
+ },
+ {
+  "id": "num_davant_52",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "davant",
+  "n": 52,
+  "niv": 2,
+  "text": "Vas cinquanta-dos segons per davant."
+ },
+ {
+  "id": "num_davant_53",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "davant",
+  "n": 53,
+  "niv": 2,
+  "text": "Vas cinquanta-tres segons per davant."
+ },
+ {
+  "id": "num_davant_54",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "davant",
+  "n": 54,
+  "niv": 2,
+  "text": "Vas cinquanta-quatre segons per davant."
+ },
+ {
+  "id": "num_davant_55",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "davant",
+  "n": 55,
+  "niv": 2,
+  "text": "Vas cinquanta-cinc segons per davant."
+ },
+ {
+  "id": "num_davant_56",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "davant",
+  "n": 56,
+  "niv": 2,
+  "text": "Vas cinquanta-sis segons per davant."
+ },
+ {
+  "id": "num_davant_57",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "davant",
+  "n": 57,
+  "niv": 2,
+  "text": "Vas cinquanta-set segons per davant."
+ },
+ {
+  "id": "num_davant_58",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "davant",
+  "n": 58,
+  "niv": 2,
+  "text": "Vas cinquanta-vuit segons per davant."
+ },
+ {
+  "id": "num_davant_59",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "davant",
+  "n": 59,
+  "niv": 2,
+  "text": "Vas cinquanta-nou segons per davant."
+ },
+ {
+  "id": "num_davant_60",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "davant",
+  "n": 60,
+  "niv": 2,
+  "text": "Vas seixanta segons per davant."
+ },
+ {
+  "id": "num_darrere_1",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "darrere",
+  "n": 1,
+  "niv": 2,
+  "text": "Vas un segon per darrere."
+ },
+ {
+  "id": "num_darrere_2",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "darrere",
+  "n": 2,
+  "niv": 2,
+  "text": "Vas dos segons per darrere."
+ },
+ {
+  "id": "num_darrere_3",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "darrere",
+  "n": 3,
+  "niv": 2,
+  "text": "Vas tres segons per darrere."
+ },
+ {
+  "id": "num_darrere_4",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "darrere",
+  "n": 4,
+  "niv": 2,
+  "text": "Vas quatre segons per darrere."
+ },
+ {
+  "id": "num_darrere_5",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "darrere",
+  "n": 5,
+  "niv": 2,
+  "text": "Vas cinc segons per darrere."
+ },
+ {
+  "id": "num_darrere_6",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "darrere",
+  "n": 6,
+  "niv": 2,
+  "text": "Vas sis segons per darrere."
+ },
+ {
+  "id": "num_darrere_7",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "darrere",
+  "n": 7,
+  "niv": 2,
+  "text": "Vas set segons per darrere."
+ },
+ {
+  "id": "num_darrere_8",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "darrere",
+  "n": 8,
+  "niv": 2,
+  "text": "Vas vuit segons per darrere."
+ },
+ {
+  "id": "num_darrere_9",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "darrere",
+  "n": 9,
+  "niv": 2,
+  "text": "Vas nou segons per darrere."
+ },
+ {
+  "id": "num_darrere_10",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "darrere",
+  "n": 10,
+  "niv": 2,
+  "text": "Vas deu segons per darrere."
+ },
+ {
+  "id": "num_darrere_11",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "darrere",
+  "n": 11,
+  "niv": 2,
+  "text": "Vas onze segons per darrere."
+ },
+ {
+  "id": "num_darrere_12",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "darrere",
+  "n": 12,
+  "niv": 2,
+  "text": "Vas dotze segons per darrere."
+ },
+ {
+  "id": "num_darrere_13",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "darrere",
+  "n": 13,
+  "niv": 2,
+  "text": "Vas tretze segons per darrere."
+ },
+ {
+  "id": "num_darrere_14",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "darrere",
+  "n": 14,
+  "niv": 2,
+  "text": "Vas catorze segons per darrere."
+ },
+ {
+  "id": "num_darrere_15",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "darrere",
+  "n": 15,
+  "niv": 2,
+  "text": "Vas quinze segons per darrere."
+ },
+ {
+  "id": "num_darrere_16",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "darrere",
+  "n": 16,
+  "niv": 2,
+  "text": "Vas setze segons per darrere."
+ },
+ {
+  "id": "num_darrere_17",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "darrere",
+  "n": 17,
+  "niv": 2,
+  "text": "Vas disset segons per darrere."
+ },
+ {
+  "id": "num_darrere_18",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "darrere",
+  "n": 18,
+  "niv": 2,
+  "text": "Vas divuit segons per darrere."
+ },
+ {
+  "id": "num_darrere_19",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "darrere",
+  "n": 19,
+  "niv": 2,
+  "text": "Vas dinou segons per darrere."
+ },
+ {
+  "id": "num_darrere_20",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "darrere",
+  "n": 20,
+  "niv": 2,
+  "text": "Vas vint segons per darrere."
+ },
+ {
+  "id": "num_darrere_21",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "darrere",
+  "n": 21,
+  "niv": 2,
+  "text": "Vas vint-i-un segons per darrere."
+ },
+ {
+  "id": "num_darrere_22",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "darrere",
+  "n": 22,
+  "niv": 2,
+  "text": "Vas vint-i-dos segons per darrere."
+ },
+ {
+  "id": "num_darrere_23",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "darrere",
+  "n": 23,
+  "niv": 2,
+  "text": "Vas vint-i-tres segons per darrere."
+ },
+ {
+  "id": "num_darrere_24",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "darrere",
+  "n": 24,
+  "niv": 2,
+  "text": "Vas vint-i-quatre segons per darrere."
+ },
+ {
+  "id": "num_darrere_25",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "darrere",
+  "n": 25,
+  "niv": 2,
+  "text": "Vas vint-i-cinc segons per darrere."
+ },
+ {
+  "id": "num_darrere_26",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "darrere",
+  "n": 26,
+  "niv": 2,
+  "text": "Vas vint-i-sis segons per darrere."
+ },
+ {
+  "id": "num_darrere_27",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "darrere",
+  "n": 27,
+  "niv": 2,
+  "text": "Vas vint-i-set segons per darrere."
+ },
+ {
+  "id": "num_darrere_28",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "darrere",
+  "n": 28,
+  "niv": 2,
+  "text": "Vas vint-i-vuit segons per darrere."
+ },
+ {
+  "id": "num_darrere_29",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "darrere",
+  "n": 29,
+  "niv": 2,
+  "text": "Vas vint-i-nou segons per darrere."
+ },
+ {
+  "id": "num_darrere_30",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "darrere",
+  "n": 30,
+  "niv": 2,
+  "text": "Vas trenta segons per darrere."
+ },
+ {
+  "id": "num_darrere_31",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "darrere",
+  "n": 31,
+  "niv": 2,
+  "text": "Vas trenta-un segons per darrere."
+ },
+ {
+  "id": "num_darrere_32",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "darrere",
+  "n": 32,
+  "niv": 2,
+  "text": "Vas trenta-dos segons per darrere."
+ },
+ {
+  "id": "num_darrere_33",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "darrere",
+  "n": 33,
+  "niv": 2,
+  "text": "Vas trenta-tres segons per darrere."
+ },
+ {
+  "id": "num_darrere_34",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "darrere",
+  "n": 34,
+  "niv": 2,
+  "text": "Vas trenta-quatre segons per darrere."
+ },
+ {
+  "id": "num_darrere_35",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "darrere",
+  "n": 35,
+  "niv": 2,
+  "text": "Vas trenta-cinc segons per darrere."
+ },
+ {
+  "id": "num_darrere_36",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "darrere",
+  "n": 36,
+  "niv": 2,
+  "text": "Vas trenta-sis segons per darrere."
+ },
+ {
+  "id": "num_darrere_37",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "darrere",
+  "n": 37,
+  "niv": 2,
+  "text": "Vas trenta-set segons per darrere."
+ },
+ {
+  "id": "num_darrere_38",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "darrere",
+  "n": 38,
+  "niv": 2,
+  "text": "Vas trenta-vuit segons per darrere."
+ },
+ {
+  "id": "num_darrere_39",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "darrere",
+  "n": 39,
+  "niv": 2,
+  "text": "Vas trenta-nou segons per darrere."
+ },
+ {
+  "id": "num_darrere_40",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "darrere",
+  "n": 40,
+  "niv": 2,
+  "text": "Vas quaranta segons per darrere."
+ },
+ {
+  "id": "num_darrere_41",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "darrere",
+  "n": 41,
+  "niv": 2,
+  "text": "Vas quaranta-un segons per darrere."
+ },
+ {
+  "id": "num_darrere_42",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "darrere",
+  "n": 42,
+  "niv": 2,
+  "text": "Vas quaranta-dos segons per darrere."
+ },
+ {
+  "id": "num_darrere_43",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "darrere",
+  "n": 43,
+  "niv": 2,
+  "text": "Vas quaranta-tres segons per darrere."
+ },
+ {
+  "id": "num_darrere_44",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "darrere",
+  "n": 44,
+  "niv": 2,
+  "text": "Vas quaranta-quatre segons per darrere."
+ },
+ {
+  "id": "num_darrere_45",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "darrere",
+  "n": 45,
+  "niv": 2,
+  "text": "Vas quaranta-cinc segons per darrere."
+ },
+ {
+  "id": "num_darrere_46",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "darrere",
+  "n": 46,
+  "niv": 2,
+  "text": "Vas quaranta-sis segons per darrere."
+ },
+ {
+  "id": "num_darrere_47",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "darrere",
+  "n": 47,
+  "niv": 2,
+  "text": "Vas quaranta-set segons per darrere."
+ },
+ {
+  "id": "num_darrere_48",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "darrere",
+  "n": 48,
+  "niv": 2,
+  "text": "Vas quaranta-vuit segons per darrere."
+ },
+ {
+  "id": "num_darrere_49",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "darrere",
+  "n": 49,
+  "niv": 2,
+  "text": "Vas quaranta-nou segons per darrere."
+ },
+ {
+  "id": "num_darrere_50",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "darrere",
+  "n": 50,
+  "niv": 2,
+  "text": "Vas cinquanta segons per darrere."
+ },
+ {
+  "id": "num_darrere_51",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "darrere",
+  "n": 51,
+  "niv": 2,
+  "text": "Vas cinquanta-un segons per darrere."
+ },
+ {
+  "id": "num_darrere_52",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "darrere",
+  "n": 52,
+  "niv": 2,
+  "text": "Vas cinquanta-dos segons per darrere."
+ },
+ {
+  "id": "num_darrere_53",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "darrere",
+  "n": 53,
+  "niv": 2,
+  "text": "Vas cinquanta-tres segons per darrere."
+ },
+ {
+  "id": "num_darrere_54",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "darrere",
+  "n": 54,
+  "niv": 2,
+  "text": "Vas cinquanta-quatre segons per darrere."
+ },
+ {
+  "id": "num_darrere_55",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "darrere",
+  "n": 55,
+  "niv": 2,
+  "text": "Vas cinquanta-cinc segons per darrere."
+ },
+ {
+  "id": "num_darrere_56",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "darrere",
+  "n": 56,
+  "niv": 2,
+  "text": "Vas cinquanta-sis segons per darrere."
+ },
+ {
+  "id": "num_darrere_57",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "darrere",
+  "n": 57,
+  "niv": 2,
+  "text": "Vas cinquanta-set segons per darrere."
+ },
+ {
+  "id": "num_darrere_58",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "darrere",
+  "n": 58,
+  "niv": 2,
+  "text": "Vas cinquanta-vuit segons per darrere."
+ },
+ {
+  "id": "num_darrere_59",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "darrere",
+  "n": 59,
+  "niv": 2,
+  "text": "Vas cinquanta-nou segons per darrere."
+ },
+ {
+  "id": "num_darrere_60",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "darrere",
+  "n": 60,
+  "niv": 2,
+  "text": "Vas seixanta segons per darrere."
+ },
+ {
+  "id": "num_darrere_61",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "darrere",
+  "n": 61,
+  "niv": 2,
+  "text": "Vas seixanta-un segons per darrere."
+ },
+ {
+  "id": "num_darrere_62",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "darrere",
+  "n": 62,
+  "niv": 2,
+  "text": "Vas seixanta-dos segons per darrere."
+ },
+ {
+  "id": "num_darrere_63",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "darrere",
+  "n": 63,
+  "niv": 2,
+  "text": "Vas seixanta-tres segons per darrere."
+ },
+ {
+  "id": "num_darrere_64",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "darrere",
+  "n": 64,
+  "niv": 2,
+  "text": "Vas seixanta-quatre segons per darrere."
+ },
+ {
+  "id": "num_darrere_65",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "darrere",
+  "n": 65,
+  "niv": 2,
+  "text": "Vas seixanta-cinc segons per darrere."
+ },
+ {
+  "id": "num_darrere_66",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "darrere",
+  "n": 66,
+  "niv": 2,
+  "text": "Vas seixanta-sis segons per darrere."
+ },
+ {
+  "id": "num_darrere_67",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "darrere",
+  "n": 67,
+  "niv": 2,
+  "text": "Vas seixanta-set segons per darrere."
+ },
+ {
+  "id": "num_darrere_68",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "darrere",
+  "n": 68,
+  "niv": 2,
+  "text": "Vas seixanta-vuit segons per darrere."
+ },
+ {
+  "id": "num_darrere_69",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "darrere",
+  "n": 69,
+  "niv": 2,
+  "text": "Vas seixanta-nou segons per darrere."
+ },
+ {
+  "id": "num_darrere_70",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "darrere",
+  "n": 70,
+  "niv": 2,
+  "text": "Vas setanta segons per darrere."
+ },
+ {
+  "id": "num_darrere_71",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "darrere",
+  "n": 71,
+  "niv": 2,
+  "text": "Vas setanta-un segons per darrere."
+ },
+ {
+  "id": "num_darrere_72",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "darrere",
+  "n": 72,
+  "niv": 2,
+  "text": "Vas setanta-dos segons per darrere."
+ },
+ {
+  "id": "num_darrere_73",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "darrere",
+  "n": 73,
+  "niv": 2,
+  "text": "Vas setanta-tres segons per darrere."
+ },
+ {
+  "id": "num_darrere_74",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "darrere",
+  "n": 74,
+  "niv": 2,
+  "text": "Vas setanta-quatre segons per darrere."
+ },
+ {
+  "id": "num_darrere_75",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "darrere",
+  "n": 75,
+  "niv": 2,
+  "text": "Vas setanta-cinc segons per darrere."
+ },
+ {
+  "id": "num_darrere_76",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "darrere",
+  "n": 76,
+  "niv": 2,
+  "text": "Vas setanta-sis segons per darrere."
+ },
+ {
+  "id": "num_darrere_77",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "darrere",
+  "n": 77,
+  "niv": 2,
+  "text": "Vas setanta-set segons per darrere."
+ },
+ {
+  "id": "num_darrere_78",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "darrere",
+  "n": 78,
+  "niv": 2,
+  "text": "Vas setanta-vuit segons per darrere."
+ },
+ {
+  "id": "num_darrere_79",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "darrere",
+  "n": 79,
+  "niv": 2,
+  "text": "Vas setanta-nou segons per darrere."
+ },
+ {
+  "id": "num_darrere_80",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "darrere",
+  "n": 80,
+  "niv": 2,
+  "text": "Vas vuitanta segons per darrere."
+ },
+ {
+  "id": "num_darrere_81",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "darrere",
+  "n": 81,
+  "niv": 2,
+  "text": "Vas vuitanta-un segons per darrere."
+ },
+ {
+  "id": "num_darrere_82",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "darrere",
+  "n": 82,
+  "niv": 2,
+  "text": "Vas vuitanta-dos segons per darrere."
+ },
+ {
+  "id": "num_darrere_83",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "darrere",
+  "n": 83,
+  "niv": 2,
+  "text": "Vas vuitanta-tres segons per darrere."
+ },
+ {
+  "id": "num_darrere_84",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "darrere",
+  "n": 84,
+  "niv": 2,
+  "text": "Vas vuitanta-quatre segons per darrere."
+ },
+ {
+  "id": "num_darrere_85",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "darrere",
+  "n": 85,
+  "niv": 2,
+  "text": "Vas vuitanta-cinc segons per darrere."
+ },
+ {
+  "id": "num_darrere_86",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "darrere",
+  "n": 86,
+  "niv": 2,
+  "text": "Vas vuitanta-sis segons per darrere."
+ },
+ {
+  "id": "num_darrere_87",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "darrere",
+  "n": 87,
+  "niv": 2,
+  "text": "Vas vuitanta-set segons per darrere."
+ },
+ {
+  "id": "num_darrere_88",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "darrere",
+  "n": 88,
+  "niv": 2,
+  "text": "Vas vuitanta-vuit segons per darrere."
+ },
+ {
+  "id": "num_darrere_89",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "darrere",
+  "n": 89,
+  "niv": 2,
+  "text": "Vas vuitanta-nou segons per darrere."
+ },
+ {
+  "id": "num_darrere_90",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "darrere",
+  "n": 90,
+  "niv": 2,
+  "text": "Vas noranta segons per darrere."
+ },
+ {
+  "id": "num_igual_0",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "igual",
+  "n": 0,
+  "niv": 2,
+  "text": "Vas clavat al teu rècord."
+ },
+ {
+  "id": "num_record_per_1",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "record_per",
+  "n": 1,
+  "niv": 2,
+  "text": "Rècord per un segon."
+ },
+ {
+  "id": "num_record_per_2",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "record_per",
+  "n": 2,
+  "niv": 2,
+  "text": "Rècord per dos segons."
+ },
+ {
+  "id": "num_record_per_3",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "record_per",
+  "n": 3,
+  "niv": 2,
+  "text": "Rècord per tres segons."
+ },
+ {
+  "id": "num_record_per_4",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "record_per",
+  "n": 4,
+  "niv": 2,
+  "text": "Rècord per quatre segons."
+ },
+ {
+  "id": "num_record_per_5",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "record_per",
+  "n": 5,
+  "niv": 2,
+  "text": "Rècord per cinc segons."
+ },
+ {
+  "id": "num_record_per_6",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "record_per",
+  "n": 6,
+  "niv": 2,
+  "text": "Rècord per sis segons."
+ },
+ {
+  "id": "num_record_per_7",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "record_per",
+  "n": 7,
+  "niv": 2,
+  "text": "Rècord per set segons."
+ },
+ {
+  "id": "num_record_per_8",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "record_per",
+  "n": 8,
+  "niv": 2,
+  "text": "Rècord per vuit segons."
+ },
+ {
+  "id": "num_record_per_9",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "record_per",
+  "n": 9,
+  "niv": 2,
+  "text": "Rècord per nou segons."
+ },
+ {
+  "id": "num_record_per_10",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "record_per",
+  "n": 10,
+  "niv": 2,
+  "text": "Rècord per deu segons."
+ },
+ {
+  "id": "num_record_per_11",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "record_per",
+  "n": 11,
+  "niv": 2,
+  "text": "Rècord per onze segons."
+ },
+ {
+  "id": "num_record_per_12",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "record_per",
+  "n": 12,
+  "niv": 2,
+  "text": "Rècord per dotze segons."
+ },
+ {
+  "id": "num_record_per_13",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "record_per",
+  "n": 13,
+  "niv": 2,
+  "text": "Rècord per tretze segons."
+ },
+ {
+  "id": "num_record_per_14",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "record_per",
+  "n": 14,
+  "niv": 2,
+  "text": "Rècord per catorze segons."
+ },
+ {
+  "id": "num_record_per_15",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "record_per",
+  "n": 15,
+  "niv": 2,
+  "text": "Rècord per quinze segons."
+ },
+ {
+  "id": "num_record_per_16",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "record_per",
+  "n": 16,
+  "niv": 2,
+  "text": "Rècord per setze segons."
+ },
+ {
+  "id": "num_record_per_17",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "record_per",
+  "n": 17,
+  "niv": 2,
+  "text": "Rècord per disset segons."
+ },
+ {
+  "id": "num_record_per_18",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "record_per",
+  "n": 18,
+  "niv": 2,
+  "text": "Rècord per divuit segons."
+ },
+ {
+  "id": "num_record_per_19",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "record_per",
+  "n": 19,
+  "niv": 2,
+  "text": "Rècord per dinou segons."
+ },
+ {
+  "id": "num_record_per_20",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "record_per",
+  "n": 20,
+  "niv": 2,
+  "text": "Rècord per vint segons."
+ },
+ {
+  "id": "num_record_per_21",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "record_per",
+  "n": 21,
+  "niv": 2,
+  "text": "Rècord per vint-i-un segons."
+ },
+ {
+  "id": "num_record_per_22",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "record_per",
+  "n": 22,
+  "niv": 2,
+  "text": "Rècord per vint-i-dos segons."
+ },
+ {
+  "id": "num_record_per_23",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "record_per",
+  "n": 23,
+  "niv": 2,
+  "text": "Rècord per vint-i-tres segons."
+ },
+ {
+  "id": "num_record_per_24",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "record_per",
+  "n": 24,
+  "niv": 2,
+  "text": "Rècord per vint-i-quatre segons."
+ },
+ {
+  "id": "num_record_per_25",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "record_per",
+  "n": 25,
+  "niv": 2,
+  "text": "Rècord per vint-i-cinc segons."
+ },
+ {
+  "id": "num_record_per_26",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "record_per",
+  "n": 26,
+  "niv": 2,
+  "text": "Rècord per vint-i-sis segons."
+ },
+ {
+  "id": "num_record_per_27",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "record_per",
+  "n": 27,
+  "niv": 2,
+  "text": "Rècord per vint-i-set segons."
+ },
+ {
+  "id": "num_record_per_28",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "record_per",
+  "n": 28,
+  "niv": 2,
+  "text": "Rècord per vint-i-vuit segons."
+ },
+ {
+  "id": "num_record_per_29",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "record_per",
+  "n": 29,
+  "niv": 2,
+  "text": "Rècord per vint-i-nou segons."
+ },
+ {
+  "id": "num_record_per_30",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "record_per",
+  "n": 30,
+  "niv": 2,
+  "text": "Rècord per trenta segons."
+ },
+ {
+  "id": "num_record_per_31",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "record_per",
+  "n": 31,
+  "niv": 2,
+  "text": "Rècord per trenta-un segons."
+ },
+ {
+  "id": "num_record_per_32",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "record_per",
+  "n": 32,
+  "niv": 2,
+  "text": "Rècord per trenta-dos segons."
+ },
+ {
+  "id": "num_record_per_33",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "record_per",
+  "n": 33,
+  "niv": 2,
+  "text": "Rècord per trenta-tres segons."
+ },
+ {
+  "id": "num_record_per_34",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "record_per",
+  "n": 34,
+  "niv": 2,
+  "text": "Rècord per trenta-quatre segons."
+ },
+ {
+  "id": "num_record_per_35",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "record_per",
+  "n": 35,
+  "niv": 2,
+  "text": "Rècord per trenta-cinc segons."
+ },
+ {
+  "id": "num_record_per_36",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "record_per",
+  "n": 36,
+  "niv": 2,
+  "text": "Rècord per trenta-sis segons."
+ },
+ {
+  "id": "num_record_per_37",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "record_per",
+  "n": 37,
+  "niv": 2,
+  "text": "Rècord per trenta-set segons."
+ },
+ {
+  "id": "num_record_per_38",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "record_per",
+  "n": 38,
+  "niv": 2,
+  "text": "Rècord per trenta-vuit segons."
+ },
+ {
+  "id": "num_record_per_39",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "record_per",
+  "n": 39,
+  "niv": 2,
+  "text": "Rècord per trenta-nou segons."
+ },
+ {
+  "id": "num_record_per_40",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "record_per",
+  "n": 40,
+  "niv": 2,
+  "text": "Rècord per quaranta segons."
+ },
+ {
+  "id": "num_record_per_41",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "record_per",
+  "n": 41,
+  "niv": 2,
+  "text": "Rècord per quaranta-un segons."
+ },
+ {
+  "id": "num_record_per_42",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "record_per",
+  "n": 42,
+  "niv": 2,
+  "text": "Rècord per quaranta-dos segons."
+ },
+ {
+  "id": "num_record_per_43",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "record_per",
+  "n": 43,
+  "niv": 2,
+  "text": "Rècord per quaranta-tres segons."
+ },
+ {
+  "id": "num_record_per_44",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "record_per",
+  "n": 44,
+  "niv": 2,
+  "text": "Rècord per quaranta-quatre segons."
+ },
+ {
+  "id": "num_record_per_45",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "record_per",
+  "n": 45,
+  "niv": 2,
+  "text": "Rècord per quaranta-cinc segons."
+ },
+ {
+  "id": "num_record_per_46",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "record_per",
+  "n": 46,
+  "niv": 2,
+  "text": "Rècord per quaranta-sis segons."
+ },
+ {
+  "id": "num_record_per_47",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "record_per",
+  "n": 47,
+  "niv": 2,
+  "text": "Rècord per quaranta-set segons."
+ },
+ {
+  "id": "num_record_per_48",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "record_per",
+  "n": 48,
+  "niv": 2,
+  "text": "Rècord per quaranta-vuit segons."
+ },
+ {
+  "id": "num_record_per_49",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "record_per",
+  "n": 49,
+  "niv": 2,
+  "text": "Rècord per quaranta-nou segons."
+ },
+ {
+  "id": "num_record_per_50",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "record_per",
+  "n": 50,
+  "niv": 2,
+  "text": "Rècord per cinquanta segons."
+ },
+ {
+  "id": "num_record_per_51",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "record_per",
+  "n": 51,
+  "niv": 2,
+  "text": "Rècord per cinquanta-un segons."
+ },
+ {
+  "id": "num_record_per_52",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "record_per",
+  "n": 52,
+  "niv": 2,
+  "text": "Rècord per cinquanta-dos segons."
+ },
+ {
+  "id": "num_record_per_53",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "record_per",
+  "n": 53,
+  "niv": 2,
+  "text": "Rècord per cinquanta-tres segons."
+ },
+ {
+  "id": "num_record_per_54",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "record_per",
+  "n": 54,
+  "niv": 2,
+  "text": "Rècord per cinquanta-quatre segons."
+ },
+ {
+  "id": "num_record_per_55",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "record_per",
+  "n": 55,
+  "niv": 2,
+  "text": "Rècord per cinquanta-cinc segons."
+ },
+ {
+  "id": "num_record_per_56",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "record_per",
+  "n": 56,
+  "niv": 2,
+  "text": "Rècord per cinquanta-sis segons."
+ },
+ {
+  "id": "num_record_per_57",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "record_per",
+  "n": 57,
+  "niv": 2,
+  "text": "Rècord per cinquanta-set segons."
+ },
+ {
+  "id": "num_record_per_58",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "record_per",
+  "n": 58,
+  "niv": 2,
+  "text": "Rècord per cinquanta-vuit segons."
+ },
+ {
+  "id": "num_record_per_59",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "record_per",
+  "n": 59,
+  "niv": 2,
+  "text": "Rècord per cinquanta-nou segons."
+ },
+ {
+  "id": "num_record_per_60",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "record_per",
+  "n": 60,
+  "niv": 2,
+  "text": "Rècord per seixanta segons."
+ },
+ {
+  "id": "num_record_per_61",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "record_per",
+  "n": 61,
+  "niv": 2,
+  "text": "Rècord per seixanta-un segons."
+ },
+ {
+  "id": "num_record_per_62",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "record_per",
+  "n": 62,
+  "niv": 2,
+  "text": "Rècord per seixanta-dos segons."
+ },
+ {
+  "id": "num_record_per_63",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "record_per",
+  "n": 63,
+  "niv": 2,
+  "text": "Rècord per seixanta-tres segons."
+ },
+ {
+  "id": "num_record_per_64",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "record_per",
+  "n": 64,
+  "niv": 2,
+  "text": "Rècord per seixanta-quatre segons."
+ },
+ {
+  "id": "num_record_per_65",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "record_per",
+  "n": 65,
+  "niv": 2,
+  "text": "Rècord per seixanta-cinc segons."
+ },
+ {
+  "id": "num_record_per_66",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "record_per",
+  "n": 66,
+  "niv": 2,
+  "text": "Rècord per seixanta-sis segons."
+ },
+ {
+  "id": "num_record_per_67",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "record_per",
+  "n": 67,
+  "niv": 2,
+  "text": "Rècord per seixanta-set segons."
+ },
+ {
+  "id": "num_record_per_68",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "record_per",
+  "n": 68,
+  "niv": 2,
+  "text": "Rècord per seixanta-vuit segons."
+ },
+ {
+  "id": "num_record_per_69",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "record_per",
+  "n": 69,
+  "niv": 2,
+  "text": "Rècord per seixanta-nou segons."
+ },
+ {
+  "id": "num_record_per_70",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "record_per",
+  "n": 70,
+  "niv": 2,
+  "text": "Rècord per setanta segons."
+ },
+ {
+  "id": "num_record_per_71",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "record_per",
+  "n": 71,
+  "niv": 2,
+  "text": "Rècord per setanta-un segons."
+ },
+ {
+  "id": "num_record_per_72",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "record_per",
+  "n": 72,
+  "niv": 2,
+  "text": "Rècord per setanta-dos segons."
+ },
+ {
+  "id": "num_record_per_73",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "record_per",
+  "n": 73,
+  "niv": 2,
+  "text": "Rècord per setanta-tres segons."
+ },
+ {
+  "id": "num_record_per_74",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "record_per",
+  "n": 74,
+  "niv": 2,
+  "text": "Rècord per setanta-quatre segons."
+ },
+ {
+  "id": "num_record_per_75",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "record_per",
+  "n": 75,
+  "niv": 2,
+  "text": "Rècord per setanta-cinc segons."
+ },
+ {
+  "id": "num_record_per_76",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "record_per",
+  "n": 76,
+  "niv": 2,
+  "text": "Rècord per setanta-sis segons."
+ },
+ {
+  "id": "num_record_per_77",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "record_per",
+  "n": 77,
+  "niv": 2,
+  "text": "Rècord per setanta-set segons."
+ },
+ {
+  "id": "num_record_per_78",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "record_per",
+  "n": 78,
+  "niv": 2,
+  "text": "Rècord per setanta-vuit segons."
+ },
+ {
+  "id": "num_record_per_79",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "record_per",
+  "n": 79,
+  "niv": 2,
+  "text": "Rècord per setanta-nou segons."
+ },
+ {
+  "id": "num_record_per_80",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "record_per",
+  "n": 80,
+  "niv": 2,
+  "text": "Rècord per vuitanta segons."
+ },
+ {
+  "id": "num_record_per_81",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "record_per",
+  "n": 81,
+  "niv": 2,
+  "text": "Rècord per vuitanta-un segons."
+ },
+ {
+  "id": "num_record_per_82",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "record_per",
+  "n": 82,
+  "niv": 2,
+  "text": "Rècord per vuitanta-dos segons."
+ },
+ {
+  "id": "num_record_per_83",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "record_per",
+  "n": 83,
+  "niv": 2,
+  "text": "Rècord per vuitanta-tres segons."
+ },
+ {
+  "id": "num_record_per_84",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "record_per",
+  "n": 84,
+  "niv": 2,
+  "text": "Rècord per vuitanta-quatre segons."
+ },
+ {
+  "id": "num_record_per_85",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "record_per",
+  "n": 85,
+  "niv": 2,
+  "text": "Rècord per vuitanta-cinc segons."
+ },
+ {
+  "id": "num_record_per_86",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "record_per",
+  "n": 86,
+  "niv": 2,
+  "text": "Rècord per vuitanta-sis segons."
+ },
+ {
+  "id": "num_record_per_87",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "record_per",
+  "n": 87,
+  "niv": 2,
+  "text": "Rècord per vuitanta-set segons."
+ },
+ {
+  "id": "num_record_per_88",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "record_per",
+  "n": 88,
+  "niv": 2,
+  "text": "Rècord per vuitanta-vuit segons."
+ },
+ {
+  "id": "num_record_per_89",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "record_per",
+  "n": 89,
+  "niv": 2,
+  "text": "Rècord per vuitanta-nou segons."
+ },
+ {
+  "id": "num_record_per_90",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "record_per",
+  "n": 90,
+  "niv": 2,
+  "text": "Rècord per noranta segons."
+ },
+ {
+  "id": "num_a_del_record_1",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "a_del_record",
+  "n": 1,
+  "niv": 2,
+  "text": "A un segon del rècord."
+ },
+ {
+  "id": "num_a_del_record_2",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "a_del_record",
+  "n": 2,
+  "niv": 2,
+  "text": "A dos segons del rècord."
+ },
+ {
+  "id": "num_a_del_record_3",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "a_del_record",
+  "n": 3,
+  "niv": 2,
+  "text": "A tres segons del rècord."
+ },
+ {
+  "id": "num_a_del_record_4",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "a_del_record",
+  "n": 4,
+  "niv": 2,
+  "text": "A quatre segons del rècord."
+ },
+ {
+  "id": "num_a_del_record_5",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "a_del_record",
+  "n": 5,
+  "niv": 2,
+  "text": "A cinc segons del rècord."
+ },
+ {
+  "id": "num_a_del_record_6",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "a_del_record",
+  "n": 6,
+  "niv": 2,
+  "text": "A sis segons del rècord."
+ },
+ {
+  "id": "num_a_del_record_7",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "a_del_record",
+  "n": 7,
+  "niv": 2,
+  "text": "A set segons del rècord."
+ },
+ {
+  "id": "num_a_del_record_8",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "a_del_record",
+  "n": 8,
+  "niv": 2,
+  "text": "A vuit segons del rècord."
+ },
+ {
+  "id": "num_a_del_record_9",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "a_del_record",
+  "n": 9,
+  "niv": 2,
+  "text": "A nou segons del rècord."
+ },
+ {
+  "id": "num_a_del_record_10",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "a_del_record",
+  "n": 10,
+  "niv": 2,
+  "text": "A deu segons del rècord."
+ },
+ {
+  "id": "num_a_del_record_11",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "a_del_record",
+  "n": 11,
+  "niv": 2,
+  "text": "A onze segons del rècord."
+ },
+ {
+  "id": "num_a_del_record_12",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "a_del_record",
+  "n": 12,
+  "niv": 2,
+  "text": "A dotze segons del rècord."
+ },
+ {
+  "id": "num_a_del_record_13",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "a_del_record",
+  "n": 13,
+  "niv": 2,
+  "text": "A tretze segons del rècord."
+ },
+ {
+  "id": "num_a_del_record_14",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "a_del_record",
+  "n": 14,
+  "niv": 2,
+  "text": "A catorze segons del rècord."
+ },
+ {
+  "id": "num_a_del_record_15",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "a_del_record",
+  "n": 15,
+  "niv": 2,
+  "text": "A quinze segons del rècord."
+ },
+ {
+  "id": "num_a_del_record_16",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "a_del_record",
+  "n": 16,
+  "niv": 2,
+  "text": "A setze segons del rècord."
+ },
+ {
+  "id": "num_a_del_record_17",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "a_del_record",
+  "n": 17,
+  "niv": 2,
+  "text": "A disset segons del rècord."
+ },
+ {
+  "id": "num_a_del_record_18",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "a_del_record",
+  "n": 18,
+  "niv": 2,
+  "text": "A divuit segons del rècord."
+ },
+ {
+  "id": "num_a_del_record_19",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "a_del_record",
+  "n": 19,
+  "niv": 2,
+  "text": "A dinou segons del rècord."
+ },
+ {
+  "id": "num_a_del_record_20",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "a_del_record",
+  "n": 20,
+  "niv": 2,
+  "text": "A vint segons del rècord."
+ },
+ {
+  "id": "num_a_del_record_21",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "a_del_record",
+  "n": 21,
+  "niv": 2,
+  "text": "A vint-i-un segons del rècord."
+ },
+ {
+  "id": "num_a_del_record_22",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "a_del_record",
+  "n": 22,
+  "niv": 2,
+  "text": "A vint-i-dos segons del rècord."
+ },
+ {
+  "id": "num_a_del_record_23",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "a_del_record",
+  "n": 23,
+  "niv": 2,
+  "text": "A vint-i-tres segons del rècord."
+ },
+ {
+  "id": "num_a_del_record_24",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "a_del_record",
+  "n": 24,
+  "niv": 2,
+  "text": "A vint-i-quatre segons del rècord."
+ },
+ {
+  "id": "num_a_del_record_25",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "a_del_record",
+  "n": 25,
+  "niv": 2,
+  "text": "A vint-i-cinc segons del rècord."
+ },
+ {
+  "id": "num_a_del_record_26",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "a_del_record",
+  "n": 26,
+  "niv": 2,
+  "text": "A vint-i-sis segons del rècord."
+ },
+ {
+  "id": "num_a_del_record_27",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "a_del_record",
+  "n": 27,
+  "niv": 2,
+  "text": "A vint-i-set segons del rècord."
+ },
+ {
+  "id": "num_a_del_record_28",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "a_del_record",
+  "n": 28,
+  "niv": 2,
+  "text": "A vint-i-vuit segons del rècord."
+ },
+ {
+  "id": "num_a_del_record_29",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "a_del_record",
+  "n": 29,
+  "niv": 2,
+  "text": "A vint-i-nou segons del rècord."
+ },
+ {
+  "id": "num_a_del_record_30",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "a_del_record",
+  "n": 30,
+  "niv": 2,
+  "text": "A trenta segons del rècord."
+ },
+ {
+  "id": "num_a_del_record_31",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "a_del_record",
+  "n": 31,
+  "niv": 2,
+  "text": "A trenta-un segons del rècord."
+ },
+ {
+  "id": "num_a_del_record_32",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "a_del_record",
+  "n": 32,
+  "niv": 2,
+  "text": "A trenta-dos segons del rècord."
+ },
+ {
+  "id": "num_a_del_record_33",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "a_del_record",
+  "n": 33,
+  "niv": 2,
+  "text": "A trenta-tres segons del rècord."
+ },
+ {
+  "id": "num_a_del_record_34",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "a_del_record",
+  "n": 34,
+  "niv": 2,
+  "text": "A trenta-quatre segons del rècord."
+ },
+ {
+  "id": "num_a_del_record_35",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "a_del_record",
+  "n": 35,
+  "niv": 2,
+  "text": "A trenta-cinc segons del rècord."
+ },
+ {
+  "id": "num_a_del_record_36",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "a_del_record",
+  "n": 36,
+  "niv": 2,
+  "text": "A trenta-sis segons del rècord."
+ },
+ {
+  "id": "num_a_del_record_37",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "a_del_record",
+  "n": 37,
+  "niv": 2,
+  "text": "A trenta-set segons del rècord."
+ },
+ {
+  "id": "num_a_del_record_38",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "a_del_record",
+  "n": 38,
+  "niv": 2,
+  "text": "A trenta-vuit segons del rècord."
+ },
+ {
+  "id": "num_a_del_record_39",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "a_del_record",
+  "n": 39,
+  "niv": 2,
+  "text": "A trenta-nou segons del rècord."
+ },
+ {
+  "id": "num_a_del_record_40",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "a_del_record",
+  "n": 40,
+  "niv": 2,
+  "text": "A quaranta segons del rècord."
+ },
+ {
+  "id": "num_a_del_record_41",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "a_del_record",
+  "n": 41,
+  "niv": 2,
+  "text": "A quaranta-un segons del rècord."
+ },
+ {
+  "id": "num_a_del_record_42",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "a_del_record",
+  "n": 42,
+  "niv": 2,
+  "text": "A quaranta-dos segons del rècord."
+ },
+ {
+  "id": "num_a_del_record_43",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "a_del_record",
+  "n": 43,
+  "niv": 2,
+  "text": "A quaranta-tres segons del rècord."
+ },
+ {
+  "id": "num_a_del_record_44",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "a_del_record",
+  "n": 44,
+  "niv": 2,
+  "text": "A quaranta-quatre segons del rècord."
+ },
+ {
+  "id": "num_a_del_record_45",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "a_del_record",
+  "n": 45,
+  "niv": 2,
+  "text": "A quaranta-cinc segons del rècord."
+ },
+ {
+  "id": "num_a_del_record_46",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "a_del_record",
+  "n": 46,
+  "niv": 2,
+  "text": "A quaranta-sis segons del rècord."
+ },
+ {
+  "id": "num_a_del_record_47",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "a_del_record",
+  "n": 47,
+  "niv": 2,
+  "text": "A quaranta-set segons del rècord."
+ },
+ {
+  "id": "num_a_del_record_48",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "a_del_record",
+  "n": 48,
+  "niv": 2,
+  "text": "A quaranta-vuit segons del rècord."
+ },
+ {
+  "id": "num_a_del_record_49",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "a_del_record",
+  "n": 49,
+  "niv": 2,
+  "text": "A quaranta-nou segons del rècord."
+ },
+ {
+  "id": "num_a_del_record_50",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "a_del_record",
+  "n": 50,
+  "niv": 2,
+  "text": "A cinquanta segons del rècord."
+ },
+ {
+  "id": "num_a_del_record_51",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "a_del_record",
+  "n": 51,
+  "niv": 2,
+  "text": "A cinquanta-un segons del rècord."
+ },
+ {
+  "id": "num_a_del_record_52",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "a_del_record",
+  "n": 52,
+  "niv": 2,
+  "text": "A cinquanta-dos segons del rècord."
+ },
+ {
+  "id": "num_a_del_record_53",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "a_del_record",
+  "n": 53,
+  "niv": 2,
+  "text": "A cinquanta-tres segons del rècord."
+ },
+ {
+  "id": "num_a_del_record_54",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "a_del_record",
+  "n": 54,
+  "niv": 2,
+  "text": "A cinquanta-quatre segons del rècord."
+ },
+ {
+  "id": "num_a_del_record_55",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "a_del_record",
+  "n": 55,
+  "niv": 2,
+  "text": "A cinquanta-cinc segons del rècord."
+ },
+ {
+  "id": "num_a_del_record_56",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "a_del_record",
+  "n": 56,
+  "niv": 2,
+  "text": "A cinquanta-sis segons del rècord."
+ },
+ {
+  "id": "num_a_del_record_57",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "a_del_record",
+  "n": 57,
+  "niv": 2,
+  "text": "A cinquanta-set segons del rècord."
+ },
+ {
+  "id": "num_a_del_record_58",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "a_del_record",
+  "n": 58,
+  "niv": 2,
+  "text": "A cinquanta-vuit segons del rècord."
+ },
+ {
+  "id": "num_a_del_record_59",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "a_del_record",
+  "n": 59,
+  "niv": 2,
+  "text": "A cinquanta-nou segons del rècord."
+ },
+ {
+  "id": "num_a_del_record_60",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "a_del_record",
+  "n": 60,
+  "niv": 2,
+  "text": "A seixanta segons del rècord."
+ },
+ {
+  "id": "num_a_del_record_61",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "a_del_record",
+  "n": 61,
+  "niv": 2,
+  "text": "A seixanta-un segons del rècord."
+ },
+ {
+  "id": "num_a_del_record_62",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "a_del_record",
+  "n": 62,
+  "niv": 2,
+  "text": "A seixanta-dos segons del rècord."
+ },
+ {
+  "id": "num_a_del_record_63",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "a_del_record",
+  "n": 63,
+  "niv": 2,
+  "text": "A seixanta-tres segons del rècord."
+ },
+ {
+  "id": "num_a_del_record_64",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "a_del_record",
+  "n": 64,
+  "niv": 2,
+  "text": "A seixanta-quatre segons del rècord."
+ },
+ {
+  "id": "num_a_del_record_65",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "a_del_record",
+  "n": 65,
+  "niv": 2,
+  "text": "A seixanta-cinc segons del rècord."
+ },
+ {
+  "id": "num_a_del_record_66",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "a_del_record",
+  "n": 66,
+  "niv": 2,
+  "text": "A seixanta-sis segons del rècord."
+ },
+ {
+  "id": "num_a_del_record_67",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "a_del_record",
+  "n": 67,
+  "niv": 2,
+  "text": "A seixanta-set segons del rècord."
+ },
+ {
+  "id": "num_a_del_record_68",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "a_del_record",
+  "n": 68,
+  "niv": 2,
+  "text": "A seixanta-vuit segons del rècord."
+ },
+ {
+  "id": "num_a_del_record_69",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "a_del_record",
+  "n": 69,
+  "niv": 2,
+  "text": "A seixanta-nou segons del rècord."
+ },
+ {
+  "id": "num_a_del_record_70",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "a_del_record",
+  "n": 70,
+  "niv": 2,
+  "text": "A setanta segons del rècord."
+ },
+ {
+  "id": "num_a_del_record_71",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "a_del_record",
+  "n": 71,
+  "niv": 2,
+  "text": "A setanta-un segons del rècord."
+ },
+ {
+  "id": "num_a_del_record_72",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "a_del_record",
+  "n": 72,
+  "niv": 2,
+  "text": "A setanta-dos segons del rècord."
+ },
+ {
+  "id": "num_a_del_record_73",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "a_del_record",
+  "n": 73,
+  "niv": 2,
+  "text": "A setanta-tres segons del rècord."
+ },
+ {
+  "id": "num_a_del_record_74",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "a_del_record",
+  "n": 74,
+  "niv": 2,
+  "text": "A setanta-quatre segons del rècord."
+ },
+ {
+  "id": "num_a_del_record_75",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "a_del_record",
+  "n": 75,
+  "niv": 2,
+  "text": "A setanta-cinc segons del rècord."
+ },
+ {
+  "id": "num_a_del_record_76",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "a_del_record",
+  "n": 76,
+  "niv": 2,
+  "text": "A setanta-sis segons del rècord."
+ },
+ {
+  "id": "num_a_del_record_77",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "a_del_record",
+  "n": 77,
+  "niv": 2,
+  "text": "A setanta-set segons del rècord."
+ },
+ {
+  "id": "num_a_del_record_78",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "a_del_record",
+  "n": 78,
+  "niv": 2,
+  "text": "A setanta-vuit segons del rècord."
+ },
+ {
+  "id": "num_a_del_record_79",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "a_del_record",
+  "n": 79,
+  "niv": 2,
+  "text": "A setanta-nou segons del rècord."
+ },
+ {
+  "id": "num_a_del_record_80",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "a_del_record",
+  "n": 80,
+  "niv": 2,
+  "text": "A vuitanta segons del rècord."
+ },
+ {
+  "id": "num_a_del_record_81",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "a_del_record",
+  "n": 81,
+  "niv": 2,
+  "text": "A vuitanta-un segons del rècord."
+ },
+ {
+  "id": "num_a_del_record_82",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "a_del_record",
+  "n": 82,
+  "niv": 2,
+  "text": "A vuitanta-dos segons del rècord."
+ },
+ {
+  "id": "num_a_del_record_83",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "a_del_record",
+  "n": 83,
+  "niv": 2,
+  "text": "A vuitanta-tres segons del rècord."
+ },
+ {
+  "id": "num_a_del_record_84",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "a_del_record",
+  "n": 84,
+  "niv": 2,
+  "text": "A vuitanta-quatre segons del rècord."
+ },
+ {
+  "id": "num_a_del_record_85",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "a_del_record",
+  "n": 85,
+  "niv": 2,
+  "text": "A vuitanta-cinc segons del rècord."
+ },
+ {
+  "id": "num_a_del_record_86",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "a_del_record",
+  "n": 86,
+  "niv": 2,
+  "text": "A vuitanta-sis segons del rècord."
+ },
+ {
+  "id": "num_a_del_record_87",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "a_del_record",
+  "n": 87,
+  "niv": 2,
+  "text": "A vuitanta-set segons del rècord."
+ },
+ {
+  "id": "num_a_del_record_88",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "a_del_record",
+  "n": 88,
+  "niv": 2,
+  "text": "A vuitanta-vuit segons del rècord."
+ },
+ {
+  "id": "num_a_del_record_89",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "a_del_record",
+  "n": 89,
+  "niv": 2,
+  "text": "A vuitanta-nou segons del rècord."
+ },
+ {
+  "id": "num_a_del_record_90",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "a_del_record",
+  "n": 90,
+  "niv": 2,
+  "text": "A noranta segons del rècord."
+ },
+ {
+  "id": "num_a_del_record_91",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "a_del_record",
+  "n": 91,
+  "niv": 2,
+  "text": "A noranta-un segons del rècord."
+ },
+ {
+  "id": "num_a_del_record_92",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "a_del_record",
+  "n": 92,
+  "niv": 2,
+  "text": "A noranta-dos segons del rècord."
+ },
+ {
+  "id": "num_a_del_record_93",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "a_del_record",
+  "n": 93,
+  "niv": 2,
+  "text": "A noranta-tres segons del rècord."
+ },
+ {
+  "id": "num_a_del_record_94",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "a_del_record",
+  "n": 94,
+  "niv": 2,
+  "text": "A noranta-quatre segons del rècord."
+ },
+ {
+  "id": "num_a_del_record_95",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "a_del_record",
+  "n": 95,
+  "niv": 2,
+  "text": "A noranta-cinc segons del rècord."
+ },
+ {
+  "id": "num_a_del_record_96",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "a_del_record",
+  "n": 96,
+  "niv": 2,
+  "text": "A noranta-sis segons del rècord."
+ },
+ {
+  "id": "num_a_del_record_97",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "a_del_record",
+  "n": 97,
+  "niv": 2,
+  "text": "A noranta-set segons del rècord."
+ },
+ {
+  "id": "num_a_del_record_98",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "a_del_record",
+  "n": 98,
+  "niv": 2,
+  "text": "A noranta-vuit segons del rècord."
+ },
+ {
+  "id": "num_a_del_record_99",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "a_del_record",
+  "n": 99,
+  "niv": 2,
+  "text": "A noranta-nou segons del rècord."
+ },
+ {
+  "id": "num_a_del_record_100",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "a_del_record",
+  "n": 100,
+  "niv": 2,
+  "text": "A cent segons del rècord."
+ },
+ {
+  "id": "num_a_del_record_101",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "a_del_record",
+  "n": 101,
+  "niv": 2,
+  "text": "A cent un segons del rècord."
+ },
+ {
+  "id": "num_a_del_record_102",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "a_del_record",
+  "n": 102,
+  "niv": 2,
+  "text": "A cent dos segons del rècord."
+ },
+ {
+  "id": "num_a_del_record_103",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "a_del_record",
+  "n": 103,
+  "niv": 2,
+  "text": "A cent tres segons del rècord."
+ },
+ {
+  "id": "num_a_del_record_104",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "a_del_record",
+  "n": 104,
+  "niv": 2,
+  "text": "A cent quatre segons del rècord."
+ },
+ {
+  "id": "num_a_del_record_105",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "a_del_record",
+  "n": 105,
+  "niv": 2,
+  "text": "A cent cinc segons del rècord."
+ },
+ {
+  "id": "num_a_del_record_106",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "a_del_record",
+  "n": 106,
+  "niv": 2,
+  "text": "A cent sis segons del rècord."
+ },
+ {
+  "id": "num_a_del_record_107",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "a_del_record",
+  "n": 107,
+  "niv": 2,
+  "text": "A cent set segons del rècord."
+ },
+ {
+  "id": "num_a_del_record_108",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "a_del_record",
+  "n": 108,
+  "niv": 2,
+  "text": "A cent vuit segons del rècord."
+ },
+ {
+  "id": "num_a_del_record_109",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "a_del_record",
+  "n": 109,
+  "niv": 2,
+  "text": "A cent nou segons del rècord."
+ },
+ {
+  "id": "num_a_del_record_110",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "a_del_record",
+  "n": 110,
+  "niv": 2,
+  "text": "A cent deu segons del rècord."
+ },
+ {
+  "id": "num_a_del_record_111",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "a_del_record",
+  "n": 111,
+  "niv": 2,
+  "text": "A cent onze segons del rècord."
+ },
+ {
+  "id": "num_a_del_record_112",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "a_del_record",
+  "n": 112,
+  "niv": 2,
+  "text": "A cent dotze segons del rècord."
+ },
+ {
+  "id": "num_a_del_record_113",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "a_del_record",
+  "n": 113,
+  "niv": 2,
+  "text": "A cent tretze segons del rècord."
+ },
+ {
+  "id": "num_a_del_record_114",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "a_del_record",
+  "n": 114,
+  "niv": 2,
+  "text": "A cent catorze segons del rècord."
+ },
+ {
+  "id": "num_a_del_record_115",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "a_del_record",
+  "n": 115,
+  "niv": 2,
+  "text": "A cent quinze segons del rècord."
+ },
+ {
+  "id": "num_a_del_record_116",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "a_del_record",
+  "n": 116,
+  "niv": 2,
+  "text": "A cent setze segons del rècord."
+ },
+ {
+  "id": "num_a_del_record_117",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "a_del_record",
+  "n": 117,
+  "niv": 2,
+  "text": "A cent disset segons del rècord."
+ },
+ {
+  "id": "num_a_del_record_118",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "a_del_record",
+  "n": 118,
+  "niv": 2,
+  "text": "A cent divuit segons del rècord."
+ },
+ {
+  "id": "num_a_del_record_119",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "a_del_record",
+  "n": 119,
+  "niv": 2,
+  "text": "A cent dinou segons del rècord."
+ },
+ {
+  "id": "num_a_del_record_120",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "a_del_record",
+  "n": 120,
+  "niv": 2,
+  "text": "A cent vint segons del rècord."
+ },
+ {
+  "id": "num_minuts_18",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "minuts",
+  "n": 18,
+  "niv": 2,
+  "text": "Temps: divuit minuts"
+ },
+ {
+  "id": "num_minuts_19",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "minuts",
+  "n": 19,
+  "niv": 2,
+  "text": "Temps: dinou minuts"
+ },
+ {
+  "id": "num_minuts_20",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "minuts",
+  "n": 20,
+  "niv": 2,
+  "text": "Temps: vint minuts"
+ },
+ {
+  "id": "num_minuts_21",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "minuts",
+  "n": 21,
+  "niv": 2,
+  "text": "Temps: vint-i-un minuts"
+ },
+ {
+  "id": "num_minuts_22",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "minuts",
+  "n": 22,
+  "niv": 2,
+  "text": "Temps: vint-i-dos minuts"
+ },
+ {
+  "id": "num_minuts_23",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "minuts",
+  "n": 23,
+  "niv": 2,
+  "text": "Temps: vint-i-tres minuts"
+ },
+ {
+  "id": "num_minuts_24",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "minuts",
+  "n": 24,
+  "niv": 2,
+  "text": "Temps: vint-i-quatre minuts"
+ },
+ {
+  "id": "num_minuts_25",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "minuts",
+  "n": 25,
+  "niv": 2,
+  "text": "Temps: vint-i-cinc minuts"
+ },
+ {
+  "id": "num_minuts_26",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "minuts",
+  "n": 26,
+  "niv": 2,
+  "text": "Temps: vint-i-sis minuts"
+ },
+ {
+  "id": "num_minuts_27",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "minuts",
+  "n": 27,
+  "niv": 2,
+  "text": "Temps: vint-i-set minuts"
+ },
+ {
+  "id": "num_minuts_28",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "minuts",
+  "n": 28,
+  "niv": 2,
+  "text": "Temps: vint-i-vuit minuts"
+ },
+ {
+  "id": "num_minuts_29",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "minuts",
+  "n": 29,
+  "niv": 2,
+  "text": "Temps: vint-i-nou minuts"
+ },
+ {
+  "id": "num_minuts_30",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "minuts",
+  "n": 30,
+  "niv": 2,
+  "text": "Temps: trenta minuts"
+ },
+ {
+  "id": "num_minuts_31",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "minuts",
+  "n": 31,
+  "niv": 2,
+  "text": "Temps: trenta-un minuts"
+ },
+ {
+  "id": "num_minuts_32",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "minuts",
+  "n": 32,
+  "niv": 2,
+  "text": "Temps: trenta-dos minuts"
+ },
+ {
+  "id": "num_minuts_33",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "minuts",
+  "n": 33,
+  "niv": 2,
+  "text": "Temps: trenta-tres minuts"
+ },
+ {
+  "id": "num_minuts_34",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "minuts",
+  "n": 34,
+  "niv": 2,
+  "text": "Temps: trenta-quatre minuts"
+ },
+ {
+  "id": "num_minuts_35",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "minuts",
+  "n": 35,
+  "niv": 2,
+  "text": "Temps: trenta-cinc minuts"
+ },
+ {
+  "id": "num_minuts_36",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "minuts",
+  "n": 36,
+  "niv": 2,
+  "text": "Temps: trenta-sis minuts"
+ },
+ {
+  "id": "num_minuts_37",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "minuts",
+  "n": 37,
+  "niv": 2,
+  "text": "Temps: trenta-set minuts"
+ },
+ {
+  "id": "num_minuts_38",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "minuts",
+  "n": 38,
+  "niv": 2,
+  "text": "Temps: trenta-vuit minuts"
+ },
+ {
+  "id": "num_minuts_39",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "minuts",
+  "n": 39,
+  "niv": 2,
+  "text": "Temps: trenta-nou minuts"
+ },
+ {
+  "id": "num_minuts_40",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "minuts",
+  "n": 40,
+  "niv": 2,
+  "text": "Temps: quaranta minuts"
+ },
+ {
+  "id": "num_isegons_0",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "isegons",
+  "n": 0,
+  "niv": 2,
+  "text": "justos."
+ },
+ {
+  "id": "num_isegons_1",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "isegons",
+  "n": 1,
+  "niv": 2,
+  "text": "i un segon."
+ },
+ {
+  "id": "num_isegons_2",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "isegons",
+  "n": 2,
+  "niv": 2,
+  "text": "i dos segons."
+ },
+ {
+  "id": "num_isegons_3",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "isegons",
+  "n": 3,
+  "niv": 2,
+  "text": "i tres segons."
+ },
+ {
+  "id": "num_isegons_4",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "isegons",
+  "n": 4,
+  "niv": 2,
+  "text": "i quatre segons."
+ },
+ {
+  "id": "num_isegons_5",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "isegons",
+  "n": 5,
+  "niv": 2,
+  "text": "i cinc segons."
+ },
+ {
+  "id": "num_isegons_6",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "isegons",
+  "n": 6,
+  "niv": 2,
+  "text": "i sis segons."
+ },
+ {
+  "id": "num_isegons_7",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "isegons",
+  "n": 7,
+  "niv": 2,
+  "text": "i set segons."
+ },
+ {
+  "id": "num_isegons_8",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "isegons",
+  "n": 8,
+  "niv": 2,
+  "text": "i vuit segons."
+ },
+ {
+  "id": "num_isegons_9",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "isegons",
+  "n": 9,
+  "niv": 2,
+  "text": "i nou segons."
+ },
+ {
+  "id": "num_isegons_10",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "isegons",
+  "n": 10,
+  "niv": 2,
+  "text": "i deu segons."
+ },
+ {
+  "id": "num_isegons_11",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "isegons",
+  "n": 11,
+  "niv": 2,
+  "text": "i onze segons."
+ },
+ {
+  "id": "num_isegons_12",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "isegons",
+  "n": 12,
+  "niv": 2,
+  "text": "i dotze segons."
+ },
+ {
+  "id": "num_isegons_13",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "isegons",
+  "n": 13,
+  "niv": 2,
+  "text": "i tretze segons."
+ },
+ {
+  "id": "num_isegons_14",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "isegons",
+  "n": 14,
+  "niv": 2,
+  "text": "i catorze segons."
+ },
+ {
+  "id": "num_isegons_15",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "isegons",
+  "n": 15,
+  "niv": 2,
+  "text": "i quinze segons."
+ },
+ {
+  "id": "num_isegons_16",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "isegons",
+  "n": 16,
+  "niv": 2,
+  "text": "i setze segons."
+ },
+ {
+  "id": "num_isegons_17",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "isegons",
+  "n": 17,
+  "niv": 2,
+  "text": "i disset segons."
+ },
+ {
+  "id": "num_isegons_18",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "isegons",
+  "n": 18,
+  "niv": 2,
+  "text": "i divuit segons."
+ },
+ {
+  "id": "num_isegons_19",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "isegons",
+  "n": 19,
+  "niv": 2,
+  "text": "i dinou segons."
+ },
+ {
+  "id": "num_isegons_20",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "isegons",
+  "n": 20,
+  "niv": 2,
+  "text": "i vint segons."
+ },
+ {
+  "id": "num_isegons_21",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "isegons",
+  "n": 21,
+  "niv": 2,
+  "text": "i vint-i-un segons."
+ },
+ {
+  "id": "num_isegons_22",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "isegons",
+  "n": 22,
+  "niv": 2,
+  "text": "i vint-i-dos segons."
+ },
+ {
+  "id": "num_isegons_23",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "isegons",
+  "n": 23,
+  "niv": 2,
+  "text": "i vint-i-tres segons."
+ },
+ {
+  "id": "num_isegons_24",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "isegons",
+  "n": 24,
+  "niv": 2,
+  "text": "i vint-i-quatre segons."
+ },
+ {
+  "id": "num_isegons_25",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "isegons",
+  "n": 25,
+  "niv": 2,
+  "text": "i vint-i-cinc segons."
+ },
+ {
+  "id": "num_isegons_26",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "isegons",
+  "n": 26,
+  "niv": 2,
+  "text": "i vint-i-sis segons."
+ },
+ {
+  "id": "num_isegons_27",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "isegons",
+  "n": 27,
+  "niv": 2,
+  "text": "i vint-i-set segons."
+ },
+ {
+  "id": "num_isegons_28",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "isegons",
+  "n": 28,
+  "niv": 2,
+  "text": "i vint-i-vuit segons."
+ },
+ {
+  "id": "num_isegons_29",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "isegons",
+  "n": 29,
+  "niv": 2,
+  "text": "i vint-i-nou segons."
+ },
+ {
+  "id": "num_isegons_30",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "isegons",
+  "n": 30,
+  "niv": 2,
+  "text": "i trenta segons."
+ },
+ {
+  "id": "num_isegons_31",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "isegons",
+  "n": 31,
+  "niv": 2,
+  "text": "i trenta-un segons."
+ },
+ {
+  "id": "num_isegons_32",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "isegons",
+  "n": 32,
+  "niv": 2,
+  "text": "i trenta-dos segons."
+ },
+ {
+  "id": "num_isegons_33",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "isegons",
+  "n": 33,
+  "niv": 2,
+  "text": "i trenta-tres segons."
+ },
+ {
+  "id": "num_isegons_34",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "isegons",
+  "n": 34,
+  "niv": 2,
+  "text": "i trenta-quatre segons."
+ },
+ {
+  "id": "num_isegons_35",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "isegons",
+  "n": 35,
+  "niv": 2,
+  "text": "i trenta-cinc segons."
+ },
+ {
+  "id": "num_isegons_36",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "isegons",
+  "n": 36,
+  "niv": 2,
+  "text": "i trenta-sis segons."
+ },
+ {
+  "id": "num_isegons_37",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "isegons",
+  "n": 37,
+  "niv": 2,
+  "text": "i trenta-set segons."
+ },
+ {
+  "id": "num_isegons_38",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "isegons",
+  "n": 38,
+  "niv": 2,
+  "text": "i trenta-vuit segons."
+ },
+ {
+  "id": "num_isegons_39",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "isegons",
+  "n": 39,
+  "niv": 2,
+  "text": "i trenta-nou segons."
+ },
+ {
+  "id": "num_isegons_40",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "isegons",
+  "n": 40,
+  "niv": 2,
+  "text": "i quaranta segons."
+ },
+ {
+  "id": "num_isegons_41",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "isegons",
+  "n": 41,
+  "niv": 2,
+  "text": "i quaranta-un segons."
+ },
+ {
+  "id": "num_isegons_42",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "isegons",
+  "n": 42,
+  "niv": 2,
+  "text": "i quaranta-dos segons."
+ },
+ {
+  "id": "num_isegons_43",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "isegons",
+  "n": 43,
+  "niv": 2,
+  "text": "i quaranta-tres segons."
+ },
+ {
+  "id": "num_isegons_44",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "isegons",
+  "n": 44,
+  "niv": 2,
+  "text": "i quaranta-quatre segons."
+ },
+ {
+  "id": "num_isegons_45",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "isegons",
+  "n": 45,
+  "niv": 2,
+  "text": "i quaranta-cinc segons."
+ },
+ {
+  "id": "num_isegons_46",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "isegons",
+  "n": 46,
+  "niv": 2,
+  "text": "i quaranta-sis segons."
+ },
+ {
+  "id": "num_isegons_47",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "isegons",
+  "n": 47,
+  "niv": 2,
+  "text": "i quaranta-set segons."
+ },
+ {
+  "id": "num_isegons_48",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "isegons",
+  "n": 48,
+  "niv": 2,
+  "text": "i quaranta-vuit segons."
+ },
+ {
+  "id": "num_isegons_49",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "isegons",
+  "n": 49,
+  "niv": 2,
+  "text": "i quaranta-nou segons."
+ },
+ {
+  "id": "num_isegons_50",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "isegons",
+  "n": 50,
+  "niv": 2,
+  "text": "i cinquanta segons."
+ },
+ {
+  "id": "num_isegons_51",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "isegons",
+  "n": 51,
+  "niv": 2,
+  "text": "i cinquanta-un segons."
+ },
+ {
+  "id": "num_isegons_52",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "isegons",
+  "n": 52,
+  "niv": 2,
+  "text": "i cinquanta-dos segons."
+ },
+ {
+  "id": "num_isegons_53",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "isegons",
+  "n": 53,
+  "niv": 2,
+  "text": "i cinquanta-tres segons."
+ },
+ {
+  "id": "num_isegons_54",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "isegons",
+  "n": 54,
+  "niv": 2,
+  "text": "i cinquanta-quatre segons."
+ },
+ {
+  "id": "num_isegons_55",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "isegons",
+  "n": 55,
+  "niv": 2,
+  "text": "i cinquanta-cinc segons."
+ },
+ {
+  "id": "num_isegons_56",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "isegons",
+  "n": 56,
+  "niv": 2,
+  "text": "i cinquanta-sis segons."
+ },
+ {
+  "id": "num_isegons_57",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "isegons",
+  "n": 57,
+  "niv": 2,
+  "text": "i cinquanta-set segons."
+ },
+ {
+  "id": "num_isegons_58",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "isegons",
+  "n": 58,
+  "niv": 2,
+  "text": "i cinquanta-vuit segons."
+ },
+ {
+  "id": "num_isegons_59",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "isegons",
+  "n": 59,
+  "niv": 2,
+  "text": "i cinquanta-nou segons."
+ },
+ {
+  "id": "num_fc_120",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "fc",
+  "n": 120,
+  "niv": 2,
+  "text": "Cent vint pulsacions."
+ },
+ {
+  "id": "num_fc_121",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "fc",
+  "n": 121,
+  "niv": 2,
+  "text": "Cent vint-i-una pulsacions."
+ },
+ {
+  "id": "num_fc_122",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "fc",
+  "n": 122,
+  "niv": 2,
+  "text": "Cent vint-i-dues pulsacions."
+ },
+ {
+  "id": "num_fc_123",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "fc",
+  "n": 123,
+  "niv": 2,
+  "text": "Cent vint-i-tres pulsacions."
+ },
+ {
+  "id": "num_fc_124",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "fc",
+  "n": 124,
+  "niv": 2,
+  "text": "Cent vint-i-quatre pulsacions."
+ },
+ {
+  "id": "num_fc_125",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "fc",
+  "n": 125,
+  "niv": 2,
+  "text": "Cent vint-i-cinc pulsacions."
+ },
+ {
+  "id": "num_fc_126",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "fc",
+  "n": 126,
+  "niv": 2,
+  "text": "Cent vint-i-sis pulsacions."
+ },
+ {
+  "id": "num_fc_127",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "fc",
+  "n": 127,
+  "niv": 2,
+  "text": "Cent vint-i-set pulsacions."
+ },
+ {
+  "id": "num_fc_128",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "fc",
+  "n": 128,
+  "niv": 2,
+  "text": "Cent vint-i-vuit pulsacions."
+ },
+ {
+  "id": "num_fc_129",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "fc",
+  "n": 129,
+  "niv": 2,
+  "text": "Cent vint-i-nou pulsacions."
+ },
+ {
+  "id": "num_fc_130",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "fc",
+  "n": 130,
+  "niv": 2,
+  "text": "Cent trenta pulsacions."
+ },
+ {
+  "id": "num_fc_131",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "fc",
+  "n": 131,
+  "niv": 2,
+  "text": "Cent trenta-una pulsacions."
+ },
+ {
+  "id": "num_fc_132",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "fc",
+  "n": 132,
+  "niv": 2,
+  "text": "Cent trenta-dues pulsacions."
+ },
+ {
+  "id": "num_fc_133",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "fc",
+  "n": 133,
+  "niv": 2,
+  "text": "Cent trenta-tres pulsacions."
+ },
+ {
+  "id": "num_fc_134",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "fc",
+  "n": 134,
+  "niv": 2,
+  "text": "Cent trenta-quatre pulsacions."
+ },
+ {
+  "id": "num_fc_135",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "fc",
+  "n": 135,
+  "niv": 2,
+  "text": "Cent trenta-cinc pulsacions."
+ },
+ {
+  "id": "num_fc_136",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "fc",
+  "n": 136,
+  "niv": 2,
+  "text": "Cent trenta-sis pulsacions."
+ },
+ {
+  "id": "num_fc_137",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "fc",
+  "n": 137,
+  "niv": 2,
+  "text": "Cent trenta-set pulsacions."
+ },
+ {
+  "id": "num_fc_138",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "fc",
+  "n": 138,
+  "niv": 2,
+  "text": "Cent trenta-vuit pulsacions."
+ },
+ {
+  "id": "num_fc_139",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "fc",
+  "n": 139,
+  "niv": 2,
+  "text": "Cent trenta-nou pulsacions."
+ },
+ {
+  "id": "num_fc_140",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "fc",
+  "n": 140,
+  "niv": 2,
+  "text": "Cent quaranta pulsacions."
+ },
+ {
+  "id": "num_fc_141",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "fc",
+  "n": 141,
+  "niv": 2,
+  "text": "Cent quaranta-una pulsacions."
+ },
+ {
+  "id": "num_fc_142",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "fc",
+  "n": 142,
+  "niv": 2,
+  "text": "Cent quaranta-dues pulsacions."
+ },
+ {
+  "id": "num_fc_143",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "fc",
+  "n": 143,
+  "niv": 2,
+  "text": "Cent quaranta-tres pulsacions."
+ },
+ {
+  "id": "num_fc_144",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "fc",
+  "n": 144,
+  "niv": 2,
+  "text": "Cent quaranta-quatre pulsacions."
+ },
+ {
+  "id": "num_fc_145",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "fc",
+  "n": 145,
+  "niv": 2,
+  "text": "Cent quaranta-cinc pulsacions."
+ },
+ {
+  "id": "num_fc_146",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "fc",
+  "n": 146,
+  "niv": 2,
+  "text": "Cent quaranta-sis pulsacions."
+ },
+ {
+  "id": "num_fc_147",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "fc",
+  "n": 147,
+  "niv": 2,
+  "text": "Cent quaranta-set pulsacions."
+ },
+ {
+  "id": "num_fc_148",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "fc",
+  "n": 148,
+  "niv": 2,
+  "text": "Cent quaranta-vuit pulsacions."
+ },
+ {
+  "id": "num_fc_149",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "fc",
+  "n": 149,
+  "niv": 2,
+  "text": "Cent quaranta-nou pulsacions."
+ },
+ {
+  "id": "num_fc_150",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "fc",
+  "n": 150,
+  "niv": 2,
+  "text": "Cent cinquanta pulsacions."
+ },
+ {
+  "id": "num_fc_151",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "fc",
+  "n": 151,
+  "niv": 2,
+  "text": "Cent cinquanta-una pulsacions."
+ },
+ {
+  "id": "num_fc_152",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "fc",
+  "n": 152,
+  "niv": 2,
+  "text": "Cent cinquanta-dues pulsacions."
+ },
+ {
+  "id": "num_fc_153",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "fc",
+  "n": 153,
+  "niv": 2,
+  "text": "Cent cinquanta-tres pulsacions."
+ },
+ {
+  "id": "num_fc_154",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "fc",
+  "n": 154,
+  "niv": 2,
+  "text": "Cent cinquanta-quatre pulsacions."
+ },
+ {
+  "id": "num_fc_155",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "fc",
+  "n": 155,
+  "niv": 2,
+  "text": "Cent cinquanta-cinc pulsacions."
+ },
+ {
+  "id": "num_fc_156",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "fc",
+  "n": 156,
+  "niv": 2,
+  "text": "Cent cinquanta-sis pulsacions."
+ },
+ {
+  "id": "num_fc_157",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "fc",
+  "n": 157,
+  "niv": 2,
+  "text": "Cent cinquanta-set pulsacions."
+ },
+ {
+  "id": "num_fc_158",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "fc",
+  "n": 158,
+  "niv": 2,
+  "text": "Cent cinquanta-vuit pulsacions."
+ },
+ {
+  "id": "num_fc_159",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "fc",
+  "n": 159,
+  "niv": 2,
+  "text": "Cent cinquanta-nou pulsacions."
+ },
+ {
+  "id": "num_fc_160",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "fc",
+  "n": 160,
+  "niv": 2,
+  "text": "Cent seixanta pulsacions."
+ },
+ {
+  "id": "num_fc_161",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "fc",
+  "n": 161,
+  "niv": 2,
+  "text": "Cent seixanta-una pulsacions."
+ },
+ {
+  "id": "num_fc_162",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "fc",
+  "n": 162,
+  "niv": 2,
+  "text": "Cent seixanta-dues pulsacions."
+ },
+ {
+  "id": "num_fc_163",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "fc",
+  "n": 163,
+  "niv": 2,
+  "text": "Cent seixanta-tres pulsacions."
+ },
+ {
+  "id": "num_fc_164",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "fc",
+  "n": 164,
+  "niv": 2,
+  "text": "Cent seixanta-quatre pulsacions."
+ },
+ {
+  "id": "num_fc_165",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "fc",
+  "n": 165,
+  "niv": 2,
+  "text": "Cent seixanta-cinc pulsacions."
+ },
+ {
+  "id": "num_fc_166",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "fc",
+  "n": 166,
+  "niv": 2,
+  "text": "Cent seixanta-sis pulsacions."
+ },
+ {
+  "id": "num_fc_167",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "fc",
+  "n": 167,
+  "niv": 2,
+  "text": "Cent seixanta-set pulsacions."
+ },
+ {
+  "id": "num_fc_168",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "fc",
+  "n": 168,
+  "niv": 2,
+  "text": "Cent seixanta-vuit pulsacions."
+ },
+ {
+  "id": "num_fc_169",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "fc",
+  "n": 169,
+  "niv": 2,
+  "text": "Cent seixanta-nou pulsacions."
+ },
+ {
+  "id": "num_fc_170",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "fc",
+  "n": 170,
+  "niv": 2,
+  "text": "Cent setanta pulsacions."
+ },
+ {
+  "id": "num_fc_171",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "fc",
+  "n": 171,
+  "niv": 2,
+  "text": "Cent setanta-una pulsacions."
+ },
+ {
+  "id": "num_fc_172",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "fc",
+  "n": 172,
+  "niv": 2,
+  "text": "Cent setanta-dues pulsacions."
+ },
+ {
+  "id": "num_fc_173",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "fc",
+  "n": 173,
+  "niv": 2,
+  "text": "Cent setanta-tres pulsacions."
+ },
+ {
+  "id": "num_fc_174",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "fc",
+  "n": 174,
+  "niv": 2,
+  "text": "Cent setanta-quatre pulsacions."
+ },
+ {
+  "id": "num_fc_175",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "fc",
+  "n": 175,
+  "niv": 2,
+  "text": "Cent setanta-cinc pulsacions."
+ },
+ {
+  "id": "num_fc_176",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "fc",
+  "n": 176,
+  "niv": 2,
+  "text": "Cent setanta-sis pulsacions."
+ },
+ {
+  "id": "num_fc_177",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "fc",
+  "n": 177,
+  "niv": 2,
+  "text": "Cent setanta-set pulsacions."
+ },
+ {
+  "id": "num_fc_178",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "fc",
+  "n": 178,
+  "niv": 2,
+  "text": "Cent setanta-vuit pulsacions."
+ },
+ {
+  "id": "num_fc_179",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "fc",
+  "n": 179,
+  "niv": 2,
+  "text": "Cent setanta-nou pulsacions."
+ },
+ {
+  "id": "num_fc_180",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "fc",
+  "n": 180,
+  "niv": 2,
+  "text": "Cent vuitanta pulsacions."
+ },
+ {
+  "id": "num_fc_181",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "fc",
+  "n": 181,
+  "niv": 2,
+  "text": "Cent vuitanta-una pulsacions."
+ },
+ {
+  "id": "num_fc_182",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "fc",
+  "n": 182,
+  "niv": 2,
+  "text": "Cent vuitanta-dues pulsacions."
+ },
+ {
+  "id": "num_fc_183",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "fc",
+  "n": 183,
+  "niv": 2,
+  "text": "Cent vuitanta-tres pulsacions."
+ },
+ {
+  "id": "num_fc_184",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "fc",
+  "n": 184,
+  "niv": 2,
+  "text": "Cent vuitanta-quatre pulsacions."
+ },
+ {
+  "id": "num_fc_185",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "fc",
+  "n": 185,
+  "niv": 2,
+  "text": "Cent vuitanta-cinc pulsacions."
+ },
+ {
+  "id": "num_fc_186",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "fc",
+  "n": 186,
+  "niv": 2,
+  "text": "Cent vuitanta-sis pulsacions."
+ },
+ {
+  "id": "num_fc_187",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "fc",
+  "n": 187,
+  "niv": 2,
+  "text": "Cent vuitanta-set pulsacions."
+ },
+ {
+  "id": "num_fc_188",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "fc",
+  "n": 188,
+  "niv": 2,
+  "text": "Cent vuitanta-vuit pulsacions."
+ },
+ {
+  "id": "num_fc_189",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "fc",
+  "n": 189,
+  "niv": 2,
+  "text": "Cent vuitanta-nou pulsacions."
+ },
+ {
+  "id": "num_fc_190",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "fc",
+  "n": 190,
+  "niv": 2,
+  "text": "Cent noranta pulsacions."
+ },
+ {
+  "id": "num_fc_191",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "fc",
+  "n": 191,
+  "niv": 2,
+  "text": "Cent noranta-una pulsacions."
+ },
+ {
+  "id": "num_fc_192",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "fc",
+  "n": 192,
+  "niv": 2,
+  "text": "Cent noranta-dues pulsacions."
+ },
+ {
+  "id": "num_fc_193",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "fc",
+  "n": 193,
+  "niv": 2,
+  "text": "Cent noranta-tres pulsacions."
+ },
+ {
+  "id": "num_fc_194",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "fc",
+  "n": 194,
+  "niv": 2,
+  "text": "Cent noranta-quatre pulsacions."
+ },
+ {
+  "id": "num_fc_195",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "fc",
+  "n": 195,
+  "niv": 2,
+  "text": "Cent noranta-cinc pulsacions."
+ },
+ {
+  "id": "num_fc_196",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "fc",
+  "n": 196,
+  "niv": 2,
+  "text": "Cent noranta-sis pulsacions."
+ },
+ {
+  "id": "num_fc_197",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "fc",
+  "n": 197,
+  "niv": 2,
+  "text": "Cent noranta-set pulsacions."
+ },
+ {
+  "id": "num_fc_198",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "fc",
+  "n": 198,
+  "niv": 2,
+  "text": "Cent noranta-vuit pulsacions."
+ },
+ {
+  "id": "num_fc_199",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "fc",
+  "n": 199,
+  "niv": 2,
+  "text": "Cent noranta-nou pulsacions."
+ }
+]

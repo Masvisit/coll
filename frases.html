@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="ca">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0e1013">
+<title>Coll · frases</title>
+<style>
+:root{--bg:#0e1013;--card:#171a1f;--card2:#1d2128;--line:#2a3039;--tx:#eef1f4;--mut:#9aa3ad;--acc:#ffb020;--ok:#3ecf8e;--blue:#5aa9ff;--red:#ff6363}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.45 -apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",system-ui,sans-serif;-webkit-text-size-adjust:100%}
+body{padding:calc(env(safe-area-inset-top) + 18px) 16px calc(env(safe-area-inset-bottom) + 40px);max-width:720px;margin:0 auto}
+h1{font-size:26px;line-height:1.1;margin:0 0 4px}
+h1 span{color:var(--acc)}
+.sub{color:var(--mut);margin:0 0 14px;font-size:14px}
+.top{position:sticky;top:0;z-index:5;background:var(--bg);padding:8px 0 10px;margin:0 -16px 6px;padding-left:16px;padding-right:16px;border-bottom:1px solid var(--line)}
+input[type=search]{width:100%;font:inherit;font-size:16px;color:var(--tx);background:var(--card);border:1px solid var(--line);border-radius:12px;padding:11px 12px;outline:none}
+input[type=search]:focus{border-color:var(--acc)}
+.chips{display:flex;gap:6px;overflow-x:auto;padding:10px 0 2px;scrollbar-width:none}
+.chips::-webkit-scrollbar{display:none}
+.chip{flex:none;font:inherit;font-size:13px;padding:6px 10px;border-radius:999px;background:var(--card);border:1px solid var(--line);color:var(--mut);cursor:pointer;white-space:nowrap}
+.chip.on{background:var(--acc);border-color:var(--acc);color:#141414;font-weight:600}
+.cat{margin:18px 0 0}
+.cat > h2{font-size:18px;margin:0 0 2px;display:flex;align-items:baseline;gap:8px}
+.cat > h2 small{color:var(--mut);font-weight:500;font-size:13px}
+.cat > p{color:var(--mut);font-size:14px;margin:0 0 8px}
+.grp{background:var(--card);border:1px solid var(--line);border-radius:14px;margin:8px 0;overflow:hidden}
+.grp h3{font-size:13px;font-weight:600;color:var(--acc);margin:0;padding:9px 12px;border-bottom:1px solid var(--line);background:var(--card2)}
+.row{display:flex;gap:10px;align-items:flex-start;padding:9px 12px;border-top:1px solid #20252c}
+.row:first-of-type{border-top:0}
+.row .t{flex:1;font-size:15px}
+.row .t mark{background:#5a4510;color:#fff;border-radius:3px}
+.row .n{font-size:11px;color:var(--mut);margin-top:2px;font-family:ui-monospace,Menlo,monospace}
+.lv{flex:none;width:8px;height:8px;border-radius:50%;margin-top:8px}
+.lv1{background:var(--blue)} .lv2{background:var(--acc)} .lv3{background:var(--red)}
+.play{flex:none;width:36px;height:36px;border-radius:50%;border:1px solid var(--line);background:var(--card2);color:var(--tx);font-size:13px;cursor:pointer}
+.play:active{background:var(--acc);color:#111}
+.more{font:inherit;font-size:14px;width:100%;padding:10px;border:0;background:transparent;color:var(--acc);cursor:pointer}
+.legend{display:flex;gap:14px;flex-wrap:wrap;color:var(--mut);font-size:12.5px;margin:4px 0 0}
+.legend span{display:flex;align-items:center;gap:6px}
+.empty{color:var(--mut);padding:30px 0;text-align:center}
+</style>
+</head>
+<body>
+<h1>Coll <span>·</span> frases</h1>
+<p class="sub" id="sub">Carregant…</p>
+<div class="top">
+  <input type="search" id="q" placeholder="Busca una paraula (p. ex. mur, collons, rècord)…" autocomplete="off">
+  <div class="chips" id="chips"></div>
+  <div class="legend"><span><i class="lv lv1"></i>to tranquil</span><span><i class="lv lv2"></i>ferm</span><span><i class="lv lv3"></i>a fons</span><span>▶ l'escoltes amb la veu de l'iPhone (la definitiva serà Alba)</span></div>
+</div>
+<div id="list"></div>
+
+<script>
+'use strict';
+const CAT = {
+  inici: ['Inici', 'Quan passes per la sortida de la pujada.'],
+  entrada: ['Entrada a cada fase', 'Quan entres a una fase nova: què ve i com encarar-la.'],
+  fase: ['Durant cada fase', 'Consells de tècnica i ritme quan no passa res especial.'],
+  punt: ['Punts clau', 'La rampa del 18 % i la meitat del quilòmetre dur.'],
+  gap: ['Diferència amb el rècord', 'Va just després de dir-te els segons (p. ex. «Vas 8 segons per davant.» + comentari).'],
+  tend: ['Tendència', 'Si en els darrers ~250 m guanyes o perds temps.'],
+  diag: ['Ritme + pulsacions', 'Combina com vas respecte al rècord amb la FC al mateix punt.'],
+  fc: ['Pulsacions', 'Quan la FC és molt alta, baixa o està bé.'],
+  queden: ['Distància que queda', 'De 3 km fins als 50 m finals.'],
+  caminar: ['Caminant', 'Si detecta que camines en un tram dur.'],
+  aturat: ['Aturat', 'Si t\'atures.'],
+  represa: ['Tornes a córrer', 'Després d\'aturar-te o caminar.'],
+  final: ['Al cim', 'Resultat respecte al rècord.'],
+  reflexio: ['Anàlisi final', 'Com has repartit l\'esforç.'],
+  baixada: ['Baixada', 'Després del cim.'],
+  motiva: ['Motivació', 'Frases generals segons la part de la pujada.'],
+  sistema: ['Sistema', 'GPS, pulsòmetre i prova de so.'],
+  num: ['Números', 'Segons de diferència, pulsacions i temps final (es combinen amb les altres).']
+};
+const FASE = {1:'Fase 1 · Arrencada (0–0,46 km, 7,8 %)',2:'Fase 2 · Tram de ritme (0,46–1,25 km, 5,6 %)',3:'Fase 3 · Respir (1,25–1,65 km, 2,1 %)',
+  4:'Fase 4 · Entrada al mur (1,65–1,87 km, 9,8 %)',5:'Fase 5 · El mur (1,87–2,14 km, 15,1 %)',6:'Fase 6 · Replà (2,14–2,29 km, 7,5 %)',
+  7:'Fase 7 · Quilòmetre dur (2,29–3,29 km, 12,1 %)',8:'Fase 8 · Coronar (3,29–3,46 km, 4,7 %)'};
+const GRUP = {ini:'Fases 1–3 (to proper)', mur:'Fases 4–6 (el mur)', fi:'Fases 7–8 (final)'};
+const ESTAT = {
+  molt_davant:'molt per davant (més de 15 s)', davant:'per davant (5–15 s)', igual:'igualat (±5 s)', darrere:'per darrere (5–15 s)', molt_darrere:'molt per darrere (més de 15 s)',
+  guanyant:'guanyant temps', perdent:'perdent temps', estable:'estable',
+  flipant:'et flipes (ràpid i FC alta)', dia_bo:'dia bo (ràpid i FC normal)', conservador:'conservador (lent i FC baixa)', dia_dur:'dia dur (lent i FC alta)', controlat:'controlat (igual de ritme i FC)',
+  molt_alta:'FC molt alta', baixa:'FC baixa', be:'FC bé',
+  record_gran:'rècord de més de 20 s', record:'rècord', igual_f:'empat', lent:'una mica més lent', molt_lent:'molt més lent',
+  marge:'has acabat amb massa marge', buit:'has sortit massa fort', equilibrat:'ben repartit',
+  rampa:'rampa del 18 % (km 2,4)', mig_km_dur:'meitat del quilòmetre dur (km 2,8)',
+  davant_n:'«Vas N segons per davant»', darrere_n:'«Vas N segons per darrere»', record_per:'«Rècord per N segons»', a_del_record:'«A N segons del rècord»',
+  minuts:'temps final: minuts', isegons:'temps final: segons', fc_n:'pulsacions'
+};
+let DATA = [], cat = 'tot', q = '', open = {};
+const $ = id => document.getElementById(id);
+const esc = s => s.replace(/[&<>]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
+const norm = s => s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
+
+function groupKey(o){
+  if (o.cat === 'num') return ESTAT[{davant:'davant_n',darrere:'darrere_n',fc:'fc_n'}[o.estat] || o.estat] || o.estat;
+  if (o.cat === 'queden') return 'Queden ' + (o.estat >= 1000 ? (o.estat/1000).toString().replace('.', ',') + ' km' : o.estat + ' m');
+  if (o.cat === 'final' && o.estat === 'igual') return ESTAT.igual_f;
+  if (o.cat === 'sistema' || o.cat === 'inici') return 'Totes';
+  const parts = [];
+  if (o.estat) parts.push(ESTAT[o.estat] || o.estat);
+  if (o.fase) parts.push(FASE[o.fase]);
+  else if (o.grup) parts.push(GRUP[o.grup]);
+  return parts.join(' · ') || 'Totes';
+}
+function speak(text){
+  if (!('speechSynthesis' in window)) return;
+  speechSynthesis.cancel();
+  const u = new SpeechSynthesisUtterance(text); u.lang = 'ca-ES';
+  const v = speechSynthesis.getVoices().find(v => /^ca/i.test(v.lang)); if (v) u.voice = v;
+  speechSynthesis.speak(u);
+}
+function render(){
+  const nq = norm(q.trim());
+  const items = DATA.filter(o => (cat === 'tot' || o.cat === cat) && (!nq || norm(o.text).includes(nq)));
+  const hand = DATA.filter(o => o.cat !== 'num').length;
+  $('sub').textContent = `${hand} frases escrites + ${DATA.length - hand} amb números = ${DATA.length} àudios. To proper fins al mur, exigent a partir d'allà.`;
+  const counts = {}; DATA.forEach(o => counts[o.cat] = (counts[o.cat] || 0) + 1);
+  $('chips').innerHTML = [['tot', 'Totes', DATA.length], ...Object.keys(CAT).map(k => [k, CAT[k][0], counts[k] || 0])]
+    .map(([k, l, n]) => `<button class="chip ${k === cat ? 'on' : ''}" data-k="${k}">${l} · ${n}</button>`).join('');
+  $('chips').querySelectorAll('.chip').forEach(b => b.onclick = () => { cat = b.dataset.k; render(); window.scrollTo({top: 0}); });
+  if (!items.length){ $('list').innerHTML = '<p class="empty">Cap frase coincideix.</p>'; return; }
+  const byCat = {};
+  items.forEach(o => { (byCat[o.cat] ??= {}); const g = groupKey(o); (byCat[o.cat][g] ??= []).push(o); });
+  const hl = t => { if (!nq) return esc(t); const i = norm(t).indexOf(nq); return i < 0 ? esc(t) : esc(t.slice(0, i)) + '<mark>' + esc(t.slice(i, i + nq.length)) + '</mark>' + esc(t.slice(i + nq.length)); };
+  $('list').innerHTML = Object.keys(CAT).filter(c => byCat[c]).map(c => {
+    const groups = byCat[c];
+    return `<section class="cat"><h2>${CAT[c][0]} <small>${Object.values(groups).flat().length}</small></h2><p>${CAT[c][1]}</p>` +
+      Object.entries(groups).map(([g, arr]) => {
+        const key = c + '|' + g, limit = c === 'num' && !open[key] && !nq ? 4 : arr.length;
+        return `<div class="grp"><h3>${esc(g)}</h3>` + arr.slice(0, limit).map(o =>
+          `<div class="row"><i class="lv lv${o.niv}"></i><div class="t">${hl(o.text)}<div class="n">${o.id}</div></div><button class="play" data-t="${esc(o.text)}" aria-label="Escolta">▶</button></div>`).join('') +
+          (limit < arr.length ? `<button class="more" data-k="${esc(key)}">Mostra'n ${arr.length - limit} més</button>` : '') + `</div>`;
+      }).join('') + `</section>`;
+  }).join('');
+  $('list').querySelectorAll('.play').forEach(b => b.onclick = () => speak(b.dataset.t));
+  $('list').querySelectorAll('.more').forEach(b => b.onclick = () => { open[b.dataset.k] = true; render(); });
+}
+$('q').addEventListener('input', e => { q = e.target.value; render(); });
+fetch('data/frases.json', {cache: 'no-cache'}).then(r => r.json()).then(d => { DATA = d; render(); })
+  .catch(e => { $('sub').textContent = 'No s\'han pogut carregar les frases: ' + e.message; });
+if ('speechSynthesis' in window) speechSynthesis.getVoices();
+</script>
+</body>
+</html>

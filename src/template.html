@@ -74,7 +74,7 @@ textarea{width:100%;min-height:150px;background:#0b0d10;color:#cfd6dd;border:1px
 </head>
 <body>
 <h1>Coll <span>·</span> prova</h1>
-<p class="sub">Versió 2 · Comprova al teu iPhone les quatre peces que fan falta per a l'entrenador.</p>
+<p class="sub">Versió 3 · Comprova al teu iPhone les quatre peces que fan falta per a l'entrenador.</p>
 <div class="chips" id="chips"></div>
 
 <section class="card">
@@ -127,7 +127,7 @@ textarea{width:100%;min-height:150px;background:#0b0d10;color:#cfd6dd;border:1px
 
 <section class="card" id="hr">
   <h2><span class="num">2</span>Pulsòmetre</h2>
-  <p class="hint">Al rellotge: entra a l'esport de córrer (pre-entrenament) → <b>Configuració → Compartir FC amb altres dispositius → Visible per a tothom</b>. Després connecta.</p>
+  <p class="hint">Al rellotge: entra a l'esport de córrer (pre-entrenament) → <b>Configuració → Compartir FC amb altres dispositius → Visible per a tothom</b>. Després connecta i <b>espera uns 10 segons</b> que el rellotge aparegui a la llista.</p>
   <div class="row"><div class="big" id="hrVal">--<small>ppm</small></div></div>
   <p class="status" id="hrStatus">Sense connectar</p>
   <button class="btn" id="hrBtn">Connectar el Pacer Pro</button>
@@ -312,8 +312,9 @@ async function hrConnect(any){
     state.hr.name = hrDev.name || '(sense nom)'; hrStep('triat ' + state.hr.name);
     hrDev.addEventListener('gattserverdisconnected', hrDisconnected);
     await hrSubscribe();
-  } catch(e){ hrStatus('No s\'ha connectat: ' + e.message, 'bad'); state.hr.err = e.message; hrStep('ERROR ' + e.message); }
+  } catch(e){ const m = errText(e); hrStatus('No s\'ha connectat: ' + m, 'bad'); state.hr.err = m; hrStep('ERROR ' + m); }
 }
+function errText(e){ if (e == null) return 'cap detall'; if (typeof e === 'string') return e; return [e.name, e.message, e.code].filter(Boolean).join(' · ') || String(e); }
 function hrStep(s){ state.hr.steps.push(s); if (state.hr.steps.length > 12) state.hr.steps.shift(); report(); }
 async function hrSubscribe(){
   hrStatus('Connectant amb ' + state.hr.name + '…', 'warn');
@@ -437,7 +438,7 @@ function report(){
   const ca = state.voices.filter(v => /^ca/i.test(v.lang)).map(v => v.name + ' (' + v.lang + ')');
   const iv = g.intervals.length ? (g.intervals.reduce((a,b)=>a+b,0)/g.intervals.length).toFixed(1) : '—';
   const lines = [
-    'PROVA COLL v2 · ' + new Date().toLocaleString('ca-ES'),
+    'PROVA COLL v3 · ' + new Date().toLocaleString('ca-ES'),
     'Navegador: ' + navigator.userAgent,
     'Suport: bluetooth=' + support.bt + ' audioSession=' + support.as + ' wakeLock=' + support.wl + ' geo=' + support.geo + ' tts=' + support.tts,
     'Sessió d\'àudio: ' + (state.audioSession || 'no tocada') + (state.asLog.length ? ' · canvis: ' + state.asLog.join(' → ') : ''),

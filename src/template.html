@@ -74,7 +74,7 @@ textarea{width:100%;min-height:150px;background:#0b0d10;color:#cfd6dd;border:1px
 </head>
 <body>
 <h1>Coll <span>·</span> prova</h1>
-<p class="sub">Versió 3 · Comprova al teu iPhone les quatre peces que fan falta per a l'entrenador.</p>
+<p class="sub">Versió 4 · Comprova al teu iPhone les quatre peces que fan falta per a l'entrenador.</p>
 <div class="chips" id="chips"></div>
 
 <section class="card">
@@ -306,8 +306,8 @@ async function hrConnect(any){
   askWake();
   try {
     const opts = any ? { acceptAllDevices: true, optionalServices: ['heart_rate'] }
-                     : { filters: [{ services: ['heart_rate'] }] };
-    hrStep('buscant (' + (any ? 'qualsevol' : 'filtre FC') + ')');
+                     : { filters: [{ services: ['heart_rate'] }, { namePrefix: 'Polar' }], optionalServices: ['heart_rate'] };
+    hrStep('buscant (' + (any ? 'qualsevol' : 'FC o Polar') + ')');
     hrDev = await navigator.bluetooth.requestDevice(opts);
     state.hr.name = hrDev.name || '(sense nom)'; hrStep('triat ' + state.hr.name);
     hrDev.addEventListener('gattserverdisconnected', hrDisconnected);
@@ -438,7 +438,7 @@ function report(){
   const ca = state.voices.filter(v => /^ca/i.test(v.lang)).map(v => v.name + ' (' + v.lang + ')');
   const iv = g.intervals.length ? (g.intervals.reduce((a,b)=>a+b,0)/g.intervals.length).toFixed(1) : '—';
   const lines = [
-    'PROVA COLL v3 · ' + new Date().toLocaleString('ca-ES'),
+    'PROVA COLL v4 · ' + new Date().toLocaleString('ca-ES'),
     'Navegador: ' + navigator.userAgent,
     'Suport: bluetooth=' + support.bt + ' audioSession=' + support.as + ' wakeLock=' + support.wl + ' geo=' + support.geo + ' tts=' + support.tts,
     'Sessió d\'àudio: ' + (state.audioSession || 'no tocada') + (state.asLog.length ? ' · canvis: ' + state.asLog.join(' → ') : ''),

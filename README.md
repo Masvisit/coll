@@ -28,6 +28,6 @@ Entrenador a l'orella per a la pujada del coll: GPS, comparació amb registres a
 | 8 | Coronar | 3,29–3,46 | 4,7 % |
 
 ## Frases de l'entrenador
-486 frases escrites + 524 amb números (1.010 àudios). Veu: Azure **ca-ES-AlbaNeural**.
+486 frases escrites + 524 amb números (1.010 àudios). Veu: Azure **ca-ES-AlbaNeural**, accelerada ×1,3 (ffmpeg `atempo`, sense canviar el to). Àudios a `audio/<id>.mp3`, durades a `audio/index.json`.
 To exigent però proper a tota la pujada (amb paciència a les fases 1–3, a fons a partir del mur); diu el nom de tant en tant i paraulotes sense manies.
 Etiquetes: `cat` (categoria), `fase` (1–8), `grup` (ini/mur/fi), `estat` (valor dins la categoria), `niv` (1 tranquil · 2 ferm · 3 a fons).

@@ -63,10 +63,11 @@ input,select{width:100%;font:inherit;color:var(--tx);background:#0b0d10;border:1
 const $ = id => document.getElementById(id);
 const SR = 24000, BATCH_CHARS = 2400, BATCH_MAX = 40, GAP_MS = window.__gapMs ?? 3200;
 const PROS = { 1: ['+0%', '+0%'], 2: ['+5%', '+2%'], 3: ['+10%', '+4%'] };
-let FRASES = [], zipBlob = null;
+let FRASES = [], zipBlob = null, zipName = 'coll-veu.zip';
 const store = { get(k){ try { return localStorage.getItem(k); } catch(e){ return null; } }, set(k, v){ try { localStorage.setItem(k, v); } catch(e){} }, del(k){ try { localStorage.removeItem(k); } catch(e){} } };
 $('key').value = store.get('coll_az_key') || ''; $('region').value = store.get('coll_az_region') || 'westeurope';
 $('voice').value = store.get('coll_az_voice') || 'ca-ES-AlbaNeural';
+const QP = new URLSearchParams(location.search); if (QP.get('ids')) $('only').value = QP.get('ids');
 function log(m){ const el = $('log'); el.textContent += m + '\n'; el.scrollTop = el.scrollHeight; }
 function status(t, cls){ const el = $('status'); el.textContent = t; el.className = cls || ''; }
 function progress(f){ $('fill').style.width = (f * 100).toFixed(1) + '%'; }
@@ -84,8 +85,9 @@ function cfg(){
 }
 function batches(list){
   const out = []; let cur = [], chars = 0;
+  const max = list.length <= 60 ? 1 : BATCH_MAX;   // poques frases: una per petició, sense talls entre frases
   for (const f of list){
-    if (cur.length && (cur.length >= BATCH_MAX || chars + f.text.length > BATCH_CHARS)){ out.push(cur); cur = []; chars = 0; }
+    if (cur.length && (cur.length >= max || chars + f.text.length > BATCH_CHARS)){ out.push(cur); cur = []; chars = 0; }
     cur.push(f); chars += f.text.length;
   }
   if (cur.length) out.push(cur);
@@ -210,6 +212,7 @@ $('runBtn').onclick = async () => {
     zip.file('audio/index.json', JSON.stringify({ voice: c.voice, created: new Date().toISOString(), count: Object.keys(index).length, durations: index }, null, 1));
     status('Comprimint…');
     zipBlob = await zip.generateAsync({ type: 'blob', compression: 'STORE' });
+    zipName = `coll-veu-${$('voice').selectedOptions[0].text.toLowerCase()}${only.length ? '-pendents' : ''}.zip`;
     window.__zipReady = { count: Object.keys(index).length, bytes: zipBlob.size };
     download();
     status(`Fet: ${Object.keys(index).length} àudios en ${Math.round((Date.now() - t0)/1000)} s. Zip de ${(zipBlob.size/1048576).toFixed(1)} MB descarregat.`, 'ok');
@@ -220,7 +223,7 @@ $('runBtn').onclick = async () => {
 function download(){
   if (!zipBlob) return;
   const a = document.createElement('a'); a.href = URL.createObjectURL(zipBlob);
-  a.download = `coll-veu-${$('voice').selectedOptions[0].text.toLowerCase()}.zip`; document.body.appendChild(a); a.click(); a.remove();
+  a.download = zipName; document.body.appendChild(a); a.click(); a.remove();
 }
 $('dlBtn').onclick = download;
 </script>

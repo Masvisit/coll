@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="ca">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0e1013">
+<title>Coll · generador de veu</title>
+<script src="https://cdn.jsdelivr.net/npm/microsoft-cognitiveservices-speech-sdk@1.52.0/distrib/browser/microsoft.cognitiveservices.speech.sdk.bundle-min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lamejs@1.2.1/lame.min.js"></script>
+<style>
+:root{--bg:#0e1013;--card:#171a1f;--card2:#1d2128;--line:#2a3039;--tx:#eef1f4;--mut:#9aa3ad;--acc:#ffb020;--ok:#3ecf8e;--bad:#ff6363}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif}
+body{padding:24px 16px 48px;max-width:640px;margin:0 auto}
+h1{font-size:26px;margin:0 0 4px} h1 span{color:var(--acc)}
+.sub{color:var(--mut);margin:0 0 16px;font-size:14px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px;margin:0 0 14px}
+label{display:block;font-size:13px;color:var(--mut);margin:10px 0 4px}
+input,select{width:100%;font:inherit;color:var(--tx);background:#0b0d10;border:1px solid var(--line);border-radius:10px;padding:10px 12px}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.chk{display:flex;gap:8px;align-items:center;margin-top:10px;font-size:14px;color:var(--mut)} .chk input{width:auto}
+.btn{width:100%;min-height:48px;border:0;border-radius:12px;background:var(--acc);color:#141414;font:inherit;font-weight:700;margin:8px 0 0;cursor:pointer}
+.btn.sec{background:var(--card2);color:var(--tx);border:1px solid var(--line);font-weight:600}
+.btn:disabled{opacity:.45;cursor:default}
+.bar{height:10px;border-radius:99px;background:#0b0d10;overflow:hidden;margin:12px 0 6px}
+.bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,#5aa9ff,var(--acc));transition:width .3s}
+#status{font-size:14px;color:var(--mut)} #status.ok{color:var(--ok)} #status.bad{color:var(--bad)}
+#log{font:12px/1.45 ui-monospace,Menlo,monospace;color:var(--mut);white-space:pre-wrap;max-height:220px;overflow:auto;margin-top:8px}
+.samples audio{width:100%;margin-top:6px}
+.samples p{margin:10px 0 0;font-size:14px}
+</style>
+</head>
+<body>
+<h1>Coll <span>·</span> generador de veu</h1>
+<p class="sub">Genera tots els àudios de l'entrenador amb una veu d'Azure i te'ls dona en un zip. La clau es queda en aquest navegador.</p>
+
+<section class="card">
+  <label for="key">Clau d'Azure Speech (KEY 1)</label>
+  <input id="key" type="password" autocomplete="off" placeholder="Enganxa-la aquí">
+  <div class="row2">
+    <div><label for="region">Regió</label><input id="region" value="westeurope"></div>
+    <div><label for="voice">Veu</label>
+      <select id="voice"><option value="ca-ES-AlbaNeural">Alba</option><option value="ca-ES-JoanaNeural">Joana</option><option value="ca-ES-EnricNeural">Enric</option></select></div>
+  </div>
+  <label for="only">Només aquests IDs (opcional, separats per comes)</label>
+  <input id="only" placeholder="p. ex. fase_012, gap_007">
+  <label class="chk"><input type="checkbox" id="remember" checked> Recorda la clau en aquest navegador</label>
+  <button class="btn sec" id="testBtn">Prova amb 3 frases</button>
+  <button class="btn" id="runBtn">Generar-ho tot</button>
+</section>
+
+<section class="card">
+  <div class="bar"><i id="fill"></i></div>
+  <div id="status">Preparat.</div>
+  <div class="samples" id="samples"></div>
+  <button class="btn sec" id="dlBtn" hidden>Descarregar el zip</button>
+  <div id="log"></div>
+</section>
+
+<script>
+'use strict';
+const $ = id => document.getElementById(id);
+const SR = 24000, BATCH_CHARS = 2400, BATCH_MAX = 40, GAP_MS = window.__gapMs ?? 3200;
+const PROS = { 1: ['+0%', '+0%'], 2: ['+5%', '+2%'], 3: ['+10%', '+4%'] };
+let FRASES = [], zipBlob = null;
+const store = { get(k){ try { return localStorage.getItem(k); } catch(e){ return null; } }, set(k, v){ try { localStorage.setItem(k, v); } catch(e){} }, del(k){ try { localStorage.removeItem(k); } catch(e){} } };
+$('key').value = store.get('coll_az_key') || ''; $('region').value = store.get('coll_az_region') || 'westeurope';
+$('voice').value = store.get('coll_az_voice') || 'ca-ES-AlbaNeural';
+function log(m){ const el = $('log'); el.textContent += m + '\n'; el.scrollTop = el.scrollHeight; }
+function status(t, cls){ const el = $('status'); el.textContent = t; el.className = cls || ''; }
+function progress(f){ $('fill').style.width = (f * 100).toFixed(1) + '%'; }
+const sleep = ms => new Promise(r => setTimeout(r, ms));
+const esc = s => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+
+fetch('data/frases.json', { cache: 'no-cache' }).then(r => r.json()).then(d => { FRASES = d; status(`Preparat: ${d.length} frases.`); })
+  .catch(e => status('No s\'han pogut carregar les frases: ' + e.message, 'bad'));
+
+function cfg(){
+  const key = $('key').value.trim(), region = $('region').value.trim(), voice = $('voice').value;
+  if (!key) throw new Error('Falta la clau.');
+  if ($('remember').checked){ store.set('coll_az_key', key); store.set('coll_az_region', region); store.set('coll_az_voice', voice); } else store.del('coll_az_key');
+  return { key, region, voice };
+}
+function batches(list){
+  const out = []; let cur = [], chars = 0;
+  for (const f of list){
+    if (cur.length && (cur.length >= BATCH_MAX || chars + f.text.length > BATCH_CHARS)){ out.push(cur); cur = []; chars = 0; }
+    cur.push(f); chars += f.text.length;
+  }
+  if (cur.length) out.push(cur);
+  return out;
+}
+function ssml(voice, list){
+  return `<speak version="1.0" xmlns="http://www.w3.org/2001/10/synthesis" xml:lang="ca-ES"><voice name="${voice}">` +
+    list.map(f => { const [rate, pitch] = PROS[f.niv] || PROS[2];
+      return `<bookmark mark="s|${f.id}"/><prosody rate="${rate}" pitch="${pitch}">${esc(f.text)}</prosody><bookmark mark="e|${f.id}"/><break time="900ms"/>`; }).join('') +
+    `</voice></speak>`;
+}
+/* Una crida a Azure: retorna { pcm: Int16Array, marks: [{text, t}] } */
+function synth(c, xml){
+  if (window.__mockSynth) return window.__mockSynth(xml);
+  return new Promise((resolve, reject) => {
+    const sc = SpeechSDK.SpeechConfig.fromSubscription(c.key, c.region);
+    sc.speechSynthesisOutputFormat = SpeechSDK.SpeechSynthesisOutputFormat.Riff24Khz16BitMonoPcm;
+    const s = new SpeechSDK.SpeechSynthesizer(sc, null); const marks = [];
+    s.bookmarkReached = (_, e) => marks.push({ text: e.text, t: e.audioOffset });
+    s.speakSsmlAsync(xml, r => {
+      s.close();
+      if (r.reason === SpeechSDK.ResultReason.SynthesizingAudioCompleted) resolve({ pcm: wavToPcm(r.audioData), marks });
+      else reject(new Error(r.errorDetails || 'Error de síntesi'));
+    }, e => { s.close(); reject(new Error(String(e))); });
+  });
+}
+function wavToPcm(buf){
+  const dv = new DataView(buf); let p = 12;
+  while (p + 8 <= dv.byteLength){
+    const id = String.fromCharCode(dv.getUint8(p), dv.getUint8(p+1), dv.getUint8(p+2), dv.getUint8(p+3)), sz = dv.getUint32(p + 4, true);
+    if (id === 'data') return new Int16Array(buf.slice(p + 8, p + 8 + Math.min(sz, dv.byteLength - p - 8)));
+    p += 8 + sz + (sz & 1);
+  }
+  return new Int16Array(buf.slice(44));
+}
+/* Talla cada frase entre els seus bookmarks i retalla el silenci */
+function split(pcm, marks, list){
+  const dur = pcm.length / SR, maxT = Math.max(...marks.map(m => m.t));
+  const unit = maxT / 1e7 <= dur + 2 ? 1e7 : maxT / 1e3 <= dur + 2 ? 1e3 : 1e7;   // ticks (100 ns) normalment
+  const at = {}; marks.forEach(m => at[m.text] = m.t / unit);
+  const out = {};
+  list.forEach((f, i) => {
+    const s = at['s|' + f.id], e = at['e|' + f.id];
+    if (s == null || e == null) throw new Error('Falten marques per a ' + f.id);
+    const next = i + 1 < list.length ? at['s|' + list[i + 1].id] : dur;
+    let a = Math.max(0, Math.floor((s - 0.05) * SR)), b = Math.min(pcm.length, Math.floor(Math.min(e + 0.6, next - 0.05) * SR));
+    const seg = pcm.subarray(a, b);
+    const W = Math.round(SR * 0.01); let peak = 0; for (let k = 0; k < seg.length; k++){ const v = Math.abs(seg[k]); if (v > peak) peak = v; }
+    const thr = Math.max(peak * 0.03, 150), frames = Math.floor(seg.length / W); let first = -1, last = -1;
+    for (let w = 0; w < frames; w++){ let m = 0; for (let k = w*W; k < (w+1)*W; k++){ const v = Math.abs(seg[k]); if (v > m) m = v; } if (m > thr){ if (first < 0) first = w; last = w; } }
+    if (first < 0){ first = 0; last = frames - 1; }
+    const c0 = Math.max(0, first * W - Math.round(SR * 0.04)), c1 = Math.min(seg.length, (last + 1) * W + Math.round(SR * 0.12));
+    out[f.id] = normalize(seg.slice(c0, c1));
+  });
+  return out;
+}
+function normalize(x){
+  let ss = 0, peak = 1; for (let i = 0; i < x.length; i++){ ss += x[i]*x[i]; const v = Math.abs(x[i]); if (v > peak) peak = v; }
+  const rms = Math.sqrt(ss / Math.max(1, x.length)) || 1;
+  const g = Math.min(32767 * 0.126 / rms, 32767 * 0.89 / peak);   // RMS objectiu -18 dBFS, pic com a màxim -1 dBFS
+  const y = new Int16Array(x.length); for (let i = 0; i < x.length; i++) y[i] = Math.max(-32768, Math.min(32767, Math.round(x[i] * g)));
+  const fade = Math.round(SR * 0.01); for (let i = 0; i < fade && i < y.length; i++){ y[i] = Math.round(y[i] * i / fade); y[y.length-1-i] = Math.round(y[y.length-1-i] * i / fade); }
+  return y;
+}
+function toMp3(pcm){
+  const enc = new lamejs.Mp3Encoder(1, SR, 48), parts = [];
+  for (let i = 0; i < pcm.length; i += 1152){ const b = enc.encodeBuffer(pcm.subarray(i, i + 1152)); if (b.length) parts.push(new Uint8Array(b)); }
+  const f = enc.flush(); if (f.length) parts.push(new Uint8Array(f));
+  return new Blob(parts, { type: 'audio/mpeg' });
+}
+async function runBatches(c, list, onClip){
+  const bs = batches(list); let done = 0, last = 0;
+  for (let i = 0; i < bs.length; i++){
+    for (let attempt = 1; ; attempt++){
+      const wait = last + GAP_MS - Date.now(); if (wait > 0) await sleep(wait);
+      last = Date.now();
+      try {
+        const r = await synth(c, ssml(c.voice, bs[i]));
+        const clips = split(r.pcm, r.marks, bs[i]);
+        for (const f of bs[i]){ await onClip(f, clips[f.id]); await sleep(0); }
+        done += bs[i].length; progress(done / list.length);
+        status(`Lot ${i + 1} de ${bs.length} fet · ${done} de ${list.length} àudios`);
+        log(`✓ lot ${i + 1}/${bs.length}: ${bs[i].length} frases`);
+        break;
+      } catch (e){
+        const msg = e.message || String(e); log(`✗ lot ${i + 1}, intent ${attempt}: ${msg}`);
+        if (/401|403|auth|subscription key|invalid/i.test(msg)) throw new Error('Clau o regió incorrectes: ' + msg);
+        if (attempt >= 6) throw new Error('Massa errors seguits: ' + msg);
+        await sleep(/429|too many|throttl/i.test(msg) ? 20000 : 5000 * attempt);
+      }
+    }
+  }
+}
+function lock(b){ ['testBtn', 'runBtn'].forEach(id => $(id).disabled = b); }
+
+$('testBtn').onclick = async () => {
+  let c; try { c = cfg(); } catch(e){ status(e.message, 'bad'); return; }
+  lock(true); $('samples').innerHTML = ''; progress(0); status('Provant…');
+  const pick = ['inici_001', 'fase_051', 'queden_029'].map(id => FRASES.find(f => f.id === id)).filter(Boolean);
+  try {
+    await runBatches(c, pick, async (f, pcm) => {
+      const url = URL.createObjectURL(toMp3(pcm));
+      $('samples').insertAdjacentHTML('beforeend', `<p>${esc(f.text)}</p><audio controls src="${url}"></audio>`);
+    });
+    status('Prova feta. Escolta-les i, si et sonen bé, genera-ho tot.', 'ok');
+  } catch(e){ status(e.message, 'bad'); }
+  lock(false);
+};
+
+$('runBtn').onclick = async () => {
+  let c; try { c = cfg(); } catch(e){ status(e.message, 'bad'); return; }
+  const only = $('only').value.split(',').map(s => s.trim()).filter(Boolean);
+  const list = only.length ? FRASES.filter(f => only.includes(f.id)) : FRASES;
+  if (!list.length){ status('No hi ha cap frase per generar.', 'bad'); return; }
+  lock(true); $('dlBtn').hidden = true; $('samples').innerHTML = ''; $('log').textContent = ''; progress(0);
+  const zip = new JSZip(), index = {}, t0 = Date.now();
+  status(`Generant ${list.length} àudios amb ${c.voice}…`);
+  try {
+    await runBatches(c, list, async (f, pcm) => {
+      zip.file(`audio/${f.id}.mp3`, toMp3(pcm)); index[f.id] = +(pcm.length / SR).toFixed(2);
+    });
+    zip.file('audio/index.json', JSON.stringify({ voice: c.voice, created: new Date().toISOString(), count: Object.keys(index).length, durations: index }, null, 1));
+    status('Comprimint…');
+    zipBlob = await zip.generateAsync({ type: 'blob', compression: 'STORE' });
+    window.__zipReady = { count: Object.keys(index).length, bytes: zipBlob.size };
+    download();
+    status(`Fet: ${Object.keys(index).length} àudios en ${Math.round((Date.now() - t0)/1000)} s. Zip de ${(zipBlob.size/1048576).toFixed(1)} MB descarregat.`, 'ok');
+    $('dlBtn').hidden = false;
+  } catch(e){ status(e.message, 'bad'); }
+  lock(false);
+};
+function download(){
+  if (!zipBlob) return;
+  const a = document.createElement('a'); a.href = URL.createObjectURL(zipBlob);
+  a.download = `coll-veu-${$('voice').selectedOptions[0].text.toLowerCase()}.zip`; document.body.appendChild(a); a.click(); a.remove();
+}
+$('dlBtn').onclick = download;
+</script>
+</body>
+</html>

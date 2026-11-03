@@ -609,7 +609,8 @@
   "grup": "ini",
   "estat": null,
   "niv": 1,
-  "text": "Bon començament. Ara, que no decaigui."
+  "text": "Bon començament. Ara, que no decaigui.",
+  "valora": "positiu"
  },
  {
   "id": "fase_011",
@@ -654,7 +655,8 @@
   "grup": "ini",
   "estat": null,
   "niv": 1,
-  "text": "Molt bé. Aquest és el teu ritme de creuer."
+  "text": "Molt bé. Aquest és el teu ritme de creuer.",
+  "valora": "positiu"
  },
  {
   "id": "fase_016",
@@ -681,7 +683,8 @@
   "grup": "ini",
   "estat": null,
   "niv": 1,
-  "text": "Bon tram. Mantén-lo fins al respir."
+  "text": "Bon tram. Mantén-lo fins al respir.",
+  "valora": "positiu"
  },
  {
   "id": "fase_019",
@@ -1014,7 +1017,8 @@
   "grup": "mur",
   "estat": null,
   "niv": 2,
-  "text": "Molt bé. El mur ja és història."
+  "text": "Molt bé. El mur ja és història.",
+  "valora": "positiu"
  },
  {
   "id": "fase_056",
@@ -1059,7 +1063,8 @@
   "grup": "mur",
   "estat": null,
   "niv": 2,
-  "text": "Bé, bé. Ara cap al quilòmetre dur."
+  "text": "Bé, bé. Ara cap al quilòmetre dur.",
+  "valora": "positiu"
  },
  {
   "id": "fase_061",
@@ -3768,7 +3773,8 @@
   "grup": "ini",
   "estat": null,
   "niv": 1,
-  "text": "Estàs fent el que toca. Constància."
+  "text": "Estàs fent el que toca. Constància.",
+  "valora": "positiu"
  },
  {
   "id": "motiva_002",
@@ -3795,7 +3801,8 @@
   "grup": "ini",
   "estat": null,
   "niv": 1,
-  "text": "Vas bé. Però vull més que bé."
+  "text": "Vas bé. Però vull més que bé.",
+  "valora": "positiu"
  },
  {
   "id": "motiva_005",
@@ -3831,7 +3838,8 @@
   "grup": "ini",
   "estat": null,
   "niv": 1,
-  "text": "Bona feina. I no t'hi acostumis, que ara ve el dur."
+  "text": "Bona feina. I no t'hi acostumis, que ara ve el dur.",
+  "valora": "positiu"
  },
  {
   "id": "motiva_009",
@@ -3840,7 +3848,8 @@
   "grup": "ini",
   "estat": null,
   "niv": 1,
-  "text": "Ritme, respiració i cap. Tot en ordre."
+  "text": "Ritme, respiració i cap. Tot en ordre.",
+  "valora": "positiu"
  },
  {
   "id": "motiva_010",
@@ -3849,7 +3858,8 @@
   "grup": "ini",
   "estat": null,
   "niv": 1,
-  "text": "Molt bé, Àlex."
+  "text": "Molt bé, Àlex.",
+  "valora": "positiu"
  },
  {
   "id": "motiva_011",
@@ -3876,7 +3886,8 @@
   "grup": "ini",
   "estat": null,
   "niv": 1,
-  "text": "Bon pas. Endavant."
+  "text": "Bon pas. Endavant.",
+  "valora": "positiu"
  },
  {
   "id": "motiva_014",
@@ -3885,7 +3896,8 @@
   "grup": "ini",
   "estat": null,
   "niv": 1,
-  "text": "Fluid. Així."
+  "text": "Fluid. Així.",
+  "valora": "positiu"
  },
  {
   "id": "motiva_015",
@@ -3894,7 +3906,8 @@
   "grup": "ini",
   "estat": null,
   "niv": 1,
-  "text": "Estàs on has de ser."
+  "text": "Estàs on has de ser.",
+  "valora": "positiu"
  },
  {
   "id": "motiva_016",
@@ -3903,7 +3916,8 @@
   "grup": "ini",
   "estat": null,
   "niv": 1,
-  "text": "Vas bé, però no et conformis."
+  "text": "Vas bé, però no et conformis.",
+  "valora": "positiu"
  },
  {
   "id": "motiva_017",
@@ -3912,7 +3926,8 @@
   "grup": "ini",
   "estat": null,
   "niv": 1,
-  "text": "Còmode està bé. Massa còmode, no."
+  "text": "Còmode està bé. Massa còmode, no.",
+  "valora": "retret"
  },
  {
   "id": "motiva_018",
@@ -3975,7 +3990,8 @@
   "grup": "mur",
   "estat": null,
   "niv": 2,
-  "text": "Has vingut a pujar, no a passejar."
+  "text": "Has vingut a pujar, no a passejar.",
+  "valora": "retret"
  },
  {
   "id": "motiva_025",
@@ -4002,7 +4018,8 @@
   "grup": "mur",
   "estat": null,
   "niv": 2,
-  "text": "Es fa dur perquè ho estàs fent bé."
+  "text": "Es fa dur perquè ho estàs fent bé.",
+  "valora": "positiu"
  },
  {
   "id": "motiva_028",
@@ -4029,7 +4046,8 @@
   "grup": "mur",
   "estat": null,
   "niv": 2,
-  "text": "Collons, que bé que ho estàs fent."
+  "text": "Collons, que bé que ho estàs fent.",
+  "valora": "positiu"
  },
  {
   "id": "motiva_031",
@@ -4092,7 +4110,8 @@
   "grup": "fi",
   "estat": null,
   "niv": 3,
-  "text": "Ja ho tens! No afluixis!"
+  "text": "Ja ho tens! No afluixis!",
+  "valora": "positiu"
  },
  {
   "id": "motiva_038",
@@ -4146,7 +4165,8 @@
   "grup": "fi",
   "estat": null,
   "niv": 3,
-  "text": "Això és teu! Amunt!"
+  "text": "Això és teu! Amunt!",
+  "valora": "positiu"
  },
  {
   "id": "motiva_044",
@@ -4182,7 +4202,8 @@
   "grup": "fi",
   "estat": null,
   "niv": 3,
-  "text": "Hòstia, quina pujada que estàs fent!"
+  "text": "Hòstia, quina pujada que estàs fent!",
+  "valora": "positiu"
  },
  {
   "id": "motiva_048",
@@ -4209,7 +4230,8 @@
   "grup": "fi",
   "estat": null,
   "niv": 3,
-  "text": "Ara ets imparable!"
+  "text": "Ara ets imparable!",
+  "valora": "positiu"
  },
  {
   "id": "motiva_051",

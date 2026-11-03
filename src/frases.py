@@ -641,6 +641,13 @@ for m in range(18, 41): NUM.append(("minuts", m, f"Temps: {num(m)} minuts"))
 for s in range(0, 60):  NUM.append(("isegons", s, "i un segon." if s == 1 else ("justos." if s == 0 else f"i {num(s)} segons.")))
 for h in range(120, 200): NUM.append(("fc", h, f"{num(h, fem=True).capitalize()} pulsacions."))
 
+
+# ---------------------------------------------------------------- valoració implícita
+# Frases de categories "neutres" (fase, motiva) que diuen que vas bé o que t'estàs refiant.
+# El motor només les pot dir si les dades ho confirmen (vegeu README, «Regles del motor»).
+VALORA = {"positiu": ['Bon començament. Ara, que no decaigui.', 'Molt bé. Aquest és el teu ritme de creuer.', 'Bon tram. Mantén-lo fins al respir.', 'Molt bé. El mur ja és història.', 'Bé, bé. Ara cap al quilòmetre dur.', 'Estàs fent el que toca. Constància.', 'Vas bé. Però vull més que bé.', "Bona feina. I no t'hi acostumis, que ara ve el dur.", 'Molt bé, Àlex.', 'Bon pas. Endavant.', 'Fluid. Així.', 'Estàs on has de ser.', 'Ritme, respiració i cap. Tot en ordre.', 'Vas bé, però no et conformis.', 'Es fa dur perquè ho estàs fent bé.', 'Collons, que bé que ho estàs fent.', 'Ja ho tens! No afluixis!', 'Això és teu! Amunt!', 'Hòstia, quina pujada que estàs fent!', 'Ara ets imparable!'],
+          "retret": ['Has vingut a pujar, no a passejar.', 'Còmode està bé. Massa còmode, no.']}
+
 # ---------------------------------------------------------------- sortida
 out, ids = [], {}
 for cat, tags, text in B:
@@ -649,8 +656,9 @@ for cat, tags, text in B:
     fase = tags.get("fase")
     grup = tags.get("grup") or ({1: "ini", 2: "ini", 3: "ini", 4: "mur", 5: "mur", 6: "mur", 7: "fi", 8: "fi"}[fase] if fase else None)
     niv = tags.get("niv") or (NIV_FASE[fase] if fase else NIV_GRUP.get(grup, 2))
+    val = next((v for v, ts in VALORA.items() if text in ts), None)
     out.append({"id": f"{cat}_{ids[k]:03d}", "cat": cat, "fase": fase, "grup": grup,
-                "estat": tags.get("estat"), "niv": niv, "text": text})
+                "estat": tags.get("estat"), "niv": niv, "text": text, **({"valora": val} if val else {})})
 for kind, n, text in NUM:
     out.append({"id": f"num_{kind}_{n}", "cat": "num", "fase": None, "grup": None, "estat": kind,
                 "n": n, "niv": 2, "text": text})

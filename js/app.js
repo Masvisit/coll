@@ -6,6 +6,7 @@
 const $ = id => document.getElementById(id);
 const sleep = ms => new Promise(r => setTimeout(r, ms));
 const fmtT = s => { if (s == null || !isFinite(s)) return '—'; s = Math.max(0, Math.round(s)); const m = Math.floor(s / 60), x = s % 60; return m + ':' + String(x).padStart(2, '0'); };
+const fmtRel = s => (s == null ? '' : (s < 0 ? '−' : '') + fmtT(Math.abs(s)));   // abans de l'inici surt en negatiu
 const fmtSigned = d => (d > 0 ? '+' : d < 0 ? '−' : '') + Math.abs(Math.round(d));
 const fmtDate = iso => { const d = new Date(iso.length === 10 ? iso + 'T12:00:00' : iso); return d.toLocaleDateString('ca-ES', { day: 'numeric', month: 'numeric' }); };
 const store = {
@@ -275,7 +276,7 @@ function showEnd(r) {
       return `<tr><td>${p.n} · ${p.nom}</td><td>${fmtT(a)}</td><td>${fmtT(b)}</td><td class="${dd < -0.5 ? 'g' : dd > 0.5 ? 'r' : ''}">${fmtSigned(dd)} s</td></tr>`;
     }).join('');
   } else $('eTab').innerHTML = '';
-  $('eLog').innerHTML = (r.said || []).map((x, i) => `<li><span class="t">${x.rel != null ? fmtT(x.rel) : ''}</span><span>${x.text}<span class="k">${x.kind}</span></span><button data-i="${i}">▶</button></li>`).join('');
+  $('eLog').innerHTML = (r.said || []).map((x, i) => `<li><span class="t">${fmtRel(x.rel)}</span><span>${x.text}<span class="k">${x.kind}</span></span><button data-i="${i}">▶</button></li>`).join('');
   $('eLog').querySelectorAll('button').forEach(b => b.onclick = () => Player.playSeq(r.said[+b.dataset.i].ids));
   show('end');
 }
@@ -296,7 +297,7 @@ async function simulate() {
   }
   const st = c.state;
   $('simInfo').textContent = st.finish ? `Pujada del ${fmtDate(simId)} contra ${ref.nom} (${fmtT(ref.total)}): cim en ${fmtT(st.finish.T)} (${fmtSigned(st.finish.d)} s). ${out.length} intervencions.` : 'No s\'ha completat la pujada.';
-  $('simLog').innerHTML = out.map((u, i) => `<li><span class="t">${st.t0 != null ? fmtT(u.t - st.t0) : ''}</span><span>${u.text}<span class="k">${u.kind}${u.info ? ' · ' + u.info : ''}</span></span><button data-i="${i}">▶</button></li>`).join('');
+  $('simLog').innerHTML = out.map((u, i) => `<li><span class="t">${st.t0 != null ? fmtRel(u.t - st.t0) : ''}</span><span>${u.text}<span class="k">${u.kind}${u.info ? ' · ' + u.info : ''}</span></span><button data-i="${i}">▶</button></li>`).join('');
   $('simLog').querySelectorAll('button').forEach(b => b.onclick = () => Player.playSeq(out[+b.dataset.i].ids).catch(e => showErr(e.message)));
 }
 

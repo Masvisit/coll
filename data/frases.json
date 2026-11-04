@@ -114,7 +114,8 @@
   "grup": "ini",
   "estat": null,
   "niv": 1,
-  "text": "Primer tram: quatre-cents metres a prop del vuit per cent. No és el moment de demostrar res."
+  "text": "Primer tram: quatre-cents metres a prop del vuit per cent. No és el moment de demostrar res.",
+  "valora": "frena"
  },
  {
   "id": "entrada_002",
@@ -132,7 +133,8 @@
   "grup": "ini",
   "estat": null,
   "niv": 1,
-  "text": "Aquest primer tram enganya. Puja a ritme, no a orgull."
+  "text": "Aquest primer tram enganya. Puja a ritme, no a orgull.",
+  "valora": "frena"
  },
  {
   "id": "entrada_004",
@@ -141,7 +143,8 @@
   "grup": "ini",
   "estat": null,
   "niv": 1,
-  "text": "Fase u: entra en calor pujant. Que les pulsacions pugin a poc a poc."
+  "text": "Fase u: entra en calor pujant. Que les pulsacions pugin a poc a poc.",
+  "valora": "frena"
  },
  {
   "id": "entrada_005",
@@ -177,7 +180,8 @@
   "grup": "ini",
   "estat": null,
   "niv": 1,
-  "text": "Pendent més amable. No t'adormis: ritme sostingut fins al respir."
+  "text": "Pendent més amable. No t'adormis: ritme sostingut fins al respir.",
+  "valora": "empeny"
  },
  {
   "id": "entrada_009",
@@ -195,7 +199,8 @@
   "grup": "ini",
   "estat": null,
   "niv": 1,
-  "text": "Tram de ritme: si vas bé de cames, és el lloc per arrencar uns segons."
+  "text": "Tram de ritme: si vas bé de cames, és el lloc per arrencar uns segons.",
+  "valora": "empeny"
  },
  {
   "id": "entrada_011",
@@ -204,7 +209,8 @@
   "grup": "ini",
   "estat": null,
   "niv": 1,
-  "text": "Arriba el respir. Quatre-cents metres gairebé plans: recupera sense parar de córrer."
+  "text": "Arriba el respir. Quatre-cents metres gairebé plans: recupera sense parar de córrer.",
+  "valora": "frena"
  },
  {
   "id": "entrada_012",
@@ -213,7 +219,8 @@
   "grup": "ini",
   "estat": null,
   "niv": 1,
-  "text": "Respir. Deixa baixar pulsacions, però mantén la cadència."
+  "text": "Respir. Deixa baixar pulsacions, però mantén la cadència.",
+  "valora": "frena"
  },
  {
   "id": "entrada_013",
@@ -222,7 +229,8 @@
   "grup": "ini",
   "estat": null,
   "niv": 1,
-  "text": "Ara gairebé pla. Aprofita-ho per recuperar, que després ve el mur."
+  "text": "Ara gairebé pla. Aprofita-ho per recuperar, que després ve el mur.",
+  "valora": "frena"
  },
  {
   "id": "entrada_014",
@@ -231,7 +239,8 @@
   "grup": "ini",
   "estat": null,
   "niv": 1,
-  "text": "Fase tres, el respir. Braços fluixos, que el cor es calmi."
+  "text": "Fase tres, el respir. Braços fluixos, que el cor es calmi.",
+  "valora": "frena"
  },
  {
   "id": "entrada_015",
@@ -240,7 +249,8 @@
   "grup": "ini",
   "estat": null,
   "niv": 1,
-  "text": "Respira, Àlex. Aquest tram és per carregar piles."
+  "text": "Respira, Àlex. Aquest tram és per carregar piles.",
+  "valora": "frena"
  },
  {
   "id": "entrada_016",
@@ -366,7 +376,8 @@
   "grup": "mur",
   "estat": null,
   "niv": 2,
-  "text": "Replà. Cent cinquanta metres per refer-te, però sense aturar-te."
+  "text": "Replà. Cent cinquanta metres per refer-te, però sense aturar-te.",
+  "valora": "frena"
  },
  {
   "id": "entrada_030",
@@ -375,7 +386,8 @@
   "grup": "mur",
   "estat": null,
   "niv": 2,
-  "text": "Mur superat. Aprofita el replà per respirar i tornar a allargar."
+  "text": "Mur superat. Aprofita el replà per respirar i tornar a allargar.",
+  "valora": "frena"
  },
  {
   "id": "entrada_031",
@@ -384,7 +396,8 @@
   "grup": "mur",
   "estat": null,
   "niv": 2,
-  "text": "Replà: recupera en moviment. Encara queda un quilòmetre dur."
+  "text": "Replà: recupera en moviment. Encara queda un quilòmetre dur.",
+  "valora": "frena"
  },
  {
   "id": "entrada_032",
@@ -393,7 +406,8 @@
   "grup": "mur",
   "estat": null,
   "niv": 2,
-  "text": "Bé, has passat el mur. Ara refés-te sense perdre ritme."
+  "text": "Bé, has passat el mur. Ara refés-te sense perdre ritme.",
+  "valora": "frena"
  },
  {
   "id": "entrada_033",
@@ -402,7 +416,8 @@
   "grup": "mur",
   "estat": null,
   "niv": 2,
-  "text": "Fase sis. Respira fons tres vegades i prepara't per al quilòmetre dur."
+  "text": "Fase sis. Respira fons tres vegades i prepara't per al quilòmetre dur.",
+  "valora": "frena"
  },
  {
   "id": "entrada_034",
@@ -411,7 +426,8 @@
   "grup": "mur",
   "estat": null,
   "niv": 2,
-  "text": "Això és un replà, no un descans. Mantén les cames vives."
+  "text": "Això és un replà, no un descans. Mantén les cames vives.",
+  "valora": "empeny"
  },
  {
   "id": "entrada_035",
@@ -528,7 +544,8 @@
   "grup": "ini",
   "estat": null,
   "niv": 1,
-  "text": "Passes curtes i lleugeres. Que no et costi."
+  "text": "Passes curtes i lleugeres. Que no et costi.",
+  "valora": "frena"
  },
  {
   "id": "fase_002",
@@ -564,7 +581,8 @@
   "grup": "ini",
   "estat": null,
   "niv": 1,
-  "text": "Encara és d'hora. Paciència, però sense adormir-te."
+  "text": "Encara és d'hora. Paciència, però sense adormir-te.",
+  "valora": "frena"
  },
  {
   "id": "fase_006",
@@ -582,7 +600,8 @@
   "grup": "ini",
   "estat": null,
   "niv": 1,
-  "text": "Si et sents molt bé, perfecte: guarda-ho."
+  "text": "Si et sents molt bé, perfecte: guarda-ho.",
+  "valora": "frena"
  },
  {
   "id": "fase_008",
@@ -600,7 +619,8 @@
   "grup": "ini",
   "estat": null,
   "niv": 1,
-  "text": "El que estalviïs aquí, ho tindràs al mur."
+  "text": "El que estalviïs aquí, ho tindràs al mur.",
+  "valora": "frena"
  },
  {
   "id": "fase_010",
@@ -665,7 +685,8 @@
   "grup": "ini",
   "estat": null,
   "niv": 1,
-  "text": "No t'adormis, que en aquest tram és fàcil perdre segons."
+  "text": "No t'adormis, que en aquest tram és fàcil perdre segons.",
+  "valora": "empeny"
  },
  {
   "id": "fase_017",
@@ -702,7 +723,8 @@
   "grup": "ini",
   "estat": null,
   "niv": 1,
-  "text": "Encara queda molt coll. Ritme intel·ligent."
+  "text": "Encara queda molt coll. Ritme intel·ligent.",
+  "valora": "frena"
  },
  {
   "id": "fase_021",
@@ -711,7 +733,8 @@
   "grup": "ini",
   "estat": null,
   "niv": 1,
-  "text": "Recupera, però sense afluixar del tot."
+  "text": "Recupera, però sense afluixar del tot.",
+  "valora": "frena"
  },
  {
   "id": "fase_022",
@@ -738,7 +761,8 @@
   "grup": "ini",
   "estat": null,
   "niv": 1,
-  "text": "Aquí les pulsacions han de baixar una mica."
+  "text": "Aquí les pulsacions han de baixar una mica.",
+  "valora": "frena"
  },
  {
   "id": "fase_025",
@@ -774,7 +798,8 @@
   "grup": "ini",
   "estat": null,
   "niv": 1,
-  "text": "Carregant piles. Però corrent, eh, no passejant."
+  "text": "Carregant piles. Però corrent, eh, no passejant.",
+  "valora": "frena"
  },
  {
   "id": "fase_029",
@@ -846,7 +871,8 @@
   "grup": "mur",
   "estat": null,
   "niv": 2,
-  "text": "Ritme ferm. No et deixis anar."
+  "text": "Ritme ferm. No et deixis anar.",
+  "valora": "empeny"
  },
  {
   "id": "fase_037",
@@ -882,7 +908,8 @@
   "grup": "mur",
   "estat": null,
   "niv": 2,
-  "text": "No et pengis del pendent. Ataca'l."
+  "text": "No et pengis del pendent. Ataca'l.",
+  "valora": "empeny"
  },
  {
   "id": "fase_041",
@@ -999,7 +1026,8 @@
   "grup": "mur",
   "estat": null,
   "niv": 2,
-  "text": "Respira. Recupera en marxa."
+  "text": "Respira. Recupera en marxa.",
+  "valora": "frena"
  },
  {
   "id": "fase_054",
@@ -1008,7 +1036,8 @@
   "grup": "mur",
   "estat": null,
   "niv": 2,
-  "text": "Allarga una mica la passa i deixa que les cames es descarreguin."
+  "text": "Allarga una mica la passa i deixa que les cames es descarreguin.",
+  "valora": "frena"
  },
  {
   "id": "fase_055",
@@ -1054,7 +1083,8 @@
   "grup": "mur",
   "estat": null,
   "niv": 2,
-  "text": "No t'hi recreïs. Cames vives."
+  "text": "No t'hi recreïs. Cames vives.",
+  "valora": "empeny"
  },
  {
   "id": "fase_060",
@@ -3062,7 +3092,8 @@
   "grup": null,
   "estat": 2000,
   "niv": 1,
-  "text": "Queden dos mil metres. Carrega piles ara."
+  "text": "Queden dos mil metres. Carrega piles ara.",
+  "valora": "frena"
  },
  {
   "id": "queden_009",
@@ -3820,7 +3851,8 @@
   "grup": "ini",
   "estat": null,
   "niv": 1,
-  "text": "Corre fàcil. Que sembli fàcil."
+  "text": "Corre fàcil. Que sembli fàcil.",
+  "valora": "frena"
  },
  {
   "id": "motiva_007",
@@ -3877,7 +3909,8 @@
   "grup": "ini",
   "estat": null,
   "niv": 1,
-  "text": "Paciència. El coll premia qui sap esperar."
+  "text": "Paciència. El coll premia qui sap esperar.",
+  "valora": "frena"
  },
  {
   "id": "motiva_013",

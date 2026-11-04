@@ -35,6 +35,7 @@ const DB = (() => {
     get: (n, k) => tx(n, 'readonly', s => s.get(k)),
     put: (n, v, k) => tx(n, 'readwrite', s => (k === undefined ? s.put(v) : s.put(v, k))),
     keys: n => tx(n, 'readonly', s => s.getAllKeys()),
+    del: (n, k) => tx(n, 'readwrite', s => s.delete(k)),
     all: n => tx(n, 'readonly', s => s.getAll())
   };
 })();
@@ -62,20 +63,32 @@ const currentRef = () => refs.find(r => r.id === $('selRef').value) || refs[0];
 function refInfo() { const r = currentRef(); $('sRef').textContent = `Et compares amb la pujada del ${r.nom}: ${fmtT(r.total)}${r === refs[0] ? ', el teu millor temps' : ''}.`; }
 
 /* ------------------------------------------------------------ veu */
+const VOLUMS = { normal: { g: 1.0, nom: 'Normal' }, fort: { g: 1.7, nom: 'Fort' }, maxim: { g: 2.6, nom: 'Màxim' } };
+const V = () => (audioIdx && audioIdx.versio) || 1;                 // versió dels àudios (quan canvien, es tornen a baixar)
+const akey = id => id + '@' + V();
 const Player = {
-  ctx: null, mem: new Map(), muted: false,
+  ctx: null, out: null, gain: null, mem: new Map(), muted: false,
   async unlock() {
     try { if (navigator.audioSession) navigator.audioSession.type = 'ambient'; } catch (e) {}   // sona per sobre de Spotify, sense aturar-lo
-    if (!this.ctx) { const AC = window.AudioContext || window.webkitAudioContext; this.ctx = new AC(); }
+    if (!this.ctx) {
+      const AC = window.AudioContext || window.webkitAudioContext; this.ctx = new AC();
+      // guany + limitador: la veu pot pujar per sobre de la música sense distorsionar
+      this.gain = this.ctx.createGain();
+      const lim = this.ctx.createDynamicsCompressor();
+      lim.threshold.value = -3; lim.knee.value = 0; lim.ratio.value = 20; lim.attack.value = 0.002; lim.release.value = 0.12;
+      this.gain.connect(lim); lim.connect(this.ctx.destination); this.out = this.gain;
+      this.setVolume(store.get('coll_volum', 'fort'));
+    }
     if (this.ctx.state !== 'running') { try { await this.ctx.resume(); } catch (e) {} }
     const b = this.ctx.createBuffer(1, 1, 22050), s = this.ctx.createBufferSource(); s.buffer = b; s.connect(this.ctx.destination); s.start(0);
   },
+  setVolume(k) { const v = VOLUMS[k] || VOLUMS.fort; if (this.gain) this.gain.gain.value = v.g; },
   async raw(id) {
     let ab = null;
-    try { ab = await DB.get('audio', id); } catch (e) {}
+    try { ab = await DB.get('audio', akey(id)); } catch (e) {}
     if (!ab) {
-      const r = await fetch('audio/' + id + '.mp3'); if (!r.ok) throw new Error('No trobo l\'àudio ' + id);
-      ab = await r.arrayBuffer(); try { await DB.put('audio', ab, id); } catch (e) {}
+      const r = await fetch('audio/' + id + '.mp3?v=' + V()); if (!r.ok) throw new Error('No trobo l\'àudio ' + id);
+      ab = await r.arrayBuffer(); try { await DB.put('audio', ab, akey(id)); } catch (e) {}
     }
     return ab;
   },
@@ -92,7 +105,7 @@ const Player = {
       const buf = await this.buffer(ids[i]);
       if (this.muted) continue;
       await new Promise(res => {
-        const s = this.ctx.createBufferSource(); s.buffer = buf; s.connect(this.ctx.destination);
+        const s = this.ctx.createBufferSource(); s.buffer = buf; s.connect(this.out);
         let done = false; const fin = () => { if (!done) { done = true; res(); } };
         s.onended = fin; s.start(); setTimeout(fin, buf.duration * 1000 + 600);
       });
@@ -101,15 +114,20 @@ const Player = {
   }
 };
 async function voicesStatus() {
-  const all = Object.keys(audioIdx.durations);
-  let have = new Set(); try { have = new Set(await DB.keys('audio')); } catch (e) {}
+  const all = Object.keys(audioIdx.durations), suf = '@' + V();
+  let keys = []; try { keys = await DB.keys('audio'); } catch (e) {}
+  const have = new Set(keys.filter(k => String(k).endsWith(suf)).map(k => String(k).slice(0, -suf.length)));
+  const old = keys.some(k => !String(k).endsWith(suf));
   const n = all.filter(id => have.has(id)).length;
   if (n === all.length) { dot('dVeus', 'ok'); $('sVeus').textContent = `${n} frases de l'Alba al mòbil. Funciona sense cobertura.`; $('bVeus').disabled = true; $('bVeus').textContent = 'Fet'; }
-  else { dot('dVeus', n ? 'warn' : ''); $('sVeus').textContent = `${n} de ${all.length} al mòbil (${Math.round(18 * (all.length - n) / all.length)} MB per baixar). Fes-ho amb wifi: després funciona sense cobertura.`; }
-  return { n, total: all.length, have };
+  else {
+    dot('dVeus', n ? 'warn' : ''); $('bVeus').disabled = false; $('bVeus').textContent = 'Descarrega';
+    $('sVeus').textContent = (old && !n ? 'Hi ha veus noves, més fortes: torna-les a baixar. ' : `${n} de ${all.length} al mòbil. `) + `${Math.round(20 * (all.length - n) / all.length)} MB, millor amb wifi; després funciona sense cobertura.`;
+  }
+  return { n, total: all.length, have, old: keys.filter(k => !String(k).endsWith(suf)) };
 }
 async function downloadVoices() {
-  const { have } = await voicesStatus();
+  const { have, old } = await voicesStatus();
   const miss = Object.keys(audioIdx.durations).filter(id => !have.has(id));
   if (!miss.length) return;
   $('bVeus').disabled = true; $('barVeus').hidden = false;
@@ -117,23 +135,29 @@ async function downloadVoices() {
   const worker = async () => {
     while (miss.length) {
       const id = miss.shift();
-      try { const r = await fetch('audio/' + id + '.mp3'); if (!r.ok) throw 0; await DB.put('audio', await r.arrayBuffer(), id); } catch (e) { fails++; }
+      try { const r = await fetch('audio/' + id + '.mp3?v=' + V()); if (!r.ok) throw 0; await DB.put('audio', await r.arrayBuffer(), akey(id)); } catch (e) { fails++; }
       done++; $('barVeus').firstElementChild.style.width = (done / total * 100).toFixed(1) + '%';
       $('sVeus').textContent = `Baixant… ${done} de ${total}`;
     }
   };
   await Promise.all(Array.from({ length: 6 }, worker));
-  $('barVeus').hidden = true; $('bVeus').disabled = false;
+  for (const k of old) { try { await DB.del('audio', k); } catch (e) {} }        // fora les veus antigues
+  Player.mem.clear();
+  $('barVeus').hidden = true;
   await voicesStatus();
   if (fails) $('sVeus').textContent += ` (${fails} no s'han pogut baixar: torna-ho a provar)`;
 }
 
 /* ------------------------------------------------------------ pulsòmetre */
 const HR = {
-  dev: null, connected: false, bpm: null, last: 0, retry: 0, fns: [],
+  dev: null, connected: false, connecting: false, bpm: null, last: 0, retry: 0, fns: [], err: null,
   on(f) { this.fns.push(f); }, emit(k, v) { this.fns.forEach(f => f(k, v)); },
   async connect() {
     if (!navigator.bluetooth) throw new Error('Aquest navegador no té Bluetooth. Obre l\'app amb Bluefy.');
+    this.connecting = true; this.err = null;
+    try { return await this._connect(); } catch (e) { this.err = e.message || String(e); throw e; } finally { this.connecting = false; }
+  },
+  async _connect() {
     let dev = null;
     try { if (navigator.bluetooth.getDevices) { const ds = await navigator.bluetooth.getDevices(); dev = ds.find(d => /polar/i.test(d.name || '')) || null; } } catch (e) {}
     if (dev) { try { return await this.attach(dev); } catch (e) {} }
@@ -314,18 +338,34 @@ function gpsPrep(fx) {
 }
 GPS.on(fx => { gpsPrep(fx); onFixRun(fx); });
 HR.on((k, v) => {
-  if (k === 'hr') { $('sFC').textContent = `Connectat · ${v} ppm`; dot('dFC', 'ok'); if (coach) coach.onHR(v, Date.now()); }
-  else { if (!v) { dot('dFC', 'warn'); $('sFC').textContent = 'Connexió perduda, reintentant…'; } if (coach) coach.onHRStatus(v, Date.now()); }
+  if (k === 'hr') { if (coach) coach.onHR(v, Date.now()); }
+  else if (coach) coach.onHRStatus(v, Date.now());
+  hrRow();
 });
+// la fila del pulsòmetre es pinta sempre a partir de l'estat real (connectat, rebent pulsacions, perdut…)
+function hrRow() {
+  const fresh = HR.connected && Date.now() - HR.last < 5000;
+  if (!navigator.bluetooth) { dot('dFC', 'bad'); $('sFC').textContent = 'Aquest navegador no té Bluetooth: obre l\'app amb Bluefy per tenir les pulsacions.'; return; }
+  if (fresh) { dot('dFC', 'ok'); $('sFC').textContent = `Connectat${HR.dev && HR.dev.name ? ' a ' + HR.dev.name : ''} · ${HR.bpm} ppm`; $('bFC').textContent = 'Connectat'; return; }
+  $('bFC').textContent = HR.dev ? 'Reconnecta' : 'Connecta';
+  if (HR.connecting) { dot('dFC', 'warn'); $('sFC').textContent = 'Buscant… tria el Polar a la llista (pot trigar uns segons).'; }
+  else if (HR.connected) { dot('dFC', 'warn'); $('sFC').textContent = 'Connectat, esperant les pulsacions…'; }
+  else if (HR.dev) { dot('dFC', 'warn'); $('sFC').textContent = 'Connexió perduda, reintentant…'; }
+  else if (HR.err) { dot('dFC', 'bad'); $('sFC').textContent = 'No connectat: ' + HR.err; }
+  else { dot('dFC', ''); $('sFC').textContent = 'Al rellotge: córrer → LIGHT → Compartir FC → Visible per a tothom.'; }
+}
+setInterval(() => { if (!$('prep').hidden) hrRow(); }, 1000);
 
 async function init() {
   try { await loadData(); } catch (e) { showErr(e.message + '. Obre l\'app amb connexió el primer cop.'); return; }
   await voicesStatus(); prepRefresh();
-  if (!navigator.bluetooth) { dot('dFC', 'bad'); $('sFC').textContent = 'Aquest navegador no té Bluetooth: obre l\'app amb Bluefy per tenir les pulsacions.'; }
+  hrRow();
   $('selRef').onchange = () => { store.set('coll_ref', $('selRef').value); refInfo(); };
   $('bVeus').onclick = () => downloadVoices().catch(e => showErr(e.message));
   $('bSo').onclick = async () => { try { await Player.playSeq(['sistema_012']); dot('dSo', 'ok'); } catch (e) { dot('dSo', 'bad'); showErr('So: ' + e.message); } };
-  $('bFC').onclick = async () => { $('sFC').textContent = 'Buscant… tria el Polar a la llista (pot trigar uns segons).'; try { await HR.connect(); } catch (e) { dot('dFC', 'bad'); $('sFC').textContent = 'No connectat: ' + e.message; } };
+  $('selVol').value = store.get('coll_volum', 'fort');
+  $('selVol').onchange = () => { store.set('coll_volum', $('selVol').value); Player.setVolume($('selVol').value); };
+  $('bFC').onclick = async () => { const p = HR.connect(); hrRow(); try { await p; } catch (e) {} hrRow(); };
   $('bGPS').onclick = () => { try { GPS.start(); $('sGPS').textContent = 'Esperant senyal…'; dot('dGPS', 'warn'); } catch (e) { showErr(e.message); } };
   $('bStart').onclick = async () => { try { await Player.unlock(); } catch (e) {} askWake(); try { GPS.start(); } catch (e) { showErr(e.message); } startRun(); };
   $('bMute').onclick = () => { Player.muted = !Player.muted; $('bMute').textContent = Player.muted ? 'Activa la veu' : 'Silencia'; };

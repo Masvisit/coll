@@ -39,6 +39,8 @@ h1 span{color:var(--acc)}
 .bar i{display:block;height:100%;width:0;background:var(--acc);transition:width .3s}
 select{font:inherit;font-size:14px;color:var(--tx);background:var(--card2);border:1px solid var(--line);border-radius:11px;padding:8px 10px;max-width:150px}
 .note{color:var(--mut);font-size:13px;margin:8px 2px 0}
+.vol{display:flex;align-items:center;gap:8px;margin-top:6px;color:var(--mut);font-size:13px}
+.vol select{padding:5px 8px;font-size:13.5px}
 /* cursa */
 #run{display:flex;flex-direction:column;gap:12px}
 .phase{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
@@ -89,7 +91,8 @@ td.g{color:var(--ok)} td.r{color:var(--bad)}
   <div class="top"><h1>Coll <span>·</span> entrenador</h1><button class="link" id="toSim">Simula</button></div>
   <div class="card" id="checks">
     <div class="item"><span class="dot" id="dVeus"></span><div><b>Veus</b><small id="sVeus">Comprovant…</small><div class="bar" id="barVeus" hidden><i></i></div></div><button class="mini" id="bVeus">Descarrega</button></div>
-    <div class="item"><span class="dot" id="dSo"></span><div><b>So</b><small>Treu el mode silenci i posa música. La veu ha de sonar per sobre.</small></div><button class="mini" id="bSo">Prova</button></div>
+    <div class="item"><span class="dot" id="dSo"></span><div><b>So</b><small>Treu el mode silenci i posa música. La veu ha de sonar per sobre.</small>
+      <div class="vol"><span>Volum de la veu</span><select id="selVol"><option value="normal">Normal</option><option value="fort">Fort</option><option value="maxim">Màxim</option></select></div></div><button class="mini" id="bSo">Prova</button></div>
     <div class="item"><span class="dot" id="dFC"></span><div><b>Pulsòmetre</b><small id="sFC">Al rellotge: córrer → LIGHT → Compartir FC → Visible per a tothom.</small></div><button class="mini" id="bFC">Connecta</button></div>
     <div class="item"><span class="dot" id="dGPS"></span><div><b>GPS</b><small id="sGPS">Encara no actiu.</small></div><button class="mini" id="bGPS">Activa</button></div>
     <div class="item"><span class="dot ok">✓</span><div><b>Referència</b><small id="sRef">—</small></div><select id="selRef"></select></div>
@@ -140,7 +143,7 @@ td.g{color:var(--ok)} td.r{color:var(--bad)}
   <div class="card"><ul class="log" id="simLog"></ul></div>
 </section>
 
-<script src="js/coach.js?v=2"></script>
-<script src="js/app.js?v=2"></script>
+<script src="js/coach.js?v=3"></script>
+<script src="js/app.js?v=3"></script>
 </body>
 </html>

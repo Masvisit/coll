@@ -85,7 +85,7 @@ function cfg(){
 }
 function batches(list){
   const out = []; let cur = [], chars = 0;
-  const max = list.length <= 60 ? 1 : BATCH_MAX;   // poques frases: una per petició, sense talls entre frases
+  const max = list.length <= 200 ? 1 : BATCH_MAX;  // fins a 200 frases: una per petició, sense talls entre frases
   for (const f of list){
     if (cur.length && (cur.length >= max || chars + f.text.length > BATCH_CHARS)){ out.push(cur); cur = []; chars = 0; }
     cur.push(f); chars += f.text.length;

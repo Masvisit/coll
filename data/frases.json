@@ -4429,6 +4429,924 @@
   "text": "Prova de so. Si em sents per sobre de la música, tot funciona."
  },
  {
+  "id": "brief_001",
+  "cat": "brief",
+  "fase": null,
+  "grup": null,
+  "estat": "intro",
+  "niv": 1,
+  "text": "Atenció, Àlex. Arribes a l'inici amb"
+ },
+ {
+  "id": "brief_002",
+  "cat": "brief",
+  "fase": null,
+  "grup": null,
+  "estat": "intro",
+  "niv": 1,
+  "text": "Ja gairebé hi som. Arribes amb"
+ },
+ {
+  "id": "brief_003",
+  "cat": "brief",
+  "fase": null,
+  "grup": null,
+  "estat": "intro_sensefc",
+  "niv": 1,
+  "text": "Atenció, Àlex: arribes a l'inici de la pujada."
+ },
+ {
+  "id": "brief_004",
+  "cat": "brief",
+  "fase": null,
+  "grup": null,
+  "estat": "intro_sensefc",
+  "niv": 1,
+  "text": "Ja gairebé hi som. Prepara't, que comença el coll."
+ },
+ {
+  "id": "brief_005",
+  "cat": "brief",
+  "fase": null,
+  "grup": null,
+  "estat": "fc_baixa",
+  "niv": 1,
+  "text": "Vens fresc. Els primers metres, per despertar les cames, però sense adormir-te."
+ },
+ {
+  "id": "brief_006",
+  "cat": "brief",
+  "fase": null,
+  "grup": null,
+  "estat": "fc_baixa",
+  "niv": 1,
+  "text": "Cor tranquil. Perfecte: el principi el faràs amb el cap, no amb les pulsacions."
+ },
+ {
+  "id": "brief_007",
+  "cat": "brief",
+  "fase": null,
+  "grup": null,
+  "estat": "fc_baixa",
+  "niv": 1,
+  "text": "Poques pulsacions: les cames estan fredes. Entra-hi progressivament."
+ },
+ {
+  "id": "brief_008",
+  "cat": "brief",
+  "fase": null,
+  "grup": null,
+  "estat": "fc_be",
+  "niv": 1,
+  "text": "Bon escalfament: el cor està a punt per pujar."
+ },
+ {
+  "id": "brief_009",
+  "cat": "brief",
+  "fase": null,
+  "grup": null,
+  "estat": "fc_be",
+  "niv": 1,
+  "text": "Pulsacions on toca. Arribes a punt."
+ },
+ {
+  "id": "brief_010",
+  "cat": "brief",
+  "fase": null,
+  "grup": null,
+  "estat": "fc_be",
+  "niv": 1,
+  "text": "Bon punt de partida. Ni fred ni passat."
+ },
+ {
+  "id": "brief_011",
+  "cat": "brief",
+  "fase": null,
+  "grup": null,
+  "estat": "fc_alta",
+  "niv": 1,
+  "text": "Vens calent. Les primeres passes, molt controlades."
+ },
+ {
+  "id": "brief_012",
+  "cat": "brief",
+  "fase": null,
+  "grup": null,
+  "estat": "fc_alta",
+  "niv": 1,
+  "text": "Arribes amb el cor alt. Deixa'l baixar uns segons abans d'apretar."
+ },
+ {
+  "id": "brief_013",
+  "cat": "brief",
+  "fase": null,
+  "grup": null,
+  "estat": "fc_alta",
+  "niv": 1,
+  "text": "Pulsacions altes ja d'entrada: compte, que el principi enganya."
+ },
+ {
+  "id": "brief_014",
+  "cat": "brief",
+  "fase": null,
+  "grup": null,
+  "estat": "objectiu",
+  "niv": 2,
+  "text": "Objectiu d'avui: baixar del teu millor temps,"
+ },
+ {
+  "id": "brief_015",
+  "cat": "brief",
+  "fase": null,
+  "grup": null,
+  "estat": "objectiu",
+  "niv": 2,
+  "text": "El rècord a batre és de"
+ },
+ {
+  "id": "brief_016",
+  "cat": "brief",
+  "fase": null,
+  "grup": null,
+  "estat": "objectiu",
+  "niv": 2,
+  "text": "Avui vas contra el teu millor:"
+ },
+ {
+  "id": "brief_017",
+  "cat": "brief",
+  "fase": null,
+  "grup": null,
+  "estat": "objectiu_ref",
+  "niv": 2,
+  "text": "Avui et compares amb una pujada de"
+ },
+ {
+  "id": "brief_018",
+  "cat": "brief",
+  "fase": null,
+  "grup": null,
+  "estat": "pla_marge",
+  "niv": 2,
+  "text": "L'últim dia vas acabar amb massa forces: avui, entra-hi més valent des del principi."
+ },
+ {
+  "id": "brief_019",
+  "cat": "brief",
+  "fase": null,
+  "grup": null,
+  "estat": "pla_marge",
+  "niv": 2,
+  "text": "La darrera vegada et va sobrar benzina. Avui no et guardis tant als primers trams."
+ },
+ {
+  "id": "brief_020",
+  "cat": "brief",
+  "fase": null,
+  "grup": null,
+  "estat": "pla_buit",
+  "niv": 2,
+  "text": "L'últim dia vas sortir massa fort i ho vas pagar. Avui, paciència fins al respir."
+ },
+ {
+  "id": "brief_021",
+  "cat": "brief",
+  "fase": null,
+  "grup": null,
+  "estat": "pla_buit",
+  "niv": 2,
+  "text": "La darrera vegada et vas cremar d'hora. Avui, el primer quilòmetre amb el cap."
+ },
+ {
+  "id": "brief_022",
+  "cat": "brief",
+  "fase": null,
+  "grup": null,
+  "estat": "pla",
+  "niv": 2,
+  "text": "El pla: ferm fins al respir, valent al mur i tot el que quedi a l'últim quilòmetre."
+ },
+ {
+  "id": "brief_023",
+  "cat": "brief",
+  "fase": null,
+  "grup": null,
+  "estat": "pla",
+  "niv": 2,
+  "text": "Pla d'avui: ritme constant al principi, passes curtes al mur i a fons des de la rampa."
+ },
+ {
+  "id": "brief_024",
+  "cat": "brief",
+  "fase": null,
+  "grup": null,
+  "estat": "pla",
+  "niv": 2,
+  "text": "Recorda: el coll no es guanya a l'arrencada, es guanya al quilòmetre dur."
+ },
+ {
+  "id": "brief_025",
+  "cat": "brief",
+  "fase": 1,
+  "grup": "ini",
+  "estat": "feble",
+  "niv": 2,
+  "text": "Fixa't en l'arrencada: és on més temps vas deixar l'últim dia."
+ },
+ {
+  "id": "brief_026",
+  "cat": "brief",
+  "fase": 2,
+  "grup": "ini",
+  "estat": "feble",
+  "niv": 2,
+  "text": "On més pots guanyar és al tram de ritme: no t'hi adormis."
+ },
+ {
+  "id": "brief_027",
+  "cat": "brief",
+  "fase": 3,
+  "grup": "ini",
+  "estat": "feble",
+  "niv": 2,
+  "text": "Al respir l'últim dia vas perdre segons: aquest pla, corre'l de veritat."
+ },
+ {
+  "id": "brief_028",
+  "cat": "brief",
+  "fase": 4,
+  "grup": "mur",
+  "estat": "feble",
+  "niv": 2,
+  "text": "L'entrada al mur és el teu punt feble: escurça la passa abans que piqui."
+ },
+ {
+  "id": "brief_029",
+  "cat": "brief",
+  "fase": 5,
+  "grup": "mur",
+  "estat": "feble",
+  "niv": 2,
+  "text": "Al mur és on més temps se t'escapa: passes curtes i ni un pas caminant."
+ },
+ {
+  "id": "brief_030",
+  "cat": "brief",
+  "fase": 6,
+  "grup": "mur",
+  "estat": "feble",
+  "niv": 2,
+  "text": "Al replà vas perdre temps l'últim dia: no el confonguis amb un descans."
+ },
+ {
+  "id": "brief_031",
+  "cat": "brief",
+  "fase": 7,
+  "grup": "fi",
+  "estat": "feble",
+  "niv": 2,
+  "text": "Al quilòmetre dur és on més pots guanyar: divideix-lo en trossos i ataca'ls."
+ },
+ {
+  "id": "brief_032",
+  "cat": "brief",
+  "fase": 8,
+  "grup": "fi",
+  "estat": "feble",
+  "niv": 2,
+  "text": "Els últims metres et van costar segons: guarda una mica per a l'esprint final."
+ },
+ {
+  "id": "bbrief_001",
+  "cat": "bbrief",
+  "fase": null,
+  "grup": null,
+  "estat": "fc_baixa",
+  "niv": 1,
+  "text": "Cor tranquil: començaràs per sota de zona i hi aniràs entrant sol."
+ },
+ {
+  "id": "bbrief_002",
+  "cat": "bbrief",
+  "fase": null,
+  "grup": null,
+  "estat": "fc_baixa",
+  "niv": 1,
+  "text": "Poques pulsacions: perfecte per començar suau."
+ },
+ {
+  "id": "bbrief_003",
+  "cat": "bbrief",
+  "fase": null,
+  "grup": null,
+  "estat": "fc_be",
+  "niv": 1,
+  "text": "Bon punt de partida per a una pujada de base."
+ },
+ {
+  "id": "bbrief_004",
+  "cat": "bbrief",
+  "fase": null,
+  "grup": null,
+  "estat": "fc_be",
+  "niv": 1,
+  "text": "Arribes amb les pulsacions a lloc."
+ },
+ {
+  "id": "bbrief_005",
+  "cat": "bbrief",
+  "fase": null,
+  "grup": null,
+  "estat": "fc_alta",
+  "niv": 1,
+  "text": "Vens alt de pulsacions. Comença caminant fort fins que baixin a zona."
+ },
+ {
+  "id": "bbrief_006",
+  "cat": "bbrief",
+  "fase": null,
+  "grup": null,
+  "estat": "fc_alta",
+  "niv": 1,
+  "text": "Pulsacions altes d'entrada: els primers metres, molt suaus."
+ },
+ {
+  "id": "bbrief_007",
+  "cat": "bbrief",
+  "fase": null,
+  "grup": null,
+  "estat": "objectiu",
+  "niv": 1,
+  "text": "Avui, pujada de base. El rellotge no compta: compten les pulsacions."
+ },
+ {
+  "id": "bbrief_008",
+  "cat": "bbrief",
+  "fase": null,
+  "grup": null,
+  "estat": "objectiu",
+  "niv": 1,
+  "text": "Pujada de base: avui no busquem temps, busquem minuts a la zona bona."
+ },
+ {
+  "id": "bbrief_009",
+  "cat": "bbrief",
+  "fase": null,
+  "grup": null,
+  "estat": "z2",
+  "niv": 1,
+  "text": "Zona dos, tota la pujada."
+ },
+ {
+  "id": "bbrief_010",
+  "cat": "bbrief",
+  "fase": null,
+  "grup": null,
+  "estat": "z23",
+  "niv": 1,
+  "text": "Entre la zona dos i la tres, tota la pujada."
+ },
+ {
+  "id": "bbrief_011",
+  "cat": "bbrief",
+  "fase": null,
+  "grup": null,
+  "estat": "z3",
+  "niv": 1,
+  "text": "Zona tres, tota la pujada."
+ },
+ {
+  "id": "bbrief_012",
+  "cat": "bbrief",
+  "fase": null,
+  "grup": null,
+  "estat": "pla",
+  "niv": 1,
+  "text": "Al mur et costarà no passar-te'n: si cal, camina ràpid. No passa res."
+ },
+ {
+  "id": "bbrief_013",
+  "cat": "bbrief",
+  "fase": null,
+  "grup": null,
+  "estat": "pla",
+  "niv": 1,
+  "text": "Si al mur o a la rampa les pulsacions s'escapen, camina fort fins que tornin."
+ },
+ {
+  "id": "bbrief_014",
+  "cat": "bbrief",
+  "fase": null,
+  "grup": null,
+  "estat": "pla",
+  "niv": 1,
+  "text": "Respiració còmoda: has de poder dir frases curtes mentre puges."
+ },
+ {
+  "id": "base_001",
+  "cat": "base",
+  "fase": null,
+  "grup": null,
+  "estat": "dins",
+  "niv": 1,
+  "text": "Dins de zona. Així."
+ },
+ {
+  "id": "base_002",
+  "cat": "base",
+  "fase": null,
+  "grup": null,
+  "estat": "dins",
+  "niv": 1,
+  "text": "Perfecte, ets on toca."
+ },
+ {
+  "id": "base_003",
+  "cat": "base",
+  "fase": null,
+  "grup": null,
+  "estat": "dins",
+  "niv": 1,
+  "text": "Zona bona. Mantén aquest ritme."
+ },
+ {
+  "id": "base_004",
+  "cat": "base",
+  "fase": null,
+  "grup": null,
+  "estat": "dins",
+  "niv": 1,
+  "text": "Així es construeix la base. Segueix."
+ },
+ {
+  "id": "base_005",
+  "cat": "base",
+  "fase": null,
+  "grup": null,
+  "estat": "dins",
+  "niv": 1,
+  "text": "Bé. Respiració còmoda i a pujar."
+ },
+ {
+  "id": "base_006",
+  "cat": "base",
+  "fase": null,
+  "grup": null,
+  "estat": "dins",
+  "niv": 1,
+  "text": "Dins de zona, Àlex. Paciència."
+ },
+ {
+  "id": "base_007",
+  "cat": "base",
+  "fase": null,
+  "grup": null,
+  "estat": "dins",
+  "niv": 1,
+  "text": "Ritme de base perfecte."
+ },
+ {
+  "id": "base_008",
+  "cat": "base",
+  "fase": null,
+  "grup": null,
+  "estat": "dins",
+  "niv": 1,
+  "text": "Aquí és on el cos aprèn. Continua."
+ },
+ {
+  "id": "base_009",
+  "cat": "base",
+  "fase": null,
+  "grup": "pla",
+  "estat": "alta",
+  "niv": 1,
+  "text": "Per sobre de la zona. Afluixa una mica."
+ },
+ {
+  "id": "base_010",
+  "cat": "base",
+  "fase": null,
+  "grup": "pla",
+  "estat": "alta",
+  "niv": 1,
+  "text": "T'estàs passant. Baixa el ritme."
+ },
+ {
+  "id": "base_011",
+  "cat": "base",
+  "fase": null,
+  "grup": "pla",
+  "estat": "alta",
+  "niv": 1,
+  "text": "Massa pulsacions per avui. Més suau."
+ },
+ {
+  "id": "base_012",
+  "cat": "base",
+  "fase": null,
+  "grup": "pla",
+  "estat": "alta",
+  "niv": 1,
+  "text": "Recorda: avui és base. Frena una mica."
+ },
+ {
+  "id": "base_013",
+  "cat": "base",
+  "fase": null,
+  "grup": "pla",
+  "estat": "alta",
+  "niv": 1,
+  "text": "Fora de zona per dalt. Respira i afluixa."
+ },
+ {
+  "id": "base_014",
+  "cat": "base",
+  "fase": null,
+  "grup": "dret",
+  "estat": "alta",
+  "niv": 1,
+  "text": "Massa pulsacions. En aquest pendent, camina ràpid fins que baixin."
+ },
+ {
+  "id": "base_015",
+  "cat": "base",
+  "fase": null,
+  "grup": "dret",
+  "estat": "alta",
+  "niv": 1,
+  "text": "Pendent fort i cor alt: camina fort, que avui no és dia de patir."
+ },
+ {
+  "id": "base_016",
+  "cat": "base",
+  "fase": null,
+  "grup": "dret",
+  "estat": "alta",
+  "niv": 1,
+  "text": "Per sobre de zona. Passes de caminar llargues fins que tornis a lloc."
+ },
+ {
+  "id": "base_017",
+  "cat": "base",
+  "fase": null,
+  "grup": "dret",
+  "estat": "alta",
+  "niv": 1,
+  "text": "Aquí caminar és entrenar bé. Camina ràpid."
+ },
+ {
+  "id": "base_018",
+  "cat": "base",
+  "fase": null,
+  "grup": "dret",
+  "estat": "alta",
+  "niv": 1,
+  "text": "Tranquil, caminar ara és el que toca. Que baixin les pulsacions."
+ },
+ {
+  "id": "base_019",
+  "cat": "base",
+  "fase": null,
+  "grup": null,
+  "estat": "molt_alta",
+  "niv": 1,
+  "text": "Molt per sobre de la zona. Camina ja i respira."
+ },
+ {
+  "id": "base_020",
+  "cat": "base",
+  "fase": null,
+  "grup": null,
+  "estat": "molt_alta",
+  "niv": 1,
+  "text": "Para el carro, Àlex. Camina fins que baixin les pulsacions."
+ },
+ {
+  "id": "base_021",
+  "cat": "base",
+  "fase": null,
+  "grup": null,
+  "estat": "molt_alta",
+  "niv": 1,
+  "text": "Massa alt. Camina i respira fons."
+ },
+ {
+  "id": "base_022",
+  "cat": "base",
+  "fase": null,
+  "grup": null,
+  "estat": "molt_alta",
+  "niv": 1,
+  "text": "Això ja és ritme de sèries, no de base. Camina."
+ },
+ {
+  "id": "base_023",
+  "cat": "base",
+  "fase": null,
+  "grup": null,
+  "estat": "baixa",
+  "niv": 1,
+  "text": "Per sota de la zona. Pots apretar una mica."
+ },
+ {
+  "id": "base_024",
+  "cat": "base",
+  "fase": null,
+  "grup": null,
+  "estat": "baixa",
+  "niv": 1,
+  "text": "Hi ha marge: puja una mica el ritme."
+ },
+ {
+  "id": "base_025",
+  "cat": "base",
+  "fase": null,
+  "grup": null,
+  "estat": "baixa",
+  "niv": 1,
+  "text": "Massa còmode per ser base. Una marxa més."
+ },
+ {
+  "id": "base_026",
+  "cat": "base",
+  "fase": null,
+  "grup": null,
+  "estat": "baixa",
+  "niv": 1,
+  "text": "Pulsacions baixes. Allarga una mica la passa."
+ },
+ {
+  "id": "base_027",
+  "cat": "base",
+  "fase": null,
+  "grup": null,
+  "estat": "baixa",
+  "niv": 1,
+  "text": "Vas per sota: apreta una mica, sense passar-te."
+ },
+ {
+  "id": "base_028",
+  "cat": "base",
+  "fase": null,
+  "grup": null,
+  "estat": "baixa",
+  "niv": 1,
+  "text": "Pots anar un pèl més viu. Encara ets per sota."
+ },
+ {
+  "id": "base_029",
+  "cat": "base",
+  "fase": null,
+  "grup": null,
+  "estat": "torna",
+  "niv": 1,
+  "text": "Ja tornes a ser dins de zona. Mantén-ho així."
+ },
+ {
+  "id": "base_030",
+  "cat": "base",
+  "fase": null,
+  "grup": null,
+  "estat": "torna",
+  "niv": 1,
+  "text": "Tornes a estar a lloc. Bé."
+ },
+ {
+  "id": "base_031",
+  "cat": "base",
+  "fase": null,
+  "grup": null,
+  "estat": "torna",
+  "niv": 1,
+  "text": "Pulsacions a lloc. Ara, a córrer suau."
+ },
+ {
+  "id": "base_032",
+  "cat": "base",
+  "fase": null,
+  "grup": null,
+  "estat": "torna",
+  "niv": 1,
+  "text": "Dins de zona un altre cop. Així."
+ },
+ {
+  "id": "base_033",
+  "cat": "base",
+  "fase": null,
+  "grup": null,
+  "estat": "motiva",
+  "niv": 1,
+  "text": "Pujada de base: cada minut aquí et fa més fort per als dies de sèries."
+ },
+ {
+  "id": "base_034",
+  "cat": "base",
+  "fase": null,
+  "grup": null,
+  "estat": "motiva",
+  "niv": 1,
+  "text": "Constància. Avui guanyes motor."
+ },
+ {
+  "id": "base_035",
+  "cat": "base",
+  "fase": null,
+  "grup": null,
+  "estat": "motiva",
+  "niv": 1,
+  "text": "Paciència: els dies de base són els que fan els rècords."
+ },
+ {
+  "id": "base_036",
+  "cat": "base",
+  "fase": null,
+  "grup": null,
+  "estat": "motiva",
+  "niv": 1,
+  "text": "Còmode però constant. Així."
+ },
+ {
+  "id": "base_037",
+  "cat": "base",
+  "fase": null,
+  "grup": null,
+  "estat": "motiva",
+  "niv": 1,
+  "text": "Si pots respirar pel nas, vas bé."
+ },
+ {
+  "id": "base_038",
+  "cat": "base",
+  "fase": null,
+  "grup": null,
+  "estat": "motiva",
+  "niv": 1,
+  "text": "Avui el coll és un aliat, no un rival."
+ },
+ {
+  "id": "base_039",
+  "cat": "base",
+  "fase": null,
+  "grup": null,
+  "estat": "motiva",
+  "niv": 1,
+  "text": "Pas a pas. Sense pressa."
+ },
+ {
+  "id": "base_040",
+  "cat": "base",
+  "fase": null,
+  "grup": null,
+  "estat": "motiva",
+  "niv": 1,
+  "text": "Base, base, base. Això és el que construeix."
+ },
+ {
+  "id": "base_041",
+  "cat": "base",
+  "fase": null,
+  "grup": null,
+  "estat": "motiva",
+  "niv": 1,
+  "text": "Que el cor treballi, però tranquil."
+ },
+ {
+  "id": "base_042",
+  "cat": "base",
+  "fase": null,
+  "grup": null,
+  "estat": "motiva",
+  "niv": 1,
+  "text": "Gaudeix de la pujada, Àlex."
+ },
+ {
+  "id": "bentrada_001",
+  "cat": "bentrada",
+  "fase": 1,
+  "grup": "ini",
+  "estat": null,
+  "niv": 1,
+  "text": "Comencem suau. Que les pulsacions pugin a poc a poc fins a la zona."
+ },
+ {
+  "id": "bentrada_002",
+  "cat": "bentrada",
+  "fase": 3,
+  "grup": "ini",
+  "estat": null,
+  "niv": 1,
+  "text": "Respir: si anaves alt, aquí tornes a la zona."
+ },
+ {
+  "id": "bentrada_003",
+  "cat": "bentrada",
+  "fase": 4,
+  "grup": "mur",
+  "estat": null,
+  "niv": 1,
+  "text": "Comença a picar. Vigila les pulsacions, que ara s'enfilen."
+ },
+ {
+  "id": "bentrada_004",
+  "cat": "bentrada",
+  "fase": 5,
+  "grup": "mur",
+  "estat": null,
+  "niv": 1,
+  "text": "El mur: quinze per cent. Si et passes de zona, camina ràpid. Avui no hi ha cap mèrit a patir."
+ },
+ {
+  "id": "bentrada_005",
+  "cat": "bentrada",
+  "fase": 7,
+  "grup": "fi",
+  "estat": null,
+  "niv": 1,
+  "text": "Quilòmetre dur: aquí la zona es controla caminant als trossos més drets."
+ },
+ {
+  "id": "bentrada_006",
+  "cat": "bentrada",
+  "fase": 8,
+  "grup": "fi",
+  "estat": null,
+  "niv": 1,
+  "text": "Últim tram, el més suau. Acaba dins de zona."
+ },
+ {
+  "id": "bfinal_001",
+  "cat": "bfinal",
+  "fase": null,
+  "grup": null,
+  "estat": "molt_be",
+  "niv": 1,
+  "text": "Pujada de base de manual. Pràcticament tota dins de zona."
+ },
+ {
+  "id": "bfinal_002",
+  "cat": "bfinal",
+  "fase": null,
+  "grup": null,
+  "estat": "molt_be",
+  "niv": 1,
+  "text": "Perfecte: gairebé tota la pujada a la zona bona. Així es fa base."
+ },
+ {
+  "id": "bfinal_003",
+  "cat": "bfinal",
+  "fase": null,
+  "grup": null,
+  "estat": "be",
+  "niv": 1,
+  "text": "Bona pujada de base. La major part dins de zona."
+ },
+ {
+  "id": "bfinal_004",
+  "cat": "bfinal",
+  "fase": null,
+  "grup": null,
+  "estat": "be",
+  "niv": 1,
+  "text": "Bé. Alguna escapada, però la majoria a lloc."
+ },
+ {
+  "id": "bfinal_005",
+  "cat": "bfinal",
+  "fase": null,
+  "grup": null,
+  "estat": "regular",
+  "niv": 1,
+  "text": "Pujada feta, però t'has escapat de zona sovint. La propera, més suau als trams drets."
+ },
+ {
+  "id": "bfinal_006",
+  "cat": "bfinal",
+  "fase": null,
+  "grup": null,
+  "estat": "regular",
+  "niv": 1,
+  "text": "Meitat dins de zona. Als trams forts, camina abans."
+ },
+ {
+  "id": "bfinal_007",
+  "cat": "bfinal",
+  "fase": null,
+  "grup": null,
+  "estat": "malament",
+  "niv": 1,
+  "text": "Avui t'has passat de zona gairebé tota l'estona: ha estat més una pujada exigent que de base."
+ },
+ {
+  "id": "bfinal_008",
+  "cat": "bfinal",
+  "fase": null,
+  "grup": null,
+  "estat": "malament",
+  "niv": 1,
+  "text": "Massa fort per ser base. La propera, comença caminant als trams drets."
+ },
+ {
   "id": "num_davant_1",
   "cat": "num",
   "fase": null,
@@ -9667,5 +10585,235 @@
   "n": 199,
   "niv": 2,
   "text": "Cent noranta-nou pulsacions."
+ },
+ {
+  "id": "num_min_18",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "min",
+  "n": 18,
+  "niv": 2,
+  "text": "divuit minuts"
+ },
+ {
+  "id": "num_min_19",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "min",
+  "n": 19,
+  "niv": 2,
+  "text": "dinou minuts"
+ },
+ {
+  "id": "num_min_20",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "min",
+  "n": 20,
+  "niv": 2,
+  "text": "vint minuts"
+ },
+ {
+  "id": "num_min_21",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "min",
+  "n": 21,
+  "niv": 2,
+  "text": "vint-i-un minuts"
+ },
+ {
+  "id": "num_min_22",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "min",
+  "n": 22,
+  "niv": 2,
+  "text": "vint-i-dos minuts"
+ },
+ {
+  "id": "num_min_23",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "min",
+  "n": 23,
+  "niv": 2,
+  "text": "vint-i-tres minuts"
+ },
+ {
+  "id": "num_min_24",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "min",
+  "n": 24,
+  "niv": 2,
+  "text": "vint-i-quatre minuts"
+ },
+ {
+  "id": "num_min_25",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "min",
+  "n": 25,
+  "niv": 2,
+  "text": "vint-i-cinc minuts"
+ },
+ {
+  "id": "num_min_26",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "min",
+  "n": 26,
+  "niv": 2,
+  "text": "vint-i-sis minuts"
+ },
+ {
+  "id": "num_min_27",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "min",
+  "n": 27,
+  "niv": 2,
+  "text": "vint-i-set minuts"
+ },
+ {
+  "id": "num_min_28",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "min",
+  "n": 28,
+  "niv": 2,
+  "text": "vint-i-vuit minuts"
+ },
+ {
+  "id": "num_min_29",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "min",
+  "n": 29,
+  "niv": 2,
+  "text": "vint-i-nou minuts"
+ },
+ {
+  "id": "num_min_30",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "min",
+  "n": 30,
+  "niv": 2,
+  "text": "trenta minuts"
+ },
+ {
+  "id": "num_min_31",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "min",
+  "n": 31,
+  "niv": 2,
+  "text": "trenta-un minuts"
+ },
+ {
+  "id": "num_min_32",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "min",
+  "n": 32,
+  "niv": 2,
+  "text": "trenta-dos minuts"
+ },
+ {
+  "id": "num_min_33",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "min",
+  "n": 33,
+  "niv": 2,
+  "text": "trenta-tres minuts"
+ },
+ {
+  "id": "num_min_34",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "min",
+  "n": 34,
+  "niv": 2,
+  "text": "trenta-quatre minuts"
+ },
+ {
+  "id": "num_min_35",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "min",
+  "n": 35,
+  "niv": 2,
+  "text": "trenta-cinc minuts"
+ },
+ {
+  "id": "num_min_36",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "min",
+  "n": 36,
+  "niv": 2,
+  "text": "trenta-sis minuts"
+ },
+ {
+  "id": "num_min_37",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "min",
+  "n": 37,
+  "niv": 2,
+  "text": "trenta-set minuts"
+ },
+ {
+  "id": "num_min_38",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "min",
+  "n": 38,
+  "niv": 2,
+  "text": "trenta-vuit minuts"
+ },
+ {
+  "id": "num_min_39",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "min",
+  "n": 39,
+  "niv": 2,
+  "text": "trenta-nou minuts"
+ },
+ {
+  "id": "num_min_40",
+  "cat": "num",
+  "fase": null,
+  "grup": null,
+  "estat": "min",
+  "n": 40,
+  "niv": 2,
+  "text": "quaranta minuts"
  }
 ]

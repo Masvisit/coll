@@ -611,6 +611,77 @@ add("sistema", ["Ets a prop de l'inici de la pujada. Quan passis per la sortida,
 add("sistema", ["Preparat? La pujada comença d'aquí a uns metres."], estat="a_prop_inici", niv=1)
 add("sistema", ["Prova de so. Si em sents per sobre de la música, tot funciona."], estat="prova_so", niv=1)
 
+# ---------------------------------------------------------------- xerrada abans de la pujada (mode exigent)
+# Es compon: intro + «N pulsacions.» + comentari de FC · objectiu + «X minuts» + «i Y segons.» · pla o punt feble.
+add("brief", ["Atenció, Àlex. Arribes a l'inici amb", "Ja gairebé hi som. Arribes amb"], estat="intro", niv=1)
+add("brief", ["Atenció, Àlex: arribes a l'inici de la pujada.", "Ja gairebé hi som. Prepara't, que comença el coll."], estat="intro_sensefc", niv=1)
+add("brief", ["Vens fresc. Els primers metres, per despertar les cames, però sense adormir-te.",
+              "Cor tranquil. Perfecte: el principi el faràs amb el cap, no amb les pulsacions.",
+              "Poques pulsacions: les cames estan fredes. Entra-hi progressivament."], estat="fc_baixa", niv=1)
+add("brief", ["Bon escalfament: el cor està a punt per pujar.", "Pulsacions on toca. Arribes a punt.",
+              "Bon punt de partida. Ni fred ni passat."], estat="fc_be", niv=1)
+add("brief", ["Vens calent. Les primeres passes, molt controlades.",
+              "Arribes amb el cor alt. Deixa'l baixar uns segons abans d'apretar.",
+              "Pulsacions altes ja d'entrada: compte, que el principi enganya."], estat="fc_alta", niv=1)
+add("brief", ["Objectiu d'avui: baixar del teu millor temps,", "El rècord a batre és de", "Avui vas contra el teu millor:"], estat="objectiu", niv=2)
+add("brief", ["Avui et compares amb una pujada de"], estat="objectiu_ref", niv=2)
+add("brief", ["L'últim dia vas acabar amb massa forces: avui, entra-hi més valent des del principi.",
+              "La darrera vegada et va sobrar benzina. Avui no et guardis tant als primers trams."], estat="pla_marge", niv=2)
+add("brief", ["L'últim dia vas sortir massa fort i ho vas pagar. Avui, paciència fins al respir.",
+              "La darrera vegada et vas cremar d'hora. Avui, el primer quilòmetre amb el cap."], estat="pla_buit", niv=2)
+add("brief", ["El pla: ferm fins al respir, valent al mur i tot el que quedi a l'últim quilòmetre.",
+              "Pla d'avui: ritme constant al principi, passes curtes al mur i a fons des de la rampa.",
+              "Recorda: el coll no es guanya a l'arrencada, es guanya al quilòmetre dur."], estat="pla", niv=2)
+add("brief", ["Fixa't en l'arrencada: és on més temps vas deixar l'últim dia."], estat="feble", fase=1, grup="ini", niv=2)
+add("brief", ["On més pots guanyar és al tram de ritme: no t'hi adormis."], estat="feble", fase=2, grup="ini", niv=2)
+add("brief", ["Al respir l'últim dia vas perdre segons: aquest pla, corre'l de veritat."], estat="feble", fase=3, grup="ini", niv=2)
+add("brief", ["L'entrada al mur és el teu punt feble: escurça la passa abans que piqui."], estat="feble", fase=4, grup="mur", niv=2)
+add("brief", ["Al mur és on més temps se t'escapa: passes curtes i ni un pas caminant."], estat="feble", fase=5, grup="mur", niv=2)
+add("brief", ["Al replà vas perdre temps l'últim dia: no el confonguis amb un descans."], estat="feble", fase=6, grup="mur", niv=2)
+add("brief", ["Al quilòmetre dur és on més pots guanyar: divideix-lo en trossos i ataca'ls."], estat="feble", fase=7, grup="fi", niv=2)
+add("brief", ["Els últims metres et van costar segons: guarda una mica per a l'esprint final."], estat="feble", fase=8, grup="fi", niv=2)
+
+# ---------------------------------------------------------------- mode base (per zones de pulsacions)
+add("bbrief", ["Cor tranquil: començaràs per sota de zona i hi aniràs entrant sol.", "Poques pulsacions: perfecte per començar suau."], estat="fc_baixa", niv=1)
+add("bbrief", ["Bon punt de partida per a una pujada de base.", "Arribes amb les pulsacions a lloc."], estat="fc_be", niv=1)
+add("bbrief", ["Vens alt de pulsacions. Comença caminant fort fins que baixin a zona.", "Pulsacions altes d'entrada: els primers metres, molt suaus."], estat="fc_alta", niv=1)
+add("bbrief", ["Avui, pujada de base. El rellotge no compta: compten les pulsacions.",
+               "Pujada de base: avui no busquem temps, busquem minuts a la zona bona."], estat="objectiu", niv=1)
+add("bbrief", ["Zona dos, tota la pujada."], estat="z2", niv=1)
+add("bbrief", ["Entre la zona dos i la tres, tota la pujada."], estat="z23", niv=1)
+add("bbrief", ["Zona tres, tota la pujada."], estat="z3", niv=1)
+add("bbrief", ["Al mur et costarà no passar-te'n: si cal, camina ràpid. No passa res.",
+               "Si al mur o a la rampa les pulsacions s'escapen, camina fort fins que tornin.",
+               "Respiració còmoda: has de poder dir frases curtes mentre puges."], estat="pla", niv=1)
+add("base", ["Dins de zona. Així.", "Perfecte, ets on toca.", "Zona bona. Mantén aquest ritme.", "Així es construeix la base. Segueix.",
+             "Bé. Respiració còmoda i a pujar.", "Dins de zona, Àlex. Paciència.", "Ritme de base perfecte.", "Aquí és on el cos aprèn. Continua."], estat="dins", niv=1)
+add("base", ["Per sobre de la zona. Afluixa una mica.", "T'estàs passant. Baixa el ritme.", "Massa pulsacions per avui. Més suau.",
+             "Recorda: avui és base. Frena una mica.", "Fora de zona per dalt. Respira i afluixa."], estat="alta", grup="pla", niv=1)
+add("base", ["Massa pulsacions. En aquest pendent, camina ràpid fins que baixin.", "Pendent fort i cor alt: camina fort, que avui no és dia de patir.",
+             "Per sobre de zona. Passes de caminar llargues fins que tornis a lloc.", "Aquí caminar és entrenar bé. Camina ràpid.",
+             "Tranquil, caminar ara és el que toca. Que baixin les pulsacions."], estat="alta", grup="dret", niv=1)
+add("base", ["Molt per sobre de la zona. Camina ja i respira.", "Para el carro, Àlex. Camina fins que baixin les pulsacions.",
+             "Massa alt. Camina i respira fons.", "Això ja és ritme de sèries, no de base. Camina."], estat="molt_alta", niv=1)
+add("base", ["Per sota de la zona. Pots apretar una mica.", "Hi ha marge: puja una mica el ritme.", "Massa còmode per ser base. Una marxa més.",
+             "Pulsacions baixes. Allarga una mica la passa.", "Vas per sota: apreta una mica, sense passar-te.", "Pots anar un pèl més viu. Encara ets per sota."], estat="baixa", niv=1)
+add("base", ["Ja tornes a ser dins de zona. Mantén-ho així.", "Tornes a estar a lloc. Bé.", "Pulsacions a lloc. Ara, a córrer suau.",
+             "Dins de zona un altre cop. Així."], estat="torna", niv=1)
+add("base", ["Pujada de base: cada minut aquí et fa més fort per als dies de sèries.", "Constància. Avui guanyes motor.",
+             "Paciència: els dies de base són els que fan els rècords.", "Còmode però constant. Així.", "Si pots respirar pel nas, vas bé.",
+             "Avui el coll és un aliat, no un rival.", "Pas a pas. Sense pressa.", "Base, base, base. Això és el que construeix.",
+             "Que el cor treballi, però tranquil.", "Gaudeix de la pujada, Àlex."], estat="motiva", niv=1)
+add("bentrada", ["Comencem suau. Que les pulsacions pugin a poc a poc fins a la zona."], fase=1, niv=1)
+add("bentrada", ["Respir: si anaves alt, aquí tornes a la zona."], fase=3, niv=1)
+add("bentrada", ["Comença a picar. Vigila les pulsacions, que ara s'enfilen."], fase=4, niv=1)
+add("bentrada", ["El mur: quinze per cent. Si et passes de zona, camina ràpid. Avui no hi ha cap mèrit a patir."], fase=5, niv=1)
+add("bentrada", ["Quilòmetre dur: aquí la zona es controla caminant als trossos més drets."], fase=7, niv=1)
+add("bentrada", ["Últim tram, el més suau. Acaba dins de zona."], fase=8, niv=1)
+add("bfinal", ["Pujada de base de manual. Pràcticament tota dins de zona.", "Perfecte: gairebé tota la pujada a la zona bona. Així es fa base."], estat="molt_be", niv=1)
+add("bfinal", ["Bona pujada de base. La major part dins de zona.", "Bé. Alguna escapada, però la majoria a lloc."], estat="be", niv=1)
+add("bfinal", ["Pujada feta, però t'has escapat de zona sovint. La propera, més suau als trams drets.", "Meitat dins de zona. Als trams forts, camina abans."], estat="regular", niv=1)
+add("bfinal", ["Avui t'has passat de zona gairebé tota l'estona: ha estat més una pujada exigent que de base.",
+               "Massa fort per ser base. La propera, comença caminant als trams drets."], estat="malament", niv=1)
+
 # ---------------------------------------------------------------- números (es diuen en lletres per tenir el gènere bé)
 UNITS = ["", "un", "dos", "tres", "quatre", "cinc", "sis", "set", "vuit", "nou", "deu", "onze", "dotze",
          "tretze", "catorze", "quinze", "setze", "disset", "divuit", "dinou"]
@@ -640,6 +711,7 @@ for n in range(1, 121): NUM.append(("a_del_record", n, f"A {seg(n)} del rècord.
 for m in range(18, 41): NUM.append(("minuts", m, f"Temps: {num(m)} minuts"))
 for s in range(0, 60):  NUM.append(("isegons", s, "i un segon." if s == 1 else ("justos." if s == 0 else f"i {num(s)} segons.")))
 for h in range(120, 200): NUM.append(("fc", h, f"{num(h, fem=True).capitalize()} pulsacions."))
+for m in range(18, 41): NUM.append(("min", m, f"{num(m)} minuts"))      # per a la xerrada: «El rècord a batre és de» + «vint-i-quatre minuts»
 
 
 # ---------------------------------------------------------------- valoració implícita

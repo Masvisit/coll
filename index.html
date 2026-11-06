@@ -53,7 +53,7 @@ select{font:inherit;font-size:14px;color:var(--tx);background:var(--card2);borde
 .delta .v{font-size:min(30vw,148px);font-weight:900;line-height:.95;letter-spacing:-.04em;font-variant-numeric:tabular-nums}
 .delta .v small{font-size:.32em;font-weight:800;margin-left:4px;letter-spacing:0}
 .delta .l{color:var(--mut);font-size:15px;margin-top:6px}
-.delta.ahead .v{color:var(--ok)} .delta.behind .v{color:var(--bad)}
+.delta.ahead .v{color:var(--ok)} .delta.behind .v{color:var(--bad)} .delta.low .v{color:var(--blue)}
 .wait{text-align:center;padding:28px 0}
 .wait .v{font-size:34px;font-weight:800;line-height:1.15}
 .wait .l{color:var(--mut);margin-top:8px}
@@ -82,24 +82,83 @@ td.g{color:var(--ok)} td.r{color:var(--bad)}
 .log .k{display:block;color:var(--mut);font-size:12px}
 .log button{width:32px;height:32px;border-radius:50%;border:1px solid var(--line);background:var(--card2);color:var(--tx);font-size:12px}
 .err{color:var(--bad);font-size:13px;white-space:pre-wrap}
+.links{display:flex;gap:14px}
+/* tipus de pujada */
+.seg{display:grid;grid-template-columns:1fr 1fr;gap:4px;background:#07090b;border:1px solid var(--line);border-radius:14px;padding:4px}
+.seg button{border:0;border-radius:10px;background:none;color:var(--mut);font-weight:700;font-size:15px;min-height:42px}
+.seg button.on{background:var(--card2);color:var(--tx);box-shadow:inset 0 0 0 1px var(--line)}
+.seg button.on[data-t="exigent"]{color:var(--acc)} .seg button.on[data-t="base"]{color:var(--ok)}
+.seg button:disabled{opacity:.4}
+.zrow{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:10px;font-size:14px;color:var(--mut)}
+.pill{display:inline-block;border-radius:99px;padding:2px 9px;font-size:12px;font-weight:700;border:1px solid var(--line);color:var(--mut);white-space:nowrap}
+.pill.ex{color:var(--acc);border-color:#5a4313} .pill.bs{color:var(--ok);border-color:#1d5a40} .pill.rec{background:var(--acc);color:#111;border-color:var(--acc)}
+/* historial */
+.hsum{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;text-align:center}
+.hsum b{display:block;font-size:22px;font-variant-numeric:tabular-nums}
+.hsum small{color:var(--mut);font-size:12px}
+.hlist{list-style:none;margin:12px 0 0;padding:0;display:flex;flex-direction:column;gap:8px}
+.hlist button{width:100%;display:grid;grid-template-columns:auto 1fr auto;gap:12px;align-items:center;text-align:left;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:12px 14px;color:var(--tx)}
+.hlist button:active{background:var(--card2)}
+.hlist .pos{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;background:var(--card2);font-weight:800;font-size:14px;color:var(--mut)}
+.hlist .pos.p1{background:var(--acc);color:#111}
+.hlist .hl b{display:block;font-size:15.5px}
+.hlist .hl small{display:block;color:var(--mut);font-size:12.5px;margin-top:2px}
+.hlist .hr{text-align:right}
+.hlist .hr b{display:block;font-size:22px;font-weight:800;font-variant-numeric:tabular-nums;line-height:1.1}
+.hlist .hr small{display:block;font-size:12.5px;color:var(--mut)}
+.g{color:var(--ok)} .r{color:var(--bad)}
+/* anàlisi */
+.ah{display:flex;justify-content:space-between;align-items:center;gap:8px;color:var(--mut);font-size:14px}
+.tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:0 0 12px}
+.tiles div{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:9px 8px;text-align:center}
+.tiles small{display:block;color:var(--mut);font-size:11px;text-transform:uppercase;letter-spacing:.03em}
+.tiles b{display:block;font-size:19px;font-weight:800;font-variant-numeric:tabular-nums;line-height:1.2}
+.tiles b em{font-style:normal;font-size:11px;color:var(--mut);font-weight:600;margin-left:2px}
+.ch{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:6px}
+.ch select{max-width:170px;font-size:13px;padding:5px 8px}
+.sub{color:var(--mut);font-size:12.5px;margin:0 0 4px}
+.chart{position:relative;touch-action:pan-y;user-select:none;-webkit-user-select:none}
+.chart svg{display:block;width:100%;overflow:visible}
+.chart text{font:11px -apple-system,system-ui,sans-serif;fill:var(--mut)}
+.tip{position:absolute;top:0;pointer-events:none;background:#000c;border:1px solid var(--line);border-radius:10px;padding:6px 9px;font-size:12.5px;line-height:1.35;white-space:nowrap;color:var(--tx);transform:translateX(-50%)}
+.tip b{font-variant-numeric:tabular-nums}
+.leg{display:flex;flex-wrap:wrap;gap:12px;font-size:12.5px;color:var(--mut);margin-top:6px}
+.leg i{display:inline-block;width:16px;height:0;border-top:2px solid;vertical-align:middle;margin-right:5px}
+.zbar{display:flex;gap:2px;height:14px;margin-top:12px;border-radius:5px;overflow:hidden}
+.zbar span{display:block;height:100%}
+.zleg{display:grid;grid-template-columns:repeat(5,1fr);gap:4px;margin-top:6px;font-size:12px;color:var(--mut);text-align:center}
+.zleg b{display:block;color:var(--tx);font-size:13px;font-variant-numeric:tabular-nums}
+.zleg i{display:inline-block;width:8px;height:8px;border-radius:2px;margin-right:4px}
+.ins{margin:8px 0 0;padding:0 0 0 18px}
+.ins li{margin:0 0 9px;font-size:15px;line-height:1.42}
+.ins li::marker{color:var(--acc)}
+td.best{color:var(--acc)}
+#eTab td,#eTab th{white-space:nowrap} #eTab td:first-child{white-space:normal;font-size:13.5px}
+#eTab tr:last-child th{color:var(--tx);font-weight:800}
+.danger{color:var(--bad)!important}
 </style>
 </head>
 <body>
 
 <!-- ============================== PREPARACIÓ -->
 <section id="prep">
-  <div class="top"><h1>Coll <span>·</span> entrenador</h1><button class="link" id="toSim">Simula</button></div>
+  <div class="top"><h1>Coll <span>·</span> entrenador</h1><div class="links"><button class="link" id="toHist">Historial</button><button class="link" id="toSim">Simula</button></div></div>
+  <div class="card" id="tipusCard">
+    <div class="seg" id="segTipus"><button data-t="exigent">Exigent</button><button data-t="base">Base</button></div>
+    <p class="note" id="tipusNote"></p>
+    <div class="zrow" id="zonaRow" hidden><span>Zona de pulsacions</span><select id="selZona"><option value="z2">Z2 · 137–150</option><option value="z23">Z2–Z3 · 137–165</option><option value="z3">Z3 · 151–165</option></select></div>
+  </div>
   <div class="card" id="checks">
     <div class="item"><span class="dot" id="dVeus"></span><div><b>Veus</b><small id="sVeus">Comprovant…</small><div class="bar" id="barVeus" hidden><i></i></div></div><button class="mini" id="bVeus">Descarrega</button></div>
     <div class="item"><span class="dot" id="dSo"></span><div><b>So</b><small>Treu el mode silenci i posa música. La veu ha de sonar per sobre.</small>
       <div class="vol"><span>Volum de la veu</span><select id="selVol"><option value="normal">Normal</option><option value="fort">Fort</option><option value="maxim">Màxim</option></select></div></div><button class="mini" id="bSo">Prova</button></div>
     <div class="item"><span class="dot" id="dFC"></span><div><b>Pulsòmetre</b><small id="sFC">Al rellotge: córrer → LIGHT → Compartir FC → Visible per a tothom.</small></div><button class="mini" id="bFC">Connecta</button></div>
     <div class="item"><span class="dot" id="dGPS"></span><div><b>GPS</b><small id="sGPS">Encara no actiu.</small></div><button class="mini" id="bGPS">Activa</button></div>
-    <div class="item"><span class="dot ok">✓</span><div><b>Referència</b><small id="sRef">—</small></div><select id="selRef"></select></div>
+    <div class="item" id="refRow"><span class="dot ok">✓</span><div><b>Referència</b><small id="sRef">—</small></div><select id="selRef"></select></div>
   </div>
   <button class="big" id="bStart">Comença</button>
   <p class="note">Quan prems Comença, l'entrenador s'activa sol en passar per l'inici de la pujada. Deixa la pantalla encesa i no recarreguis la pàgina mentre corres.</p>
-  <p class="note" id="lastRun"></p>
+  <p class="note" id="lastRun" role="button" style="cursor:pointer"></p>
   <div class="err" id="err"></div>
 </section>
 
@@ -112,7 +171,7 @@ td.g{color:var(--ok)} td.r{color:var(--bad)}
   <div class="grid">
     <div class="cell"><small>Temps</small><b id="rT">—</b></div>
     <div class="cell"><small>Queden</small><b id="rRem">—</b></div>
-    <div class="cell"><small>Pulsacions</small><b id="rHR">—</b></div>
+    <div class="cell"><small id="rHRl">Pulsacions</small><b id="rHR">—</b></div>
     <div class="cell"><small>Ritme</small><b id="rPace">—</b></div>
   </div>
   <div class="said"><small>Entrenador</small><span id="rSaid">—</span></div>
@@ -120,16 +179,44 @@ td.g{color:var(--ok)} td.r{color:var(--bad)}
   <div class="gps" id="rGPS"></div>
 </section>
 
-<!-- ============================== RESUM -->
+<!-- ============================== ANÀLISI D'UNA PUJADA -->
 <section id="end" hidden>
-  <div class="top"><h1>Coll <span>·</span> resum</h1></div>
+  <div class="top"><h1>Coll <span>·</span> anàlisi</h1><button class="link" id="aBack">Tornar</button></div>
   <div class="card">
+    <div class="ah"><span id="aDate">—</span><span id="aPills"></span></div>
     <div class="res" id="eT">—</div>
     <div class="res2" id="eD">—</div>
+  </div>
+  <div class="tiles" id="aTiles"></div>
+  <div class="card" id="aDeltaCard">
+    <div class="ch"><b>Temps respecte a</b><select id="aCmp"></select></div>
+    <p class="sub">Negatiu (verd): per davant. Toca la gràfica per veure cada punt.</p>
+    <div class="chart" id="aDelta"></div>
+  </div>
+  <div class="card">
+    <div class="ch"><b>Trams</b></div>
     <table id="eTab"></table>
   </div>
-  <div class="card"><b>Què t'ha dit</b><ul class="log" id="eLog"></ul></div>
+  <div class="card" id="aHRCard">
+    <div class="ch"><b>Pulsacions</b></div>
+    <div class="chart" id="aHR"></div>
+    <div class="leg" id="aHRleg"></div>
+    <div class="zbar" id="aZbar"></div>
+    <div class="zleg" id="aZleg"></div>
+  </div>
+  <div class="card"><b>Anàlisi</b><ul class="ins" id="aIns"></ul></div>
+  <div class="card" id="aLogCard"><b>Què t'ha dit</b><ul class="log" id="eLog"></ul></div>
   <button class="big" id="bBack">Tornar a l'inici</button>
+  <button class="big sec danger" id="aDel" hidden>Esborra aquesta pujada</button>
+</section>
+
+<!-- ============================== HISTORIAL -->
+<section id="hist" hidden>
+  <div class="top"><h1>Coll <span>·</span> historial</h1><button class="link" id="histBack">Tornar</button></div>
+  <div class="card"><div class="hsum" id="histSum"></div></div>
+  <div class="seg" id="segHist"><button data-o="data" class="on">Per data</button><button data-o="rank">Rànquing</button></div>
+  <ul class="hlist" id="histList"></ul>
+  <p class="note" id="histNote"></p>
 </section>
 
 <!-- ============================== SIMULACIÓ -->
@@ -137,13 +224,15 @@ td.g{color:var(--ok)} td.r{color:var(--bad)}
   <div class="top"><h1>Coll <span>·</span> simula</h1><button class="link" id="simBack">Tornar</button></div>
   <div class="card">
     <p class="note" style="margin-top:0">Passa una pujada teva pel motor i mira què t'hauria dit l'entrenador i quan. Prem ▶ per escoltar cada frase.</p>
-    <div class="row2"><select id="simRun"></select><button class="mini" id="simGo">Simula</button></div>
+    <div class="row2"><select id="simRun"></select><select id="simTipus"><option value="exigent">Exigent</option><option value="z23">Base Z2–Z3</option><option value="z2">Base Z2</option><option value="z3">Base Z3</option></select></div>
+    <button class="mini" id="simGo" style="margin-top:10px;width:100%">Simula</button>
     <p class="note" id="simInfo"></p>
   </div>
   <div class="card"><ul class="log" id="simLog"></ul></div>
 </section>
 
-<script src="js/coach.js?v=3"></script>
-<script src="js/app.js?v=3"></script>
+<script src="js/coach.js?v=4"></script>
+<script src="js/app.js?v=4"></script>
+<script src="js/historial.js?v=4"></script>
 </body>
 </html>

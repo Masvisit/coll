@@ -64,6 +64,20 @@
     return { byId, get, num };
   }
 
+  /* zones de pulsacions per a les pujades de base (Polar, FC màx 194) */
+  const ZONES = { z2: { lo: 137, hi: 150, clau: 'z2', nom: 'Z2' }, z23: { lo: 137, hi: 165, clau: 'z23', nom: 'Z2–Z3' }, z3: { lo: 151, hi: 165, clau: 'z3', nom: 'Z3' } };
+
+  /* repartiment de l'esforç d'una pujada a partir de Δ(s) respecte a la referència (també el fa servir l'anàlisi) */
+  function pacing(H, dF) {
+    const mid = H.find(h => h.s >= 1650); if (!mid || dF == null) return null;
+    const late = H.filter(h => h.s >= 1650);
+    const worst = late.reduce((a, h) => (h.d > a.d ? h : a), late[0]);
+    if (worst.d - dF >= 10) return 'marge';                                    // has recuperat ≥ 10 s al final: tenies més del que vas gastar al principi
+    if (dF - mid.d >= 10 && mid.d <= 5) return 'buit';                         // anaves bé a la meitat i ho has perdut al final: sortida massa forta
+    if (Math.abs(dF - mid.d) < 10 && dF <= 15) return 'equilibrat';
+    return null;
+  }
+
   /* --------------------------------------------------------------- motor */
   const DEF = {
     gapIgual: 3, gapMolt: 15, fcMarge: 4, trendM: 250, trendS: 4,
@@ -74,6 +88,12 @@
   function createCoach(opts) {
     const route = opts.route, bank = opts.bank, ref = opts.ref || null, P = Object.assign({}, DEF, opts.params || {});
     const usage = opts.usage || {};          // {id: vegades dita} entre sortides
+    // tipus de pujada: 'exigent' (contra la referència) o 'base' (per zones de pulsacions, el temps no compta)
+    const tipus = opts.tipus === 'base' ? 'base' : 'exigent';
+    const zona = opts.zona || { lo: 137, hi: 165, clau: 'z23' };
+    const ultima = opts.ultima || {};        // de l'última pujada exigent: { reflexio: 'marge'|'buit'|'equilibrat', feble: fase }
+    const refIsBest = opts.refIsBest !== false;
+    const BASE = tipus === 'base';
     const rand = opts.random || Math.random;
     const L = route.L;
 
@@ -90,7 +110,10 @@
       lastStatus: { t: -Infinity, d: null, gap: null }, lastTrend: { s: -Infinity, state: null },
       lastFiller: null, lastFcAlert: -Infinity, walkSince: null, stopSince: null, moveState: 'corre',
       lastMoveAlert: -Infinity, gpsLost: false, offSince: null, offRoute: false,
-      finish: null, log: [], now: 0
+      finish: null, log: [], now: 0,
+      dStartHist: [], briefSpoken: false,
+      zState: null, zSince: null, zAlertSpoken: false, lastZAlert: -Infinity, lastZStatus: -Infinity, zLastT: null,
+      zStats: { dins: 0, alta: 0, baixa: 0, total: 0 }
     };
 
     const remaining = () => L - st.s;
@@ -136,7 +159,13 @@
       const pr = route.project(fx.lat, fx.lon);
       const dStart = route.dist(fx.lat, fx.lon, route.start[0], route.start[1]);
       st.off = pr.off; st.sRaw = pr.s;
-      if (dStart < 150 && dStart > 25) push({ prio: 1, kind: 'sistema', estat: 'a_prop_inici', once: 'a_prop_inici', exp: t + 20 });
+      // xerrada abans de la pujada: quan t'hi acostes, calculada perquè acabi abans de la sortida (uns 26 s d'antelació)
+      st.dStartHist.push({ t, d: dStart }); while (st.dStartHist.length > 2 && t - st.dStartHist[0].t > 8) st.dStartHist.shift();
+      const h0 = st.dStartHist[0], vApp = t - h0.t >= 3 ? (h0.d - dStart) / (t - h0.t) : 0;   // velocitat d'acostament
+      const trig = Math.max(60, Math.min(220, vApp * 26));
+      if (vApp > 0.8 && dStart <= trig && dStart >= 20) push({ prio: 0.9, kind: 'brief', once: 'brief', exp: t + 8 });
+      else if (!st.briefSpoken && st.once.has('brief') === false && vApp > 0.5 && dStart < 60 && dStart > 20)
+        push({ prio: 1, kind: 'sistema', estat: 'a_prop_inici', once: 'a_prop_inici', exp: t + 15 });
       const near = pr.off <= 30 || dStart <= 30;
       const cur = { t, s: near ? pr.s : null, off: pr.off, speed: fx.speed };
       // inici: venim de prop de la sortida (s < 8 m) i ara som ≥ 12 m pujant per la ruta
@@ -148,8 +177,8 @@
         t0 = Math.min(t0, t);
         st.mode = 'pujant'; st.t0 = t0; st.s = cur.s; st.hist = [{ t: t0, s: 0 }, { t, s: cur.s }];
         st.phase = route.phaseAt(st.s); st.grup = route.grupOf(st.phase.n); st.lastEnd = -Infinity;
-        st.pending = st.pending.filter(e => e.estat !== 'a_prop_inici');
-        push({ prio: 0, kind: 'inici', exp: t + 15 });
+        st.pending = st.pending.filter(e => e.estat !== 'a_prop_inici' && e.kind !== 'brief');
+        push({ prio: 0, kind: BASE ? 'bentrada' : 'inici', fase: 1, exp: t + 15 });
         logEv(t, 'inici', `Inici detectat (t0 = ${t0.toFixed(1)})`);
         return;
       }
@@ -188,17 +217,19 @@
       }
       const ph = route.phaseAt(st.s);
       if (!st.phase || ph.n !== st.phase.n) {
-        if (st.phase && ph.n > st.phase.n) push({ prio: 4, kind: 'entrada', fase: ph.n, once: 'entrada' + ph.n, expS: ph.a + 120, exp: t + 40 });
+        if (st.phase && ph.n > st.phase.n) push({ prio: 4, kind: BASE ? 'bentrada' : 'entrada', fase: ph.n, once: 'entrada' + ph.n, expS: ph.a + 120, exp: t + 40 });
         st.phase = ph; st.grup = route.grupOf(ph.n);
       }
-      if (st.s >= 120) push({ prio: 7.5, kind: 'entrada', fase: 1, once: 'entrada1', expS: 320, exp: t + 120 });
-      // queden X
-      for (const X of [2000, 1000, 500, 300, 200, 100, 50]) {   // 3000 i 1500 coincidien amb entrades de fase i no aportaven res
-        if (remaining() <= X && remaining() > X - 40) push({ prio: 3, kind: 'queden', estat: X, once: 'q' + X, expS: L - X + 40, exp: t + 25 });
+      if (!BASE) {
+        if (st.s >= 120) push({ prio: 7.5, kind: 'entrada', fase: 1, once: 'entrada1', expS: 320, exp: t + 120 });
+        // queden X
+        for (const X of [2000, 1000, 500, 300, 200, 100, 50]) {   // 3000 i 1500 coincidien amb entrades de fase i no aportaven res
+          if (remaining() <= X && remaining() > X - 40) push({ prio: 3, kind: 'queden', estat: X, once: 'q' + X, expS: L - X + 40, exp: t + 25 });
+        }
+        // punts clau
+        if (st.s >= 2385 && st.s < 2440) push({ prio: 2, kind: 'punt', estat: 'rampa', once: 'rampa', expS: 2470, exp: t + 15 });
+        if (st.s >= 2780 && st.s < 2830) push({ prio: 2, kind: 'punt', estat: 'mig_km_dur', once: 'mig', expS: 2880, exp: t + 25 });
       }
-      // punts clau
-      if (st.s >= 2385 && st.s < 2440) push({ prio: 2, kind: 'punt', estat: 'rampa', once: 'rampa', expS: 2470, exp: t + 15 });
-      if (st.s >= 2780 && st.s < 2830) push({ prio: 2, kind: 'punt', estat: 'mig_km_dur', once: 'mig', expS: 2880, exp: t + 25 });
       // diferència amb la referència
       if (ref) {
         const d = (t - st.t0) - ref.tAt(st.s); st.d = d;
@@ -245,7 +276,7 @@
       st.walkSince = walking ? (st.walkSince ?? t) : null;
       if (st.stopSince != null && t - st.stopSince >= 8 && st.moveState !== 'aturat' && t - st.lastMoveAlert >= 60) {
         st.moveState = 'aturat'; st.lastMoveAlert = t; push({ prio: 4.5, kind: 'aturat', exp: t + 15 });
-      } else if (st.walkSince != null && t - st.walkSince >= 10 && st.moveState === 'corre' && t - st.lastMoveAlert >= 90) {
+      } else if (!BASE && st.walkSince != null && t - st.walkSince >= 10 && st.moveState === 'corre' && t - st.lastMoveAlert >= 90) {
         st.moveState = 'camina'; st.lastMoveAlert = t; push({ prio: 4.5, kind: 'caminar', exp: t + 15 });
       } else if (st.moveState !== 'corre' && running) {
         st.moveState = 'corre'; push({ prio: 4.5, kind: 'represa', exp: t + 10 });
@@ -254,9 +285,14 @@
     function onHR(bpm, tMs) {
       const t = tMs / 1000; st.now = Math.max(st.now, t);
       if (!(bpm > 30 && bpm < 230)) return;
+      // temps en zona (base): es compta amb cada pulsació rebuda, no amb el rellotge de l'app
+      if (BASE && st.mode === 'pujant' && st.hrLastT != null) {
+        const z = zoneOf(bpm), dt = Math.min(5, t - st.hrLastT);
+        if (dt > 0) { st.zStats.total += dt; st.zStats[z === 'molt_alta' ? 'alta' : z] += dt; }
+      }
       st.hr.push({ t, bpm }); while (st.hr.length && t - st.hr[0].t > 15) st.hr.shift();
       st.hrLastT = t;
-      if (st.mode === 'pujant' && bpm >= P.fcAlta && t - st.lastFcAlert >= 120 && hrNow(t) >= P.fcAlta) {
+      if (!BASE && st.mode === 'pujant' && bpm >= P.fcAlta && t - st.lastFcAlert >= 120 && hrNow(t) >= P.fcAlta) {
         st.lastFcAlert = t; push({ prio: 4.6, kind: 'fc', estat: 'molt_alta', exp: t + 15 });
       }
     }
@@ -269,10 +305,11 @@
     function finishAt(tf) {
       st.mode = 'cim'; st.s = L;
       const T = tf - st.t0;
-      st.finish = { T, d: ref ? T - ref.total : null, tf };
+      const zs = st.zStats;
+      st.finish = { T, d: ref ? T - ref.total : null, tf, tipus, zonaPct: zs.total >= 60 ? zs.dins / zs.total : null, zStats: Object.assign({}, zs) };
       st.pending = [];
-      push({ prio: 0, kind: 'final', exp: tf + 60 });
-      if (ref) push({ prio: 0.5, kind: 'reflexio', exp: tf + 120 });
+      push({ prio: 0, kind: BASE ? 'bfinal' : 'final', exp: tf + 60 });
+      if (ref && !BASE) push({ prio: 0.5, kind: 'reflexio', exp: tf + 120 });
       push({ prio: 0.8, kind: 'baixada', notBefore: tf + 50, exp: tf + 240 });
       logEv(tf, 'cim', `Cim en ${T.toFixed(1)} s${ref ? ` (Δ ${(T - ref.total).toFixed(1)} s)` : ''}`);
     }
@@ -295,12 +332,20 @@
         case 'punt': { if (ev.expS != null && st.s > ev.expS) return null; const f = pick(bank.get('punt', 'fi', ev.estat, 7)); return f && [f]; }
         case 'caminar': { if (st.moveState !== 'camina') return null; const f = pick(bank.get('caminar')); return f && [f]; }
         case 'aturat': { if (st.moveState !== 'aturat') return null; const f = pick(bank.get('aturat')); return f && [f]; }
-        case 'represa': { if (st.moveState !== 'corre' || !st.moveSpoken) return null; st.moveSpoken = false; const f = pick(bank.get('represa')); return f && [f]; }
+        case 'represa': { if (BASE || st.moveState !== 'corre' || !st.moveSpoken) return null; st.moveSpoken = false; const f = pick(bank.get('represa')); return f && [f]; }
         case 'fc': {
           const hr = hrNow(t); if (hr == null || hr < P.fcAlta) return null;
           const f = pick(bank.get('fc', g === 'fi' ? 'fi' : 'ini', 'molt_alta')); return f && [f];
         }
         case 'final': return buildFinal();
+        case 'brief': return buildBrief(t);
+        case 'bentrada': {
+          if (ev.expS != null && st.s > ev.expS) return null;
+          if (!st.phase || st.phase.n !== ev.fase) return null;
+          const f = pick(bank.get('bentrada', route.grupOf(ev.fase), null, ev.fase)); return f && [f];
+        }
+        case 'zona': return buildZona(ev, t);
+        case 'bfinal': return buildBaseFinal();
         case 'reflexio': return buildReflexio();
         case 'baixada': { const f = pick(bank.get('baixada')); return f && [f]; }
       }
@@ -342,17 +387,84 @@
       }
       return out.length ? out : null;
     }
+    function fcClip(hr) { return hr != null ? bank.num('fc', Math.round(hr)) : null; }
+    function timeClips(T) {
+      const M = Math.floor(T / 60), S = Math.round(T - M * 60), mm = S === 60 ? M + 1 : M, ss = S === 60 ? 0 : S;
+      const a = bank.num('min', mm), b = bank.num('isegons', ss); return a && b ? [a, b] : [];
+    }
+    // xerrada d'arribada: com arribes (pulsacions), què toca avui i el pla
+    function buildBrief(t) {
+      if (st.mode !== 'armat') return null;
+      const hr0 = hrNow(t), hr = hr0 != null ? Math.round(hr0) : null, out = [], fc = hr != null && hr >= 120 && hr < 200 ? fcClip(hr) : null;
+      const B = BASE ? 'bbrief' : 'brief';
+      // cada tros va sencer o no va (mai un número sense la frase que el presenta)
+      const band = fc ? (BASE ? (hr < zona.lo - 10 ? 'fc_baixa' : hr <= zona.hi ? 'fc_be' : 'fc_alta') : (hr < 125 ? 'fc_baixa' : hr <= 150 ? 'fc_be' : 'fc_alta')) : null;
+      // la presentació ja diu «Arribes…»: el comentari no ho pot repetir
+      const intro = fc ? pick(bank.get('brief', null, 'intro')) : null, c = band ? pick(bank.get(B, null, band), f => !/^Arribes/.test(f.text)) : null;
+      if (intro && c) out.push(intro, fc, c);
+      else { const i = pick(bank.get('brief', null, 'intro_sensefc')); if (!i) { const f = pick(bank.get('sistema', null, 'a_prop_inici')); return f && [f]; } out.push(i); }
+      if (BASE) {
+        const o = pick(bank.get('bbrief', null, 'objectiu')), z = pick(bank.get('bbrief', null, zona.clau)), pl = pick(bank.get('bbrief', null, 'pla'));
+        if (o && z) out.push(o, z); if (pl) out.push(pl);
+      } else {
+        if (ref) { const o = pick(bank.get('brief', null, refIsBest ? 'objectiu' : 'objectiu_ref')), tc = timeClips(ref.total); if (o && tc.length) out.push(o, ...tc); }
+        let pl = null;
+        if (ultima.feble && rand() < 0.6) pl = pick(bank.get('brief', route.grupOf(ultima.feble), 'feble', ultima.feble));
+        if (!pl) pl = pick(bank.get('brief', null, ultima.reflexio === 'marge' ? 'pla_marge' : ultima.reflexio === 'buit' ? 'pla_buit' : 'pla'));
+        if (pl) out.push(pl);
+      }
+      return out.length ? out : null;
+    }
+    // ---- mode base: estat de zona amb persistència
+    function zoneOf(hr) { return hr == null ? null : hr > zona.hi + 8 ? 'molt_alta' : hr > zona.hi ? 'alta' : hr < zona.lo - 3 ? 'baixa' : 'dins'; }
+    function baseTick(t) {
+      const hr = hrNow(t), z = zoneOf(hr);
+      if (z !== st.zState) { st.zState = z; st.zSince = t; }
+      if (!z || st.mode !== 'pujant') return;
+      const dur = t - st.zSince, k = 1 + 0.5 * Math.min(2, st.zStreak || 0);   // si segueix fora, els avisos s'espaien
+      if (z === 'molt_alta' && dur >= 6 && t - st.lastZAlert >= 30 * k) { st.lastZAlert = t; st.zStreak = (st.zStreak || 0) + 1; push({ prio: 4.4, kind: 'zona', estat: 'molt_alta', exp: t + 10 }); }
+      else if (z === 'alta' && dur >= 10 && t - st.lastZAlert >= 45 * k) { st.lastZAlert = t; st.zStreak = (st.zStreak || 0) + 1; push({ prio: 4.5, kind: 'zona', estat: 'alta', exp: t + 10 }); }
+      else if (z === 'baixa' && dur >= 40 && st.s >= 200 && t - st.lastZAlert >= 90 * k) { st.lastZAlert = t; st.zStreak = (st.zStreak || 0) + 1; push({ prio: 5, kind: 'zona', estat: 'baixa', exp: t + 15 }); }
+      else if (z === 'dins' && dur >= 15) {
+        st.zStreak = 0;
+        if (st.zAlertSpoken) { st.zAlertSpoken = false; push({ prio: 4.6, kind: 'zona', estat: 'torna', exp: t + 15 }); }
+      }
+    }
+    function buildZona(ev, t) {
+      const hr0 = hrNow(t), hr = hr0 != null ? Math.round(hr0) : null, z = zoneOf(hr); if (!z) return null;
+      const e = ev.estat, steep = st.phase && st.phase.pct >= 9;
+      if (e === 'molt_alta' && z !== 'molt_alta') return null;
+      if (e === 'alta' && z !== 'alta' && z !== 'molt_alta') return null;
+      if (e === 'baixa' && z !== 'baixa') return null;
+      if ((e === 'torna' || e === 'dins') && z !== 'dins') return null;
+      const list = bank.get('base', e === 'alta' ? (steep ? 'dret' : 'pla') : null, e);
+      let f = pick(list);
+      // un avís per sortir de zona s'ha de donar encara que ja s'hagin dit totes les frases: es repeteix la menys recent
+      if (!f && (e === 'alta' || e === 'molt_alta' || e === 'baixa')) f = st.log.length ? lessRecent(list) : null;
+      if (!f) return e === 'dins' && fcClip(hr) ? [fcClip(hr)] : null;   // estat sense comentari: només el número
+      return e === 'torna' ? [f] : [fcClip(hr), f].filter(Boolean);
+    }
+    function lessRecent(list) {
+      if (!list.length) return null;
+      const last = {}; st.log.forEach((l, i) => (l.ids || []).forEach(id => { last[id] = i; }));
+      return list.slice().sort((a, b) => (last[a.id] ?? -1) - (last[b.id] ?? -1))[0];
+    }
+    function buildBaseFinal() {
+      const f = st.finish, out = [];
+      if (f.zonaPct != null) {
+        // les frases de «regular» i «malament» parlen de passar-se'n: si el que ha fallat és anar per sota, només el temps
+        const p = f.zonaPct, z = f.zStats, cls = p >= 0.85 ? 'molt_be' : p >= 0.65 ? 'be' : p >= 0.4 ? 'regular' : 'malament';
+        const c = (cls === 'molt_be' || cls === 'be' || z.alta >= z.baixa) ? pick(bank.get('bfinal', null, cls)) : null;
+        if (c) out.push(c);
+      }
+      const M = Math.floor(f.T / 60), S = Math.round(f.T - M * 60), mm = S === 60 ? M + 1 : M, ss = S === 60 ? 0 : S;
+      const cm = bank.num('minuts', mm), cs = bank.num('isegons', ss); if (cm && cs) out.push(cm, cs);
+      return out.length ? out : null;
+    }
     function buildReflexio() {
       // Lectura del repartiment de l'esforç. Si no és clara, no diem res.
       if (!ref || !st.finish || !st.dHistAll.length) return null;
-      const H = st.dHistAll, dF = st.finish.d;
-      const mid = H.find(h => h.s >= 1650); if (!mid) return null;
-      const late = H.filter(h => h.s >= 1650);
-      const worst = late.reduce((a, h) => (h.d > a.d ? h : a), late[0]);
-      let estat = null;
-      if (worst.d - dF >= 10) estat = 'marge';                                  // has recuperat ≥ 10 s al final: tenies més del que vas gastar al principi
-      else if (dF - mid.d >= 10 && mid.d <= 5) estat = 'buit';                 // anaves bé a la meitat i ho has perdut al final: sortida massa forta
-      else if (Math.abs(dF - mid.d) < 10 && dF <= 15) estat = 'equilibrat';
+      const estat = pacing(st.dHistAll, st.finish.d);
       if (!estat) return null;
       const f = pick(bank.get('reflexio', null, estat)); return f && [f];
     }
@@ -364,6 +476,7 @@
       if (st.mode === 'pujant' && st.lastFixT != null && t - st.lastFixT > 10 && !st.gpsLost) {
         st.gpsLost = true; push({ prio: 1, kind: 'sistema', estat: 'gps_perdut', exp: t + 15 });
       }
+      if (BASE) baseTick(t);
       st.pending = st.pending.filter(e => (e.exp == null || t <= e.exp) && (e.expS == null || st.s <= e.expS));
       const gapNeeded = st.mode !== 'pujant' ? 4 : inFinal() ? P.minGapFinal : P.minGap;
       const since = t - st.lastEnd;
@@ -376,6 +489,18 @@
         if (clips) return emit(t, clips, ev.kind, ev.kind === 'queden' ? `queden ${ev.estat} m` : ev.estat || '');
       }
       if (st.mode !== 'pujant' || since < gapNeeded) return null;
+      if (BASE) {
+        // estat dins de zona cada ~2 min; farciment amb motivació de base (mai dues seguides)
+        if (st.zState === 'dins' && t - st.zSince >= 20 && t - st.lastZStatus >= 120 && st.s >= 150) {
+          const u = buildZona({ estat: 'dins' }, t); st.lastZStatus = t;
+          if (u) return emit(t, u, 'zona', `FC ${Math.round(hrNow(t))} · dins`);
+        }
+        if (since >= P.fillerGap && st.lastFiller !== 'motiva') {
+          const f = pick(bank.get('base', null, 'motiva')); if (f) { st.lastFiller = 'motiva'; return emit(t, [f], 'motiva', ''); }
+        }
+        if (since >= P.fillerGap) st.lastFiller = null;
+        return null;
+      }
       // estat (número + comentari)
       if (wantStatus(t)) {
         const b = buildStatus(t);
@@ -412,6 +537,8 @@
       st.busy = true; st.lastStartT = t;
       for (const c of clips) if (c.cat !== 'num') st.spoken.add(c.id);
       if (kind === 'caminar' || kind === 'aturat') st.moveSpoken = true;   // «tornem a córrer» només si abans li hem dit que caminava
+      if (kind === 'brief') st.briefSpoken = true;
+      if (kind === 'zona' && clips.some(c => c.estat === 'alta' || c.estat === 'molt_alta' || c.estat === 'baixa')) st.zAlertSpoken = true;
       const u = { t, clips, ids: clips.map(c => c.id), text: clips.map(c => c.text).join(' '), kind, info, s: st.s, d: st.d, mode: st.mode };
       logEv(t, kind, u.text, u);
       return u;
@@ -430,7 +557,8 @@
       snapshot() {
         return { mode: st.mode, s: st.s, L, remaining: remaining(), d: st.d, gap: st.gap, trend: st.trend, diag: st.diag,
           phase: st.phase, grup: st.grup, speed: st.speed, off: st.off, acc: st.acc, t0: st.t0, hr: hrNow(st.now),
-          hrRef: ref && ref.hrAt && st.mode === 'pujant' ? ref.hrAt(st.s) : null, finish: st.finish, elapsed: st.t0 != null ? (st.finish ? st.finish.T : st.now - st.t0) : null };
+          hrRef: ref && ref.hrAt && st.mode === 'pujant' ? ref.hrAt(st.s) : null, finish: st.finish, elapsed: st.t0 != null ? (st.finish ? st.finish.T : st.now - st.t0) : null,
+          tipus, zona, zState: st.zState, zonaPct: st.zStats.total >= 30 ? st.zStats.dins / st.zStats.total : null };
       },
       log: st.log
     };
@@ -451,5 +579,5 @@
     return { t, hr };
   }
 
-  return { makeRoute, makeRef, refFromRun, makeBank, createCoach, runCurve, DEF };
+  return { makeRoute, makeRef, refFromRun, makeBank, createCoach, runCurve, pacing, DEF, ZONES };
 });

@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 /* Simula una pujada real pel motor de l'entrenador i comprova les regles.
  * Ús: node tools/simula.js [--sortida 2026-11-03] [--ref 2026-10-30] [--soroll 6] [--forats] [--sensefc] [--llavor 1] [--silenci]
+ *        [--mode exigent|base] [--zona z2|z23|z3] [--fcdesp -25] [--ultima marge|buit|equilibrat] [--feble 5] [--noref]
  */
 const fs = require('fs'), path = require('path');
 const Coach = require('../js/coach.js');
@@ -11,6 +12,8 @@ const sortida = arg('sortida', '2026-11-03');
 const refId = arg('ref', sortida === '2026-10-30' ? '2026-11-03' : '2026-10-30');
 const soroll = +arg('soroll', 0), forats = !!arg('forats', false), senseFC = !!arg('sensefc', false), silenci = !!arg('silenci', false);
 let seed = +arg('llavor', 1);
+const tipus = arg('mode', 'exigent') === 'base' ? 'base' : 'exigent', zonaK = arg('zona', 'z23'), fcDesp = +arg('fcdesp', 0);
+const ultima = { reflexio: arg('ultima', null) || undefined, feble: arg('feble', null) ? +arg('feble') : undefined }, refIsBest = !arg('noref', false);
 const rnd = () => { seed = (seed * 16807) % 2147483647; return (seed - 1) / 2147483646; };
 const gauss = () => Math.sqrt(-2 * Math.log(rnd() || 1e-9)) * Math.cos(2 * Math.PI * rnd());
 
@@ -23,7 +26,9 @@ const route = Coach.makeRoute(perfil);
 const rr = perfil.registres[refId];
 const ref = Coach.makeRef(refId, refId, rr.temps_s, rr.fc, route.L);
 const bank = Coach.makeBank(frases);
-const coach = Coach.createCoach({ route, bank, ref, random: rnd, hrConnected: !senseFC });
+const zona = Coach.ZONES[zonaK];
+const coach = Coach.createCoach({ route, bank, ref, random: rnd, hrConnected: !senseFC, tipus, zona, ultima, refIsBest });
+const hrAt = [];   // FC real que rep el motor, per comprovar els avisos de zona
 
 const GAP_BETWEEN_CLIPS = 0.25;
 const out = []; let busyUntil = null;
@@ -38,7 +43,7 @@ for (let t = tStart; t <= tEnd; t++) {
     if (forats && k % 97 > 84) continue;                       // forats de GPS de ~12 s
     const lat = lat0 + (soroll ? gauss() * soroll / mPerDegLat : 0), lon = lon0 + (soroll ? gauss() * soroll / mPerDegLon : 0);
     coach.onFix({ t: tms, lat, lon, acc: soroll ? Math.max(5, soroll * 1.5) : 5, speed: vel });
-    if (!senseFC && fc > 0) coach.onHR(fc, tms);
+    if (!senseFC && fc > 0) { coach.onHR(fc + fcDesp, tms); hrAt.push([tms / 1000, fc + fcDesp]); }
   }
   if (busyUntil == null) {
     const u = coach.next(t * 1000);
@@ -56,10 +61,11 @@ if (busyUntil != null) coach.done(busyUntil * 1000);
 const st = coach.state, t0 = st.t0;
 const fmt = s => { if (s == null) return '  —  '; const neg = s < 0; s = Math.abs(s); const m = Math.floor(s / 60), x = Math.round(s - m * 60); return (neg ? '-' : '') + m + ':' + String(x).padStart(2, '0'); };
 if (!silenci) {
-  console.log(`\nSimulació ${sortida} contra ${refId} (${fmt(ref.total)})${soroll ? ` · soroll GPS ${soroll} m` : ''}${forats ? ' · forats de GPS' : ''}${senseFC ? ' · sense FC' : ''}`);
+  console.log(`\nSimulació ${sortida} contra ${refId} (${fmt(ref.total)}) · ${tipus}${tipus === 'base' ? ' ' + zona.nom + ` (${zona.lo}-${zona.hi})` : ''}${fcDesp ? ` · FC ${fcDesp > 0 ? '+' : ''}${fcDesp}` : ''}${soroll ? ` · soroll GPS ${soroll} m` : ''}${forats ? ' · forats de GPS' : ''}${senseFC ? ' · sense FC' : ''}`);
   for (const o of out) {
     const rel = t0 != null ? o.t - t0 : null;
-    console.log(`${fmt(rel).padStart(6)}  ${String(Math.round(o.snap.s)).padStart(5)} m  ${o.snap.d != null ? ((o.snap.d > 0 ? '+' : '') + o.snap.d.toFixed(0) + ' s').padStart(6) : '      '}  ${o.u.kind.padEnd(8)} ${o.u.text}${o.u.info ? `   [${o.u.info}]` : ''}`);
+    const col = tipus === 'base' ? (o.snap.hr != null ? (Math.round(o.snap.hr) + ' bpm').padStart(8) : '        ') : (o.snap.d != null ? ((o.snap.d > 0 ? '+' : '') + o.snap.d.toFixed(0) + ' s').padStart(6) : '      ');
+    console.log(`${fmt(rel).padStart(6)}  ${String(Math.round(o.snap.s)).padStart(5)} m  ${col}  ${o.u.kind.padEnd(8)} ${o.u.text}${o.u.info ? `   [${o.u.info}]` : ''}`);
   }
 }
 
@@ -69,14 +75,19 @@ const P = Coach.DEF;
 for (let i = 1; i < out.length; i++) {
   const a = out[i - 1], b = out[i];
   const gap = b.t - a.end, rem = b.snap.L - b.snap.s;
-  const crit = ['sistema', 'inici', 'final', 'reflexio', 'baixada'].includes(b.u.kind);
+  const crit = ['sistema', 'inici', 'final', 'reflexio', 'baixada', 'brief', 'bfinal'].includes(b.u.kind) || (b.u.kind === 'bentrada' && b.phaseN === 1 && b.snap.s < 60);
   const min = b.snap.mode !== 'pujant' ? 4 : crit ? 6 : rem <= P.finalZone ? P.minGapFinal : P.minGap;
   if (gap < min - 1.01) errs.push(`Massa juntes (${gap.toFixed(1)} s < ${min}) abans de: ${b.u.text}`);
 }
 const seen = new Set();
 for (const o of out) for (const c of o.u.clips) {
   if (c.cat === 'num') continue;
-  if (seen.has(c.id)) errs.push('Repetida: ' + c.id + ' ' + c.text); seen.add(c.id);
+  if (seen.has(c.id)) {
+    const alerta = c.cat === 'base' && ['alta', 'molt_alta', 'baixa'].includes(c.estat);
+    const totes = alerta && frases.filter(f => f.cat === 'base' && f.estat === c.estat && (f.grup || null) === (c.grup || null)).every(f => seen.has(f.id));
+    if (!totes) errs.push('Repetida: ' + c.id + ' ' + c.text); else warns.push('Avís repetit (ja s\'havien dit totes): ' + c.text);
+  }
+  seen.add(c.id);
   if (c.valora === 'positiu' && !(o.snap.d != null && o.snap.d <= P.gapIgual && o.snap.trend !== 'perdent' && o.snap.diag !== 'flipant' && o.snap.diag !== 'dia_dur')) errs.push(`Positiva fora de lloc (Δ ${o.snap.d?.toFixed(1)}, ${o.snap.trend}): ${c.text}`);
   if (c.valora === 'retret' && !(o.snap.d > P.gapIgual || o.snap.trend === 'perdent' || o.snap.diag === 'conservador')) errs.push(`Retret fora de lloc (Δ ${o.snap.d?.toFixed(1)}): ${c.text}`);
   const behind = o.snap.gap === 'darrere' || o.snap.gap === 'molt_darrere';
@@ -95,6 +106,41 @@ for (const o of out) for (const c of o.u.clips) if (c.cat === 'num') {
   if (c.estat === 'davant' && !(o.snap.d < 0)) errs.push(`Diu "per davant" amb Δ ${o.snap.d.toFixed(1)}`);
   if (c.estat === 'darrere' && !(o.snap.d > 0)) errs.push(`Diu "per darrere" amb Δ ${o.snap.d.toFixed(1)}`);
 }
+// xerrada d'arribada: una sola vegada, abans de l'inici, i ha d'acabar (gairebé) abans d'arrencar
+const briefs = out.filter(o => o.u.kind === 'brief');
+if (briefs.length > 1) errs.push('Xerrada repetida');
+for (const b of briefs) {
+  if (b.snap.mode !== 'armat') errs.push('Xerrada fora de temps (' + b.snap.mode + ')');
+  if (st.t0 != null && b.end > st.t0 + 4) errs.push(`La xerrada acaba ${(b.end - st.t0).toFixed(0)} s després de l'inici`);
+  if (b.u.clips.some(c => c.cat === 'num' && c.estat === 'fc') && senseFC) errs.push('Xerrada amb pulsacions sense pulsòmetre');
+  if (tipus === 'base' && b.u.clips.some(c => c.cat === 'brief' && c.estat !== 'intro' && c.estat !== 'intro_sensefc')) errs.push('Xerrada de base amb frases d\'exigent: ' + b.u.text);
+  if (tipus === 'exigent' && b.u.clips.some(c => c.cat === 'bbrief')) errs.push('Xerrada exigent amb frases de base: ' + b.u.text);
+  const fcC = b.u.clips.find(c => c.cat === 'num' && c.estat === 'fc');
+  if (fcC) { const h = hrAt.filter(x => x[0] <= b.t).pop(); if (!h || Math.abs(h[1] - fcC.n) > 3) errs.push(`Xerrada diu ${fcC.n} pulsacions però en porta ${h && h[1]}`); }
+  const band = b.u.clips.find(c => (c.cat === 'brief' || c.cat === 'bbrief') && /^fc_/.test(c.estat));
+  if (band && fcC) { const n = fcC.n, ok = tipus === 'base' ? (band.estat === 'fc_baixa' ? n < zona.lo - 10 : band.estat === 'fc_be' ? n >= zona.lo - 10 && n <= zona.hi : n > zona.hi) : (band.estat === 'fc_baixa' ? n < 125 : band.estat === 'fc_be' ? n >= 125 && n <= 150 : n > 150); if (!ok) errs.push(`Comentari ${band.estat} amb ${n} pulsacions`); }
+  if (tipus === 'exigent' && ultima.reflexio === 'marge' && b.u.clips.some(c => c.estat === 'pla_buit')) errs.push('Pla de «buit» quan l\'últim dia va sobrar marge');
+  if (tipus === 'exigent' && ultima.reflexio === 'buit' && b.u.clips.some(c => c.estat === 'pla_marge')) errs.push('Pla de «marge» quan l\'últim dia es va buidar');
+  const fb = b.u.clips.find(c => c.estat === 'feble'); if (fb && fb.fase !== ultima.feble) errs.push(`Tram feble ${fb.fase} però l'últim dia va ser el ${ultima.feble}`);
+}
+// mode base: res de temps ni de referència durant la pujada; els avisos de zona han de quadrar amb la FC
+if (tipus === 'base') {
+  for (const o of out) {
+    if (['estat', 'tend', 'queden', 'punt', 'reflexio', 'caminar', 'represa', 'fc', 'entrada', 'inici', 'final', 'status', 'diag', 'gap'].includes(o.u.kind)) errs.push(`En base no toca «${o.u.kind}»: ${o.u.text}`);
+    if (o.u.clips.some(c => ['gap', 'diag', 'tend', 'motiva', 'fase', 'entrada', 'queden', 'punt', 'final', 'reflexio'].includes(c.cat) || (c.cat === 'num' && ['davant', 'darrere', 'igual', 'record_per', 'a_del_record'].includes(c.estat)))) errs.push('Frase d\'exigent en base: ' + o.u.text);
+    if (o.u.kind !== 'zona') continue;
+    const h = o.snap.hr, z = o.u.clips.find(c => c.cat === 'base');
+    if (h == null) { errs.push('Avís de zona sense FC'); continue; }
+    const e = z ? z.estat : 'dins', ok = e === 'molt_alta' ? h > zona.hi + 8 : e === 'alta' ? h > zona.hi : e === 'baixa' ? h < zona.lo - 3 : h >= zona.lo - 3 && h <= zona.hi;
+    if (!ok) errs.push(`Avís «${e}» amb ${Math.round(h)} bpm (zona ${zona.lo}-${zona.hi}): ${o.u.text}`);
+    if (e === 'alta' && z && z.grup === 'dret' && !(o.snap.phase && o.snap.phase.pct >= 9)) errs.push(`Frase de pendent fort en un tram del ${o.snap.phase && o.snap.phase.pct} %: ${z.text}`);
+    const fcC = o.u.clips.find(c => c.cat === 'num' && c.estat === 'fc'); if (fcC && Math.abs(fcC.n - h) > 1) errs.push(`Diu ${fcC.n} pulsacions amb ${Math.round(h)}`);
+  }
+  for (const o of out) if (o.u.kind === 'bfinal') {
+    const c = o.u.clips.find(x => x.cat === 'bfinal'), f = st.finish;
+    if (c && (c.estat === 'regular' || c.estat === 'malament') && f.zStats.baixa > f.zStats.alta) errs.push('Final de «t\'has passat» quan el que ha fallat és anar per sota');
+  }
+} else if (out.some(o => o.u.clips.some(c => ['base', 'bbrief', 'bentrada', 'bfinal'].includes(c.cat)))) errs.push('Frases de base en una pujada exigent');
 // silencis llargs durant la pujada
 const climb = out.filter(o => o.snap.mode === 'pujant');
 for (let i = 1; i < climb.length; i++) { const g = climb[i].t - climb[i - 1].end; if (g > 75) warns.push(`Silenci de ${g.toFixed(0)} s abans de: ${climb[i].u.text}`); }
@@ -102,6 +148,7 @@ if (st.t0 == null) errs.push('No ha detectat l\'inici de la pujada');
 if (!st.finish) errs.push('No ha detectat el cim');
 const total = st.finish ? st.finish.T : null;
 console.log(`\nInici detectat: ${st.t0 != null ? new Date(st.t0 * 1000).toISOString().slice(11, 19) + ' UTC' : 'NO'} · cim: ${total != null ? fmt(total) + ` (${total.toFixed(1)} s)` : 'NO'} · referència ${fmt(ref.total)} · Δ final ${st.finish && st.finish.d != null ? st.finish.d.toFixed(1) + ' s' : '—'}`);
+if (tipus === 'base' && st.finish) { const z = st.finish.zStats; console.log(`Temps en zona: ${Math.round(100 * (st.finish.zonaPct || 0))} % · dins ${Math.round(z.dins)} s · per sobre ${Math.round(z.alta)} s · per sota ${Math.round(z.baixa)} s`); }
 console.log(`Intervencions: ${out.length} (pujada ${climb.length}) · per tipus: ${JSON.stringify(out.reduce((a, o) => (a[o.u.kind] = (a[o.u.kind] || 0) + 1, a), {}))}`);
 console.log(`Errors: ${errs.length}${errs.length ? '\n  - ' + errs.join('\n  - ') : ''}`);
 console.log(`Avisos: ${warns.length}${warns.length ? '\n  - ' + warns.join('\n  - ') : ''}`);

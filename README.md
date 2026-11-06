@@ -5,17 +5,28 @@ Entrenador a l'orella per a la pujada del coll: GPS, comparació amb registres a
 **App** → https://masvisit.github.io/coll/ (obrir amb **Bluefy** a l'iPhone) · pàgina de proves → https://masvisit.github.io/coll/prova.html
 
 ### Com s'usa
-1. A casa, amb wifi: obre l'app a Bluefy i prem **Descarrega** (les 1.010 veus queden al mòbil i funciona sense cobertura).
-2. Abans de sortir: **Prova** el so amb Spotify sonant (sense mode silenci), **Connecta** el Pacer Pro (córrer → LIGHT → Compartir FC → Visible per a tothom) i **Activa** el GPS.
-3. Prem **Comença** i ves a córrer: l'entrenador s'activa sol quan passes per l'inici de la pujada i acaba al cim.
-4. Al cim: resum per fases i tot el que t'ha dit. Si és rècord, passa a ser la referència.
-5. **Simula** (a dalt): passa una pujada teva pel motor i escolta què t'hauria dit.
+1. A casa, amb wifi: obre l'app a Bluefy i prem **Descarrega** (les 1.135 veus queden al mòbil i funciona sense cobertura).
+2. Tria el tipus de pujada: **Exigent** (contra la referència, a temps) o **Base** (per zones de pulsacions: Z2, Z2–Z3 o Z3; el temps no compta i necessita el pulsòmetre).
+3. Abans de sortir: **Prova** el so amb Spotify sonant (sense mode silenci), **Connecta** el Pacer Pro (córrer → LIGHT → Compartir FC → Visible per a tothom) i **Activa** el GPS.
+4. Prem **Comença** i ves a córrer. Uns 25 s abans d'arribar a l'inici sona la **xerrada**: amb quantes pulsacions arribes, l'objectiu i el pla. L'entrenador arrenca sol en passar per l'inici i acaba al cim.
+5. Al cim: **anàlisi** de la pujada. Si és rècord (només les exigents), passa a ser la referència.
+6. **Historial** (a dalt): totes les pujades per data o en rànquing de temps; toca'n una per veure'n l'anàlisi.
+7. **Simula**: passa una pujada teva pel motor (exigent o base) i escolta què t'hauria dit.
+
+### Anàlisi de cada pujada
+- Temps, posició al rànquing i diferència amb el rècord; FC mitjana i màxima, ritme i VAM.
+- Gràfica de segons per davant/darrere al llarg del coll respecte a la pujada que triïs (per defecte, la referència d'aquell dia).
+- Trams: temps, diferència, el teu millor temps a cada tram (★ si és d'aquesta pujada) i FC. La **pujada ideal** suma els millors trams.
+- Pulsacions al llarg del coll amb les zones i temps a cada zona (Z1–Z5, FC màx 194).
+- Lectura: on has guanyat i perdut, repartiment de l'esforç, forma vs esforç (temps i pulsacions respecte a l'altra pujada), tram on més pots millorar. En les de base: % en zona, on t'has escapat, i comparació amb l'última base de la mateixa zona.
+- Tot el que t'ha dit l'entrenador, per tornar-ho a escoltar. Les pujades fetes amb l'app es poden esborrar.
 
 ## Estructura
 - `index.html`, `js/app.js` — l'app (pantalles, veu, FC, GPS, desat de sortides)
+- `js/historial.js` — historial, rànquing i anàlisi de cada pujada (gràfiques SVG)
 - `js/coach.js` — el motor de l'entrenador (pur: també funciona a Node)
 - `sw.js` — per obrir l'app sense cobertura
-- `tools/simula.js` — simula una pujada real pel motor i comprova les regles: `node tools/simula.js --sortida 2026-11-03 [--soroll 8] [--forats] [--sensefc]`
+- `tools/simula.js` — simula una pujada real pel motor i comprova les regles: `node tools/simula.js --sortida 2026-11-03 [--soroll 8] [--forats] [--sensefc] [--mode base --zona z2|z23|z3 --fcdesp -20] [--ultima marge|buit|equilibrat --feble 5]`
 - `data/sim/` — les pujades del 30/10 i 03/11 (1 Hz, del FIT) per simular
 - `prova.html` — pàgina de proves (generada amb `python3 src/build.py` a partir de `src/template.html`)
 - `src/assets/` — àudios de la pàgina de proves
@@ -38,7 +49,7 @@ Entrenador a l'orella per a la pujada del coll: GPS, comparació amb registres a
 | 8 | Coronar | 3,29–3,46 | 4,7 % |
 
 ## Frases de l'entrenador
-486 frases escrites + 524 amb números (1.010 àudios). Veu: Azure **ca-ES-AlbaNeural**, accelerada ×1,3 (ffmpeg `atempo`, sense canviar el to). Àudios a `audio/<id>.mp3`, durades a `audio/index.json`.
+588 frases escrites + 547 amb números (1.135 àudios). Veu: Azure **ca-ES-AlbaNeural**, accelerada ×1,3 (ffmpeg `atempo`, sense canviar el to). Àudios a `audio/<id>.mp3`, durades a `audio/index.json`.
 To exigent però proper a tota la pujada (amb paciència a les fases 1–3, a fons a partir del mur); diu el nom de tant en tant i paraulotes sense manies.
 Etiquetes: `cat` (categoria), `fase` (1–8), `grup` (ini/mur/fi), `estat` (valor dins la categoria), `niv` (1 tranquil · 2 ferm · 3 a fons), `valora` (positiu / retret: frases que jutgen com vas).
 
@@ -82,3 +93,15 @@ sistema (GPS/FC) → punt clau (rampa) → queden X m → entrada de fase → di
 - Com a molt una frase de motivació seguida.
 - Si no ha passat res de nou, silenci fins a 60 s (14 s als últims 300 m).
 - Cap frase repetida en la mateixa pujada; entre sortides, primer les menys usades.
+
+**Xerrada d'arribada** (les dues modalitats)
+- Sona una vegada quan t'acostes a l'inici (a 20–220 m, segons la velocitat, perquè acabi just abans d'arrencar). Si vas massa lent o no s'ha pogut dir, a menys de 60 m sona només l'avís curt.
+- Cada tros va sencer o no va: pulsacions (amb què arribes i què vol dir: fred < 125, a punt 125–150, calent > 150; en base, respecte a la zona), objectiu (exigent: el temps a batre i si és el rècord; base: la zona) i pla.
+- El pla surt de l'última pujada exigent: si et van sobrar forces → sortir més valent; si et vas buidar → paciència fins al respir; si no, el tram on més lluny vas quedar del teu millor (≥ 4 s) o un pla general.
+
+**Pujada de base** (per zones de pulsacions)
+- Res de temps, referència, queden X, punts clau, caminar ni reflexió: només pulsacions.
+- Zona: dins de (mínim − 3) a màxim. Avís «per sobre» després de 10 s fora (molt per sobre, +8 ppm, després de 6 s); «per sota» després de 40 s i a partir dels 200 m. Si segueixes fora, els avisos s'espaien (×1,5, ×2).
+- «Per sobre» en un tram del 9 % o més → frases de caminar fort; en tram suau → afluixa. «Tornes a estar a lloc» només després d'un avís i 15 s dins.
+- Dins de zona: les pulsacions + un comentari cada ~2 min (si s'acaben els comentaris, només el número). Motivació de base si fa 60 s que no diu res.
+- Final: el % en zona decideix la valoració (≥ 85 %, 65–85 %, 40–65 %, < 40 %); si el que ha fallat és anar per sota, no diu «t'has passat»: només el temps.

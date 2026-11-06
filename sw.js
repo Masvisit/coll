@@ -1,7 +1,7 @@
 /* Coll · service worker: guarda l'app i les dades per obrir-la sense cobertura.
  * Els àudios van a IndexedDB (botó «Descarrega»), no aquí. Xarxa primer, memòria si no n'hi ha. */
-const C = 'coll-v2';
-const SHELL = ['./', 'index.html', 'js/coach.js', 'js/app.js', 'data/perfil_coll.json', 'data/frases.json', 'audio/index.json',
+const C = 'coll-v3';
+const SHELL = ['./', 'index.html', 'js/coach.js', 'js/app.js', 'js/historial.js', 'data/perfil_coll.json', 'data/frases.json', 'audio/index.json',
   'data/sim/2026-11-03.json', 'data/sim/2026-10-30.json'];
 self.addEventListener('install', e => e.waitUntil(caches.open(C).then(c => c.addAll(SHELL)).then(() => self.skipWaiting())));
 self.addEventListener('activate', e => e.waitUntil(self.clients.claim()));

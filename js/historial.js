@@ -135,8 +135,9 @@ const Hist = (() => {
     $('aLogCard').hidden = !said.length;
     $('eLog').innerHTML = said.map((x, i) => `<li><span class="t">${x.rel != null ? fmtRel(x.rel) : x.kind === 'brief' ? 'abans' : ''}</span><span>${x.text}<span class="k">${x.kind}</span></span><button data-i="${i}">▶</button></li>`).join('');
     $('eLog').querySelectorAll('button').forEach(b => b.onclick = () => Player.playSeq(said[+b.dataset.i].ids).catch(err => showErr(err.message)));
-    show('end');                           // primer visible, perquè les gràfiques tinguin amplada
+    show('end');                           // primer visible, perquè les gràfiques i el mapa tinguin amplada
     render(e, c);
+    try { Mapa.open(e, c); } catch (err) { $('mapCard').hidden = true; console.warn('mapa', err); }
   }
   function render(e, c) {
     const hs = hrStats(e), pace = e.total / (route.L / 1000), vam = perfil.desnivell_m / (e.total / 3600), zp = isEx(e) ? null : zonaPct(e);
@@ -249,26 +250,34 @@ const Hist = (() => {
 
   /* ---------------------------------------------------------------- gràfiques (SVG) */
   function niceStep(x) { const p = Math.pow(10, Math.floor(Math.log10(x))), m = x / p; return (m <= 1 ? 1 : m <= 2 ? 2 : m <= 5 ? 5 : 10) * p; }
-  function frame(el, yMin, yMax, ticks, fmtY, H) {
+  // xr: tram de distància visible [s0, s1] (tota la pujada si no s'amplia)
+  function frame(el, yMin, yMax, ticks, fmtY, H, xr) {
+    const [s0, s1] = xr || [0, route.L];
     const W = Math.max(280, Math.round(el.clientWidth || 340)), P = { l: 34, r: 34, t: 16, b: 22 };   // marge dret per a les etiquetes
-    const X = s => P.l + (W - P.l - P.r) * s / route.L;
+    const X = s => P.l + (W - P.l - P.r) * (s - s0) / (s1 - s0);
     const Y = v => P.t + (H - P.t - P.b) * (1 - (v - yMin) / (yMax - yMin));
-    let g = '';
+    const sOf = x => s0 + (x - P.l) / (W - P.l - P.r) * (s1 - s0);
+    const cid = 'c' + Math.random().toString(36).slice(2, 8);
+    let g = `<defs><clipPath id="${cid}"><rect x="${P.l}" y="0" width="${W - P.l - P.r}" height="${H}"/></clipPath></defs>`;
     for (const v of ticks) g += `<line x1="${P.l}" x2="${W - P.r}" y1="${Y(v).toFixed(1)}" y2="${Y(v).toFixed(1)}" stroke="${GRID}"/><text x="${P.l - 6}" y="${(Y(v) + 3.5).toFixed(1)}" text-anchor="end">${fmtY(v)}</text>`;
     for (const p of route.phases) {
-      if (p.a > 0) g += `<line x1="${X(p.a).toFixed(1)}" x2="${X(p.a).toFixed(1)}" y1="${P.t}" y2="${H - P.b}" stroke="${SEP}" stroke-dasharray="2 3"/>`;
-      g += `<text x="${((X(p.a) + X(p.b)) / 2).toFixed(1)}" y="${P.t - 5}" text-anchor="middle">${p.n}</text>`;
+      if (p.b <= s0 || p.a >= s1) continue;
+      if (p.a > s0) g += `<line x1="${X(p.a).toFixed(1)}" x2="${X(p.a).toFixed(1)}" y1="${P.t}" y2="${H - P.b}" stroke="${SEP}" stroke-dasharray="2 3"/>`;
+      const mx = (X(Math.max(p.a, s0)) + X(Math.min(p.b, s1))) / 2;
+      g += `<text x="${mx.toFixed(1)}" y="${P.t - 5}" text-anchor="middle">${(s1 - s0) < 1500 ? p.n + ' · ' + p.nom : p.n}</text>`;
     }
-    for (let k = 0; k * 1000 <= route.L; k++) g += `<text x="${X(k * 1000).toFixed(1)}" y="${H - 6}" text-anchor="middle">${k} km</text>`;
-    return { W, H, P, X, Y, g };
+    const span = s1 - s0, st = span > 2500 ? 1000 : span > 1200 ? 500 : span > 500 ? 200 : 100;
+    for (let k = Math.ceil(s0 / st) * st; k <= s1 + 0.1; k += st) g += `<text x="${X(k).toFixed(1)}" y="${H - 6}" text-anchor="middle">${st >= 1000 ? k / 1000 : km(k).replace(/,0$/, '')} km</text>`;
+    return { W, H, P, X, Y, sOf, g, clip: `clip-path="url(#${cid})"`, xr: [s0, s1] };
   }
   function mount(el, f, body, hoverFn) {
-    el.innerHTML = `<svg viewBox="0 0 ${f.W} ${f.H}" height="${f.H}" preserveAspectRatio="xMidYMid meet" role="img">${f.g}${body}` +
+    el.innerHTML = `<svg viewBox="0 0 ${f.W} ${f.H}" height="${f.H}" preserveAspectRatio="xMidYMid meet" role="img">${f.g}<g ${f.clip}>${body}</g>` +
       `<line class="cross" y1="${f.P.t}" y2="${f.H - f.P.b}" stroke="#ffffff55" style="display:none"/><g class="dots"></g></svg><div class="tip" hidden></div>`;
     const svg = el.querySelector('svg'), tip = el.querySelector('.tip'), cross = svg.querySelector('.cross'), dots = svg.querySelector('.dots');
     const move = ev => {
       const r = svg.getBoundingClientRect(), k = f.W / r.width;
-      const x = Math.max(f.P.l, Math.min(f.W - f.P.r, (ev.clientX - r.left) * k)), s = (x - f.P.l) / (f.W - f.P.l - f.P.r) * route.L;
+      if (el.__pinch) return;                                        // amb dos dits s'està ampliant, no es mostra el punt
+      const x = Math.max(f.P.l, Math.min(f.W - f.P.r, (ev.clientX - r.left) * k)), s = Math.max(0, Math.min(route.L, f.sOf(x)));
       const o = hoverFn(s);
       cross.setAttribute('x1', x); cross.setAttribute('x2', x); cross.style.display = '';
       dots.innerHTML = o.dots.filter(d => d[1] != null).map(([c, y]) => `<circle cx="${x}" cy="${y}" r="4.5" fill="${c}" stroke="#15181d" stroke-width="2"/>`).join('');
@@ -281,32 +290,37 @@ const Hist = (() => {
   }
   const phaseAtS = s => route.phases.find(p => s >= p.a && s < p.b) || route.phases[route.phases.length - 1];
 
-  function drawDelta(el, e, c) {
-    const raw = dCurve(e, c), H0 = raw.map((h, i) => (i === raw.length - 1 ? h : { s: h.s, d: sm(raw.map(x => x.d + 1e-9), i) }));
-    const ds = H0.map(h => h.d);
-    let lo = Math.min(0, ...ds), hi = Math.max(0, ...ds); const span = Math.max(10, hi - lo); lo -= span * 0.1; hi += span * 0.1;
-    const step = niceStep(span / 4), ticks = []; for (let v = Math.ceil(lo / step) * step; v <= hi; v += step) ticks.push(Math.round(v));
-    const f = frame(el, lo, hi, ticks, v => (v > 0 ? '+' : v < 0 ? '−' : '') + Math.abs(v), 190), y0 = f.Y(0);
+  function drawDelta(el, e, c, o = {}) {
+    const raw = dCurve(e, c), dv = raw.map(x => x.d), H0 = raw.map((h, i) => (i === raw.length - 1 ? h : { s: h.s, d: smS(dv, i) }));
+    const [a, b] = o.xr || [0, route.L], vis = H0.filter(h => h.s >= a - 10 && h.s <= b + 10).map(h => h.d);
+    const zoomed = b - a < route.L - 1;                                // ampliada: l'eix s'ajusta al tram, sense forçar el 0
+    let lo = zoomed ? Math.min(...vis) : Math.min(0, ...vis), hi = zoomed ? Math.max(...vis) : Math.max(0, ...vis); const span = Math.max(zoomed ? 4 : 10, hi - lo); lo -= span * 0.1; hi += span * 0.1;
+    const step = niceStep(span / (o.H > 300 ? 6 : 4)), ticks = []; for (let v = Math.ceil(lo / step) * step; v <= hi; v += step) ticks.push(Math.round(v));
+    const f = frame(el, lo, hi, ticks, v => (v > 0 ? '+' : v < 0 ? '−' : '') + Math.abs(v), o.H || 190, o.xr), y0 = f.Y(0);
     const pts = H0.map(h => `${f.X(h.s).toFixed(1)},${f.Y(h.d).toFixed(1)}`).join(' L');
     const area = `M${f.X(0)},${y0} L${pts} L${f.X(route.L)},${y0} Z`, id = 'd' + Math.random().toString(36).slice(2, 7);
+    const showEnd = b >= route.L - 1;
     const last = H0[H0.length - 1];
     const body = `<defs><clipPath id="${id}a"><rect x="0" y="0" width="${f.W}" height="${y0}"/></clipPath><clipPath id="${id}b"><rect x="0" y="${y0}" width="${f.W}" height="${f.H}"/></clipPath></defs>` +
       `<path d="${area}" fill="${BAD}" fill-opacity=".16" clip-path="url(#${id}a)"/><path d="${area}" fill="${OK}" fill-opacity=".16" clip-path="url(#${id}b)"/>` +
       `<line x1="${f.P.l}" x2="${f.W - f.P.r}" y1="${y0}" y2="${y0}" stroke="${MUT}" stroke-opacity=".6"/>` +
       `<path d="M${pts}" fill="none" stroke="${BAD}" stroke-width="2" stroke-linejoin="round" clip-path="url(#${id}a)"/>` +
       `<path d="M${pts}" fill="none" stroke="${OK}" stroke-width="2" stroke-linejoin="round" clip-path="url(#${id}b)"/>` +
-      `<text x="${f.W - f.P.r + 4}" y="${(f.Y(last.d) + 4).toFixed(1)}" style="fill:${last.d > 0 ? BAD : OK};font-weight:700">${fmtDiff(last.d).replace(' s', '')}</text>`;
+      '';
+    const endLbl = showEnd ? `<text x="${f.W - f.P.r + 4}" y="${(f.Y(last.d) + 4).toFixed(1)}" style="fill:${last.d > 0 ? BAD : OK};font-weight:700">${fmtDiff(last.d).replace(' s', '')}</text>` : '';
+    f.g += endLbl;
     mount(el, f, body, s => {
       const d = tAt(e, s) - tAt(c, s), p = phaseAtS(s);
       return { dots: [[d > 0 ? BAD : OK, f.Y(d)]],
         html: `${km(s)} km · ${p.nom}<br><b>${fmtDiff(d)}</b> ${Math.abs(d) < 0.5 ? 'igual' : d < 0 ? 'per davant' : 'per darrere'} · ${fmtT(tAt(e, s))}` };
     });
+    return f;
   }
-  function drawHR(el, e, c, zona) {
+  function drawHR(el, e, c, zona, o = {}) {
     const vals = (e.hrArr || []).filter(v => v > 0).concat(c ? c.hrArr.filter(v => v > 0) : []);
     const yMin = Math.min(130, Math.floor((Math.min(...vals) - 4) / 10) * 10), yMax = Math.max(190, Math.ceil((Math.max(...vals) + 3) / 5) * 5);
-    const ticks = []; for (let v = Math.ceil(yMin / 20) * 20; v <= yMax; v += 20) ticks.push(v);
-    const f = frame(el, yMin, yMax, ticks, v => v, 200);
+    const tk = o.H > 300 ? 10 : 20, ticks = []; for (let v = Math.ceil(yMin / tk) * tk; v <= yMax; v += tk) ticks.push(v);
+    const f = frame(el, yMin, yMax, ticks, v => v, o.H || 200, o.xr);
     let bands = '';
     if (zona) {
       bands += `<rect x="${f.P.l}" width="${f.W - f.P.l - f.P.r}" y="${f.Y(zona.hi)}" height="${f.Y(zona.lo - 3) - f.Y(zona.hi)}" fill="${OK}" fill-opacity=".13"/>`;
@@ -327,9 +341,58 @@ const Hist = (() => {
       return { dots: [[ACC, h != null ? f.Y(h) : null], [MUT, hc != null ? f.Y(hc) : null]],
         html: `${km(s)} km · ${p.nom}<br><b>${h != null ? h + ' ppm' : 'sense FC'}</b>${hc != null ? ` · ${c.nom}: ${hc}` : ''}` };
     });
+    return f;
   }
   // mitjana mòbil curta (±2 punts = ±20 m) per treure el soroll del pulsòmetre a la gràfica
   function sm(arr, i) { let a = 0, n = 0; for (let k = i - 2; k <= i + 2; k++) if (arr[k] > 0) { a += arr[k]; n++; } return n ? a / n : 0; }
+  // el mateix per a valors amb signe (diferència de temps): aquí 0 i negatius són vàlids
+  function smS(arr, i) { let a = 0, n = 0; for (let k = i - 2; k <= i + 2; k++) if (k >= 0 && k < arr.length && isFinite(arr[k])) { a += arr[k]; n++; } return n ? a / n : 0; }
+
+  /* ---------------------------------------------------------------- gràfica ampliada (pantalla completa) */
+  const FS = { draw: null, xr: null, f: null, P: new Map(), g0: null, raf: 0 };
+  function fsOpen(title, draw) {
+    FS.draw = draw; FS.xr = [0, route.L];
+    $('fsTitle').textContent = title; $('fsChart').hidden = false; document.body.style.overflow = 'hidden';
+    fsDraw();
+  }
+  function fsClose() { $('fsChart').hidden = true; document.body.style.overflow = ''; FS.draw = null; }
+  function fsDraw() {
+    if (!FS.draw) return;
+    const el = $('fsBody'), H = Math.max(240, Math.round(el.clientHeight || (innerHeight - 170)));
+    FS.f = FS.draw(el, { H, xr: FS.xr });
+    $('fsAll').disabled = FS.xr[0] <= 0 && FS.xr[1] >= route.L;
+  }
+  function fsSet(a, b) {
+    const L = route.L, span = Math.max(150, Math.min(L, b - a));
+    a = Math.max(0, Math.min(L - span, a)); FS.xr = [a, a + span];
+    cancelAnimationFrame(FS.raf); FS.raf = requestAnimationFrame(fsDraw);
+  }
+  function fsZoom(k, sMid) {
+    const [a, b] = FS.xr, m = sMid != null ? sMid : (a + b) / 2, span = (b - a) / k;
+    fsSet(m - (m - a) / k, m - (m - a) / k + span);
+  }
+  function fsBind() {
+    const el = $('fsBody');
+    const pos = ev => { const r = el.getBoundingClientRect(); return { x: (ev.clientX - r.left) * (FS.f ? FS.f.W / r.width : 1), y: ev.clientY - r.top }; };
+    el.addEventListener('pointerdown', ev => {
+      FS.P.set(ev.pointerId, pos(ev));
+      if (FS.P.size === 2) { const [p, q] = [...FS.P.values()]; el.__pinch = true; FS.g0 = { d: Math.abs(p.x - q.x) || 1, m: (p.x + q.x) / 2, xr: FS.xr.slice(), f: FS.f }; }
+    });
+    el.addEventListener('pointermove', ev => {
+      if (!FS.P.has(ev.pointerId)) return; FS.P.set(ev.pointerId, pos(ev));
+      if (FS.P.size !== 2 || !FS.g0) return;
+      const [p, q] = [...FS.P.values()], g = FS.g0, d = Math.max(20, Math.abs(p.x - q.x)), m = (p.x + q.x) / 2;
+      const span0 = g.xr[1] - g.xr[0], span = span0 * g.d / d, sMid = g.f.sOf(g.m);           // el punt sota els dits es queda sota els dits
+      const frac = (m - g.f.P.l) / (g.f.W - g.f.P.l - g.f.P.r), a = sMid - frac * span;
+      fsSet(a, a + span);
+    });
+    const up = ev => { FS.P.delete(ev.pointerId); if (FS.P.size < 2) { FS.g0 = null; if (!FS.P.size) el.__pinch = false; } };
+    el.addEventListener('pointerup', up); el.addEventListener('pointercancel', up);
+    el.addEventListener('wheel', ev => { ev.preventDefault(); if (FS.f) fsZoom(ev.deltaY < 0 ? 1.25 : 0.8, FS.f.sOf(pos(ev).x)); }, { passive: false });
+    $('fsIn').onclick = () => fsZoom(2); $('fsOut').onclick = () => fsZoom(0.5); $('fsAll').onclick = () => fsSet(0, route.L);
+    $('fsClose').onclick = fsClose;
+    addEventListener('resize', () => { if (FS.draw) { cancelAnimationFrame(FS.raf); FS.raf = requestAnimationFrame(fsDraw); } });
+  }
 
   /* ---------------------------------------------------------------- esdeveniments */
   async function del() {
@@ -341,12 +404,21 @@ const Hist = (() => {
     const last = store.get('coll_last', null); if (last && last.id === id) store.set('coll_last', null);
     await loadRefs(); list();
   }
+  function expandDelta() { const e = cur, c = hist.find(x => x.id === $('aCmp').value); if (e && c) fsOpen(`Temps respecte a ${c.nom}`, (el, o) => drawDelta(el, e, c, o)); }
+  function expandHR() {
+    const e = cur; if (!e || !e.hasHR) return;
+    const c0 = isEx(e) ? hist.find(x => x.id === $('aCmp').value) : null, c = c0 && c0.hasHR ? c0 : null;
+    fsOpen('Pulsacions', (el, o) => drawHR(el, e, c, isEx(e) ? null : zonaOf(e), o));
+  }
   function init() {
+    fsBind();
+    $('aDeltaX').onclick = expandDelta; $('aHRX').onclick = expandHR;
     $('segHist').querySelectorAll('button').forEach(b => b.onclick = () => { order = b.dataset.o; renderList(); });
     $('histBack').onclick = () => { show('prep'); prepRefresh(); };
-    $('aBack').onclick = () => { if (backTo === 'hist') list(); else { show('prep'); prepRefresh(); } };
-    $('aCmp').onchange = () => { const c = hist.find(x => x.id === $('aCmp').value); if (cur && c) render(cur, c); };
+    $('aBack').onclick = () => { Mapa.hide(); if (backTo === 'hist') list(); else { show('prep'); prepRefresh(); } };
+    $('aCmp').onchange = () => { const c = hist.find(x => x.id === $('aCmp').value); if (cur && c) { render(cur, c); Mapa.open(cur, c); } };
+    Mapa.init();
     $('aDel').onclick = () => del().catch(err => showErr(err.message));
   }
-  return { init, list, open, ultima, partials, bestPartials, zonaPct };
+  return { init, list, open, ultima, partials, bestPartials, zonaPct, tAt, zonaOf, isEx, exigents, phaseAtS, cmpDefault, sm, smS, ZN, current: () => cur };
 })();

@@ -168,6 +168,8 @@ async function downloadVoices() {
   $('barVeus').hidden = true;
   await voicesStatus();
   if (fails) $('sVeus').textContent += ` (${fails} no s'han pogut baixar: torna-ho a provar)`;
+  // de pas, el mapa de la zona (ortofoto) per veure el recorregut sense cobertura
+  if (typeof Mapa !== 'undefined' && navigator.serviceWorker && navigator.serviceWorker.controller) Mapa.prefetch().catch(() => {});
 }
 
 /* ------------------------------------------------------------ pulsòmetre */
@@ -247,7 +249,7 @@ function startRun() {
 async function speak(u) {
   speaking = true;
   $('rSaid').textContent = u.text;
-  run.said.push({ rel: coach.state.t0 != null ? u.t - coach.state.t0 : null, kind: u.kind, text: u.text, ids: u.ids });
+  run.said.push({ rel: coach.state.t0 != null ? u.t - coach.state.t0 : null, s: u.s != null ? Math.round(u.s) : null, kind: u.kind, text: u.text, ids: u.ids });
   try { await Player.playSeq(u.ids); } catch (e) { showErr('Àudio: ' + e.message); }
   for (const id of u.ids) if (!id.startsWith('num_')) usage[id] = (usage[id] || 0) + 1;
   store.set('coll_usage', usage);
@@ -395,7 +397,7 @@ async function init() {
     showErr(''); try { await Player.unlock(); } catch (e) {} askWake(); try { GPS.start(); } catch (e) { showErr(e.message); } startRun(); };
   $('bMute').onclick = () => { Player.muted = !Player.muted; $('bMute').textContent = Player.muted ? 'Activa la veu' : 'Silencia'; };
   $('bStop').onclick = stopPressed;
-  $('bBack').onclick = () => { coach = null; show('prep'); prepRefresh(); };
+  $('bBack').onclick = () => { coach = null; Mapa.hide(); show('prep'); prepRefresh(); };
   Hist.init();
   $('toSim').onclick = () => { show('sim'); };
   $('simBack').onclick = () => show('prep');

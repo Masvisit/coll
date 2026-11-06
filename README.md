@@ -14,6 +14,8 @@ Entrenador a l'orella per a la pujada del coll: GPS, comparació amb registres a
 7. **Simula**: passa una pujada teva pel motor (exigent o base) i escolta què t'hauria dit.
 
 ### Anàlisi de cada pujada
+- **Recorregut**: ortofoto de l'ICGC (si falla, Esri) amb la línia de la pujada pintada cada 20 m: verd si aquell tram l'has fet més ràpid que la teva mitjana, vermell si més lent (suavitzat ±60 m); en les de base, dins / per sobre / per sota de zona. Arrossegant el dit per la línia o pel perfil d'altitud surt, cada 20 m: ritme i % respecte a la mitjana, pulsacions i com canvien en 100 m, diferència amb la pujada triada, si és el ritme més ràpid o més lent que has fet mai en aquell punt, inici de tram i què et va dir l'entrenador allà. Moments clau numerats (màxim de pulsacions, pujada sobtada, els 200 m on més has guanyat i perdut, pitjor moment, trams rècord). ▶ reprodueix la pujada en 30 s; ⤢ pantalla completa; pessiga per ampliar. Les rajoles es guarden al mòbil en baixar les veus.
+- Les gràfiques s'amplien (⤢): pantalla completa, pessigar o +/− per veure un tram de prop.
 - Temps, posició al rànquing i diferència amb el rècord; FC mitjana i màxima, ritme i VAM.
 - Gràfica de segons per davant/darrere al llarg del coll respecte a la pujada que triïs (per defecte, la referència d'aquell dia).
 - Trams: temps, diferència, el teu millor temps a cada tram (★ si és d'aquesta pujada) i FC. La **pujada ideal** suma els millors trams.
@@ -23,7 +25,8 @@ Entrenador a l'orella per a la pujada del coll: GPS, comparació amb registres a
 
 ## Estructura
 - `index.html`, `js/app.js` — l'app (pantalles, veu, FC, GPS, desat de sortides)
-- `js/historial.js` — historial, rànquing i anàlisi de cada pujada (gràfiques SVG)
+- `js/historial.js` — historial, rànquing i anàlisi de cada pujada (gràfiques SVG, ampliables)
+- `js/mapa.js` — mapa del recorregut amb la línia de colors i la informació cada 20 m
 - `js/coach.js` — el motor de l'entrenador (pur: també funciona a Node)
 - `sw.js` — per obrir l'app sense cobertura
 - `tools/simula.js` — simula una pujada real pel motor i comprova les regles: `node tools/simula.js --sortida 2026-11-03 [--soroll 8] [--forats] [--sensefc] [--mode base --zona z2|z23|z3 --fcdesp -20] [--ultima marge|buit|equilibrat --feble 5]`

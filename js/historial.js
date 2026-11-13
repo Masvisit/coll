@@ -402,6 +402,7 @@ const Hist = (() => {
     if (Date.now() - delArmed > 3000) { delArmed = Date.now(); $('aDel').textContent = 'Segur? Toca de nou per esborrar-la'; return; }
     const id = cur.id;
     try { await DB.del('runs', id); } catch (err) { return showErr('No s\'ha pogut esborrar: ' + err.message); }
+    Nuvol.deleted(id);
     if (store.get('coll_ref', null) === id) store.set('coll_ref', null);
     const last = store.get('coll_last', null); if (last && last.id === id) store.set('coll_last', null);
     await loadRefs(); list();

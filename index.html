@@ -83,6 +83,10 @@ td.g{color:var(--ok)} td.r{color:var(--bad)}
 .log button{width:32px;height:32px;border-radius:50%;border:1px solid var(--line);background:var(--card2);color:var(--tx);font-size:12px}
 .err{color:var(--bad);font-size:13px;white-space:pre-wrap}
 .links{display:flex;gap:14px}
+.nuvset{margin-top:8px}
+.nuvset .nrow{display:flex;gap:8px;margin-bottom:6px}
+.nuvset input{flex:1;min-width:0;font:inherit;font-size:14px;color:var(--tx);background:var(--card2);border:1px solid var(--line);border-radius:11px;padding:8px 10px}
+.item small a{color:var(--mut)}
 /* tipus de pujada */
 .seg{display:grid;grid-template-columns:1fr 1fr;gap:4px;background:#07090b;border:1px solid var(--line);border-radius:14px;padding:4px}
 .seg button{border:0;border-radius:10px;background:none;color:var(--mut);font-weight:700;font-size:15px;min-height:42px}
@@ -211,6 +215,11 @@ td.best{color:var(--acc)}
       <div class="vol"><span>Volum de la veu</span><select id="selVol"><option value="normal">Normal</option><option value="fort">Fort</option><option value="maxim">Màxim</option></select></div></div><button class="mini" id="bSo">Prova</button></div>
     <div class="item"><span class="dot" id="dFC"></span><div><b>Pulsòmetre</b><small id="sFC">Al rellotge: córrer → LIGHT → Compartir FC → Visible per a tothom.</small></div><button class="mini" id="bFC">Connecta</button></div>
     <div class="item"><span class="dot" id="dGPS"></span><div><b>GPS</b><small id="sGPS">Encara no actiu.</small></div><button class="mini" id="bGPS">Activa</button></div>
+    <div class="item" id="nuvRow"><span class="dot" id="dNuv"></span><div><b>Còpia al núvol</b><small id="sNuv">—</small>
+      <div class="nuvset" id="nuvSet" hidden>
+        <div class="nrow"><input type="password" id="nuvTok" placeholder="Enganxa la clau (ghp_…)" autocomplete="off" autocapitalize="off" spellcheck="false"><button class="mini" id="nuvSave">Desa</button></div>
+        <small>A github.com: Settings → Developer settings → Personal access tokens → Tokens (classic) → Generate new token (classic). Marca només <b>gist</b>, caducitat «No expiration», i copia la clau. Fes-la una sola vegada i enganxa-la a cada mòbil o navegador on facis servir l'app. Es guarda només en aquest navegador; deixa-ho buit i prem Desa per treure-la.</small>
+      </div></div><button class="mini" id="bNuv">Configura</button></div>
     <div class="item" id="refRow"><span class="dot ok">✓</span><div><b>Referència</b><small id="sRef">—</small></div><select id="selRef"></select></div>
   </div>
   <button class="big" id="bStart">Comença</button>
@@ -309,5 +318,6 @@ td.best{color:var(--acc)}
 <script src="js/app.js?v=6"></script>
 <script src="js/historial.js?v=6"></script>
 <script src="js/mapa.js?v=6"></script>
+<script src="js/nuvol.js?v=6"></script>
 </body>
 </html>

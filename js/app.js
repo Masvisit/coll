@@ -241,7 +241,7 @@ function startRun() {
     ultima: tipus === 'exigent' ? Hist.ultima() : {}, refIsBest: ref === refs[0] });
   run = { id: 'run-' + Date.now(), date: new Date().toISOString(), tipus, zona: tipus === 'base' ? zona.clau : null,
     ref: ref.id, refNom: ref.nom, refTotal: ref.total, samples: [], said: [], complete: false };
-  ended = false; speaking = false;
+  ended = false; speaking = false; Nuvol.setRunning(true);
   $('rDL').textContent = tipus === 'base' ? `${zona.nom} · ${zona.lo}–${zona.hi} pulsacions` : `vs ${ref.nom} · ${fmtT(ref.total)}`;
   $('rHRl').textContent = tipus === 'base' ? 'En zona' : 'Pulsacions';
   $('rStrip').innerHTML = route.phases.map(p => `<span style="flex:${p.b - p.a}"><i style="width:0"></i></span>`).join('');
@@ -273,6 +273,7 @@ async function finishRun() {
   const best = refs[0];
   run.record = run.tipus !== 'base' && f.T < best.total;   // una pujada de base no és mai rècord ni referència
   try { await DB.put('runs', JSON.parse(JSON.stringify(run))); } catch (e) { showErr('No s\'ha pogut desar la sortida: ' + e.message); }
+  Nuvol.setRunning(false); Nuvol.sync();                                   // còpia al núvol (si hi ha clau i cobertura)
   store.set('coll_last', { id: run.id, date: run.date, total: run.total, d: run.d, refNom: run.refNom, record: run.record, tipus: run.tipus, zonaPct: run.zonaPct });
   if (run.record) store.set('coll_ref', run.id);
   await loadRefs();
@@ -321,7 +322,7 @@ let stopArmed = 0;
 function stopPressed() {
   if (run && run.complete) { ended = true; coach = null; return Hist.open(run.id, 'prep'); }
   if (Date.now() - stopArmed > 3000) { stopArmed = Date.now(); $('bStop').textContent = 'Segur? Prem de nou'; setTimeout(() => { if ($('bStop').textContent.startsWith('Segur')) $('bStop').textContent = 'Atura'; }, 3000); return; }
-  ended = true; coach = null; show('prep'); prepRefresh();
+  ended = true; coach = null; Nuvol.setRunning(false); show('prep'); prepRefresh();
 }
 
 /* ------------------------------------------------------------ simulació */
@@ -382,6 +383,7 @@ setInterval(() => { if (!$('prep').hidden) hrRow(); }, 1000);
 async function init() {
   try { await loadData(); } catch (e) { showErr(e.message + '. Obre l\'app amb connexió el primer cop.'); return; }
   await voicesStatus(); prepRefresh();
+  Nuvol.init();
   $('segTipus').querySelectorAll('button').forEach(b => b.onclick = () => { store.set('coll_tipus', b.dataset.t); tipusUI(); });
   $('selZona').onchange = () => { store.set('coll_zona', $('selZona').value); tipusUI(); };
   $('toHist').onclick = () => Hist.list();

@@ -26,6 +26,7 @@ Entrenador a l'orella per a la pujada del coll: GPS, comparació amb registres a
 ## Estructura
 - `index.html`, `js/app.js` — l'app (pantalles, veu, FC, GPS, desat de sortides)
 - `js/historial.js` — historial, rànquing i anàlisi de cada pujada (gràfiques SVG, ampliables)
+- `js/nuvol.js` — còpia de les pujades en un gist secret de GitHub (amb una clau «gist» enganxada a cada aparell): puja les noves, baixa les que falten i propaga els esborrats
 - `js/mapa.js` — mapa del recorregut amb la línia de colors i la informació cada 20 m
 - `js/coach.js` — el motor de l'entrenador (pur: també funciona a Node)
 - `sw.js` — per obrir l'app sense cobertura

@@ -195,7 +195,8 @@ const Hist = (() => {
       // repartiment de l'esforç (mateixa lectura que la reflexió final de l'entrenador)
       const H = dCurve(e, c), dF = e.total - c.total, pac = Coach.pacing(H, dF), mid = H.find(h => h.s >= 1650), late = H.filter(h => h.s >= 1650);
       const worst = late.reduce((a, h) => (h.d > a.d ? h : a), late[0]);
-      if (pac === 'marge') L.push(`Repartiment: el pitjor moment va ser al km ${km(worst.s)} (${fmtDiff(worst.d)}) i d'allà al cim has recuperat ${Math.round(worst.d - dF)} s. T'han sobrat forces: pots sortir més valent.`);
+      if (pac === 'marge' && worst.d > 0) L.push(`Repartiment: el pitjor moment va ser al km ${km(worst.s)} (${fmtDiff(worst.d)}) i d'allà al cim has recuperat ${Math.round(worst.d - dF)} s. T'han sobrat forces: pots sortir més valent.`);
+      else if (pac === 'marge') L.push(`Repartiment: a l'entrada del mur ja hi anaves ${fmtDiff(mid.d)} i al cim ${fmtDiff(dF)}: has guanyat més temps a la segona meitat que a la primera. Pots sortir una mica més valent.`);
       else if (pac === 'buit') L.push(`Repartiment: a l'entrada del mur anaves ${fmtDiff(mid.d)} i has acabat ${fmtDiff(dF)}. La sortida va ser massa forta: guarda una mica per al quilòmetre dur.`);
       else if (pac === 'equilibrat') L.push(`Repartiment equilibrat: a l'entrada del mur anaves ${fmtDiff(mid.d)} i has acabat ${fmtDiff(dF)}.`);
       // pulsacions: forma o només esforç
@@ -212,7 +213,8 @@ const Hist = (() => {
     if (exigents().length > 1) {
       const ideal = bp.reduce((a, x) => a + x.t, 0), gaps = pp.map((v, i) => ({ i, d: v - bp[i].t, from: bp[i].e }));
       const mine = gaps.filter(x => x.from === e).length, w = gaps.filter(x => x.d >= 3).sort((a, b) => b.d - a.d)[0];
-      L.push(`Pujada ideal (el teu millor temps a cada tram, sumat): <b>${fmtT(ideal)}</b>. Avui hi has quedat a ${fmtDiff(e.total - ideal).replace('+', '')}` +
+      if (mine === route.phases.length) L.push(`Has fet el teu millor temps de sempre a <b>tots els trams</b>: aquesta pujada és ara la teva pujada ideal (${fmtT(ideal)}).`);
+      else L.push(`Pujada ideal (el teu millor temps a cada tram, sumat): <b>${fmtT(ideal)}</b>. Avui hi has quedat a ${fmtDiff(e.total - ideal).replace('+', '')}` +
         (mine ? `, i ${mine === 1 ? 'un tram és' : mine + ' trams són'} el teu millor de sempre.` : '.'));
       if (w) L.push(`Per millorar: <b>${ph(w.i)}</b> és on més lluny ets del teu millor (${fmtDiff(w.d)} respecte al ${w.from.nom}).`);
     }

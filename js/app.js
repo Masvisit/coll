@@ -64,6 +64,8 @@ async function loadRefs() {
   try { for (const run of await DB.all('runs')) if (run.complete && run.curve) list.push(entry({ id: run.id, date: run.date, src: 'app', tipus: run.tipus || 'exigent', zona: run.zona || null, total: run.total, tArr: run.curve.t, hrArr: run.curve.hr, run })); } catch (e) {}
   hist = list;
   refs = list.filter(e => e.tipus !== 'base').map(e => e.ref).sort((a, b) => a.total - b.total);
+  // si apareix un rècord nou (també un afegit des del rellotge), passa a ser la referència
+  if (refs.length && store.get('coll_best', null) !== refs[0].id) { store.set('coll_best', refs[0].id); store.set('coll_ref', refs[0].id); }
   const sel = $('selRef'), chosen = store.get('coll_ref', null);
   sel.innerHTML = refs.map((r, i) => `<option value="${r.id}">${r.nom} · ${fmtT(r.total)}${i === 0 ? ' ★' : ''}</option>`).join('');
   sel.value = refs.some(r => r.id === chosen) ? chosen : refs[0].id;

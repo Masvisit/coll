@@ -60,8 +60,13 @@ function entry(o) {
 }
 async function loadRefs() {
   const list = [];
-  for (const [id, r] of Object.entries(perfil.registres)) list.push(entry({ id, date: id, src: 'fit', tipus: 'exigent', tArr: r.temps_s, hrArr: r.fc }));
   try { for (const run of await DB.all('runs')) if (run.complete && run.curve) list.push(entry({ id: run.id, date: run.date, src: 'app', tipus: run.tipus || 'exigent', zona: run.zona || null, total: run.total, tArr: run.curve.t, hrArr: run.curve.hr, run })); } catch (e) {}
+  // les del rellotge, menys les que també tens fetes amb l'app (mateix dia i temps): es queda la de l'app, que té el que et va dir l'entrenador
+  const dia = iso => new Date(iso).toLocaleDateString('sv');
+  for (const [id, r] of Object.entries(perfil.registres)) {
+    const e = entry({ id, date: id, src: 'fit', tipus: 'exigent', tArr: r.temps_s, hrArr: r.fc });
+    if (!list.some(x => dia(x.date) === id && Math.abs(x.total - e.total) < 60)) list.push(e);
+  }
   hist = list;
   refs = list.filter(e => e.tipus !== 'base').map(e => e.ref).sort((a, b) => a.total - b.total);
   // si apareix un rècord nou (també un afegit des del rellotge), passa a ser la referència
